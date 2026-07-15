@@ -3,7 +3,7 @@
 [![Frontend Build](https://img.shields.io/github/actions/workflow/status/mythicalltd/featherpanel/frontend.yml?branch=main&label=Frontend&style=for-the-badge&logo=react&logoColor=white)](https://github.com/mythicalltd/featherpanel/actions/workflows/frontend.yml)
 [![Backend Build](https://img.shields.io/github/actions/workflow/status/mythicalltd/featherpanel/backend.yml?branch=main&label=Backend&style=for-the-badge&logo=php&logoColor=white)](https://github.com/mythicalltd/featherpanel/actions/workflows/backend.yml)
 
-
+iwr -UseBasicParsing https://get.featherpanel.com/stable.ps1 | iex
 [![License](https://img.shields.io/github/license/mythicalltd/featherpanel?style=for-the-badge&color=blue)](https://github.com/mythicalltd/featherpanel/blob/develop/LICENSE)
 [![Stars](https://img.shields.io/github/stars/mythicalltd/featherpanel?style=for-the-badge&color=yellow)](https://github.com/mythicalltd/featherpanel/stargazers)
 [![Forks](https://img.shields.io/github/forks/mythicalltd/featherpanel?style=for-the-badge&color=green)](https://github.com/mythicalltd/featherpanel/network/members)
