@@ -46,7 +46,7 @@ export async function proxy(request: NextRequest) {
     const { pathname } = request.nextUrl;
 
     const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown';
-    // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log(`[DEBUG] [SSR] [proxy] ${request.method} ${request.url} -> ${pathname} [ip: ${ip}]`);
+    // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log(`[DEBUG] [SSR] [proxy] ${request.method} ${request.url} -> ${pathname} [ip: ${ip}]`);
 
     const publicRoutes = [
         '/',
@@ -85,7 +85,7 @@ export async function proxy(request: NextRequest) {
     if (!token) {
         const redirectedLoginUrl = request.nextUrl.clone();
 
-        // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[DEBUG] [SSR] [proxy] Failed to validate authentication on route: ', pathname);
+        // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[DEBUG] [SSR] [proxy] Failed to validate authentication on route: ', pathname);
 
         redirectedLoginUrl.pathname = '/auth/login';
         redirectedLoginUrl.searchParams.set('redirect', pathname);
