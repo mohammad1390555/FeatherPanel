@@ -26,7 +26,7 @@ use App\Config\ConfigInterface;
 class WingsFileTrashConfig
 {
     /**
-     * @return array{enabled: bool, max_size_bytes: int, retention_days: int}
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{enabled: bool, max_size_bytes: int, retention_days: int}
      */
     public static function forWings(): array
     {

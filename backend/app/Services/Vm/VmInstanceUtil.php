@@ -48,7 +48,7 @@ final class VmInstanceUtil
     /**
      * Build a Proxmox client for the given VM node (shared by admin and user controllers).
      *
-     * @param array<string, mixed> $vmNode
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $vmNode
      *
      * Magic. Do not touch.
      */
@@ -103,9 +103,9 @@ final class VmInstanceUtil
     }
 
     /**
-     * @param array<string, mixed> $instance
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $instance
      *
-     * @return array<int, array<string, mixed>>
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, array<string, mixed>>
      */
     public static function getInstanceNetworkAssignments(array $instance): array
     {
@@ -155,10 +155,10 @@ final class VmInstanceUtil
     }
 
     /**
-     * @param array<int, array<string, mixed>> $assignments
-     * @param array<string, mixed> $currentConfig
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<int, array<string, mixed>> $assignments
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $currentConfig
      *
-     * @return array{config: array<string, mixed>, deleteKeys: array<int, string>}
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{config: array<string, mixed>, deleteKeys: array<int, string>}
      */
     public static function buildNetworkConfig(string $vmType, array $assignments, array $currentConfig = []): array
     {
@@ -274,7 +274,7 @@ final class VmInstanceUtil
     /**
      * Delete all tracked backups for a VM instance (used during reinstall/delete).
      *
-     * @param array<string, mixed> $instance
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $instance
      */
     public static function deleteInstanceBackups(array $instance, ?Proxmox $client = null): void
     {
@@ -313,10 +313,10 @@ final class VmInstanceUtil
     /**
      * Start async reinstall: validate, clone from template, save pending. Caller handles logging and HTTP response.
      *
-     * @param array<string, mixed> $instance VM instance row (must have id, template_id, vm_node_id, vmid, etc.)
-     * @param array<string, mixed> $requestData e.g. ['ci_user' => ..., 'ci_password' => ...] for QEMU
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $instance VM instance row (must have id, template_id, vm_node_id, vmid, etc.)
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $requestData e.g. ['ci_user' => ..., 'ci_password' => ...] for QEMU
      *
-     * @return array{ok: true, reinstall_id: string, message: string}|array{ok: false, error: string, code: string, http_status: int}
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{ok: true, reinstall_id: string, message: string}|array{ok: false, error: string, code: string, http_status: int}
      */
     public static function startReinstall(array $instance, array $requestData): array
     {
@@ -534,10 +534,10 @@ final class VmInstanceUtil
      * After clone task is done (status=stopped, exitstatus=OK): apply config, delete old VM, start new, update DB.
      * Deletes the pending record. Caller handles logging.
      *
-     * @param array<string, mixed> $pending
-     * @param array<string, mixed> $reinstallMeta decoded from pending notes
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $pending
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $reinstallMeta decoded from pending notes
      *
-     * @return array{instance: array|null, new_vmid: int}
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{instance: array|null, new_vmid: int}
      */
     public static function completeReinstallAfterClone(string $reinstallId, array $pending, array $reinstallMeta, Proxmox $client, bool $skipStart = false): array
     {
@@ -733,11 +733,11 @@ final class VmInstanceUtil
      * Create VNC console ticket and build payload (wss_url, pve_redirect_url when possible).
      * Shared by admin and user VNC ticket endpoints.
      *
-     * @param array<string, mixed> $instance VM instance row (vmid, vm_node_id, pve_node, vm_type)
-     * @param array<string, mixed> $vmNode VM node row (fqdn, port, scheme, ...)
-     * @param int $instanceIdForLabel Used for temp PVE user name (e.g. fp-console-{id}-xxx)
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $instance VM instance row (vmid, vm_node_id, pve_node, vm_type)
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $vmNode VM node row (fqdn, port, scheme, ...)
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $instanceIdForLabel Used for temp PVE user name (e.g. fp-console-{id}-xxx)
      *
-     * @return array{ok: true, payload: array}|array{ok: false, error: string, code: string, http_status: int}
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{ok: true, payload: array}|array{ok: false, error: string, code: string, http_status: int}
      */
     public static function createVncTicketPayload(array $instance, array $vmNode, int $instanceIdForLabel): array
     {
@@ -804,7 +804,7 @@ final class VmInstanceUtil
             'wss_url' => $wssUrl,
         ];
 
-        $tempUser = self::FP_CONSOLE_USER_PREFIX . $instanceIdForLabel . '-' . bin2hex(random_bytes(4)) . '@pve';
+        $tempUser = self::FP_CONSOLE_USER_PREFIX . $instanceIdForLabel . '-' . bin2hex(random_bytes(4)) . '// // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionpve';
         $tempPass = bin2hex(random_bytes(16));
         $expire = time() + 300;
         $cr = $client->createUser($tempUser, $tempPass, $expire);
@@ -829,9 +829,9 @@ final class VmInstanceUtil
     /**
      * Delete expired temporary console users (fp-console-*) on a Proxmox node.
      *
-     * @param array<string, mixed> $vmNode VM node row from VmNode::getAllVmNodes()
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $vmNode VM node row from VmNode::getAllVmNodes()
      *
-     * @return array{deleted: int, errors: int}
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{deleted: int, errors: int}
      */
     public static function cleanupExpiredFpConsoleUsersOnNode(array $vmNode): array
     {
@@ -965,9 +965,9 @@ final class VmInstanceUtil
     /**
      * QEMU cdrom slots that reference a real ISO/import image (not the cloud-init seed).
      *
-     * @param array<string, mixed> $config Proxmox qemu config key => value
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $config Proxmox qemu config key => value
      *
-     * @return array<int, string> Full volids e.g. local:iso/my.iso
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, string> Full volids e.g. local:iso/my.iso
      */
     private static function qemuCdromIsoVolidsFromConfig(array $config): array
     {
@@ -1003,7 +1003,7 @@ final class VmInstanceUtil
      * Remove storage volumes after VM deletion. Purge removes VM-owned images but ISO/import
      * files on ISO-capable storages often remain unless deleted explicitly.
      *
-     * @param array<int, string> $volids
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<int, string> $volids
      */
     private static function deleteProxmoxStorageVolidsBestEffort(Proxmox $client, string $node, array $volids): void
     {

@@ -27,17 +27,17 @@ use App\App;
  */
 class ProxyGenerator
 {
-    /** @var array Cache of generated proxy classes */
+    /** // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array Cache of generated proxy classes */
     private static array $proxyCache = [];
 
     /**
      * Create a proxy class for a target class.
      *
-     * @param string $targetClass The class to proxy
-     * @param array $interceptMethods Methods to intercept (true for all methods)
-     * @param array $interceptProperties Properties to intercept (true for all properties)
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $targetClass The class to proxy
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $interceptMethods Methods to intercept (true for all methods)
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $interceptProperties Properties to intercept (true for all properties)
      *
-     * @return string The proxy class name
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string The proxy class name
      */
     public static function createProxy(string $targetClass, $interceptMethods = true, $interceptProperties = true): string
     {
@@ -77,12 +77,12 @@ class ProxyGenerator
     /**
      * Create an instance of a proxy class.
      *
-     * @param string $targetClass The target class
-     * @param array $constructorArgs Constructor arguments
-     * @param mixed $interceptMethods Methods to intercept
-     * @param mixed $interceptProperties Properties to intercept
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $targetClass The target class
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $constructorArgs Constructor arguments
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam mixed $interceptMethods Methods to intercept
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam mixed $interceptProperties Properties to intercept
      *
-     * @return object The proxy instance
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn object The proxy instance
      */
     public static function createProxyInstance(string $targetClass, array $constructorArgs = [], $interceptMethods = true, $interceptProperties = true): object
     {
@@ -94,12 +94,12 @@ class ProxyGenerator
     /**
      * Generate proxy class code.
      *
-     * @param \ReflectionClass $reflection The reflection class
-     * @param string $proxyClassName The proxy class name
-     * @param mixed $interceptMethods Methods to intercept
-     * @param mixed $interceptProperties Properties to intercept
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam \ReflectionClass $reflection The reflection class
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $proxyClassName The proxy class name
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam mixed $interceptMethods Methods to intercept
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam mixed $interceptProperties Properties to intercept
      *
-     * @return string The generated code
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string The generated code
      */
     private static function generateProxyCode(\ReflectionClass $reflection, string $proxyClassName, $interceptMethods, $interceptProperties): string
     {

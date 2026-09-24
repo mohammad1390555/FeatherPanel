@@ -27,7 +27,7 @@ class InfrastructureAnalytics
     /**
      * Get locations overview statistics.
      *
-     * @return array Location statistics
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Location statistics
      */
     public static function getLocationsOverview(): array
     {
@@ -57,7 +57,7 @@ class InfrastructureAnalytics
     /**
      * Get nodes by location distribution.
      *
-     * @return array Node distribution by location
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Node distribution by location
      */
     public static function getNodesByLocation(): array
     {
@@ -87,7 +87,7 @@ class InfrastructureAnalytics
     /**
      * Get nodes overview statistics.
      *
-     * @return array Node statistics
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Node statistics
      */
     public static function getNodesOverview(): array
     {
@@ -122,7 +122,7 @@ class InfrastructureAnalytics
     /**
      * Get servers by node distribution.
      *
-     * @return array Server distribution by node
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Server distribution by node
      */
     public static function getServersByNode(): array
     {
@@ -155,7 +155,7 @@ class InfrastructureAnalytics
     /**
      * Get node resource allocation statistics.
      *
-     * @return array Resource allocation stats
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Resource allocation stats
      */
     public static function getNodeResources(): array
     {
@@ -195,7 +195,7 @@ class InfrastructureAnalytics
     /**
      * Get allocation statistics.
      *
-     * @return array Allocation statistics
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Allocation statistics
      */
     public static function getAllocationsOverview(): array
     {
@@ -223,7 +223,7 @@ class InfrastructureAnalytics
     /**
      * Get allocations by node distribution.
      *
-     * @return array Allocation distribution by node
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Allocation distribution by node
      */
     public static function getAllocationsByNode(): array
     {
@@ -260,7 +260,7 @@ class InfrastructureAnalytics
     /**
      * Get database host statistics.
      *
-     * @return array Database host statistics
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Database host statistics
      */
     public static function getDatabasesOverview(): array
     {
@@ -312,7 +312,7 @@ class InfrastructureAnalytics
     /**
      * Get comprehensive infrastructure dashboard.
      *
-     * @return array Complete infrastructure statistics
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Complete infrastructure statistics
      */
     public static function getInfrastructureDashboard(): array
     {
@@ -331,9 +331,9 @@ class InfrastructureAnalytics
     /**
      * Get port usage statistics.
      *
-     * @param int $limit Number of most used ports to retrieve (default: 10)
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $limit Number of most used ports to retrieve (default: 10)
      *
-     * @return array Port usage statistics
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Port usage statistics
      */
     public static function getPortUsage(int $limit = 10): array
     {
@@ -370,9 +370,9 @@ class InfrastructureAnalytics
     /**
      * Get IP address usage statistics.
      *
-     * @param int $limit Number of most used IPs to retrieve (default: 10)
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $limit Number of most used IPs to retrieve (default: 10)
      *
-     * @return array IP usage statistics
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array IP usage statistics
      */
     public static function getIpUsage(int $limit = 10): array
     {

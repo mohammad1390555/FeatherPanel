@@ -25,16 +25,16 @@ use App\App;
 class Notification
 {
     /**
-     * @var string The notifications table name
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar string The notifications table name
      */
     private static string $table = 'featherpanel_notifications';
 
     /**
      * Create a new notification.
      *
-     * @param array $data Associative array of notification fields
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $data Associative array of notification fields
      *
-     * @return int|false The new notification's ID or false on failure
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int|false The new notification's ID or false on failure
      */
     public static function createNotification(array $data): int | false
     {
@@ -109,9 +109,9 @@ class Notification
     /**
      * Get a notification by ID.
      *
-     * @param int $id Notification ID
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $id Notification ID
      *
-     * @return array|null Notification data or null if not found
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array|null Notification data or null if not found
      */
     public static function getNotificationById(int $id): ?array
     {
@@ -136,14 +136,14 @@ class Notification
     /**
      * Get all notifications with pagination and filtering.
      *
-     * @param int $page Page number (1-based)
-     * @param int $limit Number of results per page
-     * @param string $search Search term for title/message (optional)
-     * @param string|null $type Filter by type (optional)
-     * @param string $sortBy Field to sort by (default: 'created_at')
-     * @param string $sortOrder 'ASC' or 'DESC' (default: 'DESC')
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $page Page number (1-based)
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $limit Number of results per page
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $search Search term for title/message (optional)
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $type Filter by type (optional)
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $sortBy Field to sort by (default: 'created_at')
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $sortOrder 'ASC' or 'DESC' (default: 'DESC')
      *
-     * @return array Array of notifications
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Array of notifications
      */
     public static function searchNotifications(
         int $page = 1,
@@ -200,10 +200,10 @@ class Notification
     /**
      * Get count of notifications based on filters.
      *
-     * @param string $search Search term (optional)
-     * @param string|null $type Filter by type (optional)
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $search Search term (optional)
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $type Filter by type (optional)
      *
-     * @return int Count of notifications
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int Count of notifications
      */
     public static function getNotificationsCount(
         string $search = '',
@@ -243,11 +243,11 @@ class Notification
     /**
      * Get notifications for a user.
      *
-     * @param int $userId User ID (not used, kept for compatibility)
-     * @param bool $includeDismissed Include dismissed notifications (default: false)
-     * @param int $limit Maximum number of notifications to return
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $userId User ID (not used, kept for compatibility)
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool $includeDismissed Include dismissed notifications (default: false)
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $limit Maximum number of notifications to return
      *
-     * @return array Array of notifications
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Array of notifications
      */
     public static function getNotificationsForUser(int $userId, bool $includeDismissed = false, int $limit = 50): array
     {
@@ -272,10 +272,10 @@ class Notification
     /**
      * Update a notification by ID.
      *
-     * @param int $id Notification ID
-     * @param array $data Fields to update
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $id Notification ID
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $data Fields to update
      *
-     * @return bool True on success, false on failure
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function updateNotification(int $id, array $data): bool
     {
@@ -347,10 +347,10 @@ class Notification
      * Dismiss a notification (mark as dismissed).
      * Note: Dismissal is handled client-side via localStorage. This method is kept for API compatibility.
      *
-     * @param int $id Notification ID
-     * @param int $userId User ID (not used, kept for compatibility)
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $id Notification ID
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $userId User ID (not used, kept for compatibility)
      *
-     * @return bool True on success, false on failure
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function dismissNotification(int $id, int $userId): bool
     {
@@ -371,9 +371,9 @@ class Notification
     /**
      * Hard-delete a notification (permanently remove).
      *
-     * @param int $id Notification ID
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $id Notification ID
      *
-     * @return bool True on success, false on failure
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function hardDeleteNotification(int $id): bool
     {
@@ -390,7 +390,7 @@ class Notification
     /**
      * Get table columns information.
      *
-     * @return array Array of column information
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Array of column information
      */
     public static function getColumns(): array
     {
@@ -404,9 +404,9 @@ class Notification
     /**
      * Sanitize data for logging by excluding sensitive fields.
      *
-     * @param array $data Data to sanitize
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $data Data to sanitize
      *
-     * @return array Sanitized data
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Sanitized data
      */
     private static function sanitizeDataForLogging(array $data): array
     {

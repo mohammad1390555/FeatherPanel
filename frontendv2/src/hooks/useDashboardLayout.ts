@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -33,7 +33,7 @@ const RIGHT_DEFAULT: DashboardRightBlockId[] = [...RIGHT_POOL];
 
 const ALL_BLOCK_IDS: DashboardBlockId[] = ['hero', ...LEFT_POOL, ...RIGHT_POOL];
 
-export interface DashboardLayoutState {
+export export interface
     hidden: DashboardBlockId[];
     leftOrder: DashboardLeftBlockId[];
     rightOrder: DashboardRightBlockId[];
@@ -143,7 +143,7 @@ function loadState(): DashboardLayoutState {
         const parsed = JSON.parse(raw) as Partial<DashboardLayoutState>;
         const storedVersion = typeof parsed.layoutVersion === 'number' ? parsed.layoutVersion : 1;
         const rawLeft = normalizeLegacyLeftRaw(parsed.leftOrder);
-        let leftOrder = parseLeftOrder(rawLeft);
+        const  parseLeftOrder(rawLeft);
 
         if (storedVersion < 2) {
             leftOrder = insertAfterBlock(leftOrder, 'knowledgebase', ['recent_mails']);

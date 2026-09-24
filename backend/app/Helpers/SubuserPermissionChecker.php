@@ -26,11 +26,11 @@ class SubuserPermissionChecker
     /**
      * Check if a user has a specific permission for a server.
      *
-     * @param int $userId The user ID
-     * @param int $serverId The server ID
-     * @param string $permission The permission to check (e.g., 'file.read', 'backup.create')
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $userId The user ID
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $serverId The server ID
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $permission The permission to check (e.g., 'file.read', 'backup.create')
      *
-     * @return bool True if the user has the permission, false otherwise
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if the user has the permission, false otherwise
      */
     public static function hasPermission(int $userId, int $serverId, string $permission): bool
     {
@@ -73,11 +73,11 @@ class SubuserPermissionChecker
     /**
      * Check if a user has any of the specified permissions.
      *
-     * @param int $userId The user ID
-     * @param int $serverId The server ID
-     * @param array $permissions Array of permissions to check
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $userId The user ID
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $serverId The server ID
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $permissions Array of permissions to check
      *
-     * @return bool True if the user has at least one of the permissions
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if the user has at least one of the permissions
      */
     public static function hasAnyPermission(int $userId, int $serverId, array $permissions): bool
     {
@@ -93,11 +93,11 @@ class SubuserPermissionChecker
     /**
      * Check if a user has all of the specified permissions.
      *
-     * @param int $userId The user ID
-     * @param int $serverId The server ID
-     * @param array $permissions Array of permissions to check
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $userId The user ID
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $serverId The server ID
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $permissions Array of permissions to check
      *
-     * @return bool True if the user has all of the permissions
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if the user has all of the permissions
      */
     public static function hasAllPermissions(int $userId, int $serverId, array $permissions): bool
     {
@@ -113,10 +113,10 @@ class SubuserPermissionChecker
     /**
      * Map actions to required permissions.
      *
-     * @param string $controller The controller name (e.g., 'files', 'backups', 'databases')
-     * @param string $action The action name (e.g., 'list', 'create', 'update', 'delete')
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $controller The controller name (e.g., 'files', 'backups', 'databases')
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $action The action name (e.g., 'list', 'create', 'update', 'delete')
      *
-     * @return string|null The required permission, or null if not mapped
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string|null The required permission, or null if not mapped
      */
     public static function getRequiredPermission(string $controller, string $action): ?string
     {
