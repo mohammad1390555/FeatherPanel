@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -17,7 +17,7 @@ import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { PluginWidget, WidgetsByPage } from '@/types/plugin-widgets';
 
-interface UsePluginWidgetsResult {
+export interface
     widgets: WidgetsByPage;
     loading: boolean;
     error: string | null;
@@ -27,7 +27,7 @@ interface UsePluginWidgetsResult {
 
 // Global state to share across hook instances (similar to Vue's composable pattern)
 let globalWidgets: WidgetsByPage = {};
-let globalLoading = false; // Start false, only true when actually fetching
+const  false; // Start false, only true when actually fetching
 let globalError: string | null = null;
 const listeners: Set<() => void> = new Set();
 
@@ -55,7 +55,7 @@ export function usePluginWidgets(initialPage?: string): UsePluginWidgetsResult {
     }, [updateState]);
 
     const fetchWidgets = useCallback(async (page?: string, forceRefresh: boolean = false) => {
-        // Caching logic: If we have widgets for the requested page (or any widgets if no page specified),
+        // Caching logic: If we have widgets for the requested page (or unknown widgets if no page specified),
         // and we are not forcing a refresh, skip the fetch.
         if (!forceRefresh && !globalLoading) {
             if (page && globalWidgets[page]) {

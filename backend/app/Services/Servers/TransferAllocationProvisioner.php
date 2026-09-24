@@ -28,10 +28,10 @@ use App\Services\Wings\Wings;
 class TransferAllocationProvisioner
 {
     /**
-     * @param array<string, mixed> $destinationNode
-     * @param array<int, array<string, mixed>> $sourceAllocations
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $destinationNode
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<int, array<string, mixed>> $sourceAllocations
      *
-     * @return array{success: bool, created: int, error?: string, code?: string, http_status?: int}
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{success: bool, created: int, error?: string, code?: string, http_status?: int}
      */
     public function provisionMissing(
         int $destinationNodeId,
@@ -111,9 +111,9 @@ class TransferAllocationProvisioner
     }
 
     /**
-     * @param array<int, array{ip: string, port: int}> $resolvedSlots
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<int, array{ip: string, port: int}> $resolvedSlots
      *
-     * @return array{success: bool, created: int, error?: string, code?: string, http_status?: int}
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{success: bool, created: int, error?: string, code?: string, http_status?: int}
      */
     public function provisionResolvedSlots(int $destinationNodeId, array $resolvedSlots): array
     {
@@ -162,11 +162,11 @@ class TransferAllocationProvisioner
     }
 
     /**
-     * @param array<int, array<string, mixed>> $sourceAllocations
-     * @param array<int, string> $wingsIps
-     * @param array<string, mixed> $destinationNode
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<int, array<string, mixed>> $sourceAllocations
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<int, string> $wingsIps
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $destinationNode
      *
-     * @return array<int, array{ip: string, port: int}>
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, array{ip: string, port: int}>
      */
     public function resolveDestinationSlots(
         array $sourceAllocations,
@@ -194,9 +194,9 @@ class TransferAllocationProvisioner
     }
 
     /**
-     * @param array<string, mixed> $destinationNode
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $destinationNode
      *
-     * @return array{success: bool, ips?: array<int, string>, error?: string, code?: string, http_status?: int}
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{success: bool, ips?: array<int, string>, error?: string, code?: string, http_status?: int}
      */
     public function fetchWingsIpAddresses(array $destinationNode): array
     {
@@ -228,9 +228,9 @@ class TransferAllocationProvisioner
     }
 
     /**
-     * @param array<int, array<string, mixed>> $sourceAllocations
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<int, array<string, mixed>> $sourceAllocations
      *
-     * @return array<int, array<string, mixed>>
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, array<string, mixed>>
      */
     private function buildSourceSlots(array $sourceAllocations, int $primaryAllocationId): array
     {
@@ -259,9 +259,9 @@ class TransferAllocationProvisioner
     }
 
     /**
-     * @param array<string, mixed> $ipsResponse
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $ipsResponse
      *
-     * @return array<int, string>
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, string>
      */
     private function extractWingsIpAddresses(array $ipsResponse): array
     {
@@ -282,8 +282,8 @@ class TransferAllocationProvisioner
     }
 
     /**
-     * @param array<int, string> $wingsIps
-     * @param array<string, mixed> $destinationNode
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<int, string> $wingsIps
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $destinationNode
      */
     private function resolveTargetIp(string $sourceIp, array $wingsIps, array $destinationNode): string
     {

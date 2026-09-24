@@ -154,7 +154,7 @@ class UserDataExportProcessor implements TimeTask
     private function deleteAttachmentPath(string $filePath): void
     {
         $resolvedPath = $this->resolveAttachmentPath($filePath);
-        if ($resolvedPath !== null && is_file($resolvedPath) && !@unlink($resolvedPath)) {
+        if ($resolvedPath !== null && is_file($resolvedPath) && !// // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionunlink($resolvedPath)) {
             App::getInstance(false, true)->getLogger()->warning('Failed to delete user data export attachment: ' . $resolvedPath);
         }
     }
@@ -286,7 +286,7 @@ class UserDataExportProcessor implements TimeTask
             ]);
 
             if (!$attachmentId) {
-                @unlink($zipPath);
+                // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionunlink($zipPath);
                 throw new \RuntimeException('Failed to create ticket attachment for export');
             }
 
