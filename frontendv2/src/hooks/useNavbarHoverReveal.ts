@@ -48,7 +48,7 @@ export function useNavbarHoverReveal() {
         return () => {
             listeners.delete(sync);
         };
-    }, [] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     useEffect(() => {
         const onStorage = (e: StorageEvent) => {
@@ -58,7 +58,7 @@ export function useNavbarHoverReveal() {
         };
         window.addEventListener('storage', onStorage);
         return () => window.removeEventListener('storage', onStorage);
-    }, [] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const setNavbarHoverReveal = useCallback((next: boolean) => {
         try {
@@ -67,7 +67,7 @@ export function useNavbarHoverReveal() {
             // ignore
         }
         notifyListeners();
-    }, [] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     return { navbarHoverReveal, setNavbarHoverReveal };
 }

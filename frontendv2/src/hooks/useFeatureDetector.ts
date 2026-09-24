@@ -17,7 +17,7 @@ import { useState, useCallback, useEffect } from 'react';
 import { detectFeature } from '@/lib/ServerFeatureDetector';
 
 export export interface
-    enabledFeatures?: string[] as never[] as never[] as never[];
+    enabledFeatures?: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
 }
 
 export export interface
@@ -87,7 +87,7 @@ export function useFeatureDetector({
         return () => {
             setBlockJavaVersion(false);
         };
-    }, [] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     return {
         processLog,
