@@ -25,7 +25,7 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
         return {
             name: 'FeatherPanel',
             short_name: 'FeatherPanel',
-            icons: [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[],
+            icons: [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[],
             start_url: '/',
             display: 'browser',
             background_color: '#ffffff',

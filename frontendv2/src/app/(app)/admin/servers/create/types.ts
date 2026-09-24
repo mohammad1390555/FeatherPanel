@@ -126,7 +126,7 @@ export export interface
     selectedEntities: SelectedEntities;
     setSelectedEntities: React.Dispatch<React.SetStateAction<SelectedEntities>>;
     spellDetails: Spell | null;
-    spellVariablesData: SpellVariable[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+    spellVariablesData: SpellVariable[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
 }
 
 // Wizard Step Definition

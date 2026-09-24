@@ -48,7 +48,7 @@ export function useChromeLayout() {
             window.removeEventListener('storage', onStorage);
             window.removeEventListener(EVENT_NAME, onCustom as EventListener);
         };
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const setChromeLayout = useCallback((layout: ChromeLayout) => {
         if (typeof window === 'undefined') {
@@ -57,7 +57,7 @@ export function useChromeLayout() {
         window.localStorage.setItem(STORAGE_KEY, layout);
         window.dispatchEvent(new Event(EVENT_NAME));
         setChromeLayoutState(layout);
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     return { chromeLayout, setChromeLayout };
 }

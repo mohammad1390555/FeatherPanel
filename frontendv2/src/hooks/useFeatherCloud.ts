@@ -74,7 +74,7 @@ export export interface
 }
 
 export export interface
-    purchases: ProductPurchase[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+    purchases: ProductPurchase[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
     pagination: {
         page: number;
         limit: number;
@@ -113,7 +113,7 @@ export function useFeatherCloud() {
         } finally {
             setLoading(false);
         }
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const fetchCredits = useCallback(async (): Promise<CreditsData | null> => {
         setLoading(true);
@@ -139,7 +139,7 @@ export function useFeatherCloud() {
         } finally {
             setLoading(false);
         }
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const fetchTeam = useCallback(async (): Promise<TeamData | null> => {
         setLoading(true);
@@ -165,7 +165,7 @@ export function useFeatherCloud() {
         } finally {
             setLoading(false);
         }
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const fetchProducts = useCallback(async (page = 1, limit = 50): Promise<ProductsData | null> => {
         setLoading(true);
@@ -194,7 +194,7 @@ export function useFeatherCloud() {
         } finally {
             setLoading(false);
         }
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const downloadPremiumPackage = useCallback(async (packageName: string, version: string): Promise<boolean> => {
         setLoading(true);
@@ -224,7 +224,7 @@ export function useFeatherCloud() {
         } finally {
             setLoading(false);
         }
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     return {
         loading,

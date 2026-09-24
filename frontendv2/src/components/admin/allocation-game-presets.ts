@@ -23,7 +23,7 @@ export export interface
     defaultPort: number;
 }
 
-export const allocationGamePresets: GamePreset[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] = [
+export const allocationGamePresets: GamePreset[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] = [
     { id: 'minecraft_java', name: 'Minecraft Java Edition', defaultPort: 25565 },
     { id: 'minecraft_bedrock', name: 'Minecraft Bedrock Edition', defaultPort: 19132 },
     { id: 'rust', name: 'Rust', defaultPort: 28015 },
