@@ -28,7 +28,7 @@ class RateLimitConfig
     /**
      * Get the config file path.
      *
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string The absolute path to the config file
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string The absolute path to the config file
      */
     public static function getConfigPath(): string
     {
@@ -38,7 +38,7 @@ class RateLimitConfig
     /**
      * Check if rate limiting is globally enabled.
      *
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if rate limiting is globally enabled
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if rate limiting is globally enabled
      */
     public static function isGloballyEnabled(): bool
     {
@@ -57,11 +57,11 @@ class RateLimitConfig
      * Get the rate limit configuration for a specific route.
      * Rate limits are OPT-IN only - they must be explicitly enabled in config.
      *
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $routeName The name of the route
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $defaultRate The default rate limit (ignored - only used for auto-population)
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $defaultNamespace The default namespace if not configured (optional)
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $routeName The name of the route
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $defaultRate The default rate limit (ignored - only used for auto-population)
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $defaultNamespace The default namespace if not configured (optional)
      *
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array|null Returns ['rate' => Rate, 'namespace' => string] or null if not configured/enabled
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array|null Returns ['rate' => Rate, 'namespace' => string] or null if not configured/enabled
      */
     public static function getRateLimit(string $routeName, ?Rate $defaultRate = null, ?string $defaultNamespace = null): ?array
     {
@@ -113,9 +113,9 @@ class RateLimitConfig
     /**
      * Check if a route exists in the configuration.
      *
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $routeName The route name
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $routeName The route name
      *
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if route exists in config
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if route exists in config
      */
     public static function routeExistsInConfig(string $routeName): bool
     {
@@ -127,9 +127,9 @@ class RateLimitConfig
     /**
      * Convert a Rate object to configuration format.
      *
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate $rate The Rate object
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate $rate The Rate object
      *
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array|null Returns config array or null if invalid
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array|null Returns config array or null if invalid
      */
     public static function rateToConfig(Rate $rate): ?array
     {
@@ -177,11 +177,11 @@ class RateLimitConfig
      * Get rate limit configuration or return default.
      * This is a convenience method that always returns a rate limit config.
      *
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $routeName The name of the route
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate $defaultRate The default rate limit to use if not configured
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $defaultNamespace The default namespace
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $routeName The name of the route
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate $defaultRate The default rate limit to use if not configured
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $defaultNamespace The default namespace
      *
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Returns ['rate' => Rate, 'namespace' => string]
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Returns ['rate' => Rate, 'namespace' => string]
      */
     public static function getRateLimitOrDefault(string $routeName, Rate $defaultRate, ?string $defaultNamespace = null): array
     {
@@ -206,7 +206,7 @@ class RateLimitConfig
     /**
      * Get all route configurations.
      *
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array All route rate limit configurations
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array All route rate limit configurations
      */
     public static function getAllConfigs(): array
     {
@@ -229,10 +229,10 @@ class RateLimitConfig
      * Update rate limit configuration for a route.
      * Automatically creates the file and directory if they don't exist.
      *
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $routeName The route name
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $config The configuration array
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $routeName The route name
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $config The configuration array
      *
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if successful
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if successful
      */
     public static function updateRouteConfig(string $routeName, array $config): bool
     {
@@ -318,7 +318,7 @@ class RateLimitConfig
     /**
      * Load the rate limit configuration from JSON file.
      *
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array The configuration array
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array The configuration array
      */
     private static function loadConfig(): array
     {
@@ -375,9 +375,9 @@ class RateLimitConfig
     /**
      * Parse rate configuration from config array.
      *
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $config The route configuration
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $config The route configuration
      *
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn Rate|null The Rate object or null if invalid
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn Rate|null The Rate object or null if invalid
      */
     private static function parseRateConfig(array $config): ?Rate
     {

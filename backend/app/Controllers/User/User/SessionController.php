@@ -699,7 +699,7 @@ class SessionController
 
             // Set safe file permissions (read-only for owner and group, no execute)
             // This prevents accidental execution even if PHP execution is somehow enabled
-            // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionchmod($filePath, 0644);
+            // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionchmod($filePath, 0644);
 
             // Generate URL for the avatar
             $appUrl = App::getInstance(true)->getConfig()->getSetting(ConfigInterface::APP_URL, '');

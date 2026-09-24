@@ -344,7 +344,7 @@ class MountsController
     }
 
     /**
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{error: ?string, source: string, target: string}
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{error: ?string, source: string, target: string}
      */
     private static function validatedStoragePaths(string $source, string $target): array
     {
@@ -373,7 +373,7 @@ class MountsController
     }
 
     /**
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam 'node'|'spell'|'server' $type
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam 'node'|'spell'|'server' $type
      */
     private function replaceLinks(Request $request, int $mountId, string $type, string $bodyKey): Response
     {
@@ -423,9 +423,9 @@ class MountsController
     }
 
     /**
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<mixed> $items Per API item in the request body array
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<mixed> $items Per API item in the request body array
      *
-     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn list<int>|Response
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn list<int>|Response
      */
     private function parseBodyPositiveIntIds(array $items, string $bodyKey): array | Response
     {
