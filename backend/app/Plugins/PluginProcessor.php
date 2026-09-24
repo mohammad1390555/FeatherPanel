@@ -29,9 +29,9 @@ class PluginProcessor
     /**
      * Get the event class for a plugin.
      *
-     * // // // @error suppressionerror suppressionerror suppressionparam string $identifier The plugin identifier
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam string $identifier The plugin identifier
      *
-     * // // // @error suppressionerror suppressionerror suppressionreturn AppPlugin|null The event class instance or null if not found
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn AppPlugin|null The event class instance or null if not found
      */
     public static function getEventProcessor(string $identifier): ?AppPlugin
     {
@@ -87,9 +87,9 @@ class PluginProcessor
     /**
      * Check if a plugin has a valid event implementation.
      *
-     * // // // @error suppressionerror suppressionerror suppressionparam string $identifier The plugin identifier
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam string $identifier The plugin identifier
      *
-     * // // // @error suppressionerror suppressionerror suppressionreturn bool True if plugin has valid event, false otherwise
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn bool True if plugin has valid event, false otherwise
      */
     public static function hasValidEvent(string $identifier): bool
     {
@@ -107,8 +107,8 @@ class PluginProcessor
     /**
      * Process an event for a plugin.
      *
-     * // // // @error suppressionerror suppressionerror suppressionparam string $identifier The plugin identifier
-     * // // // @error suppressionerror suppressionerror suppressionparam PluginEvents $event The event to process
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam string $identifier The plugin identifier
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam PluginEvents $event The event to process
      */
     public static function process(string $identifier, PluginEvents $event): void
     {
@@ -130,10 +130,10 @@ class PluginProcessor
     /**
      * Get mixin for a specific plugin.
      *
-     * // // // @error suppressionerror suppressionerror suppressionparam string $identifier The plugin identifier
-     * // // // @error suppressionerror suppressionerror suppressionparam string $mixinId The mixin identifier
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam string $identifier The plugin identifier
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam string $mixinId The mixin identifier
      *
-     * // // // @error suppressionerror suppressionerror suppressionreturn object|null The mixin instance or null if not found
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn object|null The mixin instance or null if not found
      */
     public static function getMixin(string $identifier, string $mixinId): ?object
     {
@@ -168,9 +168,9 @@ class PluginProcessor
     /**
      * Get all mixins for a plugin.
      *
-     * // // // @error suppressionerror suppressionerror suppressionparam string $identifier The plugin identifier
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam string $identifier The plugin identifier
      *
-     * // // // @error suppressionerror suppressionerror suppressionreturn array The mixins associated with the plugin
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn array The mixins associated with the plugin
      */
     public static function getMixins(string $identifier): array
     {
@@ -187,10 +187,10 @@ class PluginProcessor
     /**
      * Check if a plugin has a specific mixin.
      *
-     * // // // @error suppressionerror suppressionerror suppressionparam string $identifier The plugin identifier
-     * // // // @error suppressionerror suppressionerror suppressionparam string $mixinId The mixin identifier
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam string $identifier The plugin identifier
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam string $mixinId The mixin identifier
      *
-     * // // // @error suppressionerror suppressionerror suppressionreturn bool True if the plugin has the mixin, false otherwise
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn bool True if the plugin has the mixin, false otherwise
      */
     public static function hasMixin(string $identifier, string $mixinId): bool
     {

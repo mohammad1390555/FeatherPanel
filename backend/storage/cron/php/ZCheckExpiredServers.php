@@ -97,7 +97,7 @@ class ZCheckExpiredServers implements TimeTask
     /**
      * Check and suspend expired game servers.
      *
-     * // // // @error suppressionerror suppressionerror suppressionreturn int Number of servers suspended
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn int Number of servers suspended
      */
     private function checkExpiredGameServers(): int
     {
@@ -139,7 +139,7 @@ class ZCheckExpiredServers implements TimeTask
     /**
      * Check and suspend expired VM instances.
      *
-     * // // // @error suppressionerror suppressionerror suppressionreturn int Number of VMs suspended
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn int Number of VMs suspended
      */
     private function checkExpiredVmInstances(): int
     {

@@ -972,12 +972,12 @@ class TaskController
     /**
      * Get task with schedule information.
      *
-     * // // // @error suppressionerror suppressionerror suppressionparam Request $request The HTTP request
-     * // // // @error suppressionerror suppressionerror suppressionparam string $serverUuid The server UUID
-     * // // // @error suppressionerror suppressionerror suppressionparam int $scheduleId The schedule ID
-     * // // // @error suppressionerror suppressionerror suppressionparam int $taskId The task ID
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam Request $request The HTTP request
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam string $serverUuid The server UUID
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam int $scheduleId The schedule ID
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam int $taskId The task ID
      *
-     * // // // @error suppressionerror suppressionerror suppressionreturn Response The HTTP response
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn Response The HTTP response
      */
     public function getTaskWithSchedule(Request $request, string $serverUuid, int $scheduleId, int $taskId): Response
     {
