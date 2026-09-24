@@ -1441,7 +1441,7 @@ class ApiClientController
     }
 
     /**
-     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{ok: bool, status_code: int|null, body: string|null, error: string|null}
+     * // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{ok: bool, status_code: int|null, body: string|null, error: string|null}
      */
     private function deliverServerModeCallback(string $callbackUrl, array $payload): array
     {

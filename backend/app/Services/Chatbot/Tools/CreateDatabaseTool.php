@@ -275,8 +275,8 @@ class CreateDatabaseTool implements ToolInterface
                 $pdo = new \PDO($dsn, $databaseHost['database_username'], $databaseHost['database_password'], $options);
 
                 $pdo->exec("CREATE DATABASE IF NOT EXISTS {$safeDbName} CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
-                $pdo->exec("CREATE USER IF NOT EXISTS {$safeUser}// // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppression'%' IDENTIFIED BY '{$password}'");
-                $pdo->exec("GRANT ALL PRIVILEGES ON {$safeDbName}.* TO {$safeUser}// // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppression'%'");
+                $pdo->exec("CREATE USER IF NOT EXISTS {$safeUser}// // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppression'%' IDENTIFIED BY '{$password}'");
+                $pdo->exec("GRANT ALL PRIVILEGES ON {$safeDbName}.* TO {$safeUser}// // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppression'%'");
                 $pdo->exec('FLUSH PRIVILEGES');
                 break;
 
@@ -314,7 +314,7 @@ class CreateDatabaseTool implements ToolInterface
                     $pdo = new \PDO($dsn, $databaseHost['database_username'], $databaseHost['database_password'], $options);
 
                     $pdo->exec("DROP DATABASE IF EXISTS {$safeDbName}");
-                    $pdo->exec("DROP USER IF EXISTS {$safeUser}// // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppression'%'");
+                    $pdo->exec("DROP USER IF EXISTS {$safeUser}// // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppression'%'");
                     break;
 
                 case 'postgresql':
