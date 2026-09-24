@@ -29,9 +29,9 @@ class TicketAdminNotifier
     /**
      * Notify staff with ticket view permission about a new ticket or user reply.
      *
-     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $ticket Enriched or raw ticket row
-     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $event Either `new_ticket` or `user_reply`
-     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $actorUuid UUID of the user who triggered the event (excluded from recipients)
+     * // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $ticket Enriched or raw ticket row
+     * // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $event Either `new_ticket` or `user_reply`
+     * // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $actorUuid UUID of the user who triggered the event (excluded from recipients)
      */
     public static function notify(array $ticket, string $event, string $actorUuid = ''): void
     {
