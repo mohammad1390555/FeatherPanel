@@ -26,7 +26,7 @@ class VmInstance
     /**
      * Paginated list of VM instances joined with node, plan, and user data.
      *
-     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, mixed>
+     * // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, mixed>
      */
     public static function getAll(int $page = 1, int $limit = 25, ?string $search = null): array
     {
@@ -84,7 +84,7 @@ class VmInstance
     }
 
     /**
-     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam \PDO|null $pdo Optional connection (e.g. when inside a transaction)
+     * // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam \PDO|null $pdo Optional connection (e.g. when inside a transaction)
      */
     public static function getById(int $id, ?\PDO $pdo = null): ?array
     {
@@ -166,7 +166,7 @@ class VmInstance
     /**
      * Paginated VM instances for a specific owner user UUID.
      *
-     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, mixed>
+     * // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, mixed>
      */
     public static function getByUserUuid(string $userUuid, int $page = 1, int $limit = 25, ?string $search = null): array
     {
@@ -260,7 +260,7 @@ class VmInstance
     }
 
     /**
-     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam \PDO|null $pdo Optional connection (e.g. when inside a transaction)
+     * // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam \PDO|null $pdo Optional connection (e.g. when inside a transaction)
      */
     public static function updateStatus(int $id, string $status, ?\PDO $pdo = null): bool
     {
@@ -276,7 +276,7 @@ class VmInstance
     }
 
     /**
-     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam \PDO|null $pdo Optional connection (e.g. when inside a transaction)
+     * // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam \PDO|null $pdo Optional connection (e.g. when inside a transaction)
      */
     public static function create(array $data, ?\PDO $pdo = null): ?array
     {
@@ -331,7 +331,7 @@ class VmInstance
      * Allowed: hostname, notes, user_uuid, vm_ip_id (when set, ip_address and gateway are filled from VmIp),
      * and resource fields memory, cpus, cores, disk_gb, on_boot.
      *
-     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $data
+     * // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $data
      */
     public static function update(int $id, array $data): bool
     {
