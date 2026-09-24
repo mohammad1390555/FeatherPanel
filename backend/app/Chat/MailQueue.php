@@ -25,7 +25,7 @@ class MailQueue
     private static string $table = 'featherpanel_mail_queue';
 
     /**
-     * // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int|bool New queue row id on success, true when SMTP is disabled (nothing queued), false on validation or DB failure
+     * // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int|bool New queue row id on success, true when SMTP is disabled (nothing queued), false on validation or DB failure
      */
     public static function create(array $data): int | bool
     {
