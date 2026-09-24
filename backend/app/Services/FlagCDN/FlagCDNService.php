@@ -32,7 +32,7 @@ class FlagCDNService
     /**
      * Get all country codes and names.
      *
-     * @return array<string, string> Array of country codes => country names
+     * // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<string, string> Array of country codes => country names
      */
     public static function getCountryCodes(): array
     {
@@ -75,11 +75,11 @@ class FlagCDNService
     /**
      * Get flag image URL for a country code.
      *
-     * @param string $countryCode ISO 3166-1 alpha-2 country code (e.g., 'us', 'ua')
-     * @param int $width Width of the flag in pixels (default: 16)
-     * @param int $height Height of the flag in pixels (default: 12)
+     * // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $countryCode ISO 3166-1 alpha-2 country code (e.g., 'us', 'ua')
+     * // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $width Width of the flag in pixels (default: 16)
+     * // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $height Height of the flag in pixels (default: 12)
      *
-     * @return string Flag image URL
+     * // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string Flag image URL
      */
     public static function getFlagUrl(string $countryCode, int $width = 16, int $height = 12): string
     {
@@ -91,9 +91,9 @@ class FlagCDNService
     /**
      * Validate if a country code exists.
      *
-     * @param string $countryCode ISO 3166-1 alpha-2 country code
+     * // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $countryCode ISO 3166-1 alpha-2 country code
      *
-     * @return bool True if the country code is valid
+     * // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if the country code is valid
      */
     public static function isValidCountryCode(string $countryCode): bool
     {
@@ -105,9 +105,9 @@ class FlagCDNService
     /**
      * Get country name by code.
      *
-     * @param string $countryCode ISO 3166-1 alpha-2 country code
+     * // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $countryCode ISO 3166-1 alpha-2 country code
      *
-     * @return string|null Country name or null if not found
+     * // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string|null Country name or null if not found
      */
     public static function getCountryName(string $countryCode): ?string
     {
