@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -17,7 +17,7 @@ import { useState, useCallback } from 'react';
 import axios from 'axios';
 import { toast } from 'sonner';
 
-export interface CloudSummary {
+export export interface
     cloud: {
         id: number;
         cloud_name: string;
@@ -35,7 +35,7 @@ export interface CloudSummary {
     };
 }
 
-export interface CreditsData {
+export export interface
     total_credits: number;
     member_credits: Array<{
         user_uuid: string;
@@ -46,7 +46,7 @@ export interface CreditsData {
     member_count: number;
 }
 
-export interface TeamData {
+export export interface
     team: {
         id: number;
         uuid: string;
@@ -58,7 +58,7 @@ export interface TeamData {
     };
 }
 
-export interface ProductPurchase {
+export export interface
     access_id: number;
     user_uuid: string;
     username: string;
@@ -73,7 +73,7 @@ export interface ProductPurchase {
     payment_reference?: string;
 }
 
-export interface ProductsData {
+export export interface
     purchases: ProductPurchase[];
     pagination: {
         page: number;

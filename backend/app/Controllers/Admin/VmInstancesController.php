@@ -790,7 +790,7 @@ class VmInstancesController
             if ($vmType === 'qemu') {
                 $curCfgQemu = $client->getVmConfig($node, (int) $instance['vmid'], 'qemu');
                 if ($curCfgQemu['ok'] && is_array($curCfgQemu['config'] ?? null)) {
-                    /** @var array<string, mixed> $curQemuConfigTmp */
+                    /** // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array<string, mixed> $curQemuConfigTmp */
                     $curQemuConfigTmp = $curCfgQemu['config'];
                     $curQemuConfig = $curQemuConfigTmp;
                 }
@@ -935,7 +935,7 @@ class VmInstancesController
                     } elseif ($efiVolRef !== null && $efiVolRef !== '') {
                         $cfgAfter = $client->getVmConfig($node, (int) $instance['vmid'], 'qemu');
                         if ($cfgAfter['ok'] && is_array($cfgAfter['config'] ?? null)) {
-                            /** @var array<string, mixed> $cfgArrAfter */
+                            /** // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array<string, mixed> $cfgArrAfter */
                             $cfgArrAfter = $cfgAfter['config'];
                             $unusedKey = null;
                             foreach ($cfgArrAfter as $cfgKey => $value) {
@@ -983,7 +983,7 @@ class VmInstancesController
                     } elseif ($tpmVolRef !== null && $tpmVolRef !== '') {
                         $cfgAfter = $client->getVmConfig($node, (int) $instance['vmid'], 'qemu');
                         if ($cfgAfter['ok'] && is_array($cfgAfter['config'] ?? null)) {
-                            /** @var array<string, mixed> $cfgArrAfter */
+                            /** // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array<string, mixed> $cfgArrAfter */
                             $cfgArrAfter = $cfgAfter['config'];
                             $unusedKey = null;
                             foreach ($cfgArrAfter as $cfgKey => $value) {
@@ -1572,7 +1572,7 @@ class VmInstancesController
         if (!$cfg['ok'] || !is_array($cfg['config'] ?? null)) {
             return ApiResponse::error('Failed to fetch config', 'PROXMOX_ERROR', 503);
         }
-        /** @var array<string, mixed> $curConfig */
+        /** // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array<string, mixed> $curConfig */
         $curConfig = $cfg['config'];
 
         $protectedKeys = [];
@@ -1630,7 +1630,7 @@ class VmInstancesController
         if ($volRef !== null && $volRef !== '') {
             $cfg2 = $client->getVmConfig($node, (int) $instance['vmid'], 'qemu');
             if ($cfg2['ok'] && is_array($cfg2['config'] ?? null)) {
-                /** @var array<string, mixed> $cfgArr2 */
+                /** // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array<string, mixed> $cfgArr2 */
                 $cfgArr2 = $cfg2['config'];
                 $unusedKey = null;
                 foreach ($cfgArr2 as $cfgKey => $value) {
