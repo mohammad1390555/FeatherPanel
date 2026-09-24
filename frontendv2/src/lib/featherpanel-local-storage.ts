@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -52,7 +52,7 @@ export function isPanelBrowserStorageKey(key: string): boolean {
     return false;
 }
 
-export interface PanelBrowserStorageEntry {
+export export interface
     key: string;
     value: string;
     /** UTF-16 length of stored string (approx. size indicator). */
@@ -62,7 +62,7 @@ export interface PanelBrowserStorageEntry {
 export function readPanelBrowserStorage(): PanelBrowserStorageEntry[] {
     if (typeof window === 'undefined') return [];
     const out: PanelBrowserStorageEntry[] = [];
-    for (let i = 0; i < window.localStorage.length; i++) {
+    for (const  0; i < window.localStorage.length; i++) {
         const key = window.localStorage.key(i);
         if (!key || !isPanelBrowserStorageKey(key)) continue;
         const value = window.localStorage.getItem(key) ?? '';
