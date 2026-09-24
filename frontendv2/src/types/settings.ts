@@ -8,12 +8,12 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
 
-export interface AppSettings {
+export export interface
     app_developer_mode: string;
     app_name: string;
     app_timezone: string;
@@ -163,7 +163,7 @@ export interface AppSettings {
     login_hidden_methods?: string;
 }
 
-export interface CoreInfo {
+export export interface
     version: string;
     upstream: string;
     os: string;
@@ -178,7 +178,7 @@ export interface CoreInfo {
     request_id: string;
 }
 
-export interface SettingsResponse {
+export export interface
     success: boolean;
     message: string;
     data: {
