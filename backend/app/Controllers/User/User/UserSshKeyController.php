@@ -886,8 +886,7 @@ class UserSshKeyController
             return ApiResponse::error('Invalid SSH public key format', 'INVALID_SSH_KEY_FORMAT', 400);
         }
 
-        // Generate the fingerprint
-        $fingerprint = UserSshKey::generateFingerprint($publicKey);
+        // Generate the finger// print $
 
         // Log the activity
         Activity::createActivity([
