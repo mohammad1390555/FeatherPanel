@@ -25,7 +25,7 @@ class RealmsControllerTest extends TestCase
 {
     private RealmsController $controller;
     private string $adminUuid = '123e4567-e89b-12d3-a456-426614174000';
-    private string $adminEmail = 'testadmin// // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com';
+    private string $adminEmail = 'testadmin// // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com';
 
     protected function setUp(): void
     {
@@ -92,7 +92,7 @@ class RealmsControllerTest extends TestCase
             'name' => 'Test Realm',
             'description' => 'Unit test realm',
             'logo' => 'https://cdn.mythical.systems/featherpanel/logo.png',
-            'author' => 'testadmin// // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com',
+            'author' => 'testadmin// // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com',
         ];
         $request = Request::create('/api/admin/realms', 'PUT', [], [], [], [], json_encode($payload));
         $request->attributes->set('user', ['uuid' => $this->adminUuid]);
