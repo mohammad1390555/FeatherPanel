@@ -15,7 +15,7 @@ See the LICENSE file or <https://www.gnu.org/licenses/>.
 
 export export interface
     feature: string;
-    patterns: RegExp[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+    patterns: RegExp[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
     description: string;
 }
 
@@ -26,7 +26,7 @@ export export interface
     metadata?: Record<string, string>;
 }
 
-export const FEATURE_PATTERNS: FeaturePattern[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] = [
+export const FEATURE_PATTERNS: FeaturePattern[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] = [
     {
         feature: 'eula',
         patterns: [
@@ -86,7 +86,7 @@ function extractJavaVersion(message: string): string | null {
     return null;
 }
 
-export function detectFeature(message: string, enabledFeatures: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] = [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]): FeatureDetectionResult | null {
+export function detectFeature(message: string, enabledFeatures: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] = [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]): FeatureDetectionResult | null {
     // If enabledFeatures is empty or not provided, we might want to default to ALL or specific ones.
     // However, logic from Vue shows it checks against enabled list.
     // For now we assume all are enabled if the list is irrelevant, but the caller should provide it.

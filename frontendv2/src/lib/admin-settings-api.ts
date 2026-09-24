@@ -30,37 +30,37 @@ export export interface
 export interface TextSetting extends BaseSetting {
     type: 'text';
     value: string;
-    options: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+    options: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
 }
 
 export interface SelectSetting extends BaseSetting {
     type: 'select';
     value: string;
-    options: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+    options: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
 }
 
 export interface TextareaSetting extends BaseSetting {
     type: 'textarea';
     value: string;
-    options: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+    options: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
 }
 
 export interface ToggleSetting extends BaseSetting {
     type: 'toggle';
     value: boolean; // API might return "true"/"false" strings sometimes, but let's try to stick to boolean or handle conversion
-    options: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+    options: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
 }
 
 export interface NumberSetting extends BaseSetting {
     type: 'number';
     value: number;
-    options: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+    options: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
 }
 
 export interface PasswordSetting extends BaseSetting {
     type: 'password';
     value: string;
-    options: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+    options: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
     sensitive: true;
 }
 
@@ -71,7 +71,7 @@ export export interface
     name: string;
     description: string;
     icon: string;
-    settings: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+    settings: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
 }
 
 export export interface

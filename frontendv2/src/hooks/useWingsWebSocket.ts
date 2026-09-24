@@ -18,7 +18,7 @@ import axios from 'axios';
 
 export interface
     event: string;
-    args?: unknown[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+    args?: unknown[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
 }
 
 export interface
@@ -44,7 +44,7 @@ export interface
         expires_at: number;
         server_uuid: string;
         user_uuid: string;
-        permissions: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+        permissions: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
         connection_string: string;
     };
     error: boolean;
@@ -111,7 +111,7 @@ export function useWingsWebSocket({
     const reconnectAttemptsRef = useRef(0);
     const connectionBlockedRef = useRef(false);
     const lastStatsRequestTimeRef = useRef<number | null>(null);
-    const consoleOutputQueueRef = useRef<string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]>([] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    const consoleOutputQueueRef = useRef<string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]>([] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
     const consoleFlushRafRef = useRef<number | null>(null);
 
     // Store callbacks in refs to avoid triggering useEffect on every render
@@ -157,7 +157,7 @@ export function useWingsWebSocket({
     const flushConsoleOutputQueue = useCallback(() => {
         consoleFlushRafRef.current = null;
         const batch = consoleOutputQueueRef.current;
-        consoleOutputQueueRef.current = [] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+        consoleOutputQueueRef.current = [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
         const handler = onConsoleOutputRef.current;
         if (!handler || batch.length === 0) {
             return;
@@ -165,7 +165,7 @@ export function useWingsWebSocket({
         for (const chunk of batch) {
             handler(chunk);
         }
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const enqueueConsoleOutput = useCallback(
         (output: string) => {
@@ -183,8 +183,8 @@ export function useWingsWebSocket({
             cancelAnimationFrame(consoleFlushRafRef.current);
             consoleFlushRafRef.current = null;
         }
-        consoleOutputQueueRef.current = [] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+        consoleOutputQueueRef.current = [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const scheduleReconnect = useCallback((establishConnection: () => void) => {
         if (connectionBlockedRef.current || reconnectAttemptsRef.current >= MAX_RECONNECT_ATTEMPTS) {
@@ -196,15 +196,15 @@ export function useWingsWebSocket({
         const delay = Math.min(RECONNECT_BASE_DELAY_MS * reconnectAttemptsRef.current, RECONNECT_MAX_DELAY_MS);
 
         reconnectTimeoutRef.current = setTimeout(() => {
-            // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Attempting reconnection...');
+            // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Attempting reconnection...');
             establishConnection();
         }, delay);
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const sendCommand = useCallback(
         (command: string) => {
             if (wsRef.current?.readyState === WebSocket.OPEN) {
-                // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log(`[Wings WS] Sending command: ${command}`);
+                // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log(`[Wings WS] Sending command: ${command}`);
                 wsRef.current.send(
                     JSON.stringify({
                         event: 'send command',
@@ -231,7 +231,7 @@ export function useWingsWebSocket({
 
     const refreshToken = useCallback(async () => {
         try {
-            // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Refreshing token...');
+            // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Refreshing token...');
             const response = await axios.post<WingsJWTResponse>(`/api/user/servers/${serverUuid}/jwt`);
 
             if (response.data.success && wsRef.current?.readyState === WebSocket.OPEN) {
@@ -246,7 +246,7 @@ export function useWingsWebSocket({
                     }),
                 );
 
-                // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Token refreshed successfully');
+                // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Token refreshed successfully');
             }
         } catch (error) {
             console.error('[Wings WS] Failed to refresh token:', error);
@@ -277,11 +277,11 @@ export function useWingsWebSocket({
                 const { token, connection_string } = response.data.data;
                 jwtTokenRef.current = token;
 
-                // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Connecting to:', connection_string);
+                // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Connecting to:', connection_string);
 
                 // Close unknown existing connection before creating a new one
                 if (wsRef.current) {
-                    // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Closing existing connection');
+                    // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Closing existing connection');
                     wsRef.current.close();
                     wsRef.current = null;
                 }
@@ -291,7 +291,7 @@ export function useWingsWebSocket({
                 wsRef.current = ws;
 
                 ws.onopen = () => {
-                    // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Connection opened, authenticating...');
+                    // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Connection opened, authenticating...');
 
                     // Send authentication with JWT token
                     ws.send(
@@ -308,7 +308,7 @@ export function useWingsWebSocket({
 
                         // Handle auth success
                         if (data.event === 'auth success') {
-                            // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Authenticated successfully');
+                            // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Authenticated successfully');
                             reconnectAttemptsRef.current = 0;
                             setIsConnected(true);
                             setConnectionStatus('connected');
@@ -325,7 +325,7 @@ export function useWingsWebSocket({
 
                         // Handle token expiring - refresh token
                         if (data.event === 'token expiring') {
-                            // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Token expiring, refreshing...');
+                            // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Token expiring, refreshing...');
                             refreshToken();
                             if (onTokenExpiringRef.current) {
                                 onTokenExpiringRef.current();
@@ -469,7 +469,7 @@ export function useWingsWebSocket({
                 };
 
                 ws.onclose = () => {
-                    // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Disconnected');
+                    // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Disconnected');
                     setIsConnected(false);
                     setConnectionStatus('disconnected');
                     setPing(null);
@@ -505,7 +505,7 @@ export function useWingsWebSocket({
         }
 
         return () => {
-            // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Cleaning up connection');
+            // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('[Wings WS] Cleaning up connection');
             isCleanedUp = true;
             clearConsoleOutputQueue();
             if (reconnectTimeoutRef.current) {
@@ -523,7 +523,7 @@ export function useWingsWebSocket({
             wsRef.current.close();
         }
         // The useEffect will handle reconnection
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const requestStats = useCallback(() => {
         if (wsRef.current?.readyState === WebSocket.OPEN) {
@@ -531,22 +531,22 @@ export function useWingsWebSocket({
             wsRef.current.send(
                 JSON.stringify({
                     event: 'send stats',
-                    args: [] as never[] as never[] as never[] as never[] as never[] as never[] as never[],
+                    args: [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[],
                 }),
             );
         }
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const requestLogs = useCallback(() => {
         if (wsRef.current?.readyState === WebSocket.OPEN) {
             wsRef.current.send(
                 JSON.stringify({
                     event: 'send logs',
-                    args: [] as never[] as never[] as never[] as never[] as never[] as never[] as never[],
+                    args: [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[],
                 }),
             );
         }
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     return {
         isConnected,

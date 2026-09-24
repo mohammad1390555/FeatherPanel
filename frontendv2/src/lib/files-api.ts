@@ -41,7 +41,7 @@ export export interface
 }
 
 export export interface
-    contents: ArchiveListEntry[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+    contents: ArchiveListEntry[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
     truncated: boolean;
 }
 
@@ -63,7 +63,7 @@ export export interface
     /** Archive file name only. */
     file: string;
     /** Paths inside the archive (files and/or directories). */
-    entries: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+    entries: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
 }
 
 export export interface
@@ -143,7 +143,7 @@ const toAbsolutePath = (root: string, path: string): string => {
 };
 
 export const filesApi = {
-    getFiles: async (uuid: string, directory: string = '/'): Promise<FileObject[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]> => {
+    getFiles: async (uuid: string, directory: string = '/'): Promise<FileObject[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]> => {
         const response = await api.get<ApiResponse<FilesResponse>>(`/user/servers/${uuid}/files`, {
             params: { path: directory },
         });
@@ -162,8 +162,8 @@ export const filesApi = {
         return filterFeatherTrashFiles(mapped);
     },
 
-    searchFiles: async (uuid: string, filters: AdvancedFileSearchFilters): Promise<FileObject[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]> => {
-        const response = await api.get<ApiResponse<FileObject[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]>>(`/user/servers/${uuid}/search-files`, {
+    searchFiles: async (uuid: string, filters: AdvancedFileSearchFilters): Promise<FileObject[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]> => {
+        const response = await api.get<ApiResponse<FileObject[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]>>(`/user/servers/${uuid}/search-files`, {
             params: filters,
         });
 
@@ -195,7 +195,7 @@ export const filesApi = {
         });
         const d = response.data.data;
         if (!d.contents) {
-            return { contents: [] as never[] as never[] as never[] as never[] as never[] as never[] as never[], truncated: Boolean(d.truncated) };
+            return { contents: [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[], truncated: Boolean(d.truncated) };
         }
         return d;
     },
@@ -232,7 +232,7 @@ export const filesApi = {
         });
     },
 
-    renameFile: async (uuid: string, root: string, files: { from: string; to: string }[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]): Promise<void> => {
+    renameFile: async (uuid: string, root: string, files: { from: string; to: string }[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]): Promise<void> => {
         await api.put(`/user/servers/${uuid}/rename`, {
             root,
             files,
@@ -262,7 +262,7 @@ export const filesApi = {
         }
     },
 
-    moveFile: async (uuid: string, root: string, files: { from: string; to: string }[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]): Promise<void> => {
+    moveFile: async (uuid: string, root: string, files: { from: string; to: string }[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]): Promise<void> => {
         if (files.length === 0) return;
 
         const sourceRoot = normalizePath(root || '/');
@@ -307,7 +307,7 @@ export const filesApi = {
         });
     },
 
-    deleteFiles: async (uuid: string, root: string, files: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[], permanent = false): Promise<void> => {
+    deleteFiles: async (uuid: string, root: string, files: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[], permanent = false): Promise<void> => {
         await api.delete(`/user/servers/${uuid}/delete-files`, {
             data: {
                 root,
@@ -317,18 +317,18 @@ export const filesApi = {
         });
     },
 
-    listTrash: async (uuid: string): Promise<{ entries: TrashEntry[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]; total_size: number }> => {
-        const res = await api.get<ApiResponse<{ entries: TrashEntry[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]; total_size: number }>>(
+    listTrash: async (uuid: string): Promise<{ entries: TrashEntry[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]; total_size: number }> => {
+        const res = await api.get<ApiResponse<{ entries: TrashEntry[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]; total_size: number }>>(
             `/user/servers/${uuid}/trash`,
         );
         return res.data.data;
     },
 
-    restoreTrash: async (uuid: string, ids: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[], overwrite = false): Promise<void> => {
+    restoreTrash: async (uuid: string, ids: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[], overwrite = false): Promise<void> => {
         await api.post(`/user/servers/${uuid}/trash/restore`, { ids, overwrite });
     },
 
-    deleteTrashEntries: async (uuid: string, ids: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]): Promise<void> => {
+    deleteTrashEntries: async (uuid: string, ids: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]): Promise<void> => {
         await api.post(`/user/servers/${uuid}/trash/delete`, { ids });
     },
 
@@ -346,7 +346,7 @@ export const filesApi = {
     compressFiles: async (
         uuid: string,
         root: string,
-        files: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[],
+        files: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[],
         name?: string,
         extension: string = 'tar.gz',
     ): Promise<void> => {
@@ -370,7 +370,7 @@ export const filesApi = {
         root: string,
         file: string,
         destination: string,
-        entries: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[],
+        entries: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[],
     ): Promise<void> => {
         await api.post(`/user/servers/${uuid}/extract-archive-selection`, {
             root,
@@ -380,7 +380,7 @@ export const filesApi = {
         });
     },
 
-    changePermissions: async (uuid: string, root: string, files: { file: string; mode: string }[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]): Promise<void> => {
+    changePermissions: async (uuid: string, root: string, files: { file: string; mode: string }[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]): Promise<void> => {
         await api.post(`/user/servers/${uuid}/change-permissions`, {
             root,
             files,
@@ -397,12 +397,12 @@ export const filesApi = {
         });
     },
 
-    getPullFiles: async (uuid: string): Promise<{ Identifier: string; Progress: number }[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]> => {
+    getPullFiles: async (uuid: string): Promise<{ Identifier: string; Progress: number }[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]> => {
         const response = await api.get<{
             success: boolean;
-            data: { downloads: { Identifier: string; Progress: number }[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] };
+            data: { downloads: { Identifier: string; Progress: number }[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] };
         }>(`/user/servers/${uuid}/downloads-list`);
-        return response.data.data?.downloads || [] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+        return response.data.data?.downloads || [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
     },
 
     deletePullFile: async (uuid: string, id: string): Promise<void> => {

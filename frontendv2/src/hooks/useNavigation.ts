@@ -39,7 +39,7 @@ const normalizeSpellId = (spellId: number | string | null | undefined): number |
 
 const isSpellAllowedForPlugin = (
     spellId: number | string | null | undefined,
-    allowedOnlyOnSpells?: number[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] | null,
+    allowedOnlyOnSpells?: number[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] | null,
 ): boolean => {
     if (!allowedOnlyOnSpells || allowedOnlyOnSpells.length === 0) return true;
     const normalizedSpellId = normalizeSpellId(spellId);
@@ -88,7 +88,7 @@ export function useNavigation() {
             serverUuid?: string,
             vdsId?: string,
             spellId?: number | null,
-        ): NavigationItem[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] => {
+        ): NavigationItem[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] => {
             // Use outer serverSpellId for filtering to ensure we capture the latest value
             const currentSpellId = category === 'server' ? serverSpellId : spellId;
             return Object.entries(pluginItems)
@@ -150,7 +150,7 @@ export function useNavigation() {
                     const fullRedirect = cleanRedirect ? `${prefix}${cleanRedirect}` : fullUrl;
 
                     // Legacy-style group normalization
-                    const builtInGroups: Record<string, string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]> = {
+                    const builtInGroups: Record<string, string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]> = {
                         server: ['management', 'files', 'networking', 'automation', 'configuration'],
                         vds: ['management', 'files', 'networking', 'automation', 'configuration'],
                         admin: [

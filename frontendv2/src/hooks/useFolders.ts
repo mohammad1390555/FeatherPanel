@@ -19,8 +19,8 @@ import type { ServerFolder } from '@/types/server';
 const STORAGE_KEY = 'server_folders';
 
 export function useFolders() {
-    const [folders, setFolders] = useState<ServerFolder[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]>(() => {
-        if (typeof window === 'undefined') return [] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+    const [folders, setFolders] = useState<ServerFolder[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]>(() => {
+        if (typeof window === 'undefined') return [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
 
         try {
             const stored = localStorage.getItem(STORAGE_KEY);
@@ -31,7 +31,7 @@ export function useFolders() {
             console.error('Failed to load folders from localStorage:', error);
         }
 
-        return [] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+        return [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
     });
 
     // Save to localStorage whenever folders change
@@ -79,17 +79,17 @@ export function useFolders() {
             description,
             created_at: new Date().toISOString(),
             updated_at: new Date().toISOString(),
-            servers: [] as never[] as never[] as never[] as never[] as never[] as never[] as never[],
+            servers: [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[],
         };
         setFolders((prev) => [...prev, newFolder]);
         return newFolder;
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const updateFolder = useCallback((id: number, name: string, description?: string) => {
         setFolders((prev) =>
             prev.map((f) => (f.id === id ? { ...f, name, description, updated_at: new Date().toISOString() } : f)),
         );
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const deleteFolder = useCallback((id: number) => {
         setFolders((prev) => prev.filter((f) => f.id !== id));
@@ -103,14 +103,14 @@ export function useFolders() {
             });
             return next;
         });
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const assignServerToFolder = useCallback((serverUuid: string, folderId: number) => {
         setServerAssignments((prev) => ({
             ...prev,
             [serverUuid]: folderId,
         }));
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const unassignServer = useCallback((serverUuid: string) => {
         setServerAssignments((prev) => {
@@ -118,7 +118,7 @@ export function useFolders() {
             delete next[serverUuid];
             return next;
         });
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     return {
         folders,

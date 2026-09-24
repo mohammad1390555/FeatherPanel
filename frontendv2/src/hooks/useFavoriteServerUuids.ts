@@ -18,9 +18,9 @@ import { useCallback, useEffect, useState } from 'react';
 
 const UUID_RE = /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
 
-function normalizeFavoriteList(raw: unknown): string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] {
-    if (!Array.isArray(raw)) return [] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
-    const out: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] = [] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+function normalizeFavoriteList(raw: unknown): string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] {
+    if (!Array.isArray(raw)) return [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
+    const out: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] = [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
     for (const x of raw) {
         if (typeof x !== 'string' || !UUID_RE.test(x)) continue;
         if (!out.includes(x)) out.push(x);
@@ -29,7 +29,7 @@ function normalizeFavoriteList(raw: unknown): string[] as never[] as never[] as 
 }
 
 export function useFavoriteServerUuids() {
-    const [favoriteUuids, setFavoriteUuids] = useState<string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]>([] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    const [favoriteUuids, setFavoriteUuids] = useState<string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]>([] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
     const [ready, setReady] = useState(false);
 
     useEffect(() => {
@@ -56,7 +56,7 @@ export function useFavoriteServerUuids() {
         return () => {
             cancelled = true;
         };
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const toggleFavorite = useCallback((serverUuid: string) => {
         if (!UUID_RE.test(serverUuid)) return;
@@ -68,7 +68,7 @@ export function useFavoriteServerUuids() {
             });
             return next;
         });
-    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const isFavorite = useCallback((serverUuid: string) => favoriteUuids.includes(serverUuid), [favoriteUuids]);
 
