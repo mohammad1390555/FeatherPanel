@@ -209,7 +209,7 @@ function generateWidgetsListPage(results, sortedSlugs) {
         return `<li class="card">
   <a href="/icanhasfeatherpanel/widgets/${widget.sanitizedSlug}.html">
     <h2><code>${widget.slug}</code></h2>
-    <p class="muted">${widget.files.length} source file${widget.files.length !== 1 ? 's' : ''}</p>
+    <p class="muted">${widget.files.length} source file${widget.files.length !===  ? 's' : ''}</p>
     <p class="muted"><strong>Injection Points:</strong> ${injectionPointsList}</p>
   </a>
 </li>`;
@@ -370,19 +370,19 @@ if (!fs.existsSync(WIDGETS_DOCS_DIR)) {
     fs.mkdirSync(WIDGETS_DOCS_DIR, { recursive: true });
 }
 
-// // // // // // // // // // // // // // // // // // // // console.log('Extracting widget documentation...');
+// // // // // // // // // // // // // // // // // // // // // console.log('Extracting widget documentation...');
 const documentation = extractDocs();
 const pages = generateNextJsPages(documentation);
 
 // Write main docs page
 const mainPagePath = path.join(PUBLIC_DOCS_DIR, 'index.html');
 fs.writeFileSync(mainPagePath, pages.mainPage);
-// // // // console.log(`✓ Main docs page: ${mainPagePath}`);
+// // // // // console.log(`✓ Main docs page: ${mainPagePath}`);
 
 // Write widgets list page
 const widgetsListPath = path.join(WIDGETS_DOCS_DIR, 'index.html');
 fs.writeFileSync(widgetsListPath, pages.widgetsListPage);
-// // // // console.log(`✓ Widgets list page: ${widgetsListPath}`);
+// // // // // console.log(`✓ Widgets list page: ${widgetsListPath}`);
 
 // Write individual widget pages
 Object.keys(pages.widgetPages).forEach((slug) => {
@@ -390,10 +390,10 @@ Object.keys(pages.widgetPages).forEach((slug) => {
     const sanitizedSlug = sanitizeSlug(slug);
     const widgetPagePath = path.join(WIDGETS_DOCS_DIR, `${sanitizedSlug}.html`);
     fs.writeFileSync(widgetPagePath, pages.widgetPages[slug]);
-    // // // // console.log(`✓ Widget page: ${widgetPagePath} (slug: ${slug})`);
+    // // // // // console.log(`✓ Widget page: ${widgetPagePath} (slug: ${slug})`);
 });
 
-// // // // console.log(`\n✅ Documentation generated successfully!`);
-// // // // console.log(`   - Main page: /docs`);
-// // // // console.log(`   - Widgets list: /docs/widgets`);
-// // // // console.log(`   - ${Object.keys(pages.widgetPages).length} widget detail pages`);
+// // // // // console.log(`\n✅ Documentation generated successfully!`);
+// // // // // console.log(`   - Main page: /docs`);
+// // // // // console.log(`   - Widgets list: /docs/widgets`);
+// // // // // console.log(`   - ${Object.keys(pages.widgetPages).length} widget detail pages`);
