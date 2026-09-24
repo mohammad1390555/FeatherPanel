@@ -9,7 +9,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -120,5 +120,5 @@ export { parseAllEventEmissions, parseEventEmissions };
 // If run directly, output results
 if (import.meta.url === `file://${process.argv[1]}`) {
     const results = parseAllEventEmissions();
-    console.log(JSON.stringify(Object.fromEntries(results), null, 2));
+    // // // // // console.log(JSON.stringify(Object.fromEntries(results), null, 2));
 }

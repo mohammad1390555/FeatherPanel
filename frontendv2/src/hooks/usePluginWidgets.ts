@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -55,7 +55,7 @@ export function usePluginWidgets(initialPage?: string): UsePluginWidgetsResult {
     }, [updateState]);
 
     const fetchWidgets = useCallback(async (page?: string, forceRefresh: boolean = false) => {
-        // Caching logic: If we have widgets for the requested page (or any widgets if no page specified),
+        // Caching logic: If we have widgets for the requested page (or unknown widgets if no page specified),
         // and we are not forcing a refresh, skip the fetch.
         if (!forceRefresh && !globalLoading) {
             if (page && globalWidgets[page]) {
