@@ -8,14 +8,14 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
 
 export type PluginWidgetSizePreset = 'full' | 'half' | 'third' | 'quarter';
 
-export interface PluginWidgetSizeConfig {
+export export interface
     default?: number;
     sm?: number;
     md?: number;
@@ -23,7 +23,7 @@ export interface PluginWidgetSizeConfig {
     xl?: number;
 }
 
-export interface PluginWidgetLayoutConfig {
+export export interface
     columns?: number;
     sm?: number;
     md?: number;
@@ -33,14 +33,14 @@ export interface PluginWidgetLayoutConfig {
     colSpan?: number;
 }
 
-export interface PluginWidgetHeaderConfig {
+export export interface
     show?: boolean;
     title?: string | null;
     description?: string | null;
     icon?: string | null;
 }
 
-export interface PluginWidgetFooterConfig {
+export export interface
     show?: boolean;
     text?: string | null;
 }
@@ -48,7 +48,7 @@ export interface PluginWidgetFooterConfig {
 export type PluginWidgetCardVariant = 'default' | 'outline' | 'ghost' | 'soft';
 export type PluginWidgetCardPadding = 'none' | 'sm' | 'md' | 'lg';
 
-export interface PluginWidgetCardConfig {
+export export interface
     enabled?: boolean;
     variant?: PluginWidgetCardVariant;
     padding?: PluginWidgetCardPadding;
@@ -57,14 +57,14 @@ export interface PluginWidgetCardConfig {
     footer?: PluginWidgetFooterConfig;
 }
 
-export interface PluginWidgetBehaviorConfig {
+export export interface
     loadingMessage?: string;
     errorMessage?: string;
     retryLabel?: string;
     emptyStateMessage?: string;
 }
 
-export interface PluginWidgetIframeConfig {
+export export interface
     minHeight?: string;
     maxHeight?: string;
     sandbox?: string;
@@ -75,7 +75,7 @@ export interface PluginWidgetIframeConfig {
     ariaLabel?: string;
 }
 
-export interface PluginWidgetClassConfig {
+export export interface
     container?: string;
     card?: string;
     header?: string;
@@ -84,7 +84,7 @@ export interface PluginWidgetClassConfig {
     footer?: string;
 }
 
-export interface PluginWidget {
+export export interface
     id: string;
     plugin: string;
     pluginName: string;
@@ -107,10 +107,10 @@ export interface PluginWidget {
     useRawRendering: boolean;
 }
 
-export interface WidgetsByLocation {
-    [location: string]: PluginWidget[];
+export export interface
+    [location: string]: PluginWidget[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
 }
 
-export interface WidgetsByPage {
+export export interface
     [page: string]: WidgetsByLocation;
 }
