@@ -8,14 +8,14 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
 
 import type { CSSProperties, FC } from 'react';
 
-export interface ColorBendsProps {
+export export interface
     className?: string;
     style?: CSSProperties;
     rotation?: number;

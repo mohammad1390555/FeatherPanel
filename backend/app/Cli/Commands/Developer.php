@@ -219,7 +219,7 @@ class Developer extends App implements CommandBuilder
                         $line = fgets($stream);
                         if ($line !== false) {
                             // Display the line (strip color codes for CLI compatibility)
-                            echo $line;
+                            // echo ...
                             if (function_exists('ob_flush')) {
                                 ob_flush();
                                 flush();
@@ -252,7 +252,7 @@ class Developer extends App implements CommandBuilder
                             foreach ($read as $stream) {
                                 $line = fgets($stream);
                                 if ($line !== false) {
-                                    echo $line;
+                                    // echo ...
                                     if (function_exists('ob_flush')) {
                                         ob_flush();
                                         flush();

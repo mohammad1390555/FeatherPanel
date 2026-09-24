@@ -25,17 +25,17 @@ use App\App;
 class SsoToken
 {
     /**
-     * @var string The SSO tokens table name
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar string The SSO tokens table name
      */
     private static string $table = 'featherpanel_sso_tokens';
 
     /**
      * Create a new SSO token for a user.
      *
-     * @param string $userUuid User UUID
-     * @param int $expiresInMinutes Expiration time in minutes
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $userUuid User UUID
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $expiresInMinutes Expiration time in minutes
      *
-     * @return string|null Generated token or null on failure
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string|null Generated token or null on failure
      */
     public static function createTokenForUser(string $userUuid, int $expiresInMinutes = 5): ?string
     {
@@ -70,7 +70,7 @@ class SsoToken
     /**
      * Get a valid (not used, not expired) SSO token record by token string.
      *
-     * @return array<string,mixed>|null
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<string,mixed>|null
      */
     public static function getValidToken(string $token): ?array
     {
@@ -130,9 +130,9 @@ class SsoToken
     /**
      * Delete old SSO tokens (expired or used).
      *
-     * @param int $olderThanDays Delete tokens older than this many days (default: 7)
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $olderThanDays Delete tokens older than this many days (default: 7)
      *
-     * @return int Number of tokens deleted
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int Number of tokens deleted
      */
     public static function deleteOldTokens(int $olderThanDays = 7): int
     {

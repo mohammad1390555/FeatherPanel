@@ -139,7 +139,7 @@ $pmaPostLoadScript = $pmaPostLoadScript ?? '';
             animation: spin 0.8s linear infinite;
         }
 
-        @keyframes spin {
+        // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionkeyframes spin {
             to { transform: rotate(360deg); }
         }
 
@@ -191,7 +191,7 @@ $pmaPostLoadScript = $pmaPostLoadScript ?? '';
         }
     </style>
 </head>
-<body data-page-mode="<?php echo htmlspecialchars($pmaPageMode, ENT_QUOTES, 'UTF-8'); ?>">
+<body data-page-mode="<?php // echo ... ?>">
     <div class="shell">
         <div class="brand-block">
             <div id="app-logo-container" class="logo-wrap">
@@ -214,7 +214,7 @@ $pmaPostLoadScript = $pmaPostLoadScript ?? '';
                         <line x1="12" y1="16" x2="12.01" y2="16"></line>
                     </svg>
                     <h2 id="status-heading" class="heading error-heading" data-i18n="authError">Authentication error</h2>
-                    <p class="message"><?php echo $pmaErrorMessage; ?></p>
+                    <p class="message"><?php // echo ... ?></p>
                 <?php } else { ?>
                     <div class="spinner" role="status" aria-labelledby="status-heading"></div>
                     <h2 id="status-heading" class="heading" data-i18n="connecting">Connecting to phpMyAdmin</h2>
@@ -450,11 +450,11 @@ $pmaPostLoadScript = $pmaPostLoadScript ?? '';
 
             <?php if ($pmaRedirectUrl) { ?>
             setTimeout(function() {
-                window.location.href = <?php echo json_encode($pmaRedirectUrl, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>;
-            }, <?php echo (int) $pmaRedirectDelay; ?>);
+                window.location.href = <?php // echo ...
+            }, <?php // echo ...
             <?php } ?>
 
-            <?php echo $pmaPostLoadScript; ?>
+            <?php // echo ... ?>
         })();
     </script>
 </body>

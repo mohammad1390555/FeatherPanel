@@ -26,16 +26,16 @@ use App\SubuserPermissions;
 class Subuser
 {
     /**
-     * @var string The server subusers table name
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar string The server subusers table name
      */
     private static string $table = 'featherpanel_server_subusers';
 
     /**
      * Create a new subuser.
      *
-     * @param array $data Associative array of subuser fields
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $data Associative array of subuser fields
      *
-     * @return int|false The new subuser's ID or false on failure
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int|false The new subuser's ID or false on failure
      */
     public static function createSubuser(array $data): int | false
     {
@@ -253,15 +253,15 @@ class Subuser
     /**
      * Search subusers with pagination, filtering, and field selection.
      *
-     * @param int $page Page number (1-based)
-     * @param int $limit Number of results per page
-     * @param string $search Search term for user or server (optional)
-     * @param array $fields Fields to select (e.g. ['user_id', 'server_id']) (default: all)
-     * @param string $sortBy Field to sort by (default: 'id')
-     * @param string $sortOrder 'ASC' or 'DESC' (default: 'ASC')
-     * @param int|null $userId Filter by user ID (optional)
-     * @param int|null $serverId Filter by server ID (optional)
-     * @param string|null $permission Filter by permission (optional)
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $page Page number (1-based)
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $limit Number of results per page
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $search Search term for user or server (optional)
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $fields Fields to select (e.g. ['user_id', 'server_id']) (default: all)
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $sortBy Field to sort by (default: 'id')
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $sortOrder 'ASC' or 'DESC' (default: 'ASC')
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int|null $userId Filter by user ID (optional)
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int|null $serverId Filter by server ID (optional)
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $permission Filter by permission (optional)
      */
     public static function searchSubusers(
         int $page = 1,

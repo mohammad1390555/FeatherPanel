@@ -10,12 +10,12 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
 
-export interface ServerOwner {
+export export interface
     id: number;
     username: string;
     email: string;
@@ -24,7 +24,7 @@ export interface ServerOwner {
     last_name?: string;
 }
 
-export interface ServerAllocation {
+export export interface
     id: number;
     ip: string;
     port: number;
@@ -32,7 +32,7 @@ export interface ServerAllocation {
     ip_alias?: string;
 }
 
-export interface ServerNode {
+export export interface
     id: number;
     name: string;
     fqdn: string;
@@ -52,20 +52,20 @@ export interface ServerNode {
     location?: ServerLocation;
 }
 
-export interface ServerLocation {
+export export interface
     id: number;
     name: string;
     description: string;
     flag_code?: string;
 }
 
-export interface ServerRealm {
+export export interface
     id: number;
     name: string;
     description?: string;
 }
 
-export interface ServerSpell {
+export export interface
     id: number;
     name: string;
     description?: string;
@@ -79,7 +79,7 @@ export interface ServerSpell {
     realm_id?: number;
 }
 
-export interface Variable {
+export export interface
     id: number;
     server_id: number;
     variable_id: number;
@@ -94,7 +94,7 @@ export interface Variable {
     field_type: string;
 }
 
-export interface CustomVariable {
+export export interface
     id: number;
     server_id: number;
     user_id: number;
@@ -106,7 +106,7 @@ export interface CustomVariable {
     updated_at?: string;
 }
 
-export interface ServerStats {
+export export interface
     memory_bytes: number;
     memory_limit_bytes: number;
     cpu_absolute: number;
@@ -119,7 +119,7 @@ export interface ServerStats {
     state: 'running' | 'starting' | 'stopping' | 'stopped' | 'offline';
 }
 
-export interface Server {
+export export interface
     id: number;
     uuid: string;
     uuidShort: string;
@@ -195,7 +195,7 @@ export interface Server {
     environment?: Record<string, string>;
 }
 
-export interface ServerFolder {
+export export interface
     id: number;
     user_id: number;
     name: string;
@@ -209,7 +209,7 @@ export type ViewMode = 'folders' | 'list' | 'table' | 'compact' | 'detailed' | '
 
 export type ServerStatus = Server['status'];
 
-export interface ServerFilters {
+export export interface
     search?: string;
     status?: ServerStatus;
     node_id?: number;
@@ -218,7 +218,7 @@ export interface ServerFilters {
     folder_id?: number | null;
 }
 
-export interface ServersResponse {
+export export interface
     success: boolean;
     data: {
         servers: Server[];
@@ -233,11 +233,11 @@ export interface ServersResponse {
     message?: string;
 }
 
-export interface DatabaseFilters {
+export export interface
     search?: string;
 }
 
-export interface Database {
+export export interface
     id: number;
     server_id: number;
     database_host_id: number;
@@ -255,7 +255,7 @@ export interface Database {
     host_name?: string;
 }
 
-export interface DatabaseHost {
+export export interface
     id: number;
     name: string;
     database_type: string;
@@ -264,7 +264,7 @@ export interface DatabaseHost {
     database_port: number;
 }
 
-export interface DatabasesResponse {
+export export interface
     success: boolean;
     data: {
         data: Database[];
@@ -279,11 +279,11 @@ export interface DatabasesResponse {
     };
     message?: string;
 }
-export interface BackupFilters {
+export export interface
     search?: string;
 }
 
-export interface BackupItem {
+export export interface
     id: number;
     server_id: number;
     uuid: string;
@@ -298,7 +298,7 @@ export interface BackupItem {
     completed_at?: string;
 }
 
-export interface BackupsResponse {
+export export interface
     success: boolean;
     data: {
         data: BackupItem[];
@@ -317,7 +317,7 @@ export interface BackupsResponse {
     };
     message?: string;
 }
-export interface ImportItem {
+export export interface
     id: number;
     server_id: number;
     user: string;
@@ -336,7 +336,7 @@ export interface ImportItem {
     updated_at: string;
 }
 
-export interface ImportsResponse {
+export export interface
     success: boolean;
     data: {
         imports: ImportItem[];
@@ -344,7 +344,7 @@ export interface ImportsResponse {
     message?: string;
 }
 
-export interface AllocationItem {
+export export interface
     id: number;
     node_id: number;
     ip: string;
@@ -354,7 +354,7 @@ export interface AllocationItem {
     is_primary: boolean;
 }
 
-export interface AllocationPagination {
+export export interface
     page: number;
     limit: number;
     total: number;
@@ -365,7 +365,7 @@ export interface AllocationPagination {
     to: number;
 }
 
-export interface AllocationsResponse {
+export export interface
     success: boolean;
     data: {
         server: {
@@ -382,7 +382,7 @@ export interface AllocationsResponse {
     message?: string;
 }
 
-export interface AvailableAllocationsResponse {
+export export interface
     success: boolean;
     data: {
         allocations: Omit<AllocationItem, 'is_primary'>[];
@@ -395,7 +395,7 @@ export interface AvailableAllocationsResponse {
     message?: string;
 }
 
-export interface FirewallRule {
+export export interface
     id: number;
     created_at: string;
     updated_at: string;
@@ -407,7 +407,7 @@ export interface FirewallRule {
     protocol: 'tcp' | 'udp';
 }
 
-export interface CreateFirewallRuleRequest {
+export export interface
     remote_ip: string;
     server_port: number;
     priority?: number;
@@ -415,7 +415,7 @@ export interface CreateFirewallRuleRequest {
     protocol?: 'tcp' | 'udp';
 }
 
-export interface FirewallRulesResponse {
+export export interface
     success: boolean;
     data: {
         data: FirewallRule[];
@@ -423,7 +423,7 @@ export interface FirewallRulesResponse {
     message?: string;
 }
 
-export interface Proxy {
+export export interface
     id: number;
     server_id: number;
     domain: string;
@@ -438,7 +438,7 @@ export interface Proxy {
     updated_at: string;
 }
 
-export interface ProxyCreateRequest {
+export export interface
     domain: string;
     port: string;
     ssl: boolean;
@@ -448,7 +448,7 @@ export interface ProxyCreateRequest {
     ssl_key?: string;
 }
 
-export interface ProxiesResponse {
+export export interface
     success: boolean;
     data: {
         proxies: Proxy[];
@@ -456,7 +456,7 @@ export interface ProxiesResponse {
     message?: string;
 }
 
-export interface DnsVerifyResponse {
+export export interface
     success: boolean;
     data: {
         verified: boolean;
@@ -466,13 +466,13 @@ export interface DnsVerifyResponse {
     message?: string;
 }
 
-export interface SubdomainDomain {
+export export interface
     id: number;
     uuid: string;
     domain: string;
 }
 
-export interface SubdomainEntry {
+export export interface
     id: number;
     uuid: string;
     domain: string;
@@ -483,19 +483,19 @@ export interface SubdomainEntry {
     updated_at?: string;
 }
 
-export interface SubdomainOverview {
+export export interface
     current_total: number;
     max_allowed: number;
     domains: SubdomainDomain[];
     subdomains: SubdomainEntry[];
 }
 
-export interface SubdomainCreateRequest {
+export export interface
     domain_uuid: string;
     subdomain: string;
 }
 
-export interface Schedule {
+export export interface
     id: number;
     server_id: number;
     name: string;
@@ -514,7 +514,7 @@ export interface Schedule {
     updated_at: string;
 }
 
-export interface ScheduleCreateRequest {
+export export interface
     name: string;
     cron_minute: string;
     cron_hour: string;
@@ -528,7 +528,7 @@ export interface ScheduleCreateRequest {
 
 export type ScheduleUpdateRequest = ScheduleCreateRequest;
 
-export interface SchedulePagination {
+export export interface
     current_page: number;
     per_page: number;
     total: number;
@@ -537,7 +537,7 @@ export interface SchedulePagination {
     to: number;
 }
 
-export interface Task {
+export export interface
     id: number;
     schedule_id: number;
     sequence_id: number;
@@ -550,7 +550,7 @@ export interface Task {
     updated_at: string;
 }
 
-export interface TaskCreateRequest {
+export export interface
     action: string;
     payload: string;
     time_offset: number;
@@ -564,7 +564,7 @@ export interface TaskUpdateRequest extends TaskCreateRequest {
 export type LifecycleHookType = 'pre_start' | 'pre_stop';
 export type LifecycleTaskType = 'discord_webhook' | 'container_command' | 'http_request';
 
-export interface LifecycleHookStep {
+export export interface
     id: number;
     hook_id: number;
     sequence_id: number;
@@ -575,14 +575,14 @@ export interface LifecycleHookStep {
     updated_at?: string;
 }
 
-export interface LifecycleHook {
+export export interface
     id: number | null;
     server_id: number;
     hook_type: LifecycleHookType;
     is_active: number;
     steps: LifecycleHookStep[];
 }
-export interface Subuser {
+export export interface
     id: number;
     server_id: number;
     user_id: number;
@@ -593,7 +593,7 @@ export interface Subuser {
     updated_at: string;
 }
 
-export interface SubuserPagination {
+export export interface
     current_page: number;
     per_page: number;
     total: number;
@@ -602,7 +602,7 @@ export interface SubuserPagination {
     to: number;
 }
 
-export interface SubusersResponse {
+export export interface
     success: boolean;
     data: {
         data: Subuser[];
@@ -611,7 +611,7 @@ export interface SubusersResponse {
     message?: string;
 }
 
-export interface SubuserPermissionsResponse {
+export export interface
     success: boolean;
     data: {
         permissions: string[];
@@ -625,7 +625,7 @@ export interface SubuserPermissionsResponse {
     message?: string;
 }
 
-export interface RealmsResponse {
+export export interface
     success: boolean;
     data: {
         realms: ServerRealm[];
@@ -633,7 +633,7 @@ export interface RealmsResponse {
     message?: string;
 }
 
-export interface SpellsResponse {
+export export interface
     success: boolean;
     data: {
         spells: ServerSpell[];
@@ -641,7 +641,7 @@ export interface SpellsResponse {
     message?: string;
 }
 
-export interface SpellDetailsResponse {
+export export interface
     success: boolean;
     data: {
         spell: ServerSpell;
@@ -650,7 +650,7 @@ export interface SpellDetailsResponse {
     message?: string;
 }
 
-export interface FileObject {
+export export interface
     name: string;
     mode: string;
     mode_bits: string;
@@ -674,11 +674,11 @@ export interface FileObject {
     mime?: string;
 }
 
-export interface FilesResponse {
+export export interface
     contents: FileObject[];
 }
 
-export interface FileUploadStatus {
+export export interface
     id: string;
     name: string;
     size: number;

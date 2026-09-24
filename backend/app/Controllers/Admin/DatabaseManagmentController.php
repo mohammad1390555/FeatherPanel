@@ -191,7 +191,7 @@ class DatabaseManagmentController
                     ? $migrationName
                     : self::PLUGIN_NAMESPACE_PREFIX . $addonName . ':' . $migrationName;
 
-                $sql = @file_get_contents($path);
+                $sql = // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionfile_get_contents($path);
                 if ($sql === false) {
                     $lines[] = '⏭️  Skipped: ' . $displayName . ' (unreadable)';
                     ++$skipped;
@@ -370,7 +370,7 @@ class DatabaseManagmentController
     }
 
     /**
-     * @return array<string, string>
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<string, string>
      */
     private function getMigrationDirectories(): array
     {
@@ -402,9 +402,9 @@ class DatabaseManagmentController
     }
 
     /**
-     * @param array<string, string> $directories
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, string> $directories
      *
-     * @return array<int, array{namespace: string, path: string, name: string}>
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, array{namespace: string, path: string, name: string}>
      */
     private function collectMigrationFiles(array $directories): array
     {

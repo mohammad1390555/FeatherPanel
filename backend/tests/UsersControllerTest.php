@@ -25,7 +25,7 @@ class UsersControllerTest extends TestCase
 {
     private UsersController $controller;
     private string $adminUuid = '123e4567-e89b-12d3-a456-426614174000';
-    private string $adminEmail = 'testadmin@example.com';
+    private string $adminEmail = 'testadmin// // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com';
 
     protected function setUp(): void
     {
@@ -93,7 +93,7 @@ class UsersControllerTest extends TestCase
             'username' => 'testuser_' . uniqid(),
             'first_name' => 'Test',
             'last_name' => 'User',
-            'email' => 'testuser_' . uniqid() . '@example.com',
+            'email' => 'testuser_' . uniqid() . '// // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com',
             'password' => 'TestPassword123',
         ];
         $request = Request::create('/api/admin/users', 'PUT', [], [], [], [], json_encode($payload));

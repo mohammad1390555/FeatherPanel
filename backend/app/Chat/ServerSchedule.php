@@ -26,16 +26,16 @@ use Cron\Schedule\CrontabSchedule;
 class ServerSchedule
 {
     /**
-     * @var string The server_schedules table name
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar string The server_schedules table name
      */
     private static string $table = 'featherpanel_server_schedules';
 
     /**
      * Create a new server schedule.
      *
-     * @param array $data Associative array of schedule fields
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $data Associative array of schedule fields
      *
-     * @return int|false The new schedule's ID or false on failure
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int|false The new schedule's ID or false on failure
      */
     public static function createSchedule(array $data): int | false
     {
@@ -212,7 +212,7 @@ class ServerSchedule
      *
      * Comparison is done in UTC: PHP's `date()` is pinned to UTC by App.php
      * and `next_run_at` is persisted as a UTC literal by
-     * {@see calculateNextRunTime()}, so this query is timezone-deterministic
+     * {// // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionsee calculateNextRunTime()}, so this query is timezone-deterministic
      * regardless of the schedule's authoring zone.
      */
     public static function getDueSchedules(): array
@@ -229,15 +229,15 @@ class ServerSchedule
     /**
      * Search schedules with pagination, filtering, and field selection.
      *
-     * @param int $page Page number (1-based)
-     * @param int $limit Number of results per page
-     * @param string $search Search term for name (optional)
-     * @param array $fields Fields to select (e.g. ['name', 'is_active']) (default: all)
-     * @param string $sortBy Field to sort by (default: 'id')
-     * @param string $sortOrder 'ASC' or 'DESC' (default: 'DESC')
-     * @param int|null $serverId Filter by server ID (optional)
-     * @param bool|null $isActive Filter by active status (optional)
-     * @param bool|null $isProcessing Filter by processing status (optional)
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $page Page number (1-based)
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $limit Number of results per page
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $search Search term for name (optional)
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $fields Fields to select (e.g. ['name', 'is_active']) (default: all)
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $sortBy Field to sort by (default: 'id')
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $sortOrder 'ASC' or 'DESC' (default: 'DESC')
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int|null $serverId Filter by server ID (optional)
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool|null $isActive Filter by active status (optional)
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool|null $isProcessing Filter by processing status (optional)
      */
     public static function searchSchedules(
         int $page = 1,
@@ -555,13 +555,13 @@ class ServerSchedule
      * `next_run_at <= UTC_TIMESTAMP()` in `getDueSchedules()` is sound
      * regardless of which zone the schedule was authored in.
      *
-     * @param string $dayOfWeek Cron expression day of week component
-     * @param string $month Cron expression month component
-     * @param string $dayOfMonth Cron expression day of month component
-     * @param string $hour Cron expression hour component
-     * @param string $minute Cron expression minute component
-     * @param string|null $referenceTime Optional reference time (UTC literal) to maintain cadence
-     * @param string $timezone IANA timezone name the cron expression is authored in (default: UTC)
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $dayOfWeek Cron expression day of week component
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $month Cron expression month component
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $dayOfMonth Cron expression day of month component
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $hour Cron expression hour component
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $minute Cron expression minute component
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $referenceTime Optional reference time (UTC literal) to maintain cadence
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $timezone IANA timezone name the cron expression is authored in (default: UTC)
      */
     public static function calculateNextRunTime(string $dayOfWeek, string $month, string $dayOfMonth, string $hour, string $minute, ?string $referenceTime = null, string $timezone = 'UTC'): string
     {

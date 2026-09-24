@@ -32,9 +32,9 @@ class InstalledPlugin
     /**
      * Create a new installed plugin record.
      *
-     * @param array $data Associative array of plugin fields
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $data Associative array of plugin fields
      *
-     * @return int|false The new record's ID or false on failure
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int|false The new record's ID or false on failure
      */
     public static function createInstalledPlugin(array $data): int | false
     {
@@ -71,9 +71,9 @@ class InstalledPlugin
     /**
      * Get installed plugin by identifier.
      *
-     * @param string $identifier Plugin identifier
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $identifier Plugin identifier
      *
-     * @return array|null Plugin data or null if not found
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array|null Plugin data or null if not found
      */
     public static function getInstalledPluginByIdentifier(string $identifier): ?array
     {
@@ -91,9 +91,9 @@ class InstalledPlugin
     /**
      * Get installed plugin by ID.
      *
-     * @param int $id Plugin record ID
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $id Plugin record ID
      *
-     * @return array|null Plugin data or null if not found
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array|null Plugin data or null if not found
      */
     public static function getInstalledPluginById(int $id): ?array
     {
@@ -111,7 +111,7 @@ class InstalledPlugin
     /**
      * Get all installed plugins (not uninstalled).
      *
-     * @return array Array of installed plugins
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Array of installed plugins
      */
     public static function getAllInstalledPlugins(): array
     {
@@ -124,7 +124,7 @@ class InstalledPlugin
     /**
      * Get all previously installed plugins (including uninstalled ones).
      *
-     * @return array Array of all plugin records
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Array of all plugin records
      */
     public static function getAllPreviouslyInstalledPlugins(): array
     {
@@ -137,7 +137,7 @@ class InstalledPlugin
     /**
      * Get uninstalled plugins (for restoration suggestions).
      *
-     * @return array Array of uninstalled plugins
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Array of uninstalled plugins
      */
     public static function getUninstalledPlugins(): array
     {
@@ -150,9 +150,9 @@ class InstalledPlugin
     /**
      * Mark plugin as uninstalled.
      *
-     * @param string $identifier Plugin identifier
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $identifier Plugin identifier
      *
-     * @return bool True on success, false on failure
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function markAsUninstalled(string $identifier): bool
     {
@@ -169,9 +169,9 @@ class InstalledPlugin
     /**
      * Mark plugin as reinstalled (clear uninstalled_at).
      *
-     * @param string $identifier Plugin identifier
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $identifier Plugin identifier
      *
-     * @return bool True on success, false on failure
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function markAsReinstalled(string $identifier): bool
     {
@@ -188,10 +188,10 @@ class InstalledPlugin
     /**
      * Update installed plugin.
      *
-     * @param string $identifier Plugin identifier
-     * @param array $data Fields to update
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $identifier Plugin identifier
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $data Fields to update
      *
-     * @return bool True on success, false on failure
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function updateInstalledPlugin(string $identifier, array $data): bool
     {
@@ -225,9 +225,9 @@ class InstalledPlugin
     /**
      * Delete installed plugin record.
      *
-     * @param int $id Plugin record ID
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $id Plugin record ID
      *
-     * @return bool True on success, false on failure
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function hardDeleteInstalledPlugin(int $id): bool
     {
@@ -244,7 +244,7 @@ class InstalledPlugin
     /**
      * Get count of installed plugins.
      *
-     * @return int Count of installed plugins
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int Count of installed plugins
      */
     public static function getInstalledPluginsCount(): int
     {
@@ -257,7 +257,7 @@ class InstalledPlugin
     /**
      * Get count of uninstalled plugins.
      *
-     * @return int Count of uninstalled plugins
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int Count of uninstalled plugins
      */
     public static function getUninstalledPluginsCount(): int
     {
@@ -270,7 +270,7 @@ class InstalledPlugin
     /**
      * Get table columns information.
      *
-     * @return array Array of column information
+     * // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Array of column information
      */
     public static function getColumns(): array
     {
