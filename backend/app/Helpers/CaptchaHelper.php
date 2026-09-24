@@ -27,10 +27,10 @@ class CaptchaHelper
     /**
      * Validate a captcha response based on the configured provider.
      *
-     * @param string $token The user response token
-     * @param string $ip The user's IP address
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam string $token The user response token
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam string $ip The user's IP address
      *
-     * @return bool True if validation is successful or captcha is disabled
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn bool True if validation is successful or captcha is disabled
      */
     public static function validate(string $token, string $ip): bool
     {

@@ -27,7 +27,7 @@ class ContentAnalytics
     /**
      * Get realms overview statistics.
      *
-     * @return array Realm statistics
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn array Realm statistics
      */
     public static function getRealmsOverview(): array
     {
@@ -56,7 +56,7 @@ class ContentAnalytics
     /**
      * Get spells by realm distribution.
      *
-     * @return array Spell distribution
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn array Spell distribution
      */
     public static function getSpellsByRealm(): array
     {
@@ -86,7 +86,7 @@ class ContentAnalytics
     /**
      * Get spells overview statistics.
      *
-     * @return array Spell statistics
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn array Spell statistics
      */
     public static function getSpellsOverview(): array
     {
@@ -126,7 +126,7 @@ class ContentAnalytics
     /**
      * Get spell variable statistics.
      *
-     * @return array Variable statistics
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn array Variable statistics
      */
     public static function getSpellVariableStats(): array
     {
@@ -182,7 +182,7 @@ class ContentAnalytics
     /**
      * Get images overview statistics.
      *
-     * @return array Image statistics
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn array Image statistics
      */
     public static function getImagesOverview(): array
     {
@@ -200,7 +200,7 @@ class ContentAnalytics
     /**
      * Get redirect links overview statistics.
      *
-     * @return array Redirect link statistics
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn array Redirect link statistics
      */
     public static function getRedirectLinksOverview(): array
     {
@@ -235,7 +235,7 @@ class ContentAnalytics
     /**
      * Get mail templates overview.
      *
-     * @return array Mail template statistics
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn array Mail template statistics
      */
     public static function getMailTemplatesOverview(): array
     {
@@ -253,7 +253,7 @@ class ContentAnalytics
     /**
      * Get comprehensive content analytics dashboard.
      *
-     * @return array Complete content statistics
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn array Complete content statistics
      */
     public static function getContentDashboard(): array
     {
@@ -271,10 +271,10 @@ class ContentAnalytics
     /**
      * Check if a table exists in the current database.
      *
-     * @param \PDO $pdo Database connection
-     * @param string $tableName Table to check
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam \PDO $pdo Database connection
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam string $tableName Table to check
      *
-     * @return bool True when table exists
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn bool True when table exists
      */
     private static function tableExists(\PDO $pdo, string $tableName): bool
     {

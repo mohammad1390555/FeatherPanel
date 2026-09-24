@@ -52,9 +52,9 @@ class PlayerStatusService
      * falls back to LogParser for player names if GameQ returns empty names,
      * and caches the result in Redis.
      *
-     * @param array $server Server array with keys: uuid_short, uuid, name, status, ip, port, spell, realm, node_fqdn, node_public_ip
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam array $server Server array with keys: uuid_short, uuid, name, status, ip, port, spell, realm, node_fqdn, node_public_ip
      *
-     * @return array|null Player status data or null if the server is unsupported
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn array|null Player status data or null if the server is unsupported
      */
     public static function queryServer(array $server): ?array
     {
@@ -170,9 +170,9 @@ class PlayerStatusService
     /**
      * Get the player status for a server from cache, or trigger a fresh query on cache miss.
      *
-     * @param string $uuidShort The server's short UUID
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam string $uuidShort The server's short UUID
      *
-     * @return array|null Cached player status data or null if unavailable
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn array|null Cached player status data or null if unavailable
      */
     public static function getPlayerStatus(string $uuidShort): ?array
     {
@@ -196,9 +196,9 @@ class PlayerStatusService
     /**
      * Get the effective polling interval, clamped to [10, 300] seconds.
      *
-     * @param int|null $configured The configured polling interval in seconds, or null for default
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam int|null $configured The configured polling interval in seconds, or null for default
      *
-     * @return int Effective polling interval in seconds
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn int Effective polling interval in seconds
      */
     public static function getEffectivePollingInterval(?int $configured): int
     {
@@ -212,9 +212,9 @@ class PlayerStatusService
     /**
      * Build the Redis cache key for a server's player status.
      *
-     * @param string $uuidShort The server's short UUID
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam string $uuidShort The server's short UUID
      *
-     * @return string Cache key in the format `player_status:{uuidShort}`
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn string Cache key in the format `player_status:{uuidShort}`
      */
     public static function buildCacheKey(string $uuidShort): string
     {
@@ -226,9 +226,9 @@ class PlayerStatusService
      *
      * The TTL is 2 × the polling interval, converted from seconds to minutes.
      *
-     * @param int $pollingInterval The effective polling interval in seconds
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam int $pollingInterval The effective polling interval in seconds
      *
-     * @return int Cache TTL in minutes
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn int Cache TTL in minutes
      */
     public static function getCacheTtl(int $pollingInterval): int
     {
@@ -241,9 +241,9 @@ class PlayerStatusService
     /**
      * Fetch server data from the database by uuidShort.
      *
-     * @param string $uuidShort The server's short UUID
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam string $uuidShort The server's short UUID
      *
-     * @return array|null Server data array or null if not found
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn array|null Server data array or null if not found
      */
     private static function fetchServerData(string $uuidShort): ?array
     {
@@ -361,10 +361,10 @@ class PlayerStatusService
      *
      * If the allocation IP is 0.0.0.0 (wildcard), use the node's public IP or FQDN instead.
      *
-     * @param string $allocationIp The allocation IP from the database
-     * @param array $server The server data array (may contain node_fqdn, node_public_ip)
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam string $allocationIp The allocation IP from the database
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam array $server The server data array (may contain node_fqdn, node_public_ip)
      *
-     * @return string The resolved IP/hostname to query
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn string The resolved IP/hostname to query
      */
     private static function resolveQueryIp(string $allocationIp, array $server): string
     {

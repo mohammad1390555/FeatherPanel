@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -26,7 +26,7 @@ interface ApiResponse<T> {
     error_code: string | null;
 }
 
-interface JWTResponse {
+export interface
     token: string;
     expires_at: number;
     server_uuid: string;
@@ -35,7 +35,7 @@ interface JWTResponse {
     connection_string: string;
 }
 
-interface ServersResponse {
+export interface
     servers: Server[];
     pagination: {
         current_page: number;

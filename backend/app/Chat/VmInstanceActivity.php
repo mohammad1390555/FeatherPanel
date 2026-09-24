@@ -31,9 +31,9 @@ class VmInstanceActivity
     /**
      * Create a new VM instance activity log.
      *
-     * @param array $data vm_instance_id, vm_node_id, event; optional: user_id, metadata, ip
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam array $data vm_instance_id, vm_node_id, event; optional: user_id, metadata, ip
      *
-     * @return int|false The new activity's ID or false on failure
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn int|false The new activity's ID or false on failure
      */
     public static function createActivity(array $data): int | false
     {
@@ -88,10 +88,10 @@ class VmInstanceActivity
     /**
      * Get activities by VM instance ID.
      *
-     * @param int $vmInstanceId VM instance ID
-     * @param int $limit Maximum number of results
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam int $vmInstanceId VM instance ID
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam int $limit Maximum number of results
      *
-     * @return array<int, array<string, mixed>>
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn array<int, array<string, mixed>>
      */
     public static function getActivitiesByVmInstanceId(int $vmInstanceId, int $limit = 100): array
     {
@@ -110,7 +110,7 @@ class VmInstanceActivity
     /**
      * Get activities with pagination (and optional search), for a single VM instance.
      *
-     * @return array{data: array<int, array<string, mixed>>, pagination: array{current_page: int, per_page: int, total: int, last_page: int, from: int, to: int}}
+     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn array{data: array<int, array<string, mixed>>, pagination: array{current_page: int, per_page: int, total: int, last_page: int, from: int, to: int}}
      */
     public static function getActivitiesWithPagination(
         int $page = 1,
