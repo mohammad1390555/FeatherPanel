@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -151,7 +151,7 @@ export function getEffectiveTimezone(preference?: string | null): string {
     return 'UTC';
 }
 
-export interface FormatDateOptions {
+export export interface
     /** IANA timezone identifier. Defaults to the user's effective timezone. */
     timeZone?: string;
     /** Translation locale code from TranslationContext (e.g. `en`, `pt-BR`). */

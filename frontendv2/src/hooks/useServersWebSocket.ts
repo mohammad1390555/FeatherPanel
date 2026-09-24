@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -18,7 +18,7 @@ import axios from 'axios';
 import { serversApi } from '@/lib/servers-api';
 
 // WebSocket message types
-interface WebSocketMessage {
+export interface
     event: string;
     data?: string;
     args?: string[];
@@ -26,7 +26,7 @@ interface WebSocketMessage {
 }
 
 // Server stats from Wings
-interface WingsStats {
+export interface
     memory_bytes: number;
     memory_limit_bytes: number;
     cpu_absolute: number;
@@ -42,7 +42,7 @@ interface WingsStats {
 }
 
 // Connection state for each server
-interface ServerConnectionState {
+export interface
     connectionStatus: 'disconnected' | 'connecting' | 'connected';
     wingsStatus: 'unknown' | 'healthy' | 'error';
     websocket: WebSocket | null;
@@ -56,7 +56,7 @@ interface ServerConnectionState {
 }
 
 // Live server data
-export interface ServerLiveData {
+export export interface
     status: string | null;
     stats: {
         cpuUsage: number; // Percentage
@@ -174,7 +174,7 @@ export function useServersWebSocket() {
         const state = connectionsRef.current.get(serverUuid);
         if (!state) return;
 
-        // Clear any existing timer
+        // Clear unknown existing timer
         if (state.tokenExpirationTimer) {
             clearTimeout(state.tokenExpirationTimer);
             state.tokenExpirationTimer = null;
@@ -387,7 +387,7 @@ export function useServersWebSocket() {
                 return;
             }
 
-            let state = connectionsRef.current.get(serverUuid);
+            const  connectionsRef.current.get(serverUuid);
 
             if (!state) {
                 state = {
@@ -490,7 +490,7 @@ export function useServersWebSocket() {
     const connectServers = useCallback(
         async (serverUuids: string[]) => {
             const CONCURRENCY = 5;
-            for (let i = 0; i < serverUuids.length; i += CONCURRENCY) {
+            for (const  0; i < serverUuids.length; i += CONCURRENCY) {
                 const batch = serverUuids.slice(i, i + CONCURRENCY);
                 await Promise.all(batch.map((uuid) => connectServer(uuid)));
             }

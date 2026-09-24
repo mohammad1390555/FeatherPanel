@@ -478,7 +478,7 @@ class VmUserInstanceController
         if (!$curCfg['ok'] || !is_array($curCfg['config'] ?? null)) {
             return ApiResponse::error('Failed to fetch current QEMU config', 'PROXMOX_ERROR', 503);
         }
-        /** @var array<string, mixed> $curQemuConfig */
+        /** // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array<string, mixed> $curQemuConfig */
         $curQemuConfig = $curCfg['config'];
 
         $config = [];
@@ -519,7 +519,7 @@ class VmUserInstanceController
             if ($efiVolRef !== null && $efiVolRef !== '') {
                 $cfgAfter = $client->getVmConfig($node, $vmid, 'qemu');
                 if ($cfgAfter['ok'] && is_array($cfgAfter['config'] ?? null)) {
-                    /** @var array<string, mixed> $cfgArrAfter */
+                    /** // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array<string, mixed> $cfgArrAfter */
                     $cfgArrAfter = $cfgAfter['config'];
                     $unusedKey = null;
                     foreach ($cfgArrAfter as $cfgKey => $value) {
@@ -571,7 +571,7 @@ class VmUserInstanceController
             if ($tpmVolRef !== null && $tpmVolRef !== '') {
                 $cfgAfter = $client->getVmConfig($node, $vmid, 'qemu');
                 if ($cfgAfter['ok'] && is_array($cfgAfter['config'] ?? null)) {
-                    /** @var array<string, mixed> $cfgArrAfter */
+                    /** // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array<string, mixed> $cfgArrAfter */
                     $cfgArrAfter = $cfgAfter['config'];
                     $unusedKey = null;
                     foreach ($cfgArrAfter as $cfgKey => $value) {
@@ -1107,7 +1107,7 @@ class VmUserInstanceController
             return ApiResponse::error('Failed to fetch VM config', 'PROXMOX_ERROR', 503);
         }
 
-        /** @var array<string, mixed> $cfg */
+        /** // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array<string, mixed> $cfg */
         $cfg = $cfgRes['config'];
 
         $mountedIso = null;
@@ -1267,7 +1267,7 @@ class VmUserInstanceController
 
         $tmpDir = sys_get_temp_dir() . '/featherpanel-iso-upload';
         if (!is_dir($tmpDir)) {
-            @mkdir($tmpDir, 0700, true);
+            // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionmkdir($tmpDir, 0700, true);
         }
         $tmpPath = $tmpDir . '/' . bin2hex(random_bytes(8)) . '-' . basename($originalName);
 
@@ -1360,7 +1360,7 @@ class VmUserInstanceController
             );
         } finally {
             if (is_file($tmpPath)) {
-                @unlink($tmpPath);
+                // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionunlink($tmpPath);
             }
         }
     }
@@ -1560,7 +1560,7 @@ class VmUserInstanceController
             return ApiResponse::error('Failed to fetch VM config', 'PROXMOX_ERROR', 503);
         }
 
-        /** @var array<string, mixed> $cfg */
+        /** // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array<string, mixed> $cfg */
         $cfg = $cfgRes['config'];
 
         // Preserve cloud-init config values so we can force Proxmox to regenerate

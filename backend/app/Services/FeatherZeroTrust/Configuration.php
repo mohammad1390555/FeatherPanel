@@ -40,7 +40,7 @@ class Configuration
     /**
      * Get all configuration with defaults.
      *
-     * @return array<string, mixed> Configuration array
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<string, mixed> Configuration array
      */
     public function getAll(): array
     {
@@ -156,7 +156,7 @@ class Configuration
                 'base64_decode(',
                 'gzinflate(',
                 'whatsapp',
-                '@whastapp',
+                '// // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionwhastapp',
                 'baileys',
             ]),
             'malicious_processes' => $this->getJsonSetting('featherzerotrust.malicious_processes', [
@@ -247,9 +247,9 @@ class Configuration
     /**
      * Update configuration.
      *
-     * @param array<string, mixed> $config Configuration to update
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $config Configuration to update
      *
-     * @return bool Success status
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool Success status
      */
     public function update(array $config): bool
     {
@@ -284,10 +284,10 @@ class Configuration
     /**
      * Get a JSON setting and decode it.
      *
-     * @param string $key Setting key
-     * @param array<mixed> $default Default value
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $key Setting key
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<mixed> $default Default value
      *
-     * @return array<mixed> Decoded JSON array
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<mixed> Decoded JSON array
      */
     private function getJsonSetting(string $key, array $default): array
     {

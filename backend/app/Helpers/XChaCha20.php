@@ -22,11 +22,11 @@ class XChaCha20
     /**
      * Encrypt the data specified.
      *
-     * @param string|array $data The data that should be encrypted!
-     * @param string $key The key you want to encrypt the data with!
-     * @param bool $isKeyHashed Is the key hashed in base64?
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|array $data The data that should be encrypted!
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $key The key you want to encrypt the data with!
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool $isKeyHashed Is the key hashed in base64?
      *
-     * @return string|array The encrypted data!
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string|array The encrypted data!
      */
     public static function encrypt(string | array $data, string $key, bool $isKeyHashed = true): string | array
     {
@@ -42,9 +42,9 @@ class XChaCha20
     /**
      * Decrypt the data specified.
      *
-     * @param string|array $data the data that should be decrypted!
-     * @param string $key The key you want to decrypt the data with!
-     * @param bool $isKeyHashed Is the key hashed in base64?
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|array $data the data that should be decrypted!
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $key The key you want to decrypt the data with!
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool $isKeyHashed Is the key hashed in base64?
      */
     public static function decrypt(string | array $data, string $key, bool $isKeyHashed = true): string | array
     {
@@ -61,8 +61,8 @@ class XChaCha20
     /**
      * Check if the encryption key is strong.
      *
-     * @param string $key The key
-     * @param bool $isKeyHashed Is the key hashed in base64?
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $key The key
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool $isKeyHashed Is the key hashed in base64?
      */
     public static function checkIfStrongKey(string $key, bool $isKeyHashed): bool
     {
@@ -76,9 +76,9 @@ class XChaCha20
     /**
      * Generate a strong key.
      *
-     * @param bool $hash Should we hash the key in order so you can use it in the config?
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool $hash Should we hash the key in order so you can use it in the config?
      *
-     * @return string The encryption key!
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string The encryption key!
      */
     public static function generateStrongKey(bool $hash): string
     {

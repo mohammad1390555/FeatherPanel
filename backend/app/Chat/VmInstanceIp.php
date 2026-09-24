@@ -22,7 +22,7 @@ class VmInstanceIp
     private static string $table = 'featherpanel_vm_instance_ips';
 
     /**
-     * @return array<int, array<string, mixed>>
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, array<string, mixed>>
      */
     public static function getByInstanceId(int $instanceId): array
     {
@@ -45,7 +45,7 @@ class VmInstanceIp
     }
 
     /**
-     * @param array<int, array<string, mixed>> $assignments
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<int, array<string, mixed>> $assignments
      */
     public static function syncForInstance(int $instanceId, array $assignments, ?\PDO $pdo = null): bool
     {

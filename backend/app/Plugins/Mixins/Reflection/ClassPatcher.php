@@ -28,24 +28,24 @@ use ReflectionClass;
  */
 class ClassPatcher
 {
-    /** @var array Cached reflection classes */
+    /** // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array Cached reflection classes */
     private static array $reflectionCache = [];
 
-    /** @var array Method patches by class and method name */
+    /** // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array Method patches by class and method name */
     private static array $methodPatches = [];
 
-    /** @var array Class proxies by class name */
+    /** // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array Class proxies by class name */
     private static array $classProxies = [];
 
-    /** @var array Property overrides by class and property name */
+    /** // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array Property overrides by class and property name */
     private static array $propertyOverrides = [];
 
     /**
      * Get a ReflectionClass instance for a class.
      *
-     * @param string|object $class Class name or object instance
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|object $class Class name or object instance
      *
-     * @return \ReflectionClass The reflection class
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn \ReflectionClass The reflection class
      */
     public static function getReflectionClass($class): \ReflectionClass
     {
@@ -64,12 +64,12 @@ class ClassPatcher
      * This method allows you to override, extend, or modify the behavior of a method
      * at runtime without changing the original class definition.
      *
-     * @param string $className The class name
-     * @param string $methodName The method name
-     * @param \Closure $patchCallback The patch callback
-     * @param string $patchType The patch type: 'before', 'after', 'around', or 'replace'
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $className The class name
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $methodName The method name
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam \Closure $patchCallback The patch callback
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $patchType The patch type: 'before', 'after', 'around', or 'replace'
      *
-     * @return bool True if successfully patched
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if successfully patched
      */
     public static function patchMethod(string $className, string $methodName, \Closure $patchCallback, string $patchType = 'around'): bool
     {
@@ -120,11 +120,11 @@ class ClassPatcher
      *
      * The callback receives the same arguments as the original method.
      *
-     * @param string $className The class name
-     * @param string $methodName The method name
-     * @param \Closure $callback The callback to execute before the method
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $className The class name
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $methodName The method name
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam \Closure $callback The callback to execute before the method
      *
-     * @return bool True if successfully patched
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if successfully patched
      */
     public static function beforeMethod(string $className, string $methodName, \Closure $callback): bool
     {
@@ -137,11 +137,11 @@ class ClassPatcher
      * The callback receives the original method's return value as the first argument,
      * followed by the original method arguments.
      *
-     * @param string $className The class name
-     * @param string $methodName The method name
-     * @param \Closure $callback The callback to execute after the method
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $className The class name
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $methodName The method name
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam \Closure $callback The callback to execute after the method
      *
-     * @return bool True if successfully patched
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if successfully patched
      */
     public static function afterMethod(string $className, string $methodName, \Closure $callback): bool
     {
@@ -153,11 +153,11 @@ class ClassPatcher
      *
      * The callback will be used instead of the original method.
      *
-     * @param string $className The class name
-     * @param string $methodName The method name
-     * @param \Closure $callback The replacement method
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $className The class name
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $methodName The method name
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam \Closure $callback The replacement method
      *
-     * @return bool True if successfully patched
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if successfully patched
      */
     public static function replaceMethod(string $className, string $methodName, \Closure $callback): bool
     {
@@ -171,11 +171,11 @@ class ClassPatcher
      * followed by the original method arguments. The callback is responsible for
      * calling the original method if needed.
      *
-     * @param string $className The class name
-     * @param string $methodName The method name
-     * @param \Closure $callback The callback to execute around the method
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $className The class name
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $methodName The method name
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam \Closure $callback The callback to execute around the method
      *
-     * @return bool True if successfully patched
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if successfully patched
      */
     public static function aroundMethod(string $className, string $methodName, \Closure $callback): bool
     {
@@ -187,11 +187,11 @@ class ClassPatcher
      *
      * This is used internally to apply the registered patches when a method is called.
      *
-     * @param object $instance The object instance
-     * @param string $methodName The method name
-     * @param array $args The method arguments
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam object $instance The object instance
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $methodName The method name
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $args The method arguments
      *
-     * @return mixed The method return value
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn mixed The method return value
      */
     public static function executeMethod(object $instance, string $methodName, array $args)
     {
@@ -258,11 +258,11 @@ class ClassPatcher
     /**
      * Override a property value.
      *
-     * @param string $className The class name
-     * @param string $propertyName The property name
-     * @param mixed $value The new value
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $className The class name
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $propertyName The property name
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam mixed $value The new value
      *
-     * @return bool True if successfully overridden
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if successfully overridden
      */
     public static function overrideProperty(string $className, string $propertyName, $value): bool
     {
@@ -299,10 +299,10 @@ class ClassPatcher
     /**
      * Get a property value with overrides applied.
      *
-     * @param object $instance The object instance
-     * @param string $propertyName The property name
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam object $instance The object instance
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $propertyName The property name
      *
-     * @return mixed The property value
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn mixed The property value
      */
     public static function getPropertyValue(object $instance, string $propertyName)
     {
@@ -325,11 +325,11 @@ class ClassPatcher
     /**
      * Create a proxy for a class.
      *
-     * @param string $className The class name
-     * @param array $methodOverrides Method overrides
-     * @param array $propertyOverrides Property overrides
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $className The class name
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methodOverrides Method overrides
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $propertyOverrides Property overrides
      *
-     * @return string The proxy class name
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string The proxy class name
      */
     public static function createClassProxy(string $className, array $methodOverrides = [], array $propertyOverrides = []): string
     {
@@ -361,10 +361,10 @@ class ClassPatcher
     /**
      * Get a proxy instance for a class.
      *
-     * @param string $className The class name
-     * @param array $constructorArgs Constructor arguments
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $className The class name
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $constructorArgs Constructor arguments
      *
-     * @return object The proxy instance
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn object The proxy instance
      */
     public static function getProxyInstance(string $className, array $constructorArgs = []): object
     {
@@ -390,12 +390,12 @@ class ClassPatcher
     /**
      * Generate a proxy class.
      *
-     * @param \ReflectionClass $reflection The reflection class
-     * @param string $proxyClassName The proxy class name
-     * @param array $methodOverrides Method overrides
-     * @param array $propertyOverrides Property overrides
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam \ReflectionClass $reflection The reflection class
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $proxyClassName The proxy class name
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methodOverrides Method overrides
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $propertyOverrides Property overrides
      *
-     * @return string The proxy class code
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string The proxy class code
      */
     private static function generateProxyClass(\ReflectionClass $reflection, string $proxyClassName, array $methodOverrides, array $propertyOverrides): string
     {

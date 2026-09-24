@@ -25,25 +25,25 @@ interface ToolInterface
     /**
      * Execute the tool.
      *
-     * @param array $params Tool parameters
-     * @param array $user Current user data
-     * @param array $pageContext Page context
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $params Tool parameters
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $user Current user data
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $pageContext Page context
      *
-     * @return mixed Tool execution result
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn mixed Tool execution result
      */
     public function execute(array $params, array $user, array $pageContext = []): mixed;
 
     /**
      * Get tool description.
      *
-     * @return string Tool description
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string Tool description
      */
     public function getDescription(): string;
 
     /**
      * Get tool parameters description.
      *
-     * @return array Parameter descriptions ['param_name' => 'description', ...]
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Parameter descriptions ['param_name' => 'description', ...]
      */
     public function getParameters(): array;
 }

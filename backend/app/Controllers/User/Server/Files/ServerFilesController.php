@@ -2284,10 +2284,10 @@ class ServerFilesController
     /**
      * Create a Wings connection with configurable timeout.
      *
-     * @param array $node The node configuration array
-     * @param int $timeout Timeout in seconds (default: 30 seconds)
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $node The node configuration array
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $timeout Timeout in seconds (default: 30 seconds)
      *
-     * @return Wings The Wings connection instance
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn Wings The Wings connection instance
      */
     private function createWingsConnection(array $node, int $timeout = 30): Wings
     {
@@ -2551,7 +2551,7 @@ class ServerFilesController
     }
 
     /**
-     * @return array{max_size_bytes: int, retention_days: int}
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{max_size_bytes: int, retention_days: int}
      */
     private function getTrashLimits(): array
     {
@@ -2566,7 +2566,7 @@ class ServerFilesController
     }
 
     /**
-     * @return array<string, mixed>
+     * // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<string, mixed>
      */
     private function buildTrashDeleteOptions(bool $permanent): array
     {
