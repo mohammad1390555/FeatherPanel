@@ -13,7 +13,7 @@ by the Free Software Foundation, either version 3 of the License, or
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
 
-export interface ApiServer {
+export export interface
     id: number;
     uuid: string;
     uuidShort: string;
@@ -74,7 +74,7 @@ export interface ApiServer {
     };
 }
 
-export interface Pagination {
+export export interface
     page: number;
     pageSize: number;
     total: number;
@@ -85,13 +85,13 @@ export interface Pagination {
     to: number;
 }
 
-export interface ApiNode {
+export export interface
     id: number;
     name: string;
     fqdn: string;
 }
 
-export interface ApiAllocation {
+export export interface
     id: number;
     ip: string;
     port: number;

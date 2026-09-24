@@ -29,7 +29,7 @@ export const DEFAULT_LOGIN_METHODS_ORDER: LoginMethodId[] = [
 
 const PRIMARY_PANEL_METHODS: LoginMethodId[] = ['local', 'ldap', 'email_code'];
 
-export interface LoginMethodAvailability {
+export export interface
     local: boolean;
     ldap: boolean;
     passkey: boolean;
@@ -38,7 +38,7 @@ export interface LoginMethodAvailability {
     oidc: boolean;
 }
 
-export interface LoginPageLayout {
+export export interface
     /** Panel shown first (full form or dedicated OAuth block). */
     primary: LoginMethodId;
     /** Other methods offered below the primary panel, in configured order. */

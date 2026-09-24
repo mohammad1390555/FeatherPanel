@@ -13,7 +13,7 @@ by the Free Software Foundation, either version 3 of the License, or
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
 
-export interface MinecraftServerPropertiesForm {
+export export interface
     motd: string;
     serverName: string;
     difficulty: string;

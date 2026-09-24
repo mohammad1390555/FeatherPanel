@@ -26,7 +26,7 @@ interface ApiResponse<T> {
     error_code: string | null;
 }
 
-interface JWTResponse {
+export interface
     token: string;
     expires_at: number;
     server_uuid: string;
@@ -35,7 +35,7 @@ interface JWTResponse {
     connection_string: string;
 }
 
-interface ServersResponse {
+export interface
     servers: Server[];
     pagination: {
         current_page: number;

@@ -16,7 +16,7 @@ See the LICENSE file or <https://www.gnu.org/licenses/>.
 import axios from 'axios';
 
 // Setting Types
-export interface BaseSetting {
+export export interface
     name: string;
     description: string;
     type: 'text' | 'select' | 'textarea' | 'toggle' | 'number' | 'password';
@@ -67,14 +67,14 @@ export interface PasswordSetting extends BaseSetting {
 export type Setting = TextSetting | SelectSetting | TextareaSetting | ToggleSetting | NumberSetting | PasswordSetting;
 
 // Category Types
-export interface CategoryConfig {
+export export interface
     name: string;
     description: string;
     icon: string;
     settings: string[];
 }
 
-export interface Category {
+export export interface
     id: string;
     name: string;
     description: string;
@@ -82,7 +82,7 @@ export interface Category {
     settings_count: number;
 }
 
-export interface OrganizedSettings {
+export export interface
     [category: string]: {
         category: CategoryConfig;
         settings: {
@@ -91,7 +91,7 @@ export interface OrganizedSettings {
     };
 }
 
-export interface SettingsResponse {
+export export interface
     settings: Record<string, Setting>;
     categories: Record<string, CategoryConfig>;
     organized_settings: OrganizedSettings;

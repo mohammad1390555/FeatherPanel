@@ -24,7 +24,7 @@ interface ApiResponse<T> {
     error?: boolean;
 }
 
-export interface FileHashesResponse {
+export export interface
     md5: string;
     sha1: string;
     sha256: string;
@@ -32,7 +32,7 @@ export interface FileHashesResponse {
     path: string;
 }
 
-export interface ArchiveListEntry {
+export export interface
     name: string;
     path: string;
     size: number;
@@ -40,12 +40,12 @@ export interface ArchiveListEntry {
     modified?: string;
 }
 
-export interface ArchiveListData {
+export export interface
     contents: ArchiveListEntry[];
     truncated: boolean;
 }
 
-export interface TrashEntry {
+export export interface
     id: string;
     original_root: string;
     original_name: string;
@@ -57,7 +57,7 @@ export interface TrashEntry {
 /** DataTransfer type for dragging paths out of the archive browser into the file list. */
 export const ARCHIVE_EXTRACT_DRAG_MIME = 'application/x-featherpanel-archive-extract' as const;
 
-export interface ArchiveExtractDragPayload {
+export export interface
     /** Server directory that contains the archive (same as decompress `root`). */
     root: string;
     /** Archive file name only. */
@@ -66,7 +66,7 @@ export interface ArchiveExtractDragPayload {
     entries: string[];
 }
 
-export interface AdvancedFileSearchFilters {
+export export interface
     directory?: string;
     pattern?: string;
     include?: string;

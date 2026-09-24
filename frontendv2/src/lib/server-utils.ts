@@ -83,7 +83,7 @@ export const SERVER_RESOURCE_LIMITS = {
     io: { min: 10, max: 1000 },
 } as const;
 
-export interface ServerResourceValues {
+export export interface
     memory: number;
     swap: number;
     disk: number;

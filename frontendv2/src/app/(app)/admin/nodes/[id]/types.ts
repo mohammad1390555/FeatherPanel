@@ -13,7 +13,7 @@ by the Free Software Foundation, either version 3 of the License, or
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
 
-export interface UtilizationResponse {
+export export interface
     utilization: {
         memory_total: number;
         memory_used: number;
@@ -35,7 +35,7 @@ export interface UtilizationResponse {
     };
 }
 
-export interface DockerResponse {
+export export interface
     dockerDiskUsage: {
         containers_size: number;
         images_total: number;
@@ -45,13 +45,13 @@ export interface DockerResponse {
     };
 }
 
-export interface NetworkResponse {
+export export interface
     ips: {
         ip_addresses: string[];
     };
 }
 
-export interface DiagnosticsResult {
+export export interface
     format: 'text' | 'url';
     content: string | null;
     url: string | null;
@@ -60,7 +60,7 @@ export interface DiagnosticsResult {
     log_lines: number | null;
 }
 
-export interface SystemInfoResponse {
+export export interface
     wings: {
         version: string;
         docker: {
@@ -94,7 +94,7 @@ export interface SystemInfoResponse {
     };
 }
 
-export interface NodeData {
+export export interface
     id: number;
     uuid: string;
     name: string;
@@ -122,14 +122,14 @@ export interface NodeData {
     updated_at: string;
 }
 
-export interface CommandExecutionRequest {
+export export interface
     command: string;
     timeout_seconds?: number;
     working_directory?: string;
     environment?: Record<string, string>;
 }
 
-export interface CommandExecutionResponse {
+export export interface
     exit_code: number;
     stdout: string;
     stderr: string;
@@ -137,7 +137,7 @@ export interface CommandExecutionResponse {
     duration_ms: number;
 }
 
-export interface WingsConfigResponse {
+export export interface
     success: boolean;
     data: {
         config: string;
@@ -145,7 +145,7 @@ export interface WingsConfigResponse {
     message?: string;
 }
 
-export interface Module {
+export export interface
     name: string;
     description: string;
     version: string;
@@ -153,18 +153,18 @@ export interface Module {
     config?: Record<string, unknown>;
 }
 
-export interface ModuleConfig {
+export export interface
     name: string;
     config: Record<string, unknown>;
 }
 
-export interface Location {
+export export interface
     id: number;
     name: string;
     description?: string;
 }
 
-export interface VersionStatus {
+export export interface
     current_version: string;
     latest_version: string | null;
     is_up_to_date: boolean;

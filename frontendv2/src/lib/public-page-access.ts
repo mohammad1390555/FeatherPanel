@@ -18,7 +18,7 @@ import { settingsApi } from '@/lib/settings-api';
 
 export type PublicPageKey = 'status' | 'knowledgebase';
 
-interface PublicPagePolicy {
+export interface
     featureEnabledSettingKey: 'status_page_enabled' | 'knowledgebase_enabled';
     publicEnabledSettingKey: 'status_page_public_enabled' | 'knowledgebase_public_enabled';
     fallbackPath: '/dashboard/status' | '/dashboard/knowledgebase';

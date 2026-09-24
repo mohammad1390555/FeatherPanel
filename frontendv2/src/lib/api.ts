@@ -74,7 +74,7 @@ const attachClientSyncRequestInterceptor = (client: AxiosInstance) => {
 };
 
 const releaseWingsQueueSlot = (config?: InternalAxiosRequestConfig) => {
-    const wingsConfig = config as WingsQueuedAxiosRequestConfig | undefined;
+    const wingsConfig = config as unknown | undefined;
     if (!wingsConfig?._wingsQueued) {
         return;
     }

@@ -15,7 +15,7 @@ See the LICENSE file or <https://www.gnu.org/licenses/>.
 
 import type { AppSettings } from '@/types/settings';
 
-export interface ConfiguredLink {
+export export interface
     id: string;
     label: string;
     href: string;

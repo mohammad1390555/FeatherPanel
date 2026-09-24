@@ -15,13 +15,13 @@ See the LICENSE file or <https://www.gnu.org/licenses/>.
 
 import type { FC } from 'react';
 
-export interface WavePosition {
+export export interface
     x?: number;
     y?: number;
     rotate?: number;
 }
 
-export interface FloatingLinesProps {
+export export interface
     linesGradient: string[];
     enabledWaves?: string[];
     lineCount?: number[];

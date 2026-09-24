@@ -15,7 +15,7 @@ See the LICENSE file or <https://www.gnu.org/licenses/>.
 
 import type { CSSProperties, FC } from 'react';
 
-export interface ColorBendsProps {
+export export interface
     className?: string;
     style?: CSSProperties;
     rotation?: number;

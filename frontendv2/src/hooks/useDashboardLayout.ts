@@ -33,7 +33,7 @@ const RIGHT_DEFAULT: DashboardRightBlockId[] = [...RIGHT_POOL];
 
 const ALL_BLOCK_IDS: DashboardBlockId[] = ['hero', ...LEFT_POOL, ...RIGHT_POOL];
 
-export interface DashboardLayoutState {
+export export interface
     hidden: DashboardBlockId[];
     leftOrder: DashboardLeftBlockId[];
     rightOrder: DashboardRightBlockId[];

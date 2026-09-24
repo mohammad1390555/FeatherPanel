@@ -16,11 +16,11 @@ See the LICENSE file or <https://www.gnu.org/licenses/>.
 import { useState, useCallback, useEffect } from 'react';
 import { detectFeature } from '@/lib/ServerFeatureDetector';
 
-export interface UseFeatureDetectorProps {
+export export interface
     enabledFeatures?: string[];
 }
 
-export interface UseFeatureDetectorReturn {
+export export interface
     processLog: (log: string) => void;
 
     // EULA State

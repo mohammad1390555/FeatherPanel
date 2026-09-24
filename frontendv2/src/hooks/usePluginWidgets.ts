@@ -17,7 +17,7 @@ import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { PluginWidget, WidgetsByPage } from '@/types/plugin-widgets';
 
-interface UsePluginWidgetsResult {
+export interface
     widgets: WidgetsByPage;
     loading: boolean;
     error: string | null;

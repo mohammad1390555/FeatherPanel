@@ -15,7 +15,7 @@ See the LICENSE file or <https://www.gnu.org/licenses/>.
 
 import axios from 'axios';
 
-export interface ActionCommand {
+export export interface
     type: 'server_power' | 'server_command' | 'navigate';
     action?: 'start' | 'stop' | 'restart' | 'kill';
     serverUuid?: string;

@@ -17,7 +17,7 @@ by the Free Software Foundation, either version 3 of the License, or
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
 
-export interface GamePreset {
+export export interface
     id: string;
     name: string;
     defaultPort: number;

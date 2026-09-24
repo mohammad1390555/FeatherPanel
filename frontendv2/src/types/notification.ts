@@ -13,7 +13,7 @@ by the Free Software Foundation, either version 3 of the License, or
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
 
-export interface Notification {
+export export interface
     id: number;
     user_id: number | null;
     title: string;
@@ -25,7 +25,7 @@ export interface Notification {
     updated_at: string | null;
 }
 
-export interface NotificationsResponse {
+export export interface
     success: boolean;
     message: string;
     data: {

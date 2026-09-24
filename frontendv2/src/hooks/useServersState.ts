@@ -16,7 +16,7 @@ See the LICENSE file or <https://www.gnu.org/licenses/>.
 import { useState, useEffect, useCallback } from 'react';
 
 // State interface
-interface ServersState {
+export interface
     selectedLayout: 'grid' | 'list';
     selectedSort: string;
     showOnlyRunning: boolean;

@@ -18,7 +18,7 @@ See the LICENSE file or <https://www.gnu.org/licenses/>.
 import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 
-interface AdminDashboardData {
+export interface
     count: {
         users: number;
         nodes: number;

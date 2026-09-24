@@ -15,7 +15,7 @@ See the LICENSE file or <https://www.gnu.org/licenses/>.
 
 import axios from 'axios';
 
-export interface VmInstance {
+export export interface
     id: number;
     user_uuid: string;
     vm_node_id: number;
@@ -44,7 +44,7 @@ export interface VmInstance {
     updated_at?: string;
 }
 
-export interface VmPagination {
+export export interface
     current_page: number;
     per_page: number;
     total_records: number;
@@ -56,7 +56,7 @@ export interface VmPagination {
     to?: number;
 }
 
-export interface VmListResponse {
+export export interface
     success: boolean;
     data: {
         instances: VmInstance[];
@@ -65,11 +65,11 @@ export interface VmListResponse {
     message: string;
 }
 
-export interface VmStatusData {
+export export interface
     [key: string]: unknown;
 }
 
-export interface PowerActionResponse {
+export export interface
     task_id?: string;
     status?: string;
     [key: string]: unknown;

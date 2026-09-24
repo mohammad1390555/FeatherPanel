@@ -18,7 +18,7 @@ import axios from 'axios';
 import { serversApi } from '@/lib/servers-api';
 
 // WebSocket message types
-interface WebSocketMessage {
+export interface
     event: string;
     data?: string;
     args?: string[];
@@ -26,7 +26,7 @@ interface WebSocketMessage {
 }
 
 // Server stats from Wings
-interface WingsStats {
+export interface
     memory_bytes: number;
     memory_limit_bytes: number;
     cpu_absolute: number;
@@ -42,7 +42,7 @@ interface WingsStats {
 }
 
 // Connection state for each server
-interface ServerConnectionState {
+export interface
     connectionStatus: 'disconnected' | 'connecting' | 'connected';
     wingsStatus: 'unknown' | 'healthy' | 'error';
     websocket: WebSocket | null;
@@ -56,7 +56,7 @@ interface ServerConnectionState {
 }
 
 // Live server data
-export interface ServerLiveData {
+export export interface
     status: string | null;
     stats: {
         cpuUsage: number; // Percentage

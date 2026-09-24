@@ -14,7 +14,7 @@ See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
 
 declare global {
-    interface Window {
+    export interface
         grecaptcha?: {
             ready: (cb: () => void) => void;
             execute: (siteKey: string, options: { action: string }) => Promise<string>;

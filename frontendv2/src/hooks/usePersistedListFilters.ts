@@ -90,7 +90,7 @@ export function usePersistedListFilters<T extends Record<string, unknown>>(stora
     return { filters, setFilters, patchFilters, resetFilters, hydrated };
 }
 
-export interface SearchListFilters {
+export export interface
     searchQuery: string;
     page: number;
     pageSize: number;

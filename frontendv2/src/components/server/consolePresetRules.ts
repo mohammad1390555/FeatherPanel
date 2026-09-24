@@ -17,7 +17,7 @@ See the LICENSE file or <https://www.gnu.org/licenses/>.
 
 export type ConsolePresetMenuGroup = 'redact' | 'highlight';
 
-export interface ConsolePresetTemplate {
+export export interface
     presetId: string;
     menuGroup: ConsolePresetMenuGroup;
     pattern: string;

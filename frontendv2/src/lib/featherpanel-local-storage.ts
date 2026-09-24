@@ -52,7 +52,7 @@ export function isPanelBrowserStorageKey(key: string): boolean {
     return false;
 }
 
-export interface PanelBrowserStorageEntry {
+export export interface
     key: string;
     value: string;
     /** UTF-16 length of stored string (approx. size indicator). */

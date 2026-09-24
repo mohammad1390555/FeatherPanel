@@ -15,7 +15,7 @@ See the LICENSE file or <https://www.gnu.org/licenses/>.
 
 import type { LucideIcon } from 'lucide-react';
 
-export interface NavigationItem {
+export export interface
     id: string;
     name: string;
     title: string;
@@ -38,12 +38,12 @@ export interface NavigationItem {
     children?: NavigationItem[]; // Optional submenu items
 }
 
-export interface NavigationGroup {
+export export interface
     name: string;
     items: NavigationItem[];
 }
 
-export interface PluginSidebarItem {
+export export interface
     name: string;
     icon: string;
     lucideIcon?: string; // Lucide icon name (e.g., "camera", "search") - if provided, will be used instead of icon emoji
@@ -61,7 +61,7 @@ export interface PluginSidebarItem {
     allowedOnlyOnSpells?: number[] | null; // Array of spell IDs if restricted, null if no restrictions
 }
 
-export interface PluginSidebarResponse {
+export export interface
     success: boolean;
     data: {
         sidebar: {

@@ -13,7 +13,7 @@ by the Free Software Foundation, either version 3 of the License, or
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
 
-export interface Activity {
+export export interface
     id: number;
     user_uuid: string;
     name: string;
@@ -24,6 +24,6 @@ export interface Activity {
     updated_at: string;
 }
 
-export interface DateFormatter {
+export export interface
     (dateString: string): string;
 }
