@@ -232,7 +232,7 @@ class Migrate extends App implements CommandBuilder
     /**
      * Get all migration directories, including core and plugin migrations.
      *
-     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn array<string, string>
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<string, string>
      */
     private static function getMigrationDirectories(): array
     {
@@ -266,9 +266,9 @@ class Migrate extends App implements CommandBuilder
     /**
      * Collects migration files from the provided directories.
      *
-     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionparam array<string, string> $directories
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, string> $directories
      *
-     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn array<int, array{namespace: string, path: string, name: string}>
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, array{namespace: string, path: string, name: string}>
      */
     private static function collectMigrationFiles(array $directories): array
     {

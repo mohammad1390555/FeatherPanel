@@ -123,7 +123,7 @@ class BPlayerStatusPoller implements TimeTask
     /**
      * Get all running servers with their allocation, spell, and realm data.
      *
-     * // // // // @error suppressionerror suppressionerror suppressionerror suppressionreturn array Array of server rows with joined data
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Array of server rows with joined data
      */
     private function getRunningServers(): array
     {
