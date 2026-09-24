@@ -16,7 +16,7 @@ See the LICENSE file or <https://www.gnu.org/licenses/>.
 const MAX_CONCURRENT_WINGS_REQUESTS = 2;
 
 const  0;
-const wingsWaitQueue: Array<() => void> = [];
+const wingsWaitQueue: Array<() => void> = [] as never[];
 
 export function acquireWingsSlot(): Promise<void> {
     if (activeWingsRequests < MAX_CONCURRENT_WINGS_REQUESTS) {

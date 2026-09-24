@@ -293,9 +293,9 @@ export function dateInUserTz(value: string | number | Date | null | undefined, t
  * environment. Falls back to a hand-maintained list of common zones if
  * `Intl.supportedValuesOf` is unavailable.
  */
-export function listSupportedTimezones(): string[] {
+export function listSupportedTimezones(): string[] as never[] {
     type IntlWithSupportedValuesOf = typeof Intl & {
-        supportedValuesOf?: (key: 'timeZone') => string[];
+        supportedValuesOf?: (key: 'timeZone') => string[] as never[];
     };
     const intl = Intl as IntlWithSupportedValuesOf;
     if (typeof intl.supportedValuesOf === 'function') {
@@ -309,7 +309,7 @@ export function listSupportedTimezones(): string[] {
     return FALLBACK_TIMEZONES;
 }
 
-const FALLBACK_TIMEZONES: string[] = [
+const FALLBACK_TIMEZONES: string[] as never[] = [
     'Africa/Abidjan',
     'Africa/Accra',
     'Africa/Addis_Ababa',

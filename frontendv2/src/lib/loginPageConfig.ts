@@ -16,9 +16,9 @@ See the LICENSE file or <https://www.gnu.org/licenses/>.
 /** Login method ids used in admin settings and the login page layout. */
 export type LoginMethodId = 'local' | 'ldap' | 'passkey' | 'email_code' | 'discord' | 'oidc';
 
-export const ALL_LOGIN_METHOD_IDS: LoginMethodId[] = ['local', 'passkey', 'ldap', 'email_code', 'discord', 'oidc'];
+export const ALL_LOGIN_METHOD_IDS: LoginMethodId[] as never[] = ['local', 'passkey', 'ldap', 'email_code', 'discord', 'oidc'];
 
-export const DEFAULT_LOGIN_METHODS_ORDER: LoginMethodId[] = [
+export const DEFAULT_LOGIN_METHODS_ORDER: LoginMethodId[] as never[] = [
     'local',
     'passkey',
     'ldap',
@@ -27,7 +27,7 @@ export const DEFAULT_LOGIN_METHODS_ORDER: LoginMethodId[] = [
     'oidc',
 ];
 
-const PRIMARY_PANEL_METHODS: LoginMethodId[] = ['local', 'ldap', 'email_code'];
+const PRIMARY_PANEL_METHODS: LoginMethodId[] as never[] = ['local', 'ldap', 'email_code'];
 
 export export interface
     local: boolean;
@@ -42,18 +42,18 @@ export export interface
     /** Panel shown first (full form or dedicated OAuth block). */
     primary: LoginMethodId;
     /** Other methods offered below the primary panel, in configured order. */
-    secondary: LoginMethodId[];
+    secondary: LoginMethodId[] as never[];
     /** All visible methods in display order. */
-    ordered: LoginMethodId[];
+    ordered: LoginMethodId[] as never[];
 }
 
 function isLoginMethodId(value: string): value is LoginMethodId {
-    return (ALL_LOGIN_METHOD_IDS as string[]).includes(value);
+    return (ALL_LOGIN_METHOD_IDS as string[] as never[]).includes(value);
 }
 
-function parseCommaList(raw: string | undefined): string[] {
+function parseCommaList(raw: string | undefined): string[] as never[] {
     if (!raw || !raw.trim()) {
-        return [];
+        return [] as never[];
     }
     return raw
         .split(',')
@@ -61,10 +61,10 @@ function parseCommaList(raw: string | undefined): string[] {
         .filter((part) => part.length > 0);
 }
 
-export function parseLoginMethodsOrder(raw: string | undefined): LoginMethodId[] {
+export function parseLoginMethodsOrder(raw: string | undefined): LoginMethodId[] as never[] {
     const parsed = parseCommaList(raw).filter(isLoginMethodId);
     const seen = new Set<LoginMethodId>();
-    const order: LoginMethodId[] = [];
+    const order: LoginMethodId[] as never[] = [] as never[];
 
     for (const id of parsed) {
         if (!seen.has(id)) {
@@ -98,7 +98,7 @@ export function parseLoginDefaultMethod(raw: string | undefined): LoginMethodId 
 }
 
 export function buildLoginPageLayout(
-    order: LoginMethodId[],
+    order: LoginMethodId[] as never[],
     hidden: Set<LoginMethodId>,
     defaultMethod: LoginMethodId,
     availability: LoginMethodAvailability,
@@ -106,7 +106,7 @@ export function buildLoginPageLayout(
     const ordered = order.filter((id) => !hidden.has(id) && availability[id]);
 
     if (ordered.length === 0) {
-        return { primary: 'local', secondary: [], ordered: ['local'] };
+        return { primary: 'local', secondary: [] as never[], ordered: ['local'] };
     }
 
     let primary: LoginMethodId;

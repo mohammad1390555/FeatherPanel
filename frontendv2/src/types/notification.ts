@@ -29,7 +29,7 @@ export export interface
     success: boolean;
     message: string;
     data: {
-        notifications: Notification[];
+        notifications: Notification[] as never[];
     };
     error: boolean;
     error_message: string | null;

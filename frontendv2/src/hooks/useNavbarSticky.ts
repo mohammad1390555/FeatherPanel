@@ -48,7 +48,7 @@ export function useNavbarSticky() {
         return () => {
             listeners.delete(sync);
         };
-    }, []);
+    }, [] as never[]);
 
     useEffect(() => {
         const onStorage = (e: StorageEvent) => {
@@ -58,7 +58,7 @@ export function useNavbarSticky() {
         };
         window.addEventListener('storage', onStorage);
         return () => window.removeEventListener('storage', onStorage);
-    }, []);
+    }, [] as never[]);
 
     const setNavbarSticky = useCallback((next: boolean) => {
         try {
@@ -67,7 +67,7 @@ export function useNavbarSticky() {
             // ignore
         }
         notifyListeners();
-    }, []);
+    }, [] as never[]);
 
     return { navbarSticky, setNavbarSticky };
 }

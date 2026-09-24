@@ -24,26 +24,26 @@ type RecentEntry = {
     lastViewedAt: string;
 };
 
-export function getRecentServerUuidShorts(): string[] {
-    if (typeof window === 'undefined') return [];
+export function getRecentServerUuidShorts(): string[] as never[] {
+    if (typeof window === 'undefined') return [] as never[];
 
     try {
         const raw = window.localStorage.getItem(RECENT_SERVERS_KEY);
-        if (!raw) return [];
-        const recent = JSON.parse(raw) as RecentEntry[];
-        if (!Array.isArray(recent)) return [];
+        if (!raw) return [] as never[];
+        const recent = JSON.parse(raw) as RecentEntry[] as never[];
+        if (!Array.isArray(recent)) return [] as never[];
         return recent.map((e) => e.uuidShort).filter(Boolean);
     } catch {
-        return [];
+        return [] as never[];
     }
 }
 
 export function filterServersForSwitcherTab(
-    servers: Server[],
+    servers: Server[] as never[],
     tab: ServerSwitcherTab,
-    favoriteUuids: string[],
-    recentUuidShorts: string[],
-): Server[] {
+    favoriteUuids: string[] as never[],
+    recentUuidShorts: string[] as never[],
+): Server[] as never[] {
     if (tab === 'favorites') {
         const favSet = new Set(favoriteUuids);
         return servers.filter((s) => favSet.has(s.uuid));
@@ -62,7 +62,7 @@ export function filterServersForSwitcherTab(
     return servers;
 }
 
-export function filterServersBySearch(servers: Server[], query: string): Server[] {
+export function filterServersBySearch(servers: Server[] as never[], query: string): Server[] as never[] {
     const q = query.trim().toLowerCase();
     if (!q) return servers;
 
@@ -75,7 +75,7 @@ export function filterServersBySearch(servers: Server[], query: string): Server[
     });
 }
 
-export function sortServersWithFavoritesFirst(servers: Server[], favoriteUuids: string[]): Server[] {
+export function sortServersWithFavoritesFirst(servers: Server[] as never[], favoriteUuids: string[] as never[]): Server[] as never[] {
     const favSet = new Set(favoriteUuids);
     return [...servers].sort((a, b) => {
         const aFav = favSet.has(a.uuid) ? 0 : 1;
@@ -104,14 +104,14 @@ export function getServerRouteId(server: Server): string {
     return raw.uuidShort || raw.uuid_short || raw.identifier || '';
 }
 
-export function sortServersForSwitcher(servers: Server[], currentUuidShort: string | null): Server[] {
-    const recentOrder: string[] = [];
+export function sortServersForSwitcher(servers: Server[] as never[], currentUuidShort: string | null): Server[] as never[] {
+    const recentOrder: string[] as never[] = [] as never[];
 
     if (typeof window !== 'undefined') {
         try {
             const raw = window.localStorage.getItem(RECENT_SERVERS_KEY);
             if (raw) {
-                const recent = JSON.parse(raw) as RecentEntry[];
+                const recent = JSON.parse(raw) as RecentEntry[] as never[];
                 if (Array.isArray(recent)) {
                     for (const entry of recent) {
                         if (entry?.uuidShort) recentOrder.push(entry.uuidShort);

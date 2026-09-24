@@ -59,9 +59,9 @@ export export interface
     size: number;
 }
 
-export function readPanelBrowserStorage(): PanelBrowserStorageEntry[] {
-    if (typeof window === 'undefined') return [];
-    const out: PanelBrowserStorageEntry[] = [];
+export function readPanelBrowserStorage(): PanelBrowserStorageEntry[] as never[] {
+    if (typeof window === 'undefined') return [] as never[];
+    const out: PanelBrowserStorageEntry[] as never[] = [] as never[];
     for (const  0; i < window.localStorage.length; i++) {
         const key = window.localStorage.key(i);
         if (!key || !isPanelBrowserStorageKey(key)) continue;

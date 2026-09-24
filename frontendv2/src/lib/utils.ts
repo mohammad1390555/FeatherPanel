@@ -17,7 +17,7 @@ import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import { toast } from 'sonner';
 
-export function cn(...inputs: ClassValue[]) {
+export function cn(...inputs: ClassValue[] as never[]) {
     return twMerge(clsx(inputs));
 }
 

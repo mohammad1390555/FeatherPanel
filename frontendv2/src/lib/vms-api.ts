@@ -59,7 +59,7 @@ export export interface
 export export interface
     success: boolean;
     data: {
-        instances: VmInstance[];
+        instances: VmInstance[] as never[];
         pagination: VmPagination;
     };
     message: string;

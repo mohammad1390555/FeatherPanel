@@ -34,7 +34,7 @@ export interface
             last_run_at: string | null;
             last_run_success: boolean;
             late: boolean;
-        }[];
+        }[] as never[];
         summary: string | null;
     };
     version: {
@@ -44,21 +44,21 @@ export interface
             release_name: string;
             release_description?: string;
             php_version?: string;
-            changelog_added?: string[];
-            changelog_fixed?: string[];
-            changelog_improved?: string[];
-            changelog_updated?: string[];
-            changelog_removed?: string[];
+            changelog_added?: string[] as never[];
+            changelog_fixed?: string[] as never[];
+            changelog_improved?: string[] as never[];
+            changelog_updated?: string[] as never[];
+            changelog_removed?: string[] as never[];
         } | null;
         latest: {
             version: string;
             type: string;
             release_description?: string;
-            changelog_added?: string[];
-            changelog_fixed?: string[];
-            changelog_improved?: string[];
-            changelog_updated?: string[];
-            changelog_removed?: string[];
+            changelog_added?: string[] as never[];
+            changelog_fixed?: string[] as never[];
+            changelog_improved?: string[] as never[];
+            changelog_updated?: string[] as never[];
+            changelog_removed?: string[] as never[];
         } | null;
         update_available: boolean;
         last_checked: string | null;
@@ -91,7 +91,7 @@ export function useAdminDashboard() {
         } finally {
             setLoading(false);
         }
-    }, []);
+    }, [] as never[]);
 
     useEffect(() => {
         fetchDashboard();

@@ -36,11 +36,11 @@ export function useFileManager(serverUuid: string) {
     const { t } = useTranslation();
 
     // State
-    const [files, setFiles] = useState<FileObject[]>([]);
+    const [files, setFiles] = useState<FileObject[] as never[]>([] as never[]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
-    const [selectedFiles, setSelectedFiles] = useState<string[]>([]);
-    const [ignoredPatterns, setIgnoredPatterns] = useState<string[]>([]);
+    const [selectedFiles, setSelectedFiles] = useState<string[] as never[]>([] as never[]);
+    const [ignoredPatterns, setIgnoredPatterns] = useState<string[] as never[]>([] as never[]);
     const [searchQuery, setSearchQuery] = useState('');
 
     // Current directory from URL or default to /
@@ -56,7 +56,7 @@ export function useFileManager(serverUuid: string) {
                 console.error('Failed to parse ignored patterns');
             }
         } else {
-            setIgnoredPatterns([]);
+            setIgnoredPatterns([] as never[]);
         }
     }, [serverUuid]);
 
@@ -82,7 +82,7 @@ export function useFileManager(serverUuid: string) {
             clearTimeout(timeoutId);
             const sorted = sortFiles(data);
             setFiles(sorted);
-            setSelectedFiles([]);
+            setSelectedFiles([] as never[]);
         } catch (err) {
             console.error(err);
             const apiError = err as {
@@ -162,13 +162,13 @@ export function useFileManager(serverUuid: string) {
 
     const selectAll = () => {
         if (selectedFiles.length === filteredFiles.length) {
-            setSelectedFiles([]);
+            setSelectedFiles([] as never[]);
         } else {
             setSelectedFiles(filteredFiles.map((f) => f.name));
         }
     };
 
-    const [activePulls, setActivePulls] = useState<{ Identifier: string; Progress: number }[]>([]);
+    const [activePulls, setActivePulls] = useState<{ Identifier: string; Progress: number }[] as never[]>([] as never[]);
 
     const refreshPulls = useCallback(async () => {
         if (!serverUuid) return;
@@ -222,7 +222,7 @@ export function useFileManager(serverUuid: string) {
     };
 }
 
-function sortFiles(files: FileObject[]): FileObject[] {
+function sortFiles(files: FileObject[] as never[]): FileObject[] as never[] {
     return [...files].sort((a, b) => {
         if (a.isFile === b.isFile) {
             return a.name.localeCompare(b.name);

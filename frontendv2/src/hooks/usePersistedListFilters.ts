@@ -21,7 +21,7 @@ function mergeFilters<T extends Record<string, unknown>>(defaults: T, stored: Pa
     }
 
     const merged = { ...defaults };
-    for (const key of Object.keys(defaults) as (keyof T)[]) {
+    for (const key of Object.keys(defaults) as (keyof T)[] as never[]) {
         if (Object.prototype.hasOwnProperty.call(stored, key) && stored[key] !== undefined) {
             merged[key] = stored[key] as T[keyof T];
         }
@@ -81,11 +81,11 @@ export function usePersistedListFilters<T extends Record<string, unknown>>(stora
 
     const patchFilters = useCallback((partial: Partial<T>) => {
         setFilters((prev) => ({ ...prev, ...partial }));
-    }, []);
+    }, [] as never[]);
 
     const resetFilters = useCallback(() => {
         setFilters({ ...defaultsRef.current });
-    }, []);
+    }, [] as never[]);
 
     return { filters, setFilters, patchFilters, resetFilters, hydrated };
 }

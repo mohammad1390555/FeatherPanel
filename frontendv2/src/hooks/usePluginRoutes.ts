@@ -93,7 +93,7 @@ export function usePluginRoutes() {
         })();
 
         loadPromise.then(() => setPluginData(cachedPluginData));
-    }, []);
+    }, [] as never[]);
 
     return pluginData;
 }
@@ -101,10 +101,10 @@ export function usePluginRoutes() {
 /**
  * Get all plugin paths for layout detection
  */
-export function getPluginPaths(pluginData: PluginSidebarResponse['data']['sidebar'] | null): string[] {
-    if (!pluginData) return [];
+export function getPluginPaths(pluginData: PluginSidebarResponse['data']['sidebar'] | null): string[] as never[] {
+    if (!pluginData) return [] as never[];
 
-    const paths: string[] = [];
+    const paths: string[] as never[] = [] as never[];
 
     // Extract client plugin paths
     if (pluginData.client) {

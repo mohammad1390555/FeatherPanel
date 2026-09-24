@@ -37,7 +37,7 @@ class IntegrityController
     )]
     public function check(Request $request): Response
     {
-        // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionset_time_limit(300);
+        // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionset_time_limit(300);
 
         try {
             $includeFiles = filter_var($request->query->get('include_files', '1'), FILTER_VALIDATE_BOOLEAN);
@@ -62,7 +62,7 @@ class IntegrityController
     )]
     public function saveBaseline(Request $request): Response
     {
-        // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionset_time_limit(300);
+        // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionset_time_limit(300);
 
         try {
             $service = PanelIntegrityService::fromEnvironment();

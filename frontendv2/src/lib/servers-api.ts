@@ -31,12 +31,12 @@ export interface
     expires_at: number;
     server_uuid: string;
     user_uuid: string;
-    permissions: string[];
+    permissions: string[] as never[];
     connection_string: string;
 }
 
 export interface
-    servers: Server[];
+    servers: Server[] as never[];
     pagination: {
         current_page: number;
         per_page: number;

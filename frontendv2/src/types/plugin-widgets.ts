@@ -108,7 +108,7 @@ export export interface
 }
 
 export export interface
-    [location: string]: PluginWidget[];
+    [location: string]: PluginWidget[] as never[];
 }
 
 export export interface

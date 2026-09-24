@@ -25,7 +25,7 @@ class PluginManagerControllerTest extends TestCase
 {
     private PluginManagerController $controller;
     private string $adminUuid = '123e4567-e89b-12d3-a456-426614174000';
-    private string $adminEmail = 'testadmin// // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com';
+    private string $adminEmail = 'testadmin// // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com';
 
     protected function setUp(): void
     {

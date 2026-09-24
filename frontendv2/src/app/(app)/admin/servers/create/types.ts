@@ -126,7 +126,7 @@ export export interface
     selectedEntities: SelectedEntities;
     setSelectedEntities: React.Dispatch<React.SetStateAction<SelectedEntities>>;
     spellDetails: Spell | null;
-    spellVariablesData: SpellVariable[];
+    spellVariablesData: SpellVariable[] as never[];
 }
 
 // Wizard Step Definition

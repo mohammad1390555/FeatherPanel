@@ -21,7 +21,7 @@ import { serversApi } from '@/lib/servers-api';
 export interface
     event: string;
     data?: string;
-    args?: string[];
+    args?: string[] as never[];
     timestamp?: number;
 }
 
@@ -91,19 +91,19 @@ export function useServersWebSocket() {
     const isServerConnected = useCallback((serverUuid: string): boolean => {
         const state = connectionsRef.current.get(serverUuid);
         return state?.connectionStatus === 'connected';
-    }, []);
+    }, [] as never[]);
 
     // Check if server is connecting
     const isServerConnecting = useCallback((serverUuid: string): boolean => {
         const state = connectionsRef.current.get(serverUuid);
         return state?.connectionStatus === 'connecting';
-    }, []);
+    }, [] as never[]);
 
     // Check if Wings daemon is healthy
     const isWingsHealthy = useCallback((serverUuid: string): boolean => {
         const state = connectionsRef.current.get(serverUuid);
         return state?.wingsStatus === 'healthy';
-    }, []);
+    }, [] as never[]);
 
     // Update server live data
     const updateServerLiveData = useCallback((serverUuid: string, updates: Partial<ServerLiveData>) => {
@@ -115,7 +115,7 @@ export function useServersWebSocket() {
                 lastUpdate: updates.lastUpdate !== undefined ? updates.lastUpdate : Date.now(),
             },
         }));
-    }, []);
+    }, [] as never[]);
 
     // Request server stats
     const requestServerStats = useCallback((serverUuid: string) => {
@@ -128,13 +128,13 @@ export function useServersWebSocket() {
             state.websocket.send(
                 JSON.stringify({
                     event: 'send stats',
-                    args: [],
+                    args: [] as never[],
                 }),
             );
         } catch (error) {
             console.warn(`Failed to request stats for server ${serverUuid}:`, error);
         }
-    }, []);
+    }, [] as never[]);
 
     // Setup stats interval
     const setupStatsInterval = useCallback(
@@ -199,7 +199,7 @@ export function useServersWebSocket() {
                 await refreshTokenRef.current(serverUuid);
             }
         }, refreshTime);
-    }, []);
+    }, [] as never[]);
 
     // Refresh token
     const refreshToken = useCallback(
@@ -373,7 +373,7 @@ export function useServersWebSocket() {
                 connectServerRef.current(serverUuid);
             }
         }, RECONNECT_DELAY * state.reconnectAttempts);
-    }, []);
+    }, [] as never[]);
 
     // Store in ref
     useEffect(() => {
@@ -484,11 +484,11 @@ export function useServersWebSocket() {
         state.wingsStatus = 'unknown';
         state.reconnectAttempts = 0;
         state.isRefreshingToken = false;
-    }, []);
+    }, [] as never[]);
 
     // Connect to multiple servers with limited concurrency
     const connectServers = useCallback(
-        async (serverUuids: string[]) => {
+        async (serverUuids: string[] as never[]) => {
             const CONCURRENCY = 5;
             for (const  0; i < serverUuids.length; i += CONCURRENCY) {
                 const batch = serverUuids.slice(i, i + CONCURRENCY);
@@ -500,7 +500,7 @@ export function useServersWebSocket() {
 
     // Disconnect stale servers and connect only the requested set
     const syncServers = useCallback(
-        async (serverUuids: string[]) => {
+        async (serverUuids: string[] as never[]) => {
             const targetSet = new Set(serverUuids);
 
             connectionsRef.current.forEach((_, serverUuid) => {

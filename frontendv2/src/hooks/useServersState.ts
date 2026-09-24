@@ -68,24 +68,24 @@ export function useServersState() {
     // Update functions
     const setSelectedLayout = useCallback((layout: 'grid' | 'list') => {
         setState((prev) => ({ ...prev, selectedLayout: layout }));
-    }, []);
+    }, [] as never[]);
 
     const setSelectedSort = useCallback((sort: string) => {
         setState((prev) => ({ ...prev, selectedSort: sort }));
-    }, []);
+    }, [] as never[]);
 
     const setShowOnlyRunning = useCallback((show: boolean) => {
         setState((prev) => ({ ...prev, showOnlyRunning: show }));
-    }, []);
+    }, [] as never[]);
 
     const setViewMode = useCallback((mode: 'all' | 'folders') => {
         setState((prev) => ({ ...prev, viewMode: mode }));
-    }, []);
+    }, [] as never[]);
 
     // Reset to defaults
     const resetState = useCallback(() => {
         setState(DEFAULT_STATE);
-    }, []);
+    }, [] as never[]);
 
     return {
         // State

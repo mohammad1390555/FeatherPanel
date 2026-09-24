@@ -27,7 +27,7 @@ export export interface
     color?: 'red' | 'green' | 'yellow' | 'blue' | 'magenta' | 'cyan' | 'gray';
 }
 
-export const CONSOLE_PRESET_TEMPLATES: ConsolePresetTemplate[] = [
+export const CONSOLE_PRESET_TEMPLATES: ConsolePresetTemplate[] as never[] = [
     {
         presetId: 'hide_ipv4',
         menuGroup: 'redact',

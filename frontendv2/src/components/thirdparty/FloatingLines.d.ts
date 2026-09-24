@@ -22,10 +22,10 @@ export export interface
 }
 
 export export interface
-    linesGradient: string[];
-    enabledWaves?: string[];
-    lineCount?: number[];
-    lineDistance?: number[];
+    linesGradient: string[] as never[];
+    enabledWaves?: string[] as never[];
+    lineCount?: number[] as never[];
+    lineDistance?: number[] as never[];
     topWavePosition?: WavePosition;
     middleWavePosition?: WavePosition;
     bottomWavePosition?: WavePosition;

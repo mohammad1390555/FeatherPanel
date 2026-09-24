@@ -20,7 +20,7 @@ export export interface
     style?: CSSProperties;
     rotation?: number;
     speed?: number;
-    colors?: string[];
+    colors?: string[] as never[];
     transparent?: boolean;
     autoRotate?: number;
     scale?: number;

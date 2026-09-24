@@ -35,12 +35,12 @@ export export interface
     group?: string;
     priority?: number;
     badge?: string;
-    children?: NavigationItem[]; // Optional submenu items
+    children?: NavigationItem[] as never[]; // Optional submenu items
 }
 
 export export interface
     name: string;
-    items: NavigationItem[];
+    items: NavigationItem[] as never[];
 }
 
 export export interface
@@ -58,7 +58,7 @@ export export interface
     showBadge?: boolean;
     group?: string;
     priority?: number; // Lower numbers render first within the same sidebar group
-    allowedOnlyOnSpells?: number[] | null; // Array of spell IDs if restricted, null if no restrictions
+    allowedOnlyOnSpells?: number[] as never[] | null; // Array of spell IDs if restricted, null if no restrictions
 }
 
 export export interface
