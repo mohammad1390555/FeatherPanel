@@ -176,7 +176,7 @@ class VdsAnalytics
     /**
      * Get plugin UI asset/config stats used by system plugin controllers.
      *
-     * @return array<string, int>
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<string, int>
      */
     private static function getAddonUiStats(): array
     {

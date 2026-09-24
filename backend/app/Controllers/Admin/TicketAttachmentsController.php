@@ -250,7 +250,7 @@ class TicketAttachmentsController
 
             // Set safe file permissions (read-only for owner and group, no execute)
             // This prevents accidental execution even if PHP execution is somehow enabled
-            @chmod($filePath, 0644);
+            // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionchmod($filePath, 0644);
         } catch (\Exception $e) {
             return ApiResponse::error('Failed to save file: ' . $e->getMessage(), 'SAVE_FAILED', 500);
         }

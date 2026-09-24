@@ -30,10 +30,10 @@ class DnsResolver
     /**
      * Resolve hostname to IP address with caching.
      *
-     * @param string $hostname The hostname to resolve
-     * @param bool $useIpv6 Whether to prefer IPv6 addresses
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $hostname The hostname to resolve
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool $useIpv6 Whether to prefer IPv6 addresses
      *
-     * @return string|null The resolved IP address or null if resolution fails
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string|null The resolved IP address or null if resolution fails
      */
     public static function resolve(string $hostname, bool $useIpv6 = false): ?string
     {
@@ -97,9 +97,9 @@ class DnsResolver
     /**
      * Get all available IP addresses for a hostname.
      *
-     * @param string $hostname The hostname to resolve
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $hostname The hostname to resolve
      *
-     * @return array Array of IP addresses
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Array of IP addresses
      */
     public static function resolveAll(string $hostname): array
     {
@@ -131,9 +131,9 @@ class DnsResolver
     /**
      * Test DNS resolution with detailed results.
      *
-     * @param string $hostname The hostname to test
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $hostname The hostname to test
      *
-     * @return array Detailed resolution results
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Detailed resolution results
      */
     public static function testResolution(string $hostname): array
     {
@@ -193,7 +193,7 @@ class DnsResolver
     /**
      * Get cache statistics.
      *
-     * @return array Cache statistics
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Cache statistics
      */
     public static function getCacheStats(): array
     {
@@ -220,7 +220,7 @@ class DnsResolver
     /**
      * Set cache timeout.
      *
-     * @param int $timeout Cache timeout in seconds
+     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $timeout Cache timeout in seconds
      */
     public static function setCacheTimeout(int $timeout): void
     {

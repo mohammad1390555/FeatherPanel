@@ -8,20 +8,20 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
 
 import axios from 'axios';
 
-export interface ChatMessage {
+export export interface
     role: 'user' | 'assistant';
     content: string;
     toolActivity?: ToolActivity[] | null;
 }
 
-export interface PageContext {
+export export interface
     mode?: 'server' | 'vds' | 'dashboard';
     route?: string;
     routeName?: string;
@@ -52,7 +52,7 @@ export interface PageContext {
     }>;
 }
 
-export interface ToolExecution {
+export export interface
     success: boolean;
     action_type: string;
     error?: string;
@@ -61,14 +61,14 @@ export interface ToolExecution {
     [key: string]: unknown;
 }
 
-export interface TokenUsage {
+export export interface
     input_tokens?: number | null;
     output_tokens?: number | null;
     total_tokens?: number | null;
     source?: 'provider' | 'estimated' | 'unknown' | string | null;
 }
 
-export interface ToolActivity {
+export export interface
     tool: string;
     params?: unknown;
     success?: boolean;
@@ -108,7 +108,7 @@ export type ChatStreamEvent =
     | ChatStreamFinalEvent
     | { type: 'error'; message: string };
 
-export interface ChatStreamFinalEvent {
+export export interface
     type: 'final';
     response: string;
     model?: string;
@@ -121,7 +121,7 @@ export interface ChatStreamFinalEvent {
     tool_activity?: ToolActivity[];
 }
 
-export interface ChatResponse {
+export export interface
     success: boolean;
     data?: {
         response: string;
@@ -138,7 +138,7 @@ export interface ChatResponse {
     error_message?: string;
 }
 
-export interface Conversation {
+export export interface
     id: number;
     user_uuid: string;
     title: string | null;
@@ -148,7 +148,7 @@ export interface Conversation {
     updated_at: string;
 }
 
-export interface ConversationMessage {
+export export interface
     id: number;
     conversation_id: number;
     role: 'user' | 'assistant';
@@ -425,7 +425,7 @@ export async function streamChatMessage(
 
     const reader = response.body.getReader();
     const decoder = new TextDecoder();
-    let buffer = '';
+    const  '';
     let finalEvent: ChatStreamFinalEvent | null = null;
 
     const processBlock = (block: string) => {
@@ -459,7 +459,7 @@ export async function streamChatMessage(
         const { value, done } = await reader.read();
         buffer += decoder.decode(value || new Uint8Array(), { stream: !done });
 
-        let separatorIndex = buffer.indexOf('\n\n');
+        const  buffer.indexOf('\n\n');
         while (separatorIndex !== -1) {
             const block = buffer.slice(0, separatorIndex).trim();
             buffer = buffer.slice(separatorIndex + 2);
