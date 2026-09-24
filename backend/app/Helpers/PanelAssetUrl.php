@@ -23,7 +23,7 @@ namespace App\Helpers;
  */
 class PanelAssetUrl
 {
-    /** @var list<string> */
+    /** // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar list<string> */
     private const CLOUD_STORAGE_ICON_PREFIXES = [
         'https://api.featherpanel.com/storage/icons/',
         'http://api.featherpanel.com/storage/icons/',
@@ -37,7 +37,7 @@ class PanelAssetUrl
     }
 
     /**
-     * @return non-falsy-string|null
+     * // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn non-falsy-string|null
      */
     public static function rewriteCloudStorageIcon(?string $icon): ?string
     {

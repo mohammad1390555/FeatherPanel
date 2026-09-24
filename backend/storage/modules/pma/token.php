@@ -25,7 +25,7 @@ $secure_cookie = true;
 session_set_cookie_params(0, '/', '', $secure_cookie, true);
 $session_name = 'TokenSession';
 session_name($session_name);
-@session_start();
+// // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionsession_start();
 
 // Check if database credentials are provided as query parameters (for automatic login from panel)
 if (isset($_GET['db']) && isset($_GET['host']) && isset($_GET['user']) && isset($_GET['pass'])) {
@@ -39,7 +39,7 @@ if (isset($_GET['db']) && isset($_GET['host']) && isset($_GET['user']) && isset(
     // Set database name
     $_SESSION['PMA_single_signon_database'] = $_GET['db'];
 
-    @session_write_close();
+    // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionsession_write_close();
 
     $pmaPageMode = 'connect';
     $pmaErrorMessage = null;
