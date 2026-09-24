@@ -42,11 +42,11 @@ class OllamaProvider implements ProviderInterface
     /**
      * Process a user message and generate a response using Ollama API.
      *
-     * @param string $message User's message
-     * @param array $history Chat history
-     * @param string $systemPrompt Optional system prompt
+     * // @error suppressionparam string $message User's message
+     * // @error suppressionparam array $history Chat history
+     * // @error suppressionparam string $systemPrompt Optional system prompt
      *
-     * @return array Response with 'response' and 'model' keys
+     * // @error suppressionreturn array Response with 'response' and 'model' keys
      */
     public function processMessage(string $message, array $history, string $systemPrompt = ''): array
     {

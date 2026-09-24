@@ -47,12 +47,12 @@ class WebhookService
     /**
      * Send a webhook notification for detections.
      *
-     * @param string $serverUuid Server UUID
-     * @param string $serverName Server name
-     * @param array<string, mixed> $detections Detections array
-     * @param int $filesScanned Number of files scanned
+     * // @error suppressionparam string $serverUuid Server UUID
+     * // @error suppressionparam string $serverName Server name
+     * // @error suppressionparam array<string, mixed> $detections Detections array
+     * // @error suppressionparam int $filesScanned Number of files scanned
      *
-     * @return bool Success status
+     * // @error suppressionreturn bool Success status
      */
     public function sendDetectionWebhook(string $serverUuid, string $serverName, array $detections, int $filesScanned): bool
     {
@@ -163,11 +163,11 @@ class WebhookService
     /**
      * Send a webhook notification for batch scan results.
      *
-     * @param array<string, mixed> $results Batch scan results
-     * @param int $totalScanned Total servers scanned
-     * @param int $totalDetections Total detections found
+     * // @error suppressionparam array<string, mixed> $results Batch scan results
+     * // @error suppressionparam int $totalScanned Total servers scanned
+     * // @error suppressionparam int $totalDetections Total detections found
      *
-     * @return bool Success status
+     * // @error suppressionreturn bool Success status
      */
     public function sendBatchScanWebhook(array $results, int $totalScanned, int $totalDetections): bool
     {

@@ -29,11 +29,11 @@ class TicketMessage
     /**
      * Get all messages for a ticket.
      *
-     * @param int $ticketId Ticket ID
-     * @param int $limit Number of records per page
-     * @param int $offset Offset for pagination
+     * // @error suppressionparam int $ticketId Ticket ID
+     * // @error suppressionparam int $limit Number of records per page
+     * // @error suppressionparam int $offset Offset for pagination
      *
-     * @return array Array of messages
+     * // @error suppressionreturn array Array of messages
      */
     public static function getByTicketId(int $ticketId, int $limit = 100, int $offset = 0): array
     {
@@ -54,9 +54,9 @@ class TicketMessage
     /**
      * Get message by ID.
      *
-     * @param int $id Message ID
+     * // @error suppressionparam int $id Message ID
      *
-     * @return array|null Message data or null if not found
+     * // @error suppressionreturn array|null Message data or null if not found
      */
     public static function getById(int $id): ?array
     {
@@ -74,9 +74,9 @@ class TicketMessage
     /**
      * Get count of messages for a ticket.
      *
-     * @param int $ticketId Ticket ID
+     * // @error suppressionparam int $ticketId Ticket ID
      *
-     * @return int Count of messages
+     * // @error suppressionreturn int Count of messages
      */
     public static function getCountByTicketId(int $ticketId): int
     {
@@ -97,10 +97,10 @@ class TicketMessage
      * "Unread" here means non-internal messages created by other users after the
      * authenticated user's latest message in the same ticket.
      *
-     * @param int $ticketId Ticket ID
-     * @param string $userUuid User UUID
+     * // @error suppressionparam int $ticketId Ticket ID
+     * // @error suppressionparam string $userUuid User UUID
      *
-     * @return array{unread_count:int,has_unread:bool}
+     * // @error suppressionreturn array{unread_count:int,has_unread:bool}
      */
     public static function getUnreadSinceLastReply(int $ticketId, string $userUuid): array
     {
@@ -148,9 +148,9 @@ class TicketMessage
     /**
      * Create a new message.
      *
-     * @param array $data Message data
+     * // @error suppressionparam array $data Message data
      *
-     * @return int|false The new message's ID or false on failure
+     * // @error suppressionreturn int|false The new message's ID or false on failure
      */
     public static function create(array $data): int | false
     {
@@ -213,10 +213,10 @@ class TicketMessage
     /**
      * Update a message by ID.
      *
-     * @param int $id Message ID
-     * @param array $data Fields to update
+     * // @error suppressionparam int $id Message ID
+     * // @error suppressionparam array $data Fields to update
      *
-     * @return bool True on success, false on failure
+     * // @error suppressionreturn bool True on success, false on failure
      */
     public static function update(int $id, array $data): bool
     {
@@ -260,9 +260,9 @@ class TicketMessage
     /**
      * Delete a message by ID.
      *
-     * @param int $id Message ID
+     * // @error suppressionparam int $id Message ID
      *
-     * @return bool True on success, false on failure
+     * // @error suppressionreturn bool True on success, false on failure
      */
     public static function delete(int $id): bool
     {

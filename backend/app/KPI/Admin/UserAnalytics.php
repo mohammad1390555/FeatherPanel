@@ -30,7 +30,7 @@ class UserAnalytics
     /**
      * Get total user count statistics.
      *
-     * @return array Statistics including total, active, banned, verified, and 2FA enabled users
+     * // @error suppressionreturn array Statistics including total, active, banned, verified, and 2FA enabled users
      */
     public static function getTotalUsers(): array
     {
@@ -71,7 +71,7 @@ class UserAnalytics
     /**
      * Get user distribution by roles.
      *
-     * @return array Role distribution with counts and percentages
+     * // @error suppressionreturn array Role distribution with counts and percentages
      */
     public static function getUsersByRole(): array
     {
@@ -110,9 +110,9 @@ class UserAnalytics
     /**
      * Get user registration trends over time.
      *
-     * @param int $days Number of days to look back (default: 30)
+     * // @error suppressionparam int $days Number of days to look back (default: 30)
      *
-     * @return array Daily registration counts
+     * // @error suppressionreturn array Daily registration counts
      */
     public static function getRegistrationTrend(int $days = 30): array
     {
@@ -141,9 +141,9 @@ class UserAnalytics
     /**
      * Get top users by server count.
      *
-     * @param int $limit Number of top users to retrieve (default: 10)
+     * // @error suppressionparam int $limit Number of top users to retrieve (default: 10)
      *
-     * @return array Top users with server counts
+     * // @error suppressionreturn array Top users with server counts
      */
     public static function getTopUsersByServers(int $limit = 10): array
     {
@@ -188,9 +188,9 @@ class UserAnalytics
     /**
      * Get user activity summary (recent registrations, logins, etc).
      *
-     * @param int $hours Number of hours to look back (default: 24)
+     * // @error suppressionparam int $hours Number of hours to look back (default: 24)
      *
-     * @return array Activity summary
+     * // @error suppressionreturn array Activity summary
      */
     public static function getUserActivity(int $hours = 24): array
     {
@@ -226,7 +226,7 @@ class UserAnalytics
     /**
      * Get comprehensive user statistics dashboard.
      *
-     * @return array Complete dashboard statistics
+     * // @error suppressionreturn array Complete dashboard statistics
      */
     public static function getDashboardStats(): array
     {
@@ -244,9 +244,9 @@ class UserAnalytics
     /**
      * Get banned users statistics and list.
      *
-     * @param int $limit Number of recent banned users to retrieve (default: 20)
+     * // @error suppressionparam int $limit Number of recent banned users to retrieve (default: 20)
      *
-     * @return array Banned users statistics
+     * // @error suppressionreturn array Banned users statistics
      */
     public static function getBannedUsersStats(int $limit = 20): array
     {
@@ -305,7 +305,7 @@ class UserAnalytics
     /**
      * Get security statistics (2FA, email verification).
      *
-     * @return array Security metrics
+     * // @error suppressionreturn array Security metrics
      */
     public static function getSecurityStats(): array
     {
@@ -347,7 +347,7 @@ class UserAnalytics
     /**
      * Get user growth rate statistics.
      *
-     * @return array Growth rate metrics
+     * // @error suppressionreturn array Growth rate metrics
      */
     public static function getGrowthRate(): array
     {
@@ -413,9 +413,9 @@ class UserAnalytics
     /**
      * Get activity trends over time.
      *
-     * @param int $days Number of days to look back (default: 7)
+     * // @error suppressionparam int $days Number of days to look back (default: 7)
      *
-     * @return array Daily activity counts
+     * // @error suppressionreturn array Daily activity counts
      */
     public static function getActivityTrend(int $days = 7): array
     {
@@ -443,9 +443,9 @@ class UserAnalytics
     /**
      * Get top activities by type.
      *
-     * @param int $limit Number of top activities to retrieve (default: 10)
+     * // @error suppressionparam int $limit Number of top activities to retrieve (default: 10)
      *
-     * @return array Top activities with counts
+     * // @error suppressionreturn array Top activities with counts
      */
     public static function getTopActivities(int $limit = 10): array
     {
@@ -478,7 +478,7 @@ class UserAnalytics
     /**
      * Get activity breakdown by type (for pie chart).
      *
-     * @return array Activity distribution
+     * // @error suppressionreturn array Activity distribution
      */
     public static function getActivityBreakdown(): array
     {
@@ -511,9 +511,9 @@ class UserAnalytics
     /**
      * Get recent activities with user information.
      *
-     * @param int $limit Number of recent activities to retrieve (default: 20)
+     * // @error suppressionparam int $limit Number of recent activities to retrieve (default: 20)
      *
-     * @return array Recent activities
+     * // @error suppressionreturn array Recent activities
      */
     public static function getRecentActivities(int $limit = 20): array
     {
@@ -550,7 +550,7 @@ class UserAnalytics
     /**
      * Get activity statistics summary.
      *
-     * @return array Activity statistics
+     * // @error suppressionreturn array Activity statistics
      */
     public static function getActivityStats(): array
     {
@@ -619,9 +619,9 @@ class UserAnalytics
     /**
      * Get hourly activity distribution (for heatmap).
      *
-     * @param int $days Number of days to look back (default: 7)
+     * // @error suppressionparam int $days Number of days to look back (default: 7)
      *
-     * @return array Hourly activity distribution
+     * // @error suppressionreturn array Hourly activity distribution
      */
     public static function getHourlyActivity(int $days = 7): array
     {

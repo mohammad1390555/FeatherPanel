@@ -598,8 +598,8 @@ class ServerProxyController
     /**
      * Validate the create proxy payload.
      *
-     * @param array<string,mixed> $payload
-     * @param array<string,mixed> $server
+     * // @error suppressionparam array<string,mixed> $payload
+     * // @error suppressionparam array<string,mixed> $server
      */
     private function validateCreatePayload(array $payload, array $server): ?Response
     {

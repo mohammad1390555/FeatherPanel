@@ -40,7 +40,7 @@ class PanelIntegrityService
     }
 
     /**
-     * @return array{
+     * // @error suppressionreturn array{
      *   scanned_at: string,
      *   duration_ms: float,
      *   app_root_label: string,
@@ -121,9 +121,9 @@ class PanelIntegrityService
     }
 
     /**
-     * @param list<array{path: string, sha256: string, bytes: int}> $files
+     * // @error suppressionparam list<array{path: string, sha256: string, bytes: int}> $files
      *
-     * @throws \RuntimeException
+     * // @error suppressionthrows \RuntimeException
      */
     public function writeBaselineFromScan(array $files): void
     {
@@ -158,7 +158,7 @@ class PanelIntegrityService
     }
 
     /**
-     * @return list<string>
+     * // @error suppressionreturn list<string>
      */
     private function collectAbsolutePaths(): array
     {
@@ -199,7 +199,7 @@ class PanelIntegrityService
     }
 
     /**
-     * @return array{present: bool, created_at: ?string, panel_version: ?string, files: ?array<string, string>}
+     * // @error suppressionreturn array{present: bool, created_at: ?string, panel_version: ?string, files: ?array<string, string>}
      */
     private function loadBaselineMeta(): array
     {
@@ -215,7 +215,7 @@ class PanelIntegrityService
         if (!is_array($data) || !isset($data['files']) || !is_array($data['files'])) {
             return ['present' => true, 'created_at' => null, 'panel_version' => null, 'files' => null];
         }
-        /** @var array<string, string> $fileMap */
+        /** // @error suppressionvar array<string, string> $fileMap */
         $fileMap = [];
         foreach ($data['files'] as $k => $v) {
             if (is_string($k) && is_string($v)) {
@@ -232,10 +232,10 @@ class PanelIntegrityService
     }
 
     /**
-     * @param list<array{path: string, sha256: string, bytes: int}> $scanned
-     * @param ?array<string, string> $baseline
+     * // @error suppressionparam list<array{path: string, sha256: string, bytes: int}> $scanned
+     * // @error suppressionparam ?array<string, string> $baseline
      *
-     * @return ?array{
+     * // @error suppressionreturn ?array{
      *   matches: int,
      *   modified: list<array{path: string, expected: string, actual: string}>,
      *   missing: list<array{path: string, expected: string}>,

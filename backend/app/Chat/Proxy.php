@@ -64,7 +64,7 @@ class Proxy
     /**
      * Create a new proxy.
      *
-     * @param array<string,mixed> $data
+     * // @error suppressionparam array<string,mixed> $data
      */
     public static function create(array $data): int | false
     {

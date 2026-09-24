@@ -24,9 +24,9 @@ class FeatherZeroTrustScanLog
     /**
      * Create a new scan log entry.
      *
-     * @param array $data Scan log data
+     * // @error suppressionparam array $data Scan log data
      *
-     * @return int|false Scan log ID or false on failure
+     * // @error suppressionreturn int|false Scan log ID or false on failure
      */
     public static function create(array $data): int | false
     {
@@ -75,9 +75,9 @@ class FeatherZeroTrustScanLog
     /**
      * Get scan logs by execution ID.
      *
-     * @param string $executionId Execution ID
+     * // @error suppressionparam string $executionId Execution ID
      *
-     * @return array Scan logs
+     * // @error suppressionreturn array Scan logs
      */
     public static function getByExecutionId(string $executionId): array
     {
@@ -100,11 +100,11 @@ class FeatherZeroTrustScanLog
     /**
      * Get scan logs by server UUID.
      *
-     * @param string $serverUuid Server UUID
-     * @param int $limit Limit
-     * @param int $offset Offset
+     * // @error suppressionparam string $serverUuid Server UUID
+     * // @error suppressionparam int $limit Limit
+     * // @error suppressionparam int $offset Offset
      *
-     * @return array Scan logs
+     * // @error suppressionreturn array Scan logs
      */
     public static function getByServerUuid(string $serverUuid, int $limit = 25, int $offset = 0): array
     {

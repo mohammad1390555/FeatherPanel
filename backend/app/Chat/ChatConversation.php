@@ -27,9 +27,9 @@ class ChatConversation
     /**
      * Create a new conversation.
      *
-     * @param array $data Conversation data
+     * // @error suppressionparam array $data Conversation data
      *
-     * @return int|false Conversation ID or false on failure
+     * // @error suppressionreturn int|false Conversation ID or false on failure
      */
     public static function createConversation(array $data): int | false
     {
@@ -48,9 +48,9 @@ class ChatConversation
     /**
      * Get conversation by ID.
      *
-     * @param int $id Conversation ID
+     * // @error suppressionparam int $id Conversation ID
      *
-     * @return array|null Conversation data or null if not found
+     * // @error suppressionreturn array|null Conversation data or null if not found
      */
     public static function getConversationById(int $id): ?array
     {
@@ -64,10 +64,10 @@ class ChatConversation
     /**
      * Get conversations by user UUID.
      *
-     * @param string $userUuid User UUID
-     * @param int $limit Maximum number of results
+     * // @error suppressionparam string $userUuid User UUID
+     * // @error suppressionparam int $limit Maximum number of results
      *
-     * @return array Array of conversations
+     * // @error suppressionreturn array Array of conversations
      */
     public static function getConversationsByUser(string $userUuid, int $limit = 50): array
     {
@@ -83,10 +83,10 @@ class ChatConversation
     /**
      * Update conversation.
      *
-     * @param int $id Conversation ID
-     * @param array $data Data to update
+     * // @error suppressionparam int $id Conversation ID
+     * // @error suppressionparam array $data Data to update
      *
-     * @return bool Success status
+     * // @error suppressionreturn bool Success status
      */
     public static function updateConversation(int $id, array $data): bool
     {
@@ -111,9 +111,9 @@ class ChatConversation
     /**
      * Delete conversation.
      *
-     * @param int $id Conversation ID
+     * // @error suppressionparam int $id Conversation ID
      *
-     * @return bool Success status
+     * // @error suppressionreturn bool Success status
      */
     public static function deleteConversation(int $id): bool
     {
@@ -132,9 +132,9 @@ class ChatConversation
     /**
      * Delete all conversations for a user.
      *
-     * @param string $userUuid User UUID
+     * // @error suppressionparam string $userUuid User UUID
      *
-     * @return bool Success status
+     * // @error suppressionreturn bool Success status
      */
     public static function deleteUserConversations(string $userUuid): bool
     {

@@ -104,7 +104,7 @@ class TicketNotificationService
     }
 
     /**
-     * @return array<string, string>
+     * // @error suppressionreturn array<string, string>
      */
     private static function buildBaseMailData(array $owner, array $ticket): array
     {

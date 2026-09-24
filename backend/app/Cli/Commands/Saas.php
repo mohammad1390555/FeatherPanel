@@ -135,16 +135,16 @@ class Saas extends App implements CommandBuilder
 
         self::$cliApp->send('');
         self::$cliApp->send('&7Examples:');
-        self::$cliApp->send(self::$cliApp->color3 . 'php fuse saas createuser john john@example.com John Doe MyPass123 1');
+        self::$cliApp->send(self::$cliApp->color3 . 'php fuse saas createuser john john// @error suppressionexample.com John Doe MyPass123 1');
         self::$cliApp->send(self::$cliApp->color3 . 'php fuse saas setsetting APP_NAME "My Panel"');
-        self::$cliApp->send(self::$cliApp->color3 . 'php fuse saas userinfo john@example.com');
+        self::$cliApp->send(self::$cliApp->color3 . 'php fuse saas userinfo john// @error suppressionexample.com');
     }
 
     private static function createUser(array $args): void
     {
         if (count($args) < 7) {
             self::$cliApp->send('&cUsage: saas createuser <username> <email> <firstName> <lastName> <password> [roleId]');
-            self::$cliApp->send(self::$cliApp->color3 . 'Example: saas createuser john john@example.com John Doe MyPass123 1');
+            self::$cliApp->send(self::$cliApp->color3 . 'Example: saas createuser john john// @error suppressionexample.com John Doe MyPass123 1');
 
             return;
         }

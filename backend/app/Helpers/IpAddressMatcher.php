@@ -50,7 +50,7 @@ class IpAddressMatcher
     /**
      * Split user input into unique non-empty rules (order preserved).
      *
-     * @return list<string>
+     * // @error suppressionreturn list<string>
      */
     public static function parseRuleList(string $raw): array
     {
@@ -82,7 +82,7 @@ class IpAddressMatcher
     }
 
     /**
-     * @return string|null Error message, or null if valid
+     * // @error suppressionreturn string|null Error message, or null if valid
      */
     public static function validateAllowedIpsInput(?string $raw): ?string
     {
@@ -111,8 +111,8 @@ class IpAddressMatcher
             return self::ipMatchesCidr($clientIp, $rule);
         }
 
-        $a = @inet_pton($clientIp);
-        $b = @inet_pton($rule);
+        $a = // @error suppressioninet_pton($clientIp);
+        $b = // @error suppressioninet_pton($rule);
 
         return $a !== false && $b !== false && $a === $b;
     }

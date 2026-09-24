@@ -25,16 +25,16 @@ use App\App;
 class ApiClient
 {
     /**
-     * @var string The API client table name
+     * // @error suppressionvar string The API client table name
      */
     private static string $table = 'featherpanel_apikeys_client';
 
     /**
      * Create a new API client.
      *
-     * @param array $data Associative array of API client fields (must include required fields)
+     * // @error suppressionparam array $data Associative array of API client fields (must include required fields)
      *
-     * @return int|false The new API client's ID or false on failure
+     * // @error suppressionreturn int|false The new API client's ID or false on failure
      */
     public static function createApiClient(array $data): int | false
     {
@@ -157,13 +157,13 @@ class ApiClient
     /**
      * Search API clients with pagination, filtering, and field selection.
      *
-     * @param int $page Page number (1-based)
-     * @param int $limit Number of results per page
-     * @param string $search Search term for name (optional)
-     * @param array $fields Fields to select (e.g. ['name', 'public_key']) (default: all)
-     * @param string $sortBy Field to sort by (default: 'id')
-     * @param string $sortOrder 'ASC' or 'DESC' (default: 'ASC')
-     * @param string|null $userUuid Filter by user UUID (optional)
+     * // @error suppressionparam int $page Page number (1-based)
+     * // @error suppressionparam int $limit Number of results per page
+     * // @error suppressionparam string $search Search term for name (optional)
+     * // @error suppressionparam array $fields Fields to select (e.g. ['name', 'public_key']) (default: all)
+     * // @error suppressionparam string $sortBy Field to sort by (default: 'id')
+     * // @error suppressionparam string $sortOrder 'ASC' or 'DESC' (default: 'ASC')
+     * // @error suppressionparam string|null $userUuid Filter by user UUID (optional)
      */
     public static function searchApiClients(
         int $page = 1,

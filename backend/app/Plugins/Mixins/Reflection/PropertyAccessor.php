@@ -28,9 +28,9 @@ trait PropertyAccessor
     /**
      * Magic method to intercept property access.
      *
-     * @param string $property The property name
+     * // @error suppressionparam string $property The property name
      *
-     * @return mixed The property value
+     * // @error suppressionreturn mixed The property value
      */
     public function __get(string $property)
     {
@@ -41,10 +41,10 @@ trait PropertyAccessor
     /**
      * Magic method to intercept property assignment.
      *
-     * @param string $property The property name
-     * @param mixed $value The value to assign
+     * // @error suppressionparam string $property The property name
+     * // @error suppressionparam mixed $value The value to assign
      *
-     * @return void
+     * // @error suppressionreturn void
      */
     public function __set(string $property, $value)
     {
@@ -55,9 +55,9 @@ trait PropertyAccessor
     /**
      * Magic method to check if a property is set.
      *
-     * @param string $property The property name
+     * // @error suppressionparam string $property The property name
      *
-     * @return bool Whether the property is set
+     * // @error suppressionreturn bool Whether the property is set
      */
     public function __isset(string $property)
     {

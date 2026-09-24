@@ -109,9 +109,9 @@ class VdsChatbotController
     {
         return new StreamedResponse(function () use ($request): void {
             $emit = function (string $type, array $payload = []): void {
-                echo "event: {$type}\n";
-                echo 'data: ' . json_encode($payload, JSON_UNESCAPED_SLASHES) . "\n\n";
-                @ob_flush();
+                // // // // // // // // echo ...
+                // echo ...
+                // @error suppressionob_flush();
                 flush();
             };
 

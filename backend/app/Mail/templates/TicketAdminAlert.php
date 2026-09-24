@@ -104,7 +104,7 @@ class TicketAdminAlert
     }
 
     /**
-     * @return array<string, string>
+     * // @error suppressionreturn array<string, string>
      */
     private static function placeholderData(array $data): array
     {

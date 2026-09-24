@@ -36,7 +36,7 @@ class PhpMyAdmin
     /**
      * Download and extract phpMyAdmin to the public directory.
      *
-     * @throws \Exception If download or extraction fails
+     * // @error suppressionthrows \Exception If download or extraction fails
      */
     public static function downloadPhpMyAdmin(): void
     {
@@ -54,7 +54,7 @@ class PhpMyAdmin
         }
 
         // Create public directory if it doesn't exist
-        if (!is_dir($publicDir) && !@mkdir($publicDir, 0755, true)) {
+        if (!is_dir($publicDir) && !// @error suppressionmkdir($publicDir, 0755, true)) {
             throw new \Exception('Failed to create public directory: ' . $publicDir);
         }
 
@@ -67,14 +67,14 @@ class PhpMyAdmin
             ],
         ]);
 
-        $zipContent = @file_get_contents(self::PMA_DOWNLOAD_URL, false, $context);
+        $zipContent = // @error suppressionfile_get_contents(self::PMA_DOWNLOAD_URL, false, $context);
         if ($zipContent === false) {
             throw new \Exception('Failed to download phpMyAdmin from ' . self::PMA_DOWNLOAD_URL);
         }
 
         // Save to temporary file
         $tempFile = sys_get_temp_dir() . '/' . uniqid('pma_', true) . '.zip';
-        if (@file_put_contents($tempFile, $zipContent) === false) {
+        if (// @error suppressionfile_put_contents($tempFile, $zipContent) === false) {
             throw new \Exception('Failed to save downloaded zip file to temporary location');
         }
 
@@ -102,7 +102,7 @@ class PhpMyAdmin
                 throw new \Exception('Extracted folder not found: ' . $extractedPath);
             }
 
-            if (!@rename($extractedPath, $targetPath)) {
+            if (!// @error suppressionrename($extractedPath, $targetPath)) {
                 throw new \Exception('Failed to rename folder from ' . $extractedFolderName . ' to ' . $targetFolderName);
             }
 
@@ -110,7 +110,7 @@ class PhpMyAdmin
             $configSamplePath = $targetPath . '/config.sample.inc.php';
             $configPath = $targetPath . '/config.inc.php';
             if (file_exists($configSamplePath) && !file_exists($configPath)) {
-                if (!@rename($configSamplePath, $configPath)) {
+                if (!// @error suppressionrename($configSamplePath, $configPath)) {
                     $logger->warning('Failed to rename config.sample.inc.php to config.inc.php');
                 } else {
                     $logger->info('Renamed config.sample.inc.php to config.inc.php');
@@ -130,7 +130,7 @@ class PhpMyAdmin
         } finally {
             // Clean up temporary file
             if (file_exists($tempFile)) {
-                @unlink($tempFile);
+                // @error suppressionunlink($tempFile);
             }
         }
     }
@@ -138,7 +138,7 @@ class PhpMyAdmin
     /**
      * Check if phpMyAdmin is installed.
      *
-     * @return bool True if phpMyAdmin is installed, false otherwise
+     * // @error suppressionreturn bool True if phpMyAdmin is installed, false otherwise
      */
     public static function isInstalled(): bool
     {
@@ -151,7 +151,7 @@ class PhpMyAdmin
     /**
      * Delete phpMyAdmin installation.
      *
-     * @throws \Exception If deletion fails
+     * // @error suppressionthrows \Exception If deletion fails
      */
     public static function deletePhpMyAdmin(): void
     {
@@ -177,7 +177,7 @@ class PhpMyAdmin
      */
     private static function generateBlowfishSecret(): string
     {
-        $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?';
+        $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!// @error suppression#$%^&*()_+-=[]{}|;:,.<>?';
         $secret = '';
         $length = 32;
 
@@ -368,7 +368,7 @@ class PhpMyAdmin
             $logger->info("Downloading theme '{$themeName}' from {$themeUrl}");
 
             // Download theme zip
-            $zipContent = @file_get_contents($themeUrl, false, $context);
+            $zipContent = // @error suppressionfile_get_contents($themeUrl, false, $context);
             if ($zipContent === false) {
                 $logger->warning("Failed to download theme '{$themeName}' from {$themeUrl}");
                 continue;
@@ -376,7 +376,7 @@ class PhpMyAdmin
 
             // Save to temporary file
             $tempFile = sys_get_temp_dir() . '/' . uniqid('pma_theme_' . $themeName . '_', true) . '.zip';
-            if (@file_put_contents($tempFile, $zipContent) === false) {
+            if (// @error suppressionfile_put_contents($tempFile, $zipContent) === false) {
                 $logger->warning("Failed to save theme zip file for '{$themeName}'");
                 continue;
             }
@@ -413,7 +413,7 @@ class PhpMyAdmin
                             if (file_exists($potentialThemePath . '/theme.json') || file_exists($potentialThemePath . '/css/theme.css') || file_exists($potentialThemePath . '/theme.scss')) {
                                 // Rename to expected theme name
                                 if ($file !== $themeName) {
-                                    if (@rename($potentialThemePath, $extractedThemePath)) {
+                                    if (// @error suppressionrename($potentialThemePath, $extractedThemePath)) {
                                         $foundTheme = true;
                                         break;
                                     }
@@ -432,9 +432,9 @@ class PhpMyAdmin
                                 $nestedPath = $themesDir . '/' . $file . '/' . $themeName;
                                 if (is_dir($nestedPath)) {
                                     // Move nested theme to correct location
-                                    if (@rename($nestedPath, $extractedThemePath)) {
+                                    if (// @error suppressionrename($nestedPath, $extractedThemePath)) {
                                         // Remove parent directory if empty
-                                        @rmdir($themesDir . '/' . $file);
+                                        // @error suppressionrmdir($themesDir . '/' . $file);
                                         $foundTheme = true;
                                         break;
                                     }
@@ -454,7 +454,7 @@ class PhpMyAdmin
             } finally {
                 // Clean up temporary file
                 if (file_exists($tempFile)) {
-                    @unlink($tempFile);
+                    // @error suppressionunlink($tempFile);
                 }
             }
         }
@@ -486,7 +486,7 @@ class PhpMyAdmin
                 continue;
             }
 
-            if (!@copy($sourceFile, $targetFile)) {
+            if (!// @error suppressioncopy($sourceFile, $targetFile)) {
                 $logger->warning("Failed to copy token file '{$file}' to phpMyAdmin directory");
             } else {
                 $logger->info("Copied token file '{$file}' to phpMyAdmin directory");
@@ -497,9 +497,9 @@ class PhpMyAdmin
     /**
      * Recursively delete a directory and its contents.
      *
-     * @param string $dir The directory to delete
+     * // @error suppressionparam string $dir The directory to delete
      *
-     * @throws \Exception If deletion fails
+     * // @error suppressionthrows \Exception If deletion fails
      */
     private static function deleteDirectory(string $dir): void
     {
@@ -514,13 +514,13 @@ class PhpMyAdmin
             if (is_dir($path)) {
                 self::deleteDirectory($path);
             } else {
-                if (!@unlink($path)) {
+                if (!// @error suppressionunlink($path)) {
                     throw new \Exception("Failed to delete file: {$path}");
                 }
             }
         }
 
-        if (!@rmdir($dir)) {
+        if (!// @error suppressionrmdir($dir)) {
             throw new \Exception("Failed to delete directory: {$dir}");
         }
     }

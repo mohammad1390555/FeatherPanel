@@ -972,12 +972,12 @@ class TaskController
     /**
      * Get task with schedule information.
      *
-     * @param Request $request The HTTP request
-     * @param string $serverUuid The server UUID
-     * @param int $scheduleId The schedule ID
-     * @param int $taskId The task ID
+     * // @error suppressionparam Request $request The HTTP request
+     * // @error suppressionparam string $serverUuid The server UUID
+     * // @error suppressionparam int $scheduleId The schedule ID
+     * // @error suppressionparam int $taskId The task ID
      *
-     * @return Response The HTTP response
+     * // @error suppressionreturn Response The HTTP response
      */
     public function getTaskWithSchedule(Request $request, string $serverUuid, int $scheduleId, int $taskId): Response
     {

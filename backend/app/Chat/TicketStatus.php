@@ -29,11 +29,11 @@ class TicketStatus
     /**
      * Get all statuses with optional search and pagination.
      *
-     * @param string|null $search Search term
-     * @param int $limit Number of records per page
-     * @param int $offset Offset for pagination
+     * // @error suppressionparam string|null $search Search term
+     * // @error suppressionparam int $limit Number of records per page
+     * // @error suppressionparam int $offset Offset for pagination
      *
-     * @return array Array of statuses
+     * // @error suppressionreturn array Array of statuses
      */
     public static function getAll(?string $search = null, int $limit = 10, int $offset = 0): array
     {
@@ -64,9 +64,9 @@ class TicketStatus
     /**
      * Get status by ID.
      *
-     * @param int $id Status ID
+     * // @error suppressionparam int $id Status ID
      *
-     * @return array|null Status data or null if not found
+     * // @error suppressionreturn array|null Status data or null if not found
      */
     public static function getById(int $id): ?array
     {
@@ -84,9 +84,9 @@ class TicketStatus
     /**
      * Get count of statuses.
      *
-     * @param string|null $search Search term
+     * // @error suppressionparam string|null $search Search term
      *
-     * @return int Count of statuses
+     * // @error suppressionreturn int Count of statuses
      */
     public static function getCount(?string $search = null): int
     {
@@ -112,9 +112,9 @@ class TicketStatus
     /**
      * Create a new status.
      *
-     * @param array $data Status data
+     * // @error suppressionparam array $data Status data
      *
-     * @return int|false The new status's ID or false on failure
+     * // @error suppressionreturn int|false The new status's ID or false on failure
      */
     public static function create(array $data): int | false
     {
@@ -153,10 +153,10 @@ class TicketStatus
     /**
      * Update a status by ID.
      *
-     * @param int $id Status ID
-     * @param array $data Fields to update
+     * // @error suppressionparam int $id Status ID
+     * // @error suppressionparam array $data Fields to update
      *
-     * @return bool True on success, false on failure
+     * // @error suppressionreturn bool True on success, false on failure
      */
     public static function update(int $id, array $data): bool
     {
@@ -193,9 +193,9 @@ class TicketStatus
     /**
      * Delete a status by ID.
      *
-     * @param int $id Status ID
+     * // @error suppressionparam int $id Status ID
      *
-     * @return bool True on success, false on failure
+     * // @error suppressionreturn bool True on success, false on failure
      */
     public static function delete(int $id): bool
     {
