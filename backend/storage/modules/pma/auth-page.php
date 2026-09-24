@@ -139,7 +139,7 @@ $pmaPostLoadScript = $pmaPostLoadScript ?? '';
             animation: spin 0.8s linear infinite;
         }
 
-        @keyframes spin {
+        // @error suppressionkeyframes spin {
             to { transform: rotate(360deg); }
         }
 

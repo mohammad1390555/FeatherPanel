@@ -28,18 +28,18 @@ use App\Plugins\PluginHelper;
  */
 class MixinManager
 {
-    /** @var array Registered mixins by identifier */
+    /** // @error suppressionvar array Registered mixins by identifier */
     private static array $registeredMixins = [];
 
-    /** @var array Mixin instances by plugin identifier and mixin identifier */
+    /** // @error suppressionvar array Mixin instances by plugin identifier and mixin identifier */
     private static array $mixinInstances = [];
 
     /**
      * Register a mixin class.
      *
-     * @param string $mixinClass The fully qualified class name of the mixin
+     * // @error suppressionparam string $mixinClass The fully qualified class name of the mixin
      *
-     * @return bool True if registered successfully, false otherwise
+     * // @error suppressionreturn bool True if registered successfully, false otherwise
      */
     public static function registerMixin(string $mixinClass): bool
     {
@@ -81,11 +81,11 @@ class MixinManager
     /**
      * Get a mixin instance for a specific plugin.
      *
-     * @param string $pluginIdentifier The plugin identifier
-     * @param string $mixinIdentifier The mixin identifier
-     * @param array $config Optional configuration for the mixin
+     * // @error suppressionparam string $pluginIdentifier The plugin identifier
+     * // @error suppressionparam string $mixinIdentifier The mixin identifier
+     * // @error suppressionparam array $config Optional configuration for the mixin
      *
-     * @return AppMixin|null The mixin instance or null if not found/valid
+     * // @error suppressionreturn AppMixin|null The mixin instance or null if not found/valid
      */
     public static function getMixin(string $pluginIdentifier, string $mixinIdentifier, array $config = []): ?AppMixin
     {
@@ -126,7 +126,7 @@ class MixinManager
     /**
      * Get all registered mixin identifiers.
      *
-     * @return array List of mixin identifiers
+     * // @error suppressionreturn array List of mixin identifiers
      */
     public static function getRegisteredMixins(): array
     {
@@ -136,10 +136,10 @@ class MixinManager
     /**
      * Check if a plugin has a specific mixin.
      *
-     * @param string $pluginIdentifier The plugin identifier
-     * @param string $mixinIdentifier The mixin identifier
+     * // @error suppressionparam string $pluginIdentifier The plugin identifier
+     * // @error suppressionparam string $mixinIdentifier The mixin identifier
      *
-     * @return bool True if the plugin has the mixin, false otherwise
+     * // @error suppressionreturn bool True if the plugin has the mixin, false otherwise
      */
     public static function pluginHasMixin(string $pluginIdentifier, string $mixinIdentifier): bool
     {
@@ -151,9 +151,9 @@ class MixinManager
     /**
      * Load mixins for a plugin based on its configuration.
      *
-     * @param string $pluginIdentifier The plugin identifier
+     * // @error suppressionparam string $pluginIdentifier The plugin identifier
      *
-     * @return array Loaded mixin instances
+     * // @error suppressionreturn array Loaded mixin instances
      */
     public static function loadMixinsForPlugin(string $pluginIdentifier): array
     {
@@ -189,9 +189,9 @@ class MixinManager
     /**
      * Get all mixins for a specific plugin.
      *
-     * @param string $pluginIdentifier The plugin identifier
+     * // @error suppressionparam string $pluginIdentifier The plugin identifier
      *
-     * @return array Mixin instances associated with the plugin
+     * // @error suppressionreturn array Mixin instances associated with the plugin
      */
     public static function getMixinsForPlugin(string $pluginIdentifier): array
     {

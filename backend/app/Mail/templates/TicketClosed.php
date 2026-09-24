@@ -85,7 +85,7 @@ class TicketClosed
     }
 
     /**
-     * @return array<string, string>
+     * // @error suppressionreturn array<string, string>
      */
     private static function templateData(array $data): array
     {

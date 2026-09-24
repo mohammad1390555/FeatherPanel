@@ -774,11 +774,11 @@ class ServerScheduleController
     /**
      * Get schedule with server information.
      *
-     * @param Request $request The HTTP request
-     * @param string $serverUuid The server UUID
-     * @param int $scheduleId The schedule ID
+     * // @error suppressionparam Request $request The HTTP request
+     * // @error suppressionparam string $serverUuid The server UUID
+     * // @error suppressionparam int $scheduleId The schedule ID
      *
-     * @return Response The HTTP response
+     * // @error suppressionreturn Response The HTTP response
      */
     public function getScheduleWithServer(Request $request, string $serverUuid, int $scheduleId): Response
     {
@@ -805,10 +805,10 @@ class ServerScheduleController
     /**
      * Get all schedules for a server with server information.
      *
-     * @param Request $request The HTTP request
-     * @param string $serverUuid The server UUID
+     * // @error suppressionparam Request $request The HTTP request
+     * // @error suppressionparam string $serverUuid The server UUID
      *
-     * @return Response The HTTP response
+     * // @error suppressionreturn Response The HTTP response
      */
     public function getSchedulesWithServer(Request $request, string $serverUuid): Response
     {

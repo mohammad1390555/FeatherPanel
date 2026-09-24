@@ -77,10 +77,10 @@ class TimeHelper
      * Normalise the standard `created_at` / `updated_at` (and any caller-supplied
      * additional keys) on an associative row in place, returning the new array.
      *
-     * @param array<string, mixed> $row
-     * @param string[] $extraKeys additional datetime keys to normalise
+     * // @error suppressionparam array<string, mixed> $row
+     * // @error suppressionparam string[] $extraKeys additional datetime keys to normalise
      *
-     * @return array<string, mixed>
+     * // @error suppressionreturn array<string, mixed>
      */
     public static function normaliseRow(array $row, array $extraKeys = []): array
     {
@@ -97,10 +97,10 @@ class TimeHelper
     /**
      * Apply `normaliseRow` to a list of rows.
      *
-     * @param array<int, array<string, mixed>> $rows
-     * @param string[] $extraKeys
+     * // @error suppressionparam array<int, array<string, mixed>> $rows
+     * // @error suppressionparam string[] $extraKeys
      *
-     * @return array<int, array<string, mixed>>
+     * // @error suppressionreturn array<int, array<string, mixed>>
      */
     public static function normaliseRows(array $rows, array $extraKeys = []): array
     {

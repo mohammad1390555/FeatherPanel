@@ -73,7 +73,7 @@ class ModerationReasonHelper
     }
 
     /**
-     * @return array{reason:string,category:?string,details:string}|null
+     * // @error suppressionreturn array{reason:string,category:?string,details:string}|null
      */
     public static function parseRequestBody(array $body): ?array
     {
@@ -104,9 +104,9 @@ class ModerationReasonHelper
     }
 
     /**
-     * @param array<string, mixed> $row
+     * // @error suppressionparam array<string, mixed> $row
      *
-     * @return array<string, mixed>
+     * // @error suppressionreturn array<string, mixed>
      */
     public static function enrichUserBanMetadata(array $row): array
     {
@@ -128,9 +128,9 @@ class ModerationReasonHelper
     }
 
     /**
-     * @param array<string, mixed> $row
+     * // @error suppressionparam array<string, mixed> $row
      *
-     * @return array<string, mixed>
+     * // @error suppressionreturn array<string, mixed>
      */
     public static function enrichServerSuspensionMetadata(array $row): array
     {
@@ -152,7 +152,7 @@ class ModerationReasonHelper
     }
 
     /**
-     * @return array<string, string|null>
+     * // @error suppressionreturn array<string, string|null>
      */
     public static function banAppliedFields(string $reason, ?array $staffUser): array
     {
@@ -165,7 +165,7 @@ class ModerationReasonHelper
     }
 
     /**
-     * @return array<string, null>
+     * // @error suppressionreturn array<string, null>
      */
     public static function banClearedFields(): array
     {
@@ -178,7 +178,7 @@ class ModerationReasonHelper
     }
 
     /**
-     * @return array<string, int|string|null>
+     * // @error suppressionreturn array<string, int|string|null>
      */
     public static function suspensionAppliedFields(string $reason, ?array $staffUser): array
     {
@@ -191,7 +191,7 @@ class ModerationReasonHelper
     }
 
     /**
-     * @return array<string, int|null>
+     * // @error suppressionreturn array<string, int|null>
      */
     public static function suspensionClearedFields(): array
     {

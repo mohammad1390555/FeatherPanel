@@ -26,20 +26,20 @@ use App\Chat\Database;
 class SuspiciousFileHashService
 {
     /**
-     * @var string The suspicious file hashes table name
+     * // @error suppressionvar string The suspicious file hashes table name
      */
     private static string $table = 'featherpanel_suspicious_file_hashes';
 
     /**
      * Submit or update a hash for tracking.
      *
-     * @param string $hash SHA-256 hash string
-     * @param string $fileName File name
-     * @param string $detectionType Detection type (e.g., "trojan", "virus", "suspicious")
-     * @param string|null $serverUuid Server UUID or identifier
-     * @param array<string, mixed> $metadata Additional metadata
+     * // @error suppressionparam string $hash SHA-256 hash string
+     * // @error suppressionparam string $fileName File name
+     * // @error suppressionparam string $detectionType Detection type (e.g., "trojan", "virus", "suspicious")
+     * // @error suppressionparam string|null $serverUuid Server UUID or identifier
+     * // @error suppressionparam array<string, mixed> $metadata Additional metadata
      *
-     * @return bool True on success, false on failure
+     * // @error suppressionreturn bool True on success, false on failure
      */
     public static function submitHash(
         string $hash,
@@ -131,9 +131,9 @@ class SuspiciousFileHashService
     /**
      * Get all confirmed malicious hashes.
      *
-     * @param bool $confirmedOnly Only return confirmed malicious hashes
+     * // @error suppressionparam bool $confirmedOnly Only return confirmed malicious hashes
      *
-     * @return array<int, array<string, mixed>> Array of hash records
+     * // @error suppressionreturn array<int, array<string, mixed>> Array of hash records
      */
     public static function getHashes(bool $confirmedOnly = false): array
     {
@@ -169,9 +169,9 @@ class SuspiciousFileHashService
     /**
      * Get hashes as a map for quick lookup.
      *
-     * @param bool $confirmedOnly Only return confirmed malicious hashes
+     * // @error suppressionparam bool $confirmedOnly Only return confirmed malicious hashes
      *
-     * @return array<string, array<string, mixed>> Hash map keyed by hash
+     * // @error suppressionreturn array<string, array<string, mixed>> Hash map keyed by hash
      */
     public static function getHashesMap(bool $confirmedOnly = false): array
     {
@@ -190,10 +190,10 @@ class SuspiciousFileHashService
     /**
      * Check multiple hashes against the database.
      *
-     * @param array<string> $hashes Array of SHA-256 hashes
-     * @param bool $confirmedOnly Only check against confirmed malicious hashes
+     * // @error suppressionparam array<string> $hashes Array of SHA-256 hashes
+     * // @error suppressionparam bool $confirmedOnly Only check against confirmed malicious hashes
      *
-     * @return array<int, array<string, mixed>> Matches found in the database
+     * // @error suppressionreturn array<int, array<string, mixed>> Matches found in the database
      */
     public static function checkHashes(array $hashes, bool $confirmedOnly = false): array
     {
@@ -234,7 +234,7 @@ class SuspiciousFileHashService
     /**
      * Get statistics about the hash database.
      *
-     * @return array<string, mixed> Statistics
+     * // @error suppressionreturn array<string, mixed> Statistics
      */
     public static function getStats(): array
     {
@@ -289,9 +289,9 @@ class SuspiciousFileHashService
     /**
      * Mark a hash as confirmed malicious.
      *
-     * @param string $hash SHA-256 hash
+     * // @error suppressionparam string $hash SHA-256 hash
      *
-     * @return bool True on success, false on failure
+     * // @error suppressionreturn bool True on success, false on failure
      */
     public static function confirmMalicious(string $hash): bool
     {
@@ -310,9 +310,9 @@ class SuspiciousFileHashService
     /**
      * Delete a hash from the database.
      *
-     * @param string $hash SHA-256 hash
+     * // @error suppressionparam string $hash SHA-256 hash
      *
-     * @return bool True on success, false on failure
+     * // @error suppressionreturn bool True on success, false on failure
      */
     public static function deleteHash(string $hash): bool
     {

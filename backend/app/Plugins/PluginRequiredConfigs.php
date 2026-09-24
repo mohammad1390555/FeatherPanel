@@ -24,9 +24,9 @@ class PluginRequiredConfigs
     /**
      * Get required configs for a plugin.
      *
-     * @param string $identifier The plugin identifier
+     * // @error suppressionparam string $identifier The plugin identifier
      *
-     * @return array The required configs
+     * // @error suppressionreturn array The required configs
      */
     public static function getRequiredConfigs(string $identifier): array
     {
@@ -38,9 +38,9 @@ class PluginRequiredConfigs
     /**
      * Check if all required configs are set for a plugin.
      *
-     * @param string $identifier The plugin identifier
+     * // @error suppressionparam string $identifier The plugin identifier
      *
-     * @return bool True if all required configs are set
+     * // @error suppressionreturn bool True if all required configs are set
      */
     public static function areRequiredConfigsSet(string $identifier): bool
     {

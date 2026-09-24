@@ -44,7 +44,7 @@ class SystemService
     /**
      * Get system information.
      *
-     * @param string $version Version to get (v1 or v2)
+     * // @error suppressionparam string $version Version to get (v1 or v2)
      */
     public function getSystemInfo(string $version = 'v1'): array
     {
@@ -603,8 +603,8 @@ class SystemService
     /**
      * Trigger a Wings self-update.
      *
-     * @param array $options Self-update options payload
-     * @param bool $disableRetries Whether to disable client-level retry logic
+     * // @error suppressionparam array $options Self-update options payload
+     * // @error suppressionparam bool $disableRetries Whether to disable client-level retry logic
      */
     public function triggerSelfUpdate(array $options, bool $disableRetries = false): array
     {
@@ -616,12 +616,12 @@ class SystemService
     /**
      * Execute a command on the host system.
      *
-     * @param string $command The command to execute
-     * @param int|null $timeoutSeconds Command timeout in seconds (default: 60)
-     * @param string|null $workingDirectory Working directory for command execution
-     * @param array|null $environment Environment variables for the command
+     * // @error suppressionparam string $command The command to execute
+     * // @error suppressionparam int|null $timeoutSeconds Command timeout in seconds (default: 60)
+     * // @error suppressionparam string|null $workingDirectory Working directory for command execution
+     * // @error suppressionparam array|null $environment Environment variables for the command
      *
-     * @return array Response containing exit_code, stdout, stderr, timed_out, duration_ms
+     * // @error suppressionreturn array Response containing exit_code, stdout, stderr, timed_out, duration_ms
      */
     public function executeCommand(
         string $command,
@@ -654,13 +654,13 @@ class SystemService
      * Returns plain-text diagnostics by default. When format is set to `url`,
      * the response will be JSON with an uploaded report URL.
      *
-     * @param bool|null $includeEndpoints Include HTTP endpoint metadata when true
-     * @param bool|null $includeLogs Include daemon logs when true
-     * @param int|null $logLines Number of log lines to include (1-500)
-     * @param string|null $format Response format (`text`|`url`)
-     * @param string|null $uploadApiUrl Override upload endpoint when using `url` format
+     * // @error suppressionparam bool|null $includeEndpoints Include HTTP endpoint metadata when true
+     * // @error suppressionparam bool|null $includeLogs Include daemon logs when true
+     * // @error suppressionparam int|null $logLines Number of log lines to include (1-500)
+     * // @error suppressionparam string|null $format Response format (`text`|`url`)
+     * // @error suppressionparam string|null $uploadApiUrl Override upload endpoint when using `url` format
      *
-     * @return array|string Plain text diagnostics or JSON payload depending on format
+     * // @error suppressionreturn array|string Plain text diagnostics or JSON payload depending on format
      */
     public function getDiagnostics(
         ?bool $includeEndpoints = null,

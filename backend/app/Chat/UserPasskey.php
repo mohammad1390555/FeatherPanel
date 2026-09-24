@@ -38,7 +38,7 @@ class UserPasskey
     }
 
     /**
-     * @return array<int, array<string, mixed>>
+     * // @error suppressionreturn array<int, array<string, mixed>>
      */
     public static function listByUserUuid(string $userUuid): array
     {
@@ -56,7 +56,7 @@ class UserPasskey
     }
 
     /**
-     * @return array<string, mixed>|null
+     * // @error suppressionreturn array<string, mixed>|null
      */
     public static function getByCredentialIdBinary(string $credentialIdBinary): ?array
     {
@@ -75,7 +75,7 @@ class UserPasskey
     }
 
     /**
-     * @param array<string, mixed> $data
+     * // @error suppressionparam array<string, mixed> $data
      */
     public static function create(array $data): int | false
     {

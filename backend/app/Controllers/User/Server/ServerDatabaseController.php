@@ -124,10 +124,10 @@ class ServerDatabaseController
     /**
      * Get all databases for a server.
      *
-     * @param Request $request The HTTP request
-     * @param string $serverUuid The server UUID
+     * // @error suppressionparam Request $request The HTTP request
+     * // @error suppressionparam string $serverUuid The server UUID
      *
-     * @return Response The HTTP response
+     * // @error suppressionreturn Response The HTTP response
      */
     #[OA\Get(
         path: '/api/user/servers/{uuidShort}/databases',
@@ -241,11 +241,11 @@ class ServerDatabaseController
     /**
      * Get a specific server database.
      *
-     * @param Request $request The HTTP request
-     * @param string $serverUuid The server UUID
-     * @param int $databaseId The database ID
+     * // @error suppressionparam Request $request The HTTP request
+     * // @error suppressionparam string $serverUuid The server UUID
+     * // @error suppressionparam int $databaseId The database ID
      *
-     * @return Response The HTTP response
+     * // @error suppressionreturn Response The HTTP response
      */
     #[OA\Get(
         path: '/api/user/servers/{uuidShort}/databases/{databaseId}',
@@ -337,10 +337,10 @@ class ServerDatabaseController
     /**
      * Create a new server database.
      *
-     * @param Request $request The HTTP request
-     * @param string $serverUuid The server UUID
+     * // @error suppressionparam Request $request The HTTP request
+     * // @error suppressionparam string $serverUuid The server UUID
      *
-     * @return Response The HTTP response
+     * // @error suppressionreturn Response The HTTP response
      */
     #[OA\Post(
         path: '/api/user/servers/{uuidShort}/databases',
@@ -513,11 +513,11 @@ class ServerDatabaseController
     /**
      * Update a server database.
      *
-     * @param Request $request The HTTP request
-     * @param string $serverUuid The server UUID
-     * @param int $databaseId The database ID
+     * // @error suppressionparam Request $request The HTTP request
+     * // @error suppressionparam string $serverUuid The server UUID
+     * // @error suppressionparam int $databaseId The database ID
      *
-     * @return Response The HTTP response
+     * // @error suppressionreturn Response The HTTP response
      */
     #[OA\Patch(
         path: '/api/user/servers/{uuidShort}/databases/{databaseId}',
@@ -645,11 +645,11 @@ class ServerDatabaseController
     /**
      * Delete a server database.
      *
-     * @param Request $request The HTTP request
-     * @param string $serverUuid The server UUID
-     * @param int $databaseId The database ID
+     * // @error suppressionparam Request $request The HTTP request
+     * // @error suppressionparam string $serverUuid The server UUID
+     * // @error suppressionparam int $databaseId The database ID
      *
-     * @return Response The HTTP response
+     * // @error suppressionreturn Response The HTTP response
      */
     #[OA\Delete(
         path: '/api/user/servers/{uuidShort}/databases/{databaseId}',
@@ -770,10 +770,10 @@ class ServerDatabaseController
     /**
      * Get available database hosts.
      *
-     * @param Request $request The HTTP request
-     * @param string $serverUuid The server UUID
+     * // @error suppressionparam Request $request The HTTP request
+     * // @error suppressionparam string $serverUuid The server UUID
      *
-     * @return Response The HTTP response
+     * // @error suppressionreturn Response The HTTP response
      */
     #[OA\Get(
         path: '/api/user/servers/{uuidShort}/databases/hosts',
@@ -828,9 +828,9 @@ class ServerDatabaseController
     /**
      * Check if phpMyAdmin module is installed.
      *
-     * @param Request $request The HTTP request
+     * // @error suppressionparam Request $request The HTTP request
      *
-     * @return Response The HTTP response
+     * // @error suppressionreturn Response The HTTP response
      */
     #[OA\Get(
         path: '/api/user/servers/{uuidShort}/databases/phpmyadmin/check',
@@ -884,11 +884,11 @@ class ServerDatabaseController
     /**
      * Generate phpMyAdmin signon token for a database.
      *
-     * @param Request $request The HTTP request
-     * @param string $serverUuid The server UUID
-     * @param int $databaseId The database ID
+     * // @error suppressionparam Request $request The HTTP request
+     * // @error suppressionparam string $serverUuid The server UUID
+     * // @error suppressionparam int $databaseId The database ID
      *
-     * @return Response The HTTP response
+     * // @error suppressionreturn Response The HTTP response
      */
     #[OA\Post(
         path: '/api/user/servers/{uuidShort}/databases/{databaseId}/phpmyadmin/token',
@@ -1005,11 +1005,11 @@ class ServerDatabaseController
     /**
      * Test connection to a database host.
      *
-     * @param Request $request The HTTP request
-     * @param string $serverUuid The server UUID
-     * @param int $databaseHostId The database host ID to test
+     * // @error suppressionparam Request $request The HTTP request
+     * // @error suppressionparam string $serverUuid The server UUID
+     * // @error suppressionparam int $databaseHostId The database host ID to test
      *
-     * @return Response The HTTP response
+     * // @error suppressionreturn Response The HTTP response
      */
     #[OA\Post(
         path: '/api/user/servers/{uuidShort}/databases/hosts/{databaseHostId}/test',
@@ -1578,12 +1578,12 @@ class ServerDatabaseController
     /**
      * Create database and user on the database host.
      *
-     * @param array $databaseHost Database host information
-     * @param string $databaseName Database name to create
-     * @param string $username Username to create
-     * @param string $password Password for the user
+     * // @error suppressionparam array $databaseHost Database host information
+     * // @error suppressionparam string $databaseName Database name to create
+     * // @error suppressionparam string $username Username to create
+     * // @error suppressionparam string $password Password for the user
      *
-     * @throws \Exception If creation fails
+     * // @error suppressionthrows \Exception If creation fails
      */
     private function createDatabaseOnHost(array $databaseHost, string $databaseName, string $username, string $password): void
     {
@@ -1607,10 +1607,10 @@ class ServerDatabaseController
                     $pdo->exec("CREATE DATABASE IF NOT EXISTS {$safeDbName} CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
 
                     // Create the user
-                    $pdo->exec("CREATE USER IF NOT EXISTS {$safeUser}@'%' IDENTIFIED BY '{$password}'");
+                    $pdo->exec("CREATE USER IF NOT EXISTS {$safeUser}// @error suppression'%' IDENTIFIED BY '{$password}'");
 
                     // Grant privileges to the user on the specific database
-                    $pdo->exec("GRANT ALL PRIVILEGES ON {$safeDbName}.* TO {$safeUser}@'%'");
+                    $pdo->exec("GRANT ALL PRIVILEGES ON {$safeDbName}.* TO {$safeUser}// @error suppression'%'");
 
                     // Flush privileges
                     $pdo->exec('FLUSH PRIVILEGES');
@@ -1643,11 +1643,11 @@ class ServerDatabaseController
     /**
      * Delete database and user from the database host.
      *
-     * @param array $databaseHost Database host information
-     * @param string $databaseName Database name to delete
-     * @param string $username Username to delete
+     * // @error suppressionparam array $databaseHost Database host information
+     * // @error suppressionparam string $databaseName Database name to delete
+     * // @error suppressionparam string $username Username to delete
      *
-     * @throws \Exception If deletion fails
+     * // @error suppressionthrows \Exception If deletion fails
      */
     private function deleteDatabaseFromHost(array $databaseHost, string $databaseName, string $username): void
     {
@@ -1668,10 +1668,10 @@ class ServerDatabaseController
                     $pdo = new \PDO($dsn, $databaseHost['database_username'], $databaseHost['database_password'], $options);
 
                     // Revoke privileges from the user
-                    $pdo->exec("REVOKE ALL PRIVILEGES ON {$safeDbName}.* FROM {$safeUser}@'%'");
+                    $pdo->exec("REVOKE ALL PRIVILEGES ON {$safeDbName}.* FROM {$safeUser}// @error suppression'%'");
 
                     // Drop the user
-                    $pdo->exec("DROP USER IF EXISTS {$safeUser}@'%'");
+                    $pdo->exec("DROP USER IF EXISTS {$safeUser}// @error suppression'%'");
 
                     // Drop the database
                     $pdo->exec("DROP DATABASE IF EXISTS {$safeDbName}");
@@ -1707,9 +1707,9 @@ class ServerDatabaseController
     /**
      * Test database connection to an external host.
      *
-     * @param array $databaseHost Database host information
+     * // @error suppressionparam array $databaseHost Database host information
      *
-     * @return array Connection test result
+     * // @error suppressionreturn array Connection test result
      */
     private function testDatabaseConnection(array $databaseHost): array
     {
@@ -1786,9 +1786,9 @@ class ServerDatabaseController
     /**
      * Generate a random string.
      *
-     * @param int $length Length of the string
+     * // @error suppressionparam int $length Length of the string
      *
-     * @return string Random string
+     * // @error suppressionreturn string Random string
      */
     private function generateRandomString(int $length): string
     {
@@ -1805,9 +1805,9 @@ class ServerDatabaseController
     /**
      * Safely quote a PostgreSQL identifier by escaping double quotes.
      *
-     * @param string $identifier The identifier to quote
+     * // @error suppressionparam string $identifier The identifier to quote
      *
-     * @return string The safely quoted identifier
+     * // @error suppressionreturn string The safely quoted identifier
      */
     private function quoteIdentifier(string $identifier): string
     {
@@ -1817,9 +1817,9 @@ class ServerDatabaseController
     /**
      * Safely quote a MySQL/MariaDB identifier by escaping backticks.
      *
-     * @param string $identifier The identifier to quote
+     * // @error suppressionparam string $identifier The identifier to quote
      *
-     * @return string The safely quoted identifier
+     * // @error suppressionreturn string The safely quoted identifier
      */
     private function quoteIdentifierMySQL(string $identifier): string
     {
@@ -1853,9 +1853,9 @@ class ServerDatabaseController
     /**
      * Split a SQL file into individual statements, handling strings and comments.
      *
-     * @param string $sql The SQL content to split
+     * // @error suppressionparam string $sql The SQL content to split
      *
-     * @return array Array of individual SQL statements
+     * // @error suppressionreturn array Array of individual SQL statements
      */
     private function splitSqlStatements(string $sql): array
     {

@@ -27,10 +27,10 @@ use App\App;
  */
 abstract class AbstractMixin implements AppMixin
 {
-    /** @var string The plugin identifier that this mixin is attached to */
+    /** // @error suppressionvar string The plugin identifier that this mixin is attached to */
     protected string $pluginIdentifier = '';
 
-    /** @var array Configuration for this mixin */
+    /** // @error suppressionvar array Configuration for this mixin */
     protected array $config = [];
 
     protected $logger;
@@ -47,7 +47,7 @@ abstract class AbstractMixin implements AppMixin
     /**
      * Get the plugin identifier.
      *
-     * @return string The plugin identifier
+     * // @error suppressionreturn string The plugin identifier
      */
     public function getPluginIdentifier(): string
     {
@@ -57,7 +57,7 @@ abstract class AbstractMixin implements AppMixin
     /**
      * Get the mixin configuration.
      *
-     * @return array The mixin configuration
+     * // @error suppressionreturn array The mixin configuration
      */
     public function getConfig(): array
     {
@@ -67,10 +67,10 @@ abstract class AbstractMixin implements AppMixin
     /**
      * Get a configuration value.
      *
-     * @param string $key The configuration key
-     * @param mixed $default Default value if key is not found
+     * // @error suppressionparam string $key The configuration key
+     * // @error suppressionparam mixed $default Default value if key is not found
      *
-     * @return mixed The configuration value or default
+     * // @error suppressionreturn mixed The configuration value or default
      */
     public function getConfigValue(string $key, $default = null)
     {
@@ -90,8 +90,8 @@ abstract class AbstractMixin implements AppMixin
     /**
      * Log a debug message.
      *
-     * @param string $message The message to log
-     * @param array $context Additional context data
+     * // @error suppressionparam string $message The message to log
+     * // @error suppressionparam array $context Additional context data
      */
     protected function debug(string $message, array $context = []): void
     {
@@ -102,8 +102,8 @@ abstract class AbstractMixin implements AppMixin
     /**
      * Log an error message.
      *
-     * @param string $message The message to log
-     * @param array $context Additional context data
+     * // @error suppressionparam string $message The message to log
+     * // @error suppressionparam array $context Additional context data
      */
     protected function error(string $message, array $context = []): void
     {

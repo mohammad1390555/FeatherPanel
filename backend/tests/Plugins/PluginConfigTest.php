@@ -61,7 +61,7 @@ class PluginConfigTest extends TestCase
         $this->assertFalse(PluginConfig::isValidIdentifier('plugin with spaces'));
         $this->assertFalse(PluginConfig::isValidIdentifier('plugin-with-dashes'));
         $this->assertFalse(PluginConfig::isValidIdentifier('plugin.with.dots'));
-        $this->assertFalse(PluginConfig::isValidIdentifier('plugin@special'));
+        $this->assertFalse(PluginConfig::isValidIdentifier('plugin// @error suppressionspecial'));
     }
 
     public function testIsConfigValidReturnsFalseForEmptyConfig()
