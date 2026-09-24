@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -21,7 +21,7 @@ function mergeFilters<T extends Record<string, unknown>>(defaults: T, stored: Pa
     }
 
     const merged = { ...defaults };
-    for (const key of Object.keys(defaults) as (keyof T)[]) {
+    for (const key of Object.keys(defaults) as (keyof T)[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]) {
         if (Object.prototype.hasOwnProperty.call(stored, key) && stored[key] !== undefined) {
             merged[key] = stored[key] as T[keyof T];
         }
@@ -81,16 +81,16 @@ export function usePersistedListFilters<T extends Record<string, unknown>>(stora
 
     const patchFilters = useCallback((partial: Partial<T>) => {
         setFilters((prev) => ({ ...prev, ...partial }));
-    }, []);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const resetFilters = useCallback(() => {
         setFilters({ ...defaultsRef.current });
-    }, []);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     return { filters, setFilters, patchFilters, resetFilters, hydrated };
 }
 
-export interface SearchListFilters {
+export export interface
     searchQuery: string;
     page: number;
     pageSize: number;

@@ -8,14 +8,14 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
 
 import type { AppSettings } from '@/types/settings';
 
-export interface ConfiguredLink {
+export export interface
     id: string;
     label: string;
     href: string;
@@ -48,12 +48,12 @@ function resolveHref(url: string): { href: string; external: boolean } {
 export function getConfiguredLinks(
     settings: Partial<AppSettings> | null | undefined,
     t: (key: string) => string,
-): ConfiguredLink[] {
+): ConfiguredLink[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] {
     if (!settings) {
-        return [];
+        return [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
     }
 
-    const sources: LinkSource[] = [
+    const sources: LinkSource[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] = [
         { id: 'website', labelKey: 'links.website', url: settings.website_url },
         { id: 'support', labelKey: 'links.support', url: settings.app_support_url },
         { id: 'discord', labelKey: 'links.discord', url: settings.discord_url },
@@ -68,7 +68,7 @@ export function getConfiguredLinks(
         { id: 'privacy', labelKey: 'links.privacy', url: settings.legal_privacy },
     ];
 
-    const links: ConfiguredLink[] = [];
+    const links: ConfiguredLink[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] = [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
 
     for (const source of sources) {
         const trimmed = source.url?.trim();

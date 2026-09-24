@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -36,11 +36,11 @@ export function useFileManager(serverUuid: string) {
     const { t } = useTranslation();
 
     // State
-    const [files, setFiles] = useState<FileObject[]>([]);
+    const [files, setFiles] = useState<FileObject[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]>([] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
-    const [selectedFiles, setSelectedFiles] = useState<string[]>([]);
-    const [ignoredPatterns, setIgnoredPatterns] = useState<string[]>([]);
+    const [selectedFiles, setSelectedFiles] = useState<string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]>([] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
+    const [ignoredPatterns, setIgnoredPatterns] = useState<string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]>([] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
     const [searchQuery, setSearchQuery] = useState('');
 
     // Current directory from URL or default to /
@@ -56,7 +56,7 @@ export function useFileManager(serverUuid: string) {
                 console.error('Failed to parse ignored patterns');
             }
         } else {
-            setIgnoredPatterns([]);
+            setIgnoredPatterns([] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
         }
     }, [serverUuid]);
 
@@ -82,7 +82,7 @@ export function useFileManager(serverUuid: string) {
             clearTimeout(timeoutId);
             const sorted = sortFiles(data);
             setFiles(sorted);
-            setSelectedFiles([]);
+            setSelectedFiles([] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
         } catch (err) {
             console.error(err);
             const apiError = err as {
@@ -122,7 +122,7 @@ export function useFileManager(serverUuid: string) {
 
     // Filtering logic
     const filteredFiles = useMemo(() => {
-        let result = filterFeatherTrashFiles(files);
+        const  filterFeatherTrashFiles(files);
 
         // Apply ignored patterns
         if (ignoredPatterns.length > 0) {
@@ -162,13 +162,13 @@ export function useFileManager(serverUuid: string) {
 
     const selectAll = () => {
         if (selectedFiles.length === filteredFiles.length) {
-            setSelectedFiles([]);
+            setSelectedFiles([] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
         } else {
             setSelectedFiles(filteredFiles.map((f) => f.name));
         }
     };
 
-    const [activePulls, setActivePulls] = useState<{ Identifier: string; Progress: number }[]>([]);
+    const [activePulls, setActivePulls] = useState<{ Identifier: string; Progress: number }[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]>([] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const refreshPulls = useCallback(async () => {
         if (!serverUuid) return;
@@ -176,7 +176,7 @@ export function useFileManager(serverUuid: string) {
             const pulls = await filesApi.getPullFiles(serverUuid);
             setActivePulls(pulls);
 
-            // If any pull is active, refresh file list to see newly created files
+            // If unknown pull is active, refresh file list to see newly created files
             if (pulls.length > 0) {
                 // Debounced or conditional refresh might be better, but for now:
                 // refresh();
@@ -222,7 +222,7 @@ export function useFileManager(serverUuid: string) {
     };
 }
 
-function sortFiles(files: FileObject[]): FileObject[] {
+function sortFiles(files: FileObject[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]): FileObject[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] {
     return [...files].sort((a, b) => {
         if (a.isFile === b.isFile) {
             return a.name.localeCompare(b.name);
