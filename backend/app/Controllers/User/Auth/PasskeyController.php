@@ -165,7 +165,7 @@ class PasskeyController
 
         $serializer = WebAuthnHelper::getSerializer();
         try {
-            /** @var PublicKeyCredentialRequestOptions $pkOptions */
+            /** // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar PublicKeyCredentialRequestOptions $pkOptions */
             $pkOptions = $serializer->deserialize(
                 $cached['options_json'],
                 PublicKeyCredentialRequestOptions::class,
@@ -179,7 +179,7 @@ class PasskeyController
 
         try {
             $credJson = json_encode($data['credential'], JSON_THROW_ON_ERROR);
-            /** @var PublicKeyCredential $pkc */
+            /** // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar PublicKeyCredential $pkc */
             $pkc = $serializer->deserialize($credJson, PublicKeyCredential::class, 'json');
         } catch (\Throwable $e) {
             App::getInstance(true)->getLogger()->error('WebAuthn deserialize credential failed: ' . $e->getMessage());
@@ -371,7 +371,7 @@ class PasskeyController
 
         $serializer = WebAuthnHelper::getSerializer();
         try {
-            /** @var PublicKeyCredentialCreationOptions $creationOptions */
+            /** // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar PublicKeyCredentialCreationOptions $creationOptions */
             $creationOptions = $serializer->deserialize(
                 (string) $cached['options_json'],
                 PublicKeyCredentialCreationOptions::class,
@@ -385,7 +385,7 @@ class PasskeyController
 
         try {
             $credJson = json_encode($data['credential'], JSON_THROW_ON_ERROR);
-            /** @var PublicKeyCredential $pkc */
+            /** // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar PublicKeyCredential $pkc */
             $pkc = $serializer->deserialize($credJson, PublicKeyCredential::class, 'json');
         } catch (\Throwable $e) {
             App::getInstance(true)->getLogger()->error('WebAuthn deserialize registration credential failed: ' . $e->getMessage());
@@ -492,7 +492,7 @@ class PasskeyController
     }
 
     /**
-     * @return array<string, mixed>|null
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<string, mixed>|null
      */
     private function resolveUserFromUsernameOrEmail(string $usernameOrEmail): ?array
     {
@@ -516,7 +516,7 @@ class PasskeyController
     }
 
     /**
-     * @param array<string, mixed> $userInfo
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $userInfo
      */
     private function passkeyLoginPolicyBlock(?array $userInfo): ?Response
     {

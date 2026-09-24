@@ -26,9 +26,9 @@ class IAsyncRunnerService
     /**
      * Dispatches an event to the rust async runner.
      *
-     * @param string $type The type of event you want to send (email,vm,etc...)
-     * @param string $action (ex: pending, create, failed, etc..)
-     * @param array $payload The payload you want to send
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $type The type of event you want to send (email,vm,etc...)
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $action (ex: pending, create, failed, etc..)
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $payload The payload you want to send
      */
     public static function dispatch(string $type, string $action, array $payload): void
     {

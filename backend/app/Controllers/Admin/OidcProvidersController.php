@@ -287,9 +287,9 @@ class OidcProvidersController
     }
 
     /**
-     * @param array<int, array<string, mixed>> $providers
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<int, array<string, mixed>> $providers
      *
-     * @return array<int, array<string, mixed>>
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, array<string, mixed>>
      */
     private static function stripClientSecretFromList(array $providers): array
     {
@@ -299,7 +299,7 @@ class OidcProvidersController
     /**
      * Validate and normalize issuer URL: must be HTTPS and host must not be private/reserved.
      *
-     * @return string|null Normalized URL (with trailing slash trimmed) or null if invalid
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string|null Normalized URL (with trailing slash trimmed) or null if invalid
      */
     private static function validateIssuerUrl(string $raw): ?string
     {
