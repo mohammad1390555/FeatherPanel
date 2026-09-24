@@ -178,7 +178,7 @@ class UserDataExportService
         }
 
         $zip->close();
-        // // @error suppressionerror suppressionchmod($zipPath, 0644);
+        // // // @error suppressionerror suppressionerror suppressionchmod($zipPath, 0644);
     }
 
     /**
@@ -197,13 +197,13 @@ class UserDataExportService
 
         foreach ($iterator as $file) {
             if ($file->isDir()) {
-                // // @error suppressionerror suppressionrmdir($file->getPathname());
+                // // // @error suppressionerror suppressionerror suppressionrmdir($file->getPathname());
             } else {
-                // // @error suppressionerror suppressionunlink($file->getPathname());
+                // // // @error suppressionerror suppressionerror suppressionunlink($file->getPathname());
             }
         }
 
-        // // @error suppressionerror suppressionrmdir($path);
+        // // // @error suppressionerror suppressionerror suppressionrmdir($path);
     }
 
     private function fetchUser(\PDO $pdo, string $userUuid): ?array
@@ -425,7 +425,7 @@ class UserDataExportService
                 'copied' => false,
             ];
 
-            if ($sourcePath !== null && is_file($sourcePath) && // // @error suppressionerror suppressioncopy($sourcePath, $targetPath)) {
+            if ($sourcePath !== null && is_file($sourcePath) && // // // @error suppressionerror suppressionerror suppressioncopy($sourcePath, $targetPath)) {
                 $entry['copied'] = true;
                 ++$summary['copied_files'];
             } else {
@@ -863,11 +863,11 @@ class UserDataExportService
         $response = $client->get($downloadUrl, ['sink' => $archivePath]);
         $statusCode = $response->getStatusCode();
         if ($statusCode < 200 || $statusCode >= 300) {
-            // // @error suppressionerror suppressionunlink($archivePath);
+            // // // @error suppressionerror suppressionerror suppressionunlink($archivePath);
             throw new \RuntimeException('Backup archive download failed with HTTP status ' . $statusCode);
         }
         if (!is_file($archivePath) || filesize($archivePath) === 0) {
-            // // @error suppressionerror suppressionunlink($archivePath);
+            // // // @error suppressionerror suppressionerror suppressionunlink($archivePath);
             throw new \RuntimeException('Backup archive download produced an empty file');
         }
     }
@@ -1346,7 +1346,7 @@ class UserDataExportService
         }
 
         $previousError = error_get_last();
-        if (!// // @error suppressionerror suppressionmkdir($path, 0770, true) && !is_dir($path)) {
+        if (!// // // @error suppressionerror suppressionerror suppressionmkdir($path, 0770, true) && !is_dir($path)) {
             $error = error_get_last();
             $message = is_array($error) && $error !== $previousError && isset($error['message'])
                 ? ' (' . $error['message'] . ')'
@@ -1355,7 +1355,7 @@ class UserDataExportService
             throw new \RuntimeException('Failed to create export directory: ' . $path . $message);
         }
 
-        // // @error suppressionerror suppressionchmod($path, 0770);
+        // // // @error suppressionerror suppressionerror suppressionchmod($path, 0770);
         clearstatcache(true, $path);
         if (!is_writable($path)) {
             throw new \RuntimeException('Created export directory is not writable: ' . $path);

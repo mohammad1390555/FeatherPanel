@@ -24,9 +24,9 @@ class FeatherZeroTrustScanLog
     /**
      * Create a new scan log entry.
      *
-     * // // @error suppressionerror suppressionparam array $data Scan log data
+     * // // // @error suppressionerror suppressionerror suppressionparam array $data Scan log data
      *
-     * // // @error suppressionerror suppressionreturn int|false Scan log ID or false on failure
+     * // // // @error suppressionerror suppressionerror suppressionreturn int|false Scan log ID or false on failure
      */
     public static function create(array $data): int | false
     {
@@ -75,9 +75,9 @@ class FeatherZeroTrustScanLog
     /**
      * Get scan logs by execution ID.
      *
-     * // // @error suppressionerror suppressionparam string $executionId Execution ID
+     * // // // @error suppressionerror suppressionerror suppressionparam string $executionId Execution ID
      *
-     * // // @error suppressionerror suppressionreturn array Scan logs
+     * // // // @error suppressionerror suppressionerror suppressionreturn array Scan logs
      */
     public static function getByExecutionId(string $executionId): array
     {
@@ -100,11 +100,11 @@ class FeatherZeroTrustScanLog
     /**
      * Get scan logs by server UUID.
      *
-     * // // @error suppressionerror suppressionparam string $serverUuid Server UUID
-     * // // @error suppressionerror suppressionparam int $limit Limit
-     * // // @error suppressionerror suppressionparam int $offset Offset
+     * // // // @error suppressionerror suppressionerror suppressionparam string $serverUuid Server UUID
+     * // // // @error suppressionerror suppressionerror suppressionparam int $limit Limit
+     * // // // @error suppressionerror suppressionerror suppressionparam int $offset Offset
      *
-     * // // @error suppressionerror suppressionreturn array Scan logs
+     * // // // @error suppressionerror suppressionerror suppressionreturn array Scan logs
      */
     public static function getByServerUuid(string $serverUuid, int $limit = 25, int $offset = 0): array
     {

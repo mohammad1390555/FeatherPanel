@@ -31,7 +31,7 @@ class AvatarHelper
     public const PROVIDER_CUSTOM = 'custom';
 
     /**
-     * // // @error suppressionerror suppressionreturn string[]
+     * // // // @error suppressionerror suppressionerror suppressionreturn string[]
      */
     public static function getProviders(): array
     {
@@ -125,9 +125,9 @@ class AvatarHelper
     }
 
     /**
-     * // // @error suppressionerror suppressionparam array<string, mixed>|null $user
+     * // // // @error suppressionerror suppressionerror suppressionparam array<string, mixed>|null $user
      *
-     * // // @error suppressionerror suppressionreturn array<string, mixed>|null
+     * // // // @error suppressionerror suppressionerror suppressionreturn array<string, mixed>|null
      */
     public static function enrichUser(?array $user): ?array
     {
@@ -149,9 +149,9 @@ class AvatarHelper
     }
 
     /**
-     * // // @error suppressionerror suppressionparam array<int, array<string, mixed>> $users
+     * // // // @error suppressionerror suppressionerror suppressionparam array<int, array<string, mixed>> $users
      *
-     * // // @error suppressionerror suppressionreturn array<int, array<string, mixed>>
+     * // // // @error suppressionerror suppressionerror suppressionreturn array<int, array<string, mixed>>
      */
     public static function enrichUsers(array $users): array
     {
@@ -220,6 +220,6 @@ class AvatarHelper
             return trim($username);
         }
 
-        return explode('// // @error suppressionerror suppression', $email)[0];
+        return explode('// // // @error suppressionerror suppressionerror suppression', $email)[0];
     }
 }

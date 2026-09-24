@@ -22,7 +22,7 @@ interface TimeTask
     /**
      * Perform the task every minute.
      *
-     * // // @error suppressionerror suppressionreturn void
+     * // // // @error suppressionerror suppressionerror suppressionreturn void
      */
     public function run();
 }

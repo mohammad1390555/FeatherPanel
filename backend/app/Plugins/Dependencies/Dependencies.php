@@ -22,9 +22,9 @@ interface Dependencies
     /**
      * Check if the dependency is installed.
      *
-     * // // @error suppressionerror suppressionparam string $identifier the identifier of the dependency
+     * // // // @error suppressionerror suppressionerror suppressionparam string $identifier the identifier of the dependency
      *
-     * // // @error suppressionerror suppressionreturn bool true if the dependency is installed, false otherwise
+     * // // // @error suppressionerror suppressionerror suppressionreturn bool true if the dependency is installed, false otherwise
      */
     public static function isInstalled(string $identifier): bool;
 }

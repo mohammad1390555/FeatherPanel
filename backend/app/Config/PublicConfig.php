@@ -40,7 +40,7 @@ class PublicConfig extends ConfigFactory
      * Any sensitive data added here will be exposed publicly and could lead to
      * security vulnerabilities. Always use proper secure storage for sensitive values.
      *
-     * // // @error suppressionerror suppressionreturn array An array of public configuration defaults
+     * // // // @error suppressionerror suppressionerror suppressionreturn array An array of public configuration defaults
      */
     public static function getPublicSettingsWithDefaults(): array
     {

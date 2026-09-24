@@ -99,9 +99,9 @@ class MixinRegistry
     /**
      * Get the fully qualified class name from a file.
      *
-     * // // @error suppressionerror suppressionparam string $file The file path
+     * // // // @error suppressionerror suppressionerror suppressionparam string $file The file path
      *
-     * // // @error suppressionerror suppressionreturn string|null The class name or null if not found
+     * // // // @error suppressionerror suppressionerror suppressionreturn string|null The class name or null if not found
      */
     private static function getClassNameFromFile(string $file): ?string
     {

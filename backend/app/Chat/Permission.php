@@ -144,7 +144,7 @@ class Permission
     /**
      * Get distinct role IDs that have a specific permission or admin.root.
      *
-     * // // @error suppressionerror suppressionreturn int[]
+     * // // // @error suppressionerror suppressionerror suppressionreturn int[]
      */
     public static function getRoleIdsWithPermission(string $permission): array
     {

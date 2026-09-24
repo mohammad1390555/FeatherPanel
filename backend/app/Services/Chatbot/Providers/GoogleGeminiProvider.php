@@ -42,11 +42,11 @@ class GoogleGeminiProvider implements ProviderInterface
     /**
      * Process a user message and generate a response using Google Gemini API.
      *
-     * // // @error suppressionerror suppressionparam string $message User's message
-     * // // @error suppressionerror suppressionparam array $history Chat history
-     * // // @error suppressionerror suppressionparam string $systemPrompt Optional system prompt
+     * // // // @error suppressionerror suppressionerror suppressionparam string $message User's message
+     * // // // @error suppressionerror suppressionerror suppressionparam array $history Chat history
+     * // // // @error suppressionerror suppressionerror suppressionparam string $systemPrompt Optional system prompt
      *
-     * // // @error suppressionerror suppressionreturn array Response with 'response' and 'model' keys
+     * // // // @error suppressionerror suppressionerror suppressionreturn array Response with 'response' and 'model' keys
      */
     public function processMessage(string $message, array $history, string $systemPrompt = ''): array
     {

@@ -166,9 +166,9 @@ class StorageSenseController
     }
 
     /**
-     * // // @error suppressionerror suppressionparam array<int, array<string, mixed>> $categories
+     * // // // @error suppressionerror suppressionerror suppressionparam array<int, array<string, mixed>> $categories
      *
-     * // // @error suppressionerror suppressionreturn array<string, int>
+     * // // // @error suppressionerror suppressionerror suppressionreturn array<string, int>
      */
     private static function buildTotals(array $categories): array
     {

@@ -261,10 +261,10 @@ class PluginSidebarController
     /**
      * Add query parameters to component URL based on section.
      *
-     * // // @error suppressionerror suppressionparam string $component Original component URL
-     * // // @error suppressionerror suppressionparam string $section Section type (server, client, admin)
+     * // // // @error suppressionerror suppressionerror suppressionparam string $component Original component URL
+     * // // // @error suppressionerror suppressionerror suppressionparam string $section Section type (server, client, admin)
      *
-     * // // @error suppressionerror suppressionreturn string Enhanced component URL with placeholders
+     * // // // @error suppressionerror suppressionerror suppressionreturn string Enhanced component URL with placeholders
      */
     private function addComponentParameters(string $component, string $section, Request $request): string
     {

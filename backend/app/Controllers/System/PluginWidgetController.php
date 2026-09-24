@@ -312,10 +312,10 @@ class PluginWidgetController
     /**
      * Add query parameters to component URL.
      *
-     * // // @error suppressionerror suppressionparam string $component Original component URL
-     * // // @error suppressionerror suppressionparam Request $request HTTP request
+     * // // // @error suppressionerror suppressionerror suppressionparam string $component Original component URL
+     * // // // @error suppressionerror suppressionerror suppressionparam Request $request HTTP request
      *
-     * // // @error suppressionerror suppressionreturn string Enhanced component URL with query parameters
+     * // // // @error suppressionerror suppressionerror suppressionreturn string Enhanced component URL with query parameters
      */
     private function addComponentParameters(string $component, Request $request): string
     {
@@ -367,9 +367,9 @@ class PluginWidgetController
     /**
      * Normalize widget size configuration.
      *
-     * // // @error suppressionerror suppressionparam mixed $size Size configuration from widget definition
+     * // // // @error suppressionerror suppressionerror suppressionparam mixed $size Size configuration from widget definition
      *
-     * // // @error suppressionerror suppressionreturn string|array<string, int>
+     * // // // @error suppressionerror suppressionerror suppressionreturn string|array<string, int>
      */
     private function normalizeWidgetSize(mixed $size): string | array
     {
@@ -414,9 +414,9 @@ class PluginWidgetController
     /**
      * Normalize layout configuration to provide more granular control over columns and spans.
      *
-     * // // @error suppressionerror suppressionparam array<string, mixed> $widget
+     * // // // @error suppressionerror suppressionerror suppressionparam array<string, mixed> $widget
      *
-     * // // @error suppressionerror suppressionreturn array<string, int>|null
+     * // // // @error suppressionerror suppressionerror suppressionreturn array<string, int>|null
      */
     private function normalizeWidgetLayout(array $widget): ?array
     {
@@ -441,7 +441,7 @@ class PluginWidgetController
     /**
      * Normalize card presentation options.
      *
-     * // // @error suppressionerror suppressionreturn array<string, mixed>|null
+     * // // // @error suppressionerror suppressionerror suppressionreturn array<string, mixed>|null
      */
     private function normalizeCardOptions(mixed $card): ?array
     {
@@ -493,7 +493,7 @@ class PluginWidgetController
     /**
      * Normalize widget behavior overrides (loading/error messages, retry labels).
      *
-     * // // @error suppressionerror suppressionreturn array<string, string>|null
+     * // // // @error suppressionerror suppressionerror suppressionreturn array<string, string>|null
      */
     private function normalizeBehaviorOptions(mixed $behavior): ?array
     {
@@ -525,7 +525,7 @@ class PluginWidgetController
     /**
      * Normalize iframe attribute overrides.
      *
-     * // // @error suppressionerror suppressionreturn array<string, string>|null
+     * // // // @error suppressionerror suppressionerror suppressionreturn array<string, string>|null
      */
     private function normalizeIframeOptions(mixed $iframe): ?array
     {
@@ -548,7 +548,7 @@ class PluginWidgetController
     /**
      * Normalize CSS class overrides for various widget parts.
      *
-     * // // @error suppressionerror suppressionreturn array<string, string>|null
+     * // // // @error suppressionerror suppressionerror suppressionreturn array<string, string>|null
      */
     private function normalizeClassOptions(mixed $classes): ?array
     {

@@ -26,11 +26,11 @@ class SubuserPermissionChecker
     /**
      * Check if a user has a specific permission for a server.
      *
-     * // // @error suppressionerror suppressionparam int $userId The user ID
-     * // // @error suppressionerror suppressionparam int $serverId The server ID
-     * // // @error suppressionerror suppressionparam string $permission The permission to check (e.g., 'file.read', 'backup.create')
+     * // // // @error suppressionerror suppressionerror suppressionparam int $userId The user ID
+     * // // // @error suppressionerror suppressionerror suppressionparam int $serverId The server ID
+     * // // // @error suppressionerror suppressionerror suppressionparam string $permission The permission to check (e.g., 'file.read', 'backup.create')
      *
-     * // // @error suppressionerror suppressionreturn bool True if the user has the permission, false otherwise
+     * // // // @error suppressionerror suppressionerror suppressionreturn bool True if the user has the permission, false otherwise
      */
     public static function hasPermission(int $userId, int $serverId, string $permission): bool
     {
@@ -73,11 +73,11 @@ class SubuserPermissionChecker
     /**
      * Check if a user has any of the specified permissions.
      *
-     * // // @error suppressionerror suppressionparam int $userId The user ID
-     * // // @error suppressionerror suppressionparam int $serverId The server ID
-     * // // @error suppressionerror suppressionparam array $permissions Array of permissions to check
+     * // // // @error suppressionerror suppressionerror suppressionparam int $userId The user ID
+     * // // // @error suppressionerror suppressionerror suppressionparam int $serverId The server ID
+     * // // // @error suppressionerror suppressionerror suppressionparam array $permissions Array of permissions to check
      *
-     * // // @error suppressionerror suppressionreturn bool True if the user has at least one of the permissions
+     * // // // @error suppressionerror suppressionerror suppressionreturn bool True if the user has at least one of the permissions
      */
     public static function hasAnyPermission(int $userId, int $serverId, array $permissions): bool
     {
@@ -93,11 +93,11 @@ class SubuserPermissionChecker
     /**
      * Check if a user has all of the specified permissions.
      *
-     * // // @error suppressionerror suppressionparam int $userId The user ID
-     * // // @error suppressionerror suppressionparam int $serverId The server ID
-     * // // @error suppressionerror suppressionparam array $permissions Array of permissions to check
+     * // // // @error suppressionerror suppressionerror suppressionparam int $userId The user ID
+     * // // // @error suppressionerror suppressionerror suppressionparam int $serverId The server ID
+     * // // // @error suppressionerror suppressionerror suppressionparam array $permissions Array of permissions to check
      *
-     * // // @error suppressionerror suppressionreturn bool True if the user has all of the permissions
+     * // // // @error suppressionerror suppressionerror suppressionreturn bool True if the user has all of the permissions
      */
     public static function hasAllPermissions(int $userId, int $serverId, array $permissions): bool
     {
@@ -113,10 +113,10 @@ class SubuserPermissionChecker
     /**
      * Map actions to required permissions.
      *
-     * // // @error suppressionerror suppressionparam string $controller The controller name (e.g., 'files', 'backups', 'databases')
-     * // // @error suppressionerror suppressionparam string $action The action name (e.g., 'list', 'create', 'update', 'delete')
+     * // // // @error suppressionerror suppressionerror suppressionparam string $controller The controller name (e.g., 'files', 'backups', 'databases')
+     * // // // @error suppressionerror suppressionerror suppressionparam string $action The action name (e.g., 'list', 'create', 'update', 'delete')
      *
-     * // // @error suppressionerror suppressionreturn string|null The required permission, or null if not mapped
+     * // // // @error suppressionerror suppressionerror suppressionreturn string|null The required permission, or null if not mapped
      */
     public static function getRequiredPermission(string $controller, string $action): ?string
     {

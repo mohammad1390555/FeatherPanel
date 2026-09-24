@@ -25,16 +25,16 @@ use App\App;
 class ApiClient
 {
     /**
-     * // // @error suppressionerror suppressionvar string The API client table name
+     * // // // @error suppressionerror suppressionerror suppressionvar string The API client table name
      */
     private static string $table = 'featherpanel_apikeys_client';
 
     /**
      * Create a new API client.
      *
-     * // // @error suppressionerror suppressionparam array $data Associative array of API client fields (must include required fields)
+     * // // // @error suppressionerror suppressionerror suppressionparam array $data Associative array of API client fields (must include required fields)
      *
-     * // // @error suppressionerror suppressionreturn int|false The new API client's ID or false on failure
+     * // // // @error suppressionerror suppressionerror suppressionreturn int|false The new API client's ID or false on failure
      */
     public static function createApiClient(array $data): int | false
     {
@@ -157,13 +157,13 @@ class ApiClient
     /**
      * Search API clients with pagination, filtering, and field selection.
      *
-     * // // @error suppressionerror suppressionparam int $page Page number (1-based)
-     * // // @error suppressionerror suppressionparam int $limit Number of results per page
-     * // // @error suppressionerror suppressionparam string $search Search term for name (optional)
-     * // // @error suppressionerror suppressionparam array $fields Fields to select (e.g. ['name', 'public_key']) (default: all)
-     * // // @error suppressionerror suppressionparam string $sortBy Field to sort by (default: 'id')
-     * // // @error suppressionerror suppressionparam string $sortOrder 'ASC' or 'DESC' (default: 'ASC')
-     * // // @error suppressionerror suppressionparam string|null $userUuid Filter by user UUID (optional)
+     * // // // @error suppressionerror suppressionerror suppressionparam int $page Page number (1-based)
+     * // // // @error suppressionerror suppressionerror suppressionparam int $limit Number of results per page
+     * // // // @error suppressionerror suppressionerror suppressionparam string $search Search term for name (optional)
+     * // // // @error suppressionerror suppressionerror suppressionparam array $fields Fields to select (e.g. ['name', 'public_key']) (default: all)
+     * // // // @error suppressionerror suppressionerror suppressionparam string $sortBy Field to sort by (default: 'id')
+     * // // // @error suppressionerror suppressionerror suppressionparam string $sortOrder 'ASC' or 'DESC' (default: 'ASC')
+     * // // // @error suppressionerror suppressionerror suppressionparam string|null $userUuid Filter by user UUID (optional)
      */
     public static function searchApiClients(
         int $page = 1,

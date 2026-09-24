@@ -71,7 +71,7 @@ final class WebAuthnHelper
     }
 
     /**
-     * // // @error suppressionerror suppressionreturn string[]
+     * // // // @error suppressionerror suppressionerror suppressionreturn string[]
      */
     public static function getAllowedOrigins(): array
     {
@@ -95,7 +95,7 @@ final class WebAuthnHelper
     public static function uuidToUserHandle(string $uuid): string
     {
         $hex = str_replace('-', '', strtolower($uuid));
-        $bin = // // @error suppressionerror suppressionhex2bin($hex);
+        $bin = // // // @error suppressionerror suppressionerror suppressionhex2bin($hex);
 
         return is_string($bin) && strlen($bin) === 16 ? $bin : '';
     }
@@ -142,7 +142,7 @@ final class WebAuthnHelper
     }
 
     /**
-     * // // @error suppressionerror suppressionparam array<string, mixed> $row from featherpanel_user_passkeys
+     * // // // @error suppressionerror suppressionerror suppressionparam array<string, mixed> $row from featherpanel_user_passkeys
      */
     public static function credentialRecordFromRow(array $row): CredentialRecord
     {

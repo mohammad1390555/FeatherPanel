@@ -27,11 +27,11 @@ trait CheckSubuserPermissionsTrait
     /**
      * Check if the current user has the required permission for a server action.
      *
-     * // // @error suppressionerror suppressionparam Request $request The request object
-     * // // @error suppressionerror suppressionparam array $server The server array
-     * // // @error suppressionerror suppressionparam string $permission The permission to check
+     * // // // @error suppressionerror suppressionerror suppressionparam Request $request The request object
+     * // // // @error suppressionerror suppressionerror suppressionparam array $server The server array
+     * // // // @error suppressionerror suppressionerror suppressionparam string $permission The permission to check
      *
-     * // // @error suppressionerror suppressionreturn Response|null Response if permission denied, null if allowed
+     * // // // @error suppressionerror suppressionerror suppressionreturn Response|null Response if permission denied, null if allowed
      */
     protected function checkPermission(Request $request, array $server, string $permission): ?Response
     {
@@ -60,11 +60,11 @@ trait CheckSubuserPermissionsTrait
     /**
      * Check if the current user has any of the required permissions.
      *
-     * // // @error suppressionerror suppressionparam Request $request The request object
-     * // // @error suppressionerror suppressionparam array $server The server array
-     * // // @error suppressionerror suppressionparam array $permissions Array of permissions to check
+     * // // // @error suppressionerror suppressionerror suppressionparam Request $request The request object
+     * // // // @error suppressionerror suppressionerror suppressionparam array $server The server array
+     * // // // @error suppressionerror suppressionerror suppressionparam array $permissions Array of permissions to check
      *
-     * // // @error suppressionerror suppressionreturn Response|null Response if permission denied, null if allowed
+     * // // // @error suppressionerror suppressionerror suppressionreturn Response|null Response if permission denied, null if allowed
      */
     protected function checkAnyPermission(Request $request, array $server, array $permissions): ?Response
     {
@@ -93,11 +93,11 @@ trait CheckSubuserPermissionsTrait
     /**
      * Check if the current user has all of the required permissions.
      *
-     * // // @error suppressionerror suppressionparam Request $request The request object
-     * // // @error suppressionerror suppressionparam array $server The server array
-     * // // @error suppressionerror suppressionparam array $permissions Array of permissions to check
+     * // // // @error suppressionerror suppressionerror suppressionparam Request $request The request object
+     * // // // @error suppressionerror suppressionerror suppressionparam array $server The server array
+     * // // // @error suppressionerror suppressionerror suppressionparam array $permissions Array of permissions to check
      *
-     * // // @error suppressionerror suppressionreturn Response|null Response if permission denied, null if allowed
+     * // // // @error suppressionerror suppressionerror suppressionreturn Response|null Response if permission denied, null if allowed
      */
     protected function checkAllPermissions(Request $request, array $server, array $permissions): ?Response
     {
