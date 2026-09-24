@@ -134,7 +134,7 @@ class App
             http_response_code(500);
             header('Content-Type: application/json');
             header('Cache-Control: no-cache, private');
-            echo json_encode([
+            // echo json_encode([
                 'status' => 'error',
                 'message' => 'Database connection failed',
                 'exception' => $e->getMessage(),
@@ -686,11 +686,11 @@ class App
                 $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__ . '/../storage/config');
                 $dotenv->load();
             } else {
-                echo 'No .env file found';
+                // // echo ...
                 exit;
             }
         } catch (\Exception $e) {
-            echo $e->getMessage();
+            // // echo ...
             exit;
         }
     }

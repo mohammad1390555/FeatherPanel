@@ -137,7 +137,7 @@ class MinecraftColorCodeSupport
         $translatedMessage = preg_replace_callback($pattern, function ($matches) {
             return self::getColorCode($matches[1]);
         }, $message);
-        echo $translatedMessage;
+        // echo ...
     }
 
     /**
@@ -163,7 +163,7 @@ class MinecraftColorCodeSupport
             $translatedMessage = preg_replace('/[^a-zA-Z0-9\s\.\,\_\-\!\?\:\;\@\#\$\%\^\&\*\(\)\[\]\{\}\<\>\=\+\/\\\\\|\~\`\'\"\§]/u', '', $translatedMessage);
         }
 
-        echo $translatedMessage . self::NewLine();
+        // echo ...
     }
 
     /**
