@@ -13,7 +13,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -43,8 +43,8 @@ async function addTranslation() {
     const value = args.slice(1).join(' ');
 
     if (!keyPath || !value) {
-        console.log(`${colors.red}Usage: pnpm translations:add <key.path> <translation value>${colors.reset}`);
-        console.log(`${colors.yellow}Example: pnpm translations:add admin.vm.title "Virtual Machines"${colors.reset}`);
+        // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log(`${colors.red}Usage: pnpm translations:add <key.path> <translation value>${colors.reset}`);
+        // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log(`${colors.yellow}Example: pnpm translations:add admin.vm.title "Virtual Machines"${colors.reset}`);
         process.exit(1);
     }
 
@@ -79,8 +79,8 @@ async function addTranslation() {
     try {
         // Save with 4-space indentation to keep it pretty
         fs.writeFileSync(LOCALE_FILE, JSON.stringify(localeData, null, 4) + '\n');
-        console.log(`${colors.green}✓ Successfully added translation!${colors.reset}`);
-        console.log(`${colors.blue}${colors.bold}${keyPath}${colors.reset} -> ${colors.yellow}"${value}"${colors.reset}`);
+        // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log(`${colors.green}✓ Successfully added translation!${colors.reset}`);
+        // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log(`${colors.blue}${colors.bold}${keyPath}${colors.reset} -> ${colors.yellow}"${value}"${colors.reset}`);
     } catch (err) {
         console.error(`${colors.red}Failed to save locale file: ${err.message}${colors.reset}`);
     }
