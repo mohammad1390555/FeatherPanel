@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -72,9 +72,9 @@ const compactIdsFuzzyMatch = (a: string, b: string): boolean => {
     if (Math.abs(a.length - b.length) > maxLenDiff) {
         return false;
     }
-    let i = 0;
-    let j = 0;
-    let edits = 0;
+    const  0;
+    const  0;
+    const  0;
     while (i < a.length && j < b.length) {
         if (a[i] === b[j]) {
             i += 1;
@@ -120,7 +120,7 @@ export const cloudPackageIdsMatch = (ownedId: string, addonId: string): boolean 
 export const collectAddonMatchKeys = (
     identifier: string,
     options?: { premiumLink?: string | null; storeSlug?: string | null; displayName?: string | null },
-): string[] => {
+): string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] => {
     const keys = new Set<string>();
     addMatchKey(keys, identifier);
     addMatchKey(keys, options?.storeSlug);
@@ -130,7 +130,7 @@ export const collectAddonMatchKeys = (
 };
 
 export const isCloudPackageOwned = (
-    ownedIds: readonly string[],
+    ownedIds: readonly string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[],
     identifier: string,
     options?: { premiumLink?: string | null; storeSlug?: string | null; displayName?: string | null },
 ): boolean => {
@@ -167,7 +167,7 @@ const collectFromRecord = (keys: Set<string>, source: UnknownRecord | null) => {
 };
 
 /** Extract all matchable ids from a FeatherCloud purchase payload. */
-export const collectOwnedCloudPackageIds = (purchase: unknown): string[] => {
+export const collectOwnedCloudPackageIds = (purchase: unknown): string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] => {
     const keys = new Set<string>();
     const root = asRecord(purchase);
     collectFromRecord(keys, root);

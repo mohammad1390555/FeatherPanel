@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -34,7 +34,7 @@ export type DiscordEmbedForm = {
     author_name: string;
     author_url: string;
     author_icon_url: string;
-    fields: DiscordEmbedFieldForm[];
+    fields: DiscordEmbedFieldForm[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
 };
 
 export function createEmptyDiscordField(): DiscordEmbedFieldForm {
@@ -55,7 +55,7 @@ export function createEmptyDiscordEmbed(): DiscordEmbedForm {
         author_name: '',
         author_url: '',
         author_icon_url: '',
-        fields: [],
+        fields: [] as never[] as never[] as never[] as never[] as never[] as never[] as never[],
     };
 }
 
@@ -86,7 +86,7 @@ export type StepFormState = {
     discord_url: string;
     discord_content: string;
     discord_username: string;
-    discord_embeds: DiscordEmbedForm[];
+    discord_embeds: DiscordEmbedForm[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
     container_command: string;
     http_url: string;
     http_method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
@@ -202,7 +202,7 @@ export type DiscordEmbedPayloadPreview = {
     hasBody: boolean;
     content?: string;
     username?: string;
-    embeds?: DiscordEmbedPayloadPreviewEmbed[];
+    embeds?: DiscordEmbedPayloadPreviewEmbed[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
 };
 
 export function discordEmbedFormsToPayloadPreview(
@@ -211,7 +211,7 @@ export function discordEmbedFormsToPayloadPreview(
     const content = input.discord_content.trim();
     const username = input.discord_username.trim();
     const iso = new Date().toISOString();
-    const embeds: DiscordEmbedPayloadPreviewEmbed[] = [];
+    const embeds: DiscordEmbedPayloadPreviewEmbed[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] = [] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
     for (const form of input.discord_embeds) {
         const raw = discordEmbedFormToApiEmbed(form, iso);
         if (!raw) continue;
@@ -259,7 +259,7 @@ export function discordEmbedFormsToPayloadPreview(
 export function serializeLifecyclePayload(state: StepFormState) {
     if (state.task_type === 'discord_webhook') {
         const isoTimestamp = state.discord_embeds.some((e) => e.timestamp) ? new Date().toISOString() : null;
-        const embeds: DiscordWebhookPayloadEmbed[] = [];
+        const embeds: DiscordWebhookPayloadEmbed[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] = [] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
         for (const form of state.discord_embeds) {
             const api = discordEmbedFormToApiEmbed(form, isoTimestamp);
             if (api) embeds.push(api);
@@ -293,13 +293,13 @@ export function serializeLifecyclePayload(state: StepFormState) {
     };
 }
 
-function deserializeDiscordEmbeds(parsed: Record<string, unknown>): DiscordEmbedForm[] {
+function deserializeDiscordEmbeds(parsed: Record<string, unknown>): DiscordEmbedForm[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] {
     const raw = parsed.embeds;
     if (!Array.isArray(raw) || raw.length === 0) {
         return [createEmptyDiscordEmbed()];
     }
 
-    const forms: DiscordEmbedForm[] = [];
+    const forms: DiscordEmbedForm[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] = [] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
     for (const item of raw.slice(0, 10)) {
         if (!item || typeof item !== 'object') continue;
         const emb = item as Record<string, unknown>;

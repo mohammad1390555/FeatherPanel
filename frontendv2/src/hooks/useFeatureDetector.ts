@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -16,11 +16,11 @@ See the LICENSE file or <https://www.gnu.org/licenses/>.
 import { useState, useCallback, useEffect } from 'react';
 import { detectFeature } from '@/lib/ServerFeatureDetector';
 
-export interface UseFeatureDetectorProps {
-    enabledFeatures?: string[];
+export export interface
+    enabledFeatures?: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
 }
 
-export interface UseFeatureDetectorReturn {
+export export interface
     processLog: (log: string) => void;
 
     // EULA State
@@ -87,7 +87,7 @@ export function useFeatureDetector({
         return () => {
             setBlockJavaVersion(false);
         };
-    }, []);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     return {
         processLog,

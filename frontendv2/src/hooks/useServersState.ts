@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -16,7 +16,7 @@ See the LICENSE file or <https://www.gnu.org/licenses/>.
 import { useState, useEffect, useCallback } from 'react';
 
 // State interface
-interface ServersState {
+export interface
     selectedLayout: 'grid' | 'list';
     selectedSort: string;
     showOnlyRunning: boolean;
@@ -68,24 +68,24 @@ export function useServersState() {
     // Update functions
     const setSelectedLayout = useCallback((layout: 'grid' | 'list') => {
         setState((prev) => ({ ...prev, selectedLayout: layout }));
-    }, []);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const setSelectedSort = useCallback((sort: string) => {
         setState((prev) => ({ ...prev, selectedSort: sort }));
-    }, []);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const setShowOnlyRunning = useCallback((show: boolean) => {
         setState((prev) => ({ ...prev, showOnlyRunning: show }));
-    }, []);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     const setViewMode = useCallback((mode: 'all' | 'folders') => {
         setState((prev) => ({ ...prev, viewMode: mode }));
-    }, []);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     // Reset to defaults
     const resetState = useCallback(() => {
         setState(DEFAULT_STATE);
-    }, []);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     return {
         // State

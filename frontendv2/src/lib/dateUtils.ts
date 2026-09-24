@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -151,7 +151,7 @@ export function getEffectiveTimezone(preference?: string | null): string {
     return 'UTC';
 }
 
-export interface FormatDateOptions {
+export export interface
     /** IANA timezone identifier. Defaults to the user's effective timezone. */
     timeZone?: string;
     /** Translation locale code from TranslationContext (e.g. `en`, `pt-BR`). */
@@ -293,9 +293,9 @@ export function dateInUserTz(value: string | number | Date | null | undefined, t
  * environment. Falls back to a hand-maintained list of common zones if
  * `Intl.supportedValuesOf` is unavailable.
  */
-export function listSupportedTimezones(): string[] {
+export function listSupportedTimezones(): string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] {
     type IntlWithSupportedValuesOf = typeof Intl & {
-        supportedValuesOf?: (key: 'timeZone') => string[];
+        supportedValuesOf?: (key: 'timeZone') => string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
     };
     const intl = Intl as IntlWithSupportedValuesOf;
     if (typeof intl.supportedValuesOf === 'function') {
@@ -309,7 +309,7 @@ export function listSupportedTimezones(): string[] {
     return FALLBACK_TIMEZONES;
 }
 
-const FALLBACK_TIMEZONES: string[] = [
+const FALLBACK_TIMEZONES: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] = [
     'Africa/Abidjan',
     'Africa/Accra',
     'Africa/Addis_Ababa',
