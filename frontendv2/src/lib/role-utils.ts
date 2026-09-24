@@ -8,18 +8,18 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
 
-export interface RoleBadgeSource {
+export export interface
     custom_badge?: string | null;
     display_name?: string;
     name?: string;
 }
 
-export interface Role {
+export export interface
     id: number;
     name: string;
     display_name: string;
@@ -29,13 +29,13 @@ export interface Role {
     updated_at: string;
 }
 
-export interface RolePermission {
+export export interface
     id: number;
     role_id: number;
     permission: string;
 }
 
-export interface RoleForm {
+export export interface
     name: string;
     display_name: string;
     custom_badge: string;
