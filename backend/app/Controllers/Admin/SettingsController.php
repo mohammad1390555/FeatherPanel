@@ -825,7 +825,7 @@ class SettingsController
                 'description' => 'TikTok profile URL',
                 'type' => 'text',
                 'required' => false,
-                'placeholder' => 'https://tiktok.com/// // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample',
+                'placeholder' => 'https://tiktok.com/// // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample',
                 'validation' => 'string|max:255',
                 'options' => [],
                 'category' => 'links',
@@ -864,7 +864,7 @@ class SettingsController
                 'description' => 'YouTube channel URL',
                 'type' => 'text',
                 'required' => false,
-                'placeholder' => 'https://youtube.com/// // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample',
+                'placeholder' => 'https://youtube.com/// // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample',
                 'validation' => 'string|max:255',
                 'options' => [],
                 'category' => 'links',
@@ -940,12 +940,12 @@ class SettingsController
                     ->getConfig()
                     ->getSetting(
                         ConfigInterface::SMTP_USER,
-                        'example// // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com',
+                        'example// // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com',
                     ),
                 'description' => 'The SMTP user of the application',
                 'type' => 'text',
                 'required' => true,
-                'placeholder' => 'example// // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com',
+                'placeholder' => 'example// // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com',
                 'validation' => 'required|string|max:255',
                 'options' => [],
                 'category' => 'email',
@@ -971,12 +971,12 @@ class SettingsController
                     ->getConfig()
                     ->getSetting(
                         ConfigInterface::SMTP_FROM,
-                        'noreply// // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionfeatherpanel.com',
+                        'noreply// // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionfeatherpanel.com',
                     ),
                 'description' => 'The SMTP from of the application',
                 'type' => 'text',
                 'required' => true,
-                'placeholder' => 'noreply// // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionfeatherpanel.com',
+                'placeholder' => 'noreply// // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionfeatherpanel.com',
                 'validation' => 'required|string|max:255',
                 'options' => [],
                 'category' => 'email',
@@ -3203,9 +3203,9 @@ class SettingsController
     /**
      * Get the AI system prompt from the system-prompt.txt file.
      *
-     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Request $request The HTTP request
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Request $request The HTTP request
      *
-     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn Response The HTTP response
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn Response The HTTP response
      */
     #[OA\Get(
         path: '/api/admin/settings/chatbot/system-prompt',
@@ -3533,7 +3533,7 @@ class SettingsController
         $responseHeaders = [];
         $responseBody = false;
         try {
-            $responseBody = // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionfile_get_contents(
+            $responseBody = // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionfile_get_contents(
                 $updaterUrl,
                 false,
                 stream_context_create([
@@ -3612,7 +3612,7 @@ class SettingsController
     }
 
     /**
-     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<int,string> $headers
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<int,string> $headers
      */
     private function extractStatusCodeFromHttpHeaders(array $headers): int
     {
@@ -3652,7 +3652,7 @@ class SettingsController
     /**
      * Normalize an incoming setting value to the string stored in the database.
      *
-     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string,mixed> $settingConfig
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string,mixed> $settingConfig
      */
     private function normalizeSettingValueForStorage(
         array $settingConfig,

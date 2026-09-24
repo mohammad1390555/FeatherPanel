@@ -24,7 +24,7 @@ class UserDevice
     private static string $table = 'featherpanel_user_devices';
 
     /**
-     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string[]
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string[]
      */
     public static function getDeviceHashesByUserUuid(string $userUuid): array
     {
@@ -42,7 +42,7 @@ class UserDevice
     }
 
     /**
-     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string[]
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string[]
      */
     public static function getSignalHashesByUserUuid(string $userUuid): array
     {
@@ -61,9 +61,9 @@ class UserDevice
     }
 
     /**
-     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string[] $deviceHashes
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string[] $deviceHashes
      *
-     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, array<string, mixed>>
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, array<string, mixed>>
      */
     public static function findUsersByDeviceHashes(array $deviceHashes, string $excludeUserUuid): array
     {
@@ -87,9 +87,9 @@ class UserDevice
     }
 
     /**
-     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string[] $signalHashes
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string[] $signalHashes
      *
-     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, array<string, mixed>>
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, array<string, mixed>>
      */
     public static function findUsersBySignalHashes(array $signalHashes, string $excludeUserUuid): array
     {
@@ -135,7 +135,7 @@ class UserDevice
     /**
      * Oldest account seen on this device (by first device visit).
      *
-     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{uuid: string, username: string, email: string}|null
+     * // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{uuid: string, username: string, email: string}|null
      */
     public static function getMainAccountForDeviceHash(string $deviceHash): ?array
     {
