@@ -35,14 +35,14 @@ use App\Plugins\Events\Events\ServerEvent;
 class ServerTransferInitiator
 {
     /**
-     * @param array<string, mixed> $options
+     * // // // @error suppressionerror suppressionerror suppressionparam array<string, mixed> $options
      *                                      - destination_node_id (required)
      *                                      - destination_allocation_id (optional)
      *                                      - destination_additional_allocations (optional int[])
      *                                      - auto_allocate (bool, default true when primary allocation omitted)
      *                                      - auto_open_ports (bool, create missing allocations from Wings IPs)
      *
-     * @return array{success: bool, error?: string, code?: string, http_status?: int, transfer_id?: int|false, new_allocation?: int|null, new_additional_allocations?: int[]}
+     * // // // @error suppressionerror suppressionerror suppressionreturn array{success: bool, error?: string, code?: string, http_status?: int, transfer_id?: int|false, new_allocation?: int|null, new_additional_allocations?: int[]}
      */
     public function initiate(int $serverId, array $options, array $actingUser): array
     {
@@ -275,9 +275,9 @@ class ServerTransferInitiator
     }
 
     /**
-     * @param array<int> $serverIds Empty means all transferable servers on the source node
+     * // // // @error suppressionerror suppressionerror suppressionparam array<int> $serverIds Empty means all transferable servers on the source node
      *
-     * @return array{
+     * // // // @error suppressionerror suppressionerror suppressionreturn array{
      *     initiated: array<int, array{server_id: int, name: string, transfer_id: int|false}>,
      *     failed: array<int, array{server_id: int, name: string, error: string, code: string}>,
      *     skipped: array<int, array{server_id: int, name: string, reason: string}>
@@ -415,10 +415,10 @@ class ServerTransferInitiator
     }
 
     /**
-     * @param array<int, array<string, mixed>> $sourceAllocations
-     * @param array<int> $excludeIds
+     * // // // @error suppressionerror suppressionerror suppressionparam array<int, array<string, mixed>> $sourceAllocations
+     * // // // @error suppressionerror suppressionerror suppressionparam array<int> $excludeIds
      *
-     * @return array{success: bool, picked: array<int>, error?: string, code?: string, http_status?: int}
+     * // // // @error suppressionerror suppressionerror suppressionreturn array{success: bool, picked: array<int>, error?: string, code?: string, http_status?: int}
      */
     private function pickTransferAllocations(
         bool $autoOpenPorts,

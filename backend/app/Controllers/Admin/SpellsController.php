@@ -1595,7 +1595,7 @@ class SpellsController
                     ],
                 ]);
 
-                $response = @file_get_contents($url, false, $context);
+                $response = // // // @error suppressionerror suppressionerror suppressionfile_get_contents($url, false, $context);
                 if ($response === false) {
                     return ApiResponse::error('Failed to fetch Pterodactyl eggs store', 'ONLINE_LIST_FETCH_FAILED', 500);
                 }
@@ -1742,7 +1742,7 @@ class SpellsController
                 ],
             ]);
 
-            $storeResp = @file_get_contents($storeUrl, false, $context);
+            $storeResp = // // // @error suppressionerror suppressionerror suppressionfile_get_contents($storeUrl, false, $context);
             if ($storeResp === false) {
                 return ApiResponse::error('Failed to fetch Pterodactyl eggs store', 'EGGS_STORE_FETCH_FAILED', 500);
             }
@@ -1768,7 +1768,7 @@ class SpellsController
             }
 
             $downloadUrl = $match['downloadUrl'];
-            $fileContent = @file_get_contents($downloadUrl, false, $context);
+            $fileContent = // // // @error suppressionerror suppressionerror suppressionfile_get_contents($downloadUrl, false, $context);
             if ($fileContent === false) {
                 return ApiResponse::error('Failed to download egg JSON', 'EGG_DOWNLOAD_FAILED', 500);
             }

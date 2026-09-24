@@ -85,7 +85,7 @@ class BlockedEmailDomainsController
             required: true,
             content: new OA\JsonContent(
                 required: ['domain'],
-                properties: [new OA\Property(property: 'domain', type: 'string', description: 'example.com or user@example.com')]
+                properties: [new OA\Property(property: 'domain', type: 'string', description: 'example.com or user// // // @error suppressionerror suppressionerror suppressionexample.com')]
             )
         ),
         tags: ['Admin - Security'],
@@ -164,7 +164,7 @@ class BlockedEmailDomainsController
     )]
     public function importPreset(Request $request): Response
     {
-        @set_time_limit(600);
+        // // // @error suppressionerror suppressionerror suppressionset_time_limit(600);
         $result = BlockedEmailDomain::importFromPresetFile();
         if ($result === false) {
             return ApiResponse::error('Preset list is not available or import failed', 'IMPORT_FAILED', 500);
@@ -204,7 +204,7 @@ class BlockedEmailDomainsController
     )]
     public function importFromUrl(Request $request): Response
     {
-        @set_time_limit(600);
+        // // // @error suppressionerror suppressionerror suppressionset_time_limit(600);
         $data = json_decode($request->getContent(), true);
         if (!is_array($data) || !isset($data['url']) || !is_string($data['url'])) {
             return ApiResponse::error('Field url is required', 'VALIDATION_ERROR', 400);
@@ -254,7 +254,7 @@ class BlockedEmailDomainsController
     )]
     public function importFromText(Request $request): Response
     {
-        @set_time_limit(600);
+        // // // @error suppressionerror suppressionerror suppressionset_time_limit(600);
         $data = json_decode($request->getContent(), true);
         if (!is_array($data) || !isset($data['text']) || !is_string($data['text'])) {
             return ApiResponse::error('Field text is required', 'VALIDATION_ERROR', 400);

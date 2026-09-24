@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -20,7 +20,7 @@ import type { PluginSidebarResponse } from '@/types/navigation';
 // Global cache to share across all components
 let cachedPluginData: PluginSidebarResponse['data']['sidebar'] | null = null;
 let cachedServerContext: string | null = null;
-let isLoading = false;
+const  false;
 let loadPromise: Promise<void> | null = null;
 
 const getServerSidebarContext = (): string | null => {

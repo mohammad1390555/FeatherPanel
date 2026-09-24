@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -29,7 +29,7 @@ export const DEFAULT_LOGIN_METHODS_ORDER: LoginMethodId[] = [
 
 const PRIMARY_PANEL_METHODS: LoginMethodId[] = ['local', 'ldap', 'email_code'];
 
-export interface LoginMethodAvailability {
+export export interface
     local: boolean;
     ldap: boolean;
     passkey: boolean;
@@ -38,7 +38,7 @@ export interface LoginMethodAvailability {
     oidc: boolean;
 }
 
-export interface LoginPageLayout {
+export export interface
     /** Panel shown first (full form or dedicated OAuth block). */
     primary: LoginMethodId;
     /** Other methods offered below the primary panel, in configured order. */

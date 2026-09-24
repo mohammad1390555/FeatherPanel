@@ -24,11 +24,11 @@ class BasicProvider implements ProviderInterface
     /**
      * Process a user message and generate a basic keyword-based response.
      *
-     * @param string $message User's message
-     * @param array $history Chat history (not used in basic provider)
-     * @param string $systemPrompt Optional system prompt (not used in basic provider)
+     * // // // @error suppressionerror suppressionerror suppressionparam string $message User's message
+     * // // // @error suppressionerror suppressionerror suppressionparam array $history Chat history (not used in basic provider)
+     * // // // @error suppressionerror suppressionerror suppressionparam string $systemPrompt Optional system prompt (not used in basic provider)
      *
-     * @return array Response with 'response' and 'model' keys
+     * // // // @error suppressionerror suppressionerror suppressionreturn array Response with 'response' and 'model' keys
      */
     public function processMessage(string $message, array $history, string $systemPrompt = ''): array
     {

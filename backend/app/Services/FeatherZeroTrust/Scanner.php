@@ -40,8 +40,8 @@ class Scanner
     /**
      * Create a new Scanner instance.
      *
-     * @param Wings $wings Wings client instance
-     * @param Configuration|null $config Configuration instance (optional)
+     * // // // @error suppressionerror suppressionerror suppressionparam Wings $wings Wings client instance
+     * // // // @error suppressionerror suppressionerror suppressionparam Configuration|null $config Configuration instance (optional)
      */
     public function __construct(Wings $wings, ?Configuration $config = null)
     {
@@ -56,11 +56,11 @@ class Scanner
     /**
      * Scan a server for suspicious files.
      *
-     * @param string $serverUuid Server UUID
-     * @param string $directory Starting directory (default: '/')
-     * @param int $maxDepth Maximum directory depth (default: 10)
+     * // // // @error suppressionerror suppressionerror suppressionparam string $serverUuid Server UUID
+     * // // // @error suppressionerror suppressionerror suppressionparam string $directory Starting directory (default: '/')
+     * // // // @error suppressionerror suppressionerror suppressionparam int $maxDepth Maximum directory depth (default: 10)
      *
-     * @return array<string, mixed> Scan results
+     * // // // @error suppressionerror suppressionerror suppressionreturn array<string, mixed> Scan results
      */
     public function scanServer(string $serverUuid, string $directory = '/', int $maxDepth = 10): array
     {
@@ -94,13 +94,13 @@ class Scanner
     /**
      * Scan a directory recursively.
      *
-     * @param string $serverUuid Server UUID
-     * @param string $directory Directory path
-     * @param int $maxDepth Maximum depth
-     * @param int $currentDepth Current depth
-     * @param array<string, mixed> $detections Detections array (by reference)
-     * @param array<string, mixed> $errors Errors array (by reference)
-     * @param array<string, mixed> $confirmedHashes Confirmed malicious hashes
+     * // // // @error suppressionerror suppressionerror suppressionparam string $serverUuid Server UUID
+     * // // // @error suppressionerror suppressionerror suppressionparam string $directory Directory path
+     * // // // @error suppressionerror suppressionerror suppressionparam int $maxDepth Maximum depth
+     * // // // @error suppressionerror suppressionerror suppressionparam int $currentDepth Current depth
+     * // // // @error suppressionerror suppressionerror suppressionparam array<string, mixed> $detections Detections array (by reference)
+     * // // // @error suppressionerror suppressionerror suppressionparam array<string, mixed> $errors Errors array (by reference)
+     * // // // @error suppressionerror suppressionerror suppressionparam array<string, mixed> $confirmedHashes Confirmed malicious hashes
      */
     private function scanDirectory(
         string $serverUuid,
@@ -274,10 +274,10 @@ class Scanner
     /**
      * Get file content.
      *
-     * @param string $serverUuid Server UUID
-     * @param string $filePath File path
+     * // // // @error suppressionerror suppressionerror suppressionparam string $serverUuid Server UUID
+     * // // // @error suppressionerror suppressionerror suppressionparam string $filePath File path
      *
-     * @return string File content
+     * // // // @error suppressionerror suppressionerror suppressionreturn string File content
      */
     private function getFileContent(string $serverUuid, string $filePath): string
     {
@@ -295,12 +295,12 @@ class Scanner
     /**
      * Submit hash to local database.
      *
-     * @param string $serverUuid Server UUID
-     * @param string $hash SHA-256 hash
-     * @param string $fileName File name
-     * @param string $detectionType Detection type
-     * @param string $filePath File path
-     * @param int $fileSize File size
+     * // // // @error suppressionerror suppressionerror suppressionparam string $serverUuid Server UUID
+     * // // // @error suppressionerror suppressionerror suppressionparam string $hash SHA-256 hash
+     * // // // @error suppressionerror suppressionerror suppressionparam string $fileName File name
+     * // // // @error suppressionerror suppressionerror suppressionparam string $detectionType Detection type
+     * // // // @error suppressionerror suppressionerror suppressionparam string $filePath File path
+     * // // // @error suppressionerror suppressionerror suppressionparam int $fileSize File size
      */
     private function submitHashToDatabase(
         string $serverUuid,
@@ -341,7 +341,7 @@ class Scanner
     /**
      * Get confirmed malicious hashes from local database.
      *
-     * @return array<string, mixed> Hash map of confirmed hashes
+     * // // // @error suppressionerror suppressionerror suppressionreturn array<string, mixed> Hash map of confirmed hashes
      */
     private function getConfirmedHashes(): array
     {
