@@ -27,9 +27,9 @@ class LogHelper
     /**
      * Get the full path to a log file by type.
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $type Log type ('web', 'app', etc.)
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $type Log type ('web', 'app', etc.)
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string Full path to the log file
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string Full path to the log file
      */
     public static function getLogFilePath(string $type): string
     {
@@ -68,9 +68,9 @@ class LogHelper
      * present on disk. Creates both with safe permissions if missing.
      * Returns the full path to the log file.
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $type Log type ('web', 'app', 'mail', 'runner', …)
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $type Log type ('web', 'app', 'mail', 'runner', …)
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string Full path to the (now-guaranteed) log file
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string Full path to the (now-guaranteed) log file
      */
     public static function ensureLogFile(string $type): string
     {
@@ -92,10 +92,10 @@ class LogHelper
     /**
      * Read the last N lines from a log file.
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $filePath Path to the log file
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $lines Number of lines to read from the end
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $filePath Path to the log file
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $lines Number of lines to read from the end
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string Content of the last N lines
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string Content of the last N lines
      */
     public static function readLastLines(string $filePath, int $lines): string
     {
@@ -127,9 +127,9 @@ class LogHelper
     /**
      * Upload log content to mclo.gs paste service.
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $content Log content to upload
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $content Log content to upload
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Upload result with 'success', 'url', 'raw', 'id' or 'error'
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Upload result with 'success', 'url', 'raw', 'id' or 'error'
      */
     public static function uploadToMcloGs(string $content): array
     {
@@ -246,9 +246,9 @@ class LogHelper
     /**
      * Get log type from filename.
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $filename The log filename
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $filename The log filename
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string Log type ('web', 'app', or 'unknown')
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string Log type ('web', 'app', or 'unknown')
      */
     public static function getLogTypeFromFileName(string $filename): string
     {

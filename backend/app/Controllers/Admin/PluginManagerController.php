@@ -1294,7 +1294,7 @@ class PluginManagerController
             if (isset($widgetToDelete['component'])) {
                 $componentPath = $pluginPath . '/Frontend/Components/' . $widgetToDelete['component'];
                 if (file_exists($componentPath)) {
-                    $componentDeleted = // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionunlink($componentPath);
+                    $componentDeleted = // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionunlink($componentPath);
                 }
             }
 
@@ -1496,7 +1496,7 @@ class PluginManagerController
             $rules['message'] = 'Must be a valid HTTPS URL for security';
         }
         if (strpos($lowerKey, 'email') !== false) {
-            $rules['regex'] = '/^[^\s// // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppression]+// // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppression[^\s// // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppression]+\.[^\s// // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppression]+$/';
+            $rules['regex'] = '/^[^\s// // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppression]+// // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppression[^\s// // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppression]+\.[^\s// // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppression]+$/';
             $rules['message'] = 'Must be a valid email address';
         }
         if (strpos($lowerKey, 'key') !== false || strpos($lowerKey, 'token') !== false || strpos($lowerKey, 'secret') !== false) {
@@ -1570,7 +1570,7 @@ class PluginManagerController
             // Starter template includes full event handling
             $useStatements .= "\nuse App\\Plugins\\Events\\Events\\AppEvent;\nuse App\\Addons\\{$identifier}\\Events\\App\\AppReadyEvent;";
             $processEventsMethod = "    /**
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressioninheritDoc
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressioninheritDoc
      */
     public static function processEvents(\\App\\Plugins\\PluginEvents \$event): void
     {
@@ -1588,7 +1588,7 @@ class PluginManagerController
         } else {
             // Fresh and empty templates have minimal or no event handling
             $processEventsMethod = '    /**
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressioninheritDoc
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressioninheritDoc
      */
     public static function processEvents(\\App\\Plugins\\PluginEvents $event): void
     {
@@ -1610,7 +1610,7 @@ class {$className} implements AppPlugin
 {$processEventsMethod}
 
     /**
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressioninheritDoc
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressioninheritDoc
      */
     public static function pluginInstall(): void
     {
@@ -1619,7 +1619,7 @@ class {$className} implements AppPlugin
     }
 
     /**
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressioninheritDoc
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressioninheritDoc
      */
     public static function pluginUpdate(?string \$oldVersion, ?string \$newVersion): void
     {
@@ -1630,7 +1630,7 @@ class {$className} implements AppPlugin
     }
 
     /**
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressioninheritDoc
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressioninheritDoc
      */
     public static function pluginUninstall(): void
     {
@@ -1897,12 +1897,12 @@ class {$className}UI {
 				gap: 16px;
 			}
 
-			// // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionkeyframes {$className}-fade-in {
+			// // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionkeyframes {$className}-fade-in {
 				from { opacity: 0; }
 				to { opacity: 1; }
 			}
 
-			// // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionkeyframes {$className}-slide-up {
+			// // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionkeyframes {$className}-slide-up {
 				from { 
 					opacity: 0;
 					transform: translateY(20px) scale(0.95);
@@ -1913,7 +1913,7 @@ class {$className}UI {
 				}
 			}
 
-			// // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionmedia (prefers-color-scheme: dark) {
+			// // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionmedia (prefers-color-scheme: dark) {
 				.{$className}-modal {
 					background: #1f2937;
 					color: #f9fafb;
@@ -2235,7 +2235,7 @@ use App\Cli\CommandBuilder;
 class {$className}Command implements CommandBuilder
 {
     /**
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressioninheritDoc
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressioninheritDoc
      */
     public static function execute(array \$args): void
     {
@@ -2245,7 +2245,7 @@ class {$className}Command implements CommandBuilder
     }
 
     /**
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressioninheritDoc
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressioninheritDoc
      */
     public static function getDescription(): string
     {
@@ -2253,7 +2253,7 @@ class {$className}Command implements CommandBuilder
     }
 
     /**
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressioninheritDoc
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressioninheritDoc
      */
     public static function getSubCommands(): array
     {
@@ -2350,7 +2350,7 @@ not the plugin manager hence that won't add the symlinks!";
  *
  * Copyright (c) 2025 MythicalSystems
  * Copyright (c) 2025 Cassian Gherman (NaysKutzu)
- * Copyright (c) 2018 - 2021 Dane Everitt <dane// // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressiondaneeveritt.com> and Contributors
+ * Copyright (c) 2018 - 2021 Dane Everitt <dane// // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressiondaneeveritt.com> and Contributors
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the \"Software\"), to deal
@@ -2399,7 +2399,7 @@ return function (RouteCollection \$routes): void {
  *
  * Copyright (c) 2025 MythicalSystems
  * Copyright (c) 2025 Cassian Gherman (NaysKutzu)
- * Copyright (c) 2018 - 2021 Dane Everitt <dane// // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressiondaneeveritt.com> and Contributors
+ * Copyright (c) 2018 - 2021 Dane Everitt <dane// // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressiondaneeveritt.com> and Contributors
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the \"Software\"), to deal
@@ -2459,7 +2459,7 @@ class ExampleController
  *
  * Copyright (c) 2025 MythicalSystems
  * Copyright (c) 2025 Cassian Gherman (NaysKutzu)
- * Copyright (c) 2018 - 2021 Dane Everitt <dane// // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressiondaneeveritt.com> and Contributors
+ * Copyright (c) 2018 - 2021 Dane Everitt <dane// // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressiondaneeveritt.com> and Contributors
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the \"Software\"), to deal
@@ -2491,7 +2491,7 @@ class ExampleLog
     /**
      * Get all logs.
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Array of logs
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Array of logs
      */
     public static function getAll(): array
     {
@@ -2510,9 +2510,9 @@ class ExampleLog
     /**
      * Get log by ID.
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int \$id Log ID
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int \$id Log ID
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array|null Log data or null if not found
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array|null Log data or null if not found
      */
     public static function getById(int \$id): ?array
     {
@@ -2533,10 +2533,10 @@ class ExampleLog
     /**
      * Create a new log entry.
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string \$message Log message
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string \$level Log level (default: 'info')
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string \$message Log message
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string \$level Log level (default: 'info')
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool Success status
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool Success status
      */
     public static function create(string \$message, string \$level = 'info'): bool
     {
@@ -2559,9 +2559,9 @@ class ExampleLog
     /**
      * Delete a log entry.
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int \$id Log ID
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int \$id Log ID
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool Success status
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool Success status
      */
     public static function delete(int \$id): bool
     {
@@ -2701,7 +2701,7 @@ HTML;
  *
  * Copyright (c) 2025 MythicalSystems
  * Copyright (c) 2025 Cassian Gherman (NaysKutzu)
- * Copyright (c) 2018 - 2021 Dane Everitt <dane// // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressiondaneeveritt.com> and Contributors
+ * Copyright (c) 2018 - 2021 Dane Everitt <dane// // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressiondaneeveritt.com> and Contributors
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the \"Software\"), to deal
@@ -2738,7 +2738,7 @@ class AppReadyEvent
     /**
      * Constructor called when the router is ready.
      * 
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array \$eventData Event data passed from the event system
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array \$eventData Event data passed from the event system
      */
     public function __construct(array \$eventData)
     {
@@ -2886,18 +2886,18 @@ This plugin includes:
         if (is_dir($pluginComponents)) {
             // Create /public/components directory if it doesn't exist
             if (!is_dir($publicComponentsBase)) {
-                // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionmkdir($publicComponentsBase, 0755, true);
+                // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionmkdir($publicComponentsBase, 0755, true);
             }
 
             // Create symlink at /public/components/{identifier}
             $linkPath = $publicComponentsBase . '/' . $identifier;
-            // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexec('rm -rf ' . escapeshellarg($linkPath));
+            // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexec('rm -rf ' . escapeshellarg($linkPath));
             $lnCmd = 'ln -s ' . escapeshellarg($pluginComponents) . ' ' . escapeshellarg($linkPath);
             exec($lnCmd, $lnOut, $lnCode);
 
             // Fallback to copy if symlink fails
             if ($lnCode !== 0) {
-                // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionmkdir($linkPath, 0755, true);
+                // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionmkdir($linkPath, 0755, true);
                 $copyCmd = sprintf('cp -r %s/* %s', escapeshellarg($pluginComponents), escapeshellarg($linkPath));
                 exec($copyCmd);
             }
@@ -2914,14 +2914,14 @@ This plugin includes:
 
         if (is_dir($pluginPublic)) {
             if (!is_dir($publicAddonsBase)) {
-                // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionmkdir($publicAddonsBase, 0755, true);
+                // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionmkdir($publicAddonsBase, 0755, true);
             }
             $linkPath = $publicAddonsBase . '/' . $identifier;
-            // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexec('rm -rf ' . escapeshellarg($linkPath));
+            // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexec('rm -rf ' . escapeshellarg($linkPath));
             $lnCmd = 'ln -s ' . escapeshellarg($pluginPublic) . ' ' . escapeshellarg($linkPath);
             exec($lnCmd, $lnOut, $lnCode);
             if ($lnCode !== 0) {
-                // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionmkdir($linkPath, 0755, true);
+                // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionmkdir($linkPath, 0755, true);
                 $copyPubCmd = sprintf('cp -r %s/* %s', escapeshellarg($pluginPublic), escapeshellarg($linkPath));
                 exec($copyPubCmd);
             }
@@ -2973,7 +2973,7 @@ This plugin includes:
 
             foreach ($migrationFiles as $file) {
                 $path = $dir . '/' . $file;
-                $sql = // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionfile_get_contents($path);
+                $sql = // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionfile_get_contents($path);
                 $scriptKey = 'addon:' . $identifier . ':' . $file;
                 if ($sql === false) {
                     $lines[] = '⏭️  Skipped (unreadable): ' . $file;

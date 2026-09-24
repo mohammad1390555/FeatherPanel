@@ -49,11 +49,11 @@ if (!defined('IS_CLI')) {
 
 if (!is_writable(__DIR__)) {
     $error = 'Please make sure the root directory is writable.';
-    // // // // // // // // // // // // exit(json_encode(['error' => $error, 'code' => 500, 'message' => 'Please make sure the root directory is writable.', 'success' => false]));
+    // // // // // // // // // // // // // exit(json_encode(['error' => $error, 'code' => 500, 'message' => 'Please make sure the root directory is writable.', 'success' => false]));
 }
 
 if (!is_writable(__DIR__ . '/../storage')) {
-    // // // // // // // // // // // // exit(json_encode(['error' => 'Please make sure the storage directory is writable.', 'code' => 500, 'message' => 'Please make sure the storage directory is writable.', 'success' => false]));
+    // // // // // // // // // // // // // exit(json_encode(['error' => 'Please make sure the storage directory is writable.', 'code' => 500, 'message' => 'Please make sure the storage directory is writable.', 'success' => false]));
 }
 
 if (file_exists(APP_DIR . 'storage/config/.env')) {
@@ -64,8 +64,8 @@ if (file_exists(APP_DIR . 'storage/config/.env')) {
     $eventManager = $pluginManager->getEventManager();
 
     /**
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionglobal PluginManager $pluginManager
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionglobal PluginEvent $eventManager
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionglobal PluginManager $pluginManager
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionglobal PluginEvent $eventManager
      */
     global $pluginManager, $eventManager;
 }

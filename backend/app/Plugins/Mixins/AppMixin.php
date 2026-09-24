@@ -28,22 +28,22 @@ interface AppMixin
     /**
      * Initialize the mixin with the plugin identifier.
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $pluginIdentifier The identifier of the plugin using this mixin
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $config Optional configuration for the mixin
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $pluginIdentifier The identifier of the plugin using this mixin
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $config Optional configuration for the mixin
      */
     public function initialize(string $pluginIdentifier, array $config = []): void;
 
     /**
      * Get the unique identifier for this mixin.
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string The mixin identifier
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string The mixin identifier
      */
     public static function getMixinIdentifier(): string;
 
     /**
      * Get the version of this mixin.
      *
-     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string The mixin version
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string The mixin version
      */
     public static function getMixinVersion(): string;
 }
