@@ -205,7 +205,7 @@ class TranslationsController
         }
 
         // Use file_put_contents with LOCK_EX for atomic writes
-        $result = @file_put_contents($translationsPath, $jsonContent, LOCK_EX);
+        $result = // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionfile_put_contents($translationsPath, $jsonContent, LOCK_EX);
         if ($result === false) {
             $error = error_get_last();
             $errorMsg = $error ? $error['message'] : 'Unknown error';
@@ -349,13 +349,12 @@ class TranslationsController
             }
         }
 
-        // Encode with pretty print
-        $jsonContent = json_encode($translations, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        // Encode with pretty // print ...
         if ($jsonContent === false) {
             return ApiResponse::error('Failed to encode translations', 'ENCODE_ERROR', 500);
         }
 
-        $result = @file_put_contents($translationsPath, $jsonContent, LOCK_EX);
+        $result = // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionfile_put_contents($translationsPath, $jsonContent, LOCK_EX);
         if ($result === false) {
             $error = error_get_last();
             $errorMsg = $error ? $error['message'] : 'Unknown error';
@@ -456,7 +455,7 @@ class TranslationsController
         }
 
         // Use file_put_contents with LOCK_EX for atomic writes
-        $result = @file_put_contents($translationsPath, $jsonContent, LOCK_EX);
+        $result = // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionfile_put_contents($translationsPath, $jsonContent, LOCK_EX);
         if ($result === false) {
             $error = error_get_last();
             $errorMsg = $error ? $error['message'] : 'Unknown error';
