@@ -26,7 +26,7 @@ use Symfony\Component\Yaml\Yaml;
 class Node
 {
     /**
-     * @var string The nodes table name
+     * // // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar string The nodes table name
      */
     private static string $table = 'featherpanel_nodes';
 
@@ -128,9 +128,9 @@ class Node
     /**
      * Create a new node.
      *
-     * @param array $data Associative array of node fields
+     * // // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $data Associative array of node fields
      *
-     * @return int|false The new node's ID or false on failure
+     * // // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int|false The new node's ID or false on failure
      */
     public static function createNode(array $data): int | false
     {
@@ -625,9 +625,9 @@ class Node
     /**
      * Validate subdomain format according to RFC 1123 DNS hostname rules.
      *
-     * @param string|null $subdomain The subdomain to validate
+     * // // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $subdomain The subdomain to validate
      *
-     * @return bool True if valid or null, false otherwise
+     * // // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if valid or null, false otherwise
      */
     public static function isValidSubdomain(?string $subdomain): bool
     {
@@ -655,9 +655,9 @@ class Node
     /**
      * Get the SFTP hostname for a node (subdomain or fallback to FQDN/IP).
      *
-     * @param array $node Node data array
+     * // // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $node Node data array
      *
-     * @return string The hostname to use for SFTP connections
+     * // // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string The hostname to use for SFTP connections
      */
     public static function getSftpHostname(array $node): string
     {
@@ -797,10 +797,10 @@ class Node
      * Generate Wings config.yml content from node data.
      * Used by the panel to serve config to Wings via GET /api/remote/config (setup flow).
      *
-     * @param array<string, mixed> $node Node record (must include uuid, daemon_token_id, daemon_token, daemonListen, scheme, fqdn, upload_size, daemonBase, daemonSFTP)
-     * @param string $panelUrl Panel base URL (e.g. https://panel.example.com) for Wings to call back
+     * // // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $node Node record (must include uuid, daemon_token_id, daemon_token, daemonListen, scheme, fqdn, upload_size, daemonBase, daemonSFTP)
+     * // // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $panelUrl Panel base URL (e.g. https://panel.example.com) for Wings to call back
      *
-     * @return string YAML content for FeatherWings config.yml
+     * // // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string YAML content for FeatherWings config.yml
      */
     public static function generateWingsConfigYaml(array $node, string $panelUrl): string
     {
