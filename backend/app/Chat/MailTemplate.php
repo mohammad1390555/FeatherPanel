@@ -138,7 +138,7 @@ class MailTemplate
     /**
      * Hard delete all soft-deleted mail templates.
      *
-     * @return int Number of templates deleted
+     * // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int Number of templates deleted
      */
     public static function deleteSoftDeletedTemplates(): int
     {

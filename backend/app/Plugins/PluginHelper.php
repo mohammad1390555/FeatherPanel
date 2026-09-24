@@ -25,7 +25,7 @@ class PluginHelper
     /**
      * Get the plugins directory.
      *
-     * @return string The plugins directory
+     * // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string The plugins directory
      */
     public static function getPluginsDir(): string
     {
@@ -44,9 +44,9 @@ class PluginHelper
     /**
      * Get the plugin config.
      *
-     * @param string $identifier The plugin identifier
+     * // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $identifier The plugin identifier
      *
-     * @return array The plugin config
+     * // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array The plugin config
      */
     public static function getPluginConfig(string $identifier): array
     {

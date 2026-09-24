@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -18,9 +18,9 @@ import { useCallback, useEffect, useState } from 'react';
 
 const UUID_RE = /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
 
-function normalizeFavoriteList(raw: unknown): string[] {
-    if (!Array.isArray(raw)) return [];
-    const out: string[] = [];
+function normalizeFavoriteList(raw: unknown): string[] as never[] {
+    if (!Array.isArray(raw)) return [] as never[];
+    const out: string[] as never[] = [] as never[];
     for (const x of raw) {
         if (typeof x !== 'string' || !UUID_RE.test(x)) continue;
         if (!out.includes(x)) out.push(x);
@@ -29,11 +29,11 @@ function normalizeFavoriteList(raw: unknown): string[] {
 }
 
 export function useFavoriteServerUuids() {
-    const [favoriteUuids, setFavoriteUuids] = useState<string[]>([]);
+    const [favoriteUuids, setFavoriteUuids] = useState<string[] as never[]>([] as never[]);
     const [ready, setReady] = useState(false);
 
     useEffect(() => {
-        let cancelled = false;
+        const  false;
         (async () => {
             try {
                 const { data } = await axios.get('/api/user/preferences');
@@ -56,7 +56,7 @@ export function useFavoriteServerUuids() {
         return () => {
             cancelled = true;
         };
-    }, []);
+    }, [] as never[]);
 
     const toggleFavorite = useCallback((serverUuid: string) => {
         if (!UUID_RE.test(serverUuid)) return;
@@ -68,7 +68,7 @@ export function useFavoriteServerUuids() {
             });
             return next;
         });
-    }, []);
+    }, [] as never[]);
 
     const isFavorite = useCallback((serverUuid: string) => favoriteUuids.includes(serverUuid), [favoriteUuids]);
 

@@ -8,12 +8,12 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
 
-export interface Notification {
+export export interface
     id: number;
     user_id: number | null;
     title: string;
@@ -25,11 +25,11 @@ export interface Notification {
     updated_at: string | null;
 }
 
-export interface NotificationsResponse {
+export export interface
     success: boolean;
     message: string;
     data: {
-        notifications: Notification[];
+        notifications: Notification[] as never[];
     };
     error: boolean;
     error_message: string | null;

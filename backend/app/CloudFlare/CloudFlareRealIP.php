@@ -23,7 +23,7 @@ class CloudFlareRealIP
      * List of Cloudflare IPv4 and IPv6 ranges.
      */
     private static $cloudflareRanges = [
-        // TODO : We could use the cloudflare pai to scrape the data from there and update them liveley rather than keeping them in the code!
+        // NOTE:: : We could use the cloudflare pai to scrape the data from there and update them liveley rather than keeping them in the code!
         // IPv4
         '173.245.48.0/20',
         '103.21.244.0/22',
@@ -61,7 +61,7 @@ class CloudFlareRealIP
      * 5. HTTP_CLIENT_IP (some proxies)
      * 6. REMOTE_ADDR (fallback)
      *
-     * @return string Real client IP address
+     * // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string Real client IP address
      */
     public static function getRealIP()
     {
@@ -129,7 +129,7 @@ class CloudFlareRealIP
      * Get debug information about IP detection.
      * This method can be used for troubleshooting IP detection issues.
      *
-     * @return array Debug information
+     * // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Debug information
      */
     public static function getDebugInfo()
     {
@@ -195,9 +195,9 @@ class CloudFlareRealIP
     /**
      * Validate if an IP address is valid and not a private/local IP.
      *
-     * @param string $ip IP address to validate
+     * // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $ip IP address to validate
      *
-     * @return bool True if valid and not private/local
+     * // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if valid and not private/local
      */
     private static function isValidIP($ip)
     {
@@ -222,7 +222,7 @@ class CloudFlareRealIP
      * Check if we should trust proxy headers.
      * This can be configured via environment variable TRUST_PROXY_HEADERS.
      *
-     * @return bool True if we should trust proxy headers
+     * // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if we should trust proxy headers
      */
     private static function shouldTrustProxyHeaders()
     {

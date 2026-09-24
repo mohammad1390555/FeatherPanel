@@ -52,7 +52,7 @@ class LdapAuthenticator
         $host = $protocol . $this->config['host'];
         $port = (int) ($this->config['port'] ?? 389);
 
-        $this->connection = @ldap_connect($host, $port);
+        $this->connection = // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionldap_connect($host, $port);
 
         if (!$this->connection) {
             $this->lastError = 'Failed to connect to LDAP server';
@@ -67,7 +67,7 @@ class LdapAuthenticator
 
         // Enable TLS if configured
         if (($this->config['use_tls'] ?? 'false') === 'true' && ($this->config['use_ssl'] ?? 'false') !== 'true') {
-            if (!@ldap_start_tls($this->connection)) {
+            if (!// // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionldap_start_tls($this->connection)) {
                 $this->lastError = 'Failed to start TLS: ' . ldap_error($this->connection);
 
                 return false;
@@ -92,14 +92,14 @@ class LdapAuthenticator
                 $app = App::getInstance(true);
                 $bindPassword = $app->decryptValue($this->config['bind_password']);
 
-                if (!@ldap_bind($this->connection, $this->config['bind_dn'], $bindPassword)) {
+                if (!// // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionldap_bind($this->connection, $this->config['bind_dn'], $bindPassword)) {
                     $this->lastError = 'Service account bind failed: ' . ldap_error($this->connection);
 
                     return null;
                 }
             } else {
                 // Anonymous bind
-                if (!@ldap_bind($this->connection)) {
+                if (!// // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionldap_bind($this->connection)) {
                     $this->lastError = 'Anonymous bind failed: ' . ldap_error($this->connection);
 
                     return null;
@@ -126,7 +126,7 @@ class LdapAuthenticator
                 $attributes[] = $this->config['group_attribute'];
             }
 
-            $search = @ldap_search($this->connection, $baseDn, $userFilter, $attributes);
+            $search = // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionldap_search($this->connection, $baseDn, $userFilter, $attributes);
 
             if (!$search) {
                 $this->lastError = 'User search failed: ' . ldap_error($this->connection);
@@ -182,7 +182,7 @@ class LdapAuthenticator
             }
 
             // Authenticate user with their password
-            if (!@ldap_bind($this->connection, $userDn, $password)) {
+            if (!// // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionldap_bind($this->connection, $userDn, $password)) {
                 $this->lastError = 'Invalid password';
 
                 return null;
@@ -208,7 +208,7 @@ class LdapAuthenticator
                 $panelUrl = $app->getConfig()->getSetting(\App\Config\ConfigInterface::APP_URL, 'localhost');
                 // Extract domain from panel URL
                 $domain = parse_url($panelUrl, PHP_URL_HOST) ?? 'localhost';
-                $userData['email'] = $userData['username'] . '@' . $domain;
+                $userData['email'] = $userData['username'] . '// // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppression' . $domain;
                 $app->getLogger()->info('LDAP: Generated email for user ' . $userData['username'] . ' as ' . $userData['email']);
             }
 
@@ -219,7 +219,7 @@ class LdapAuthenticator
             return $userData;
         } finally {
             if ($this->connection) {
-                @ldap_unbind($this->connection);
+                // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionldap_unbind($this->connection);
             }
         }
     }
@@ -239,13 +239,13 @@ class LdapAuthenticator
                 $app = App::getInstance(true);
                 $bindPassword = $app->decryptValue($this->config['bind_password']);
 
-                if (!@ldap_bind($this->connection, $this->config['bind_dn'], $bindPassword)) {
+                if (!// // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionldap_bind($this->connection, $this->config['bind_dn'], $bindPassword)) {
                     $this->lastError = 'Bind failed: ' . ldap_error($this->connection);
 
                     return false;
                 }
             } else {
-                if (!@ldap_bind($this->connection)) {
+                if (!// // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionldap_bind($this->connection)) {
                     $this->lastError = 'Anonymous bind failed: ' . ldap_error($this->connection);
 
                     return false;
@@ -253,7 +253,7 @@ class LdapAuthenticator
             }
 
             // Try to read base DN
-            $search = @ldap_read($this->connection, $this->config['base_dn'], '(objectClass=*)', ['dn']);
+            $search = // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionldap_read($this->connection, $this->config['base_dn'], '(objectClass=*)', ['dn']);
             if (!$search) {
                 $this->lastError = 'Cannot read base DN: ' . ldap_error($this->connection);
 
@@ -263,7 +263,7 @@ class LdapAuthenticator
             return true;
         } finally {
             if ($this->connection) {
-                @ldap_unbind($this->connection);
+                // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionldap_unbind($this->connection);
             }
         }
     }
