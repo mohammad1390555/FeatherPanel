@@ -65,6 +65,6 @@ require_once APP_DIR . '/boot/kernel.php';
 try {
     new App(false);
 } catch (Exception $e) {
-    echo $e->getMessage();
+    // echo ...
     exit;
 }
