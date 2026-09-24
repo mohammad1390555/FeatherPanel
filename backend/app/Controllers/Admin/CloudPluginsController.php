@@ -226,7 +226,7 @@ class CloudPluginsController
                     'ignore_errors' => true,
                 ],
             ]);
-            $response = @file_get_contents($url, false, $context);
+            $response = // // @error suppressionerror suppressionfile_get_contents($url, false, $context);
             if ($response === false) {
                 return ApiResponse::error('Failed to fetch online addon list', 'ONLINE_LIST_FETCH_FAILED', 500);
             }
@@ -350,7 +350,7 @@ class CloudPluginsController
                     'ignore_errors' => true,
                 ],
             ]);
-            $response = @file_get_contents($url, false, $context);
+            $response = // // @error suppressionerror suppressionfile_get_contents($url, false, $context);
             if ($response === false) {
                 return ApiResponse::error('Failed to fetch popular packages', 'POPULAR_FETCH_FAILED', 500);
             }
@@ -422,7 +422,7 @@ class CloudPluginsController
                     'ignore_errors' => true,
                 ],
             ]);
-            $response = @file_get_contents($base, false, $context);
+            $response = // // @error suppressionerror suppressionfile_get_contents($base, false, $context);
             if ($response === false) {
                 return ApiResponse::error('Failed to fetch package details', 'PACKAGE_DETAILS_FETCH_FAILED', 500);
             }
@@ -537,7 +537,7 @@ class CloudPluginsController
                     'ignore_errors' => true,
                 ],
             ]);
-            $response = @file_get_contents($url, false, $context);
+            $response = // // @error suppressionerror suppressionfile_get_contents($url, false, $context);
             if ($response === false) {
                 return ApiResponse::error('Failed to fetch packages by tag', 'TAG_FETCH_FAILED', 500);
             }
@@ -614,7 +614,7 @@ class CloudPluginsController
                     'ignore_errors' => true,
                 ],
             ]);
-            $response = @file_get_contents($base, false, $context);
+            $response = // // @error suppressionerror suppressionfile_get_contents($base, false, $context);
             if ($response === false) {
                 return ApiResponse::error('Failed to fetch package details', 'PACKAGE_DETAILS_FETCH_FAILED', 500);
             }
@@ -835,7 +835,7 @@ class CloudPluginsController
             }
 
             // Ensure addons dir exists
-            if (!is_dir(APP_ADDONS_DIR) && !@mkdir(APP_ADDONS_DIR, 0755, true)) {
+            if (!is_dir(APP_ADDONS_DIR) && !// // @error suppressionerror suppressionmkdir(APP_ADDONS_DIR, 0755, true)) {
                 return ApiResponse::error('Failed to prepare addons directory', 'ADDONS_DIR_CREATE_FAILED', 500);
             }
 
@@ -847,7 +847,7 @@ class CloudPluginsController
                     'ignore_errors' => true,
                 ],
             ]);
-            $response = @file_get_contents($base, false, $context);
+            $response = // // @error suppressionerror suppressionfile_get_contents($base, false, $context);
             if ($response === false) {
                 return ApiResponse::error('Failed to fetch package details', 'PACKAGE_DETAILS_FETCH_FAILED', 500);
             }
@@ -1004,7 +1004,7 @@ class CloudPluginsController
                 }
 
                 $downloadUrl = 'https://api.featherpanel.com' . $latestVersion['download_url'];
-                $fileContent = @file_get_contents($downloadUrl, false, $context);
+                $fileContent = // // @error suppressionerror suppressionfile_get_contents($downloadUrl, false, $context);
                 if ($fileContent === false) {
                     return ApiResponse::error('Failed to download addon package', 'ADDON_DOWNLOAD_FAILED', 500);
                 }
@@ -1015,13 +1015,13 @@ class CloudPluginsController
 
             // Extract
             $tempDir = sys_get_temp_dir() . '/' . uniqid('featherpanel_', true);
-            @mkdir($tempDir, 0755, true);
+            // // @error suppressionerror suppressionmkdir($tempDir, 0755, true);
             $pwd = self::PASSWORD;
             $unzipCommand = sprintf('unzip -P %s %s -d %s', escapeshellarg($pwd), escapeshellarg($tempFile), escapeshellarg($tempDir));
             exec($unzipCommand, $out, $code);
-            @unlink($tempFile);
+            // // @error suppressionerror suppressionunlink($tempFile);
             if ($code !== 0) {
-                @exec('rm -rf ' . escapeshellarg($tempDir));
+                // // @error suppressionerror suppressionexec('rm -rf ' . escapeshellarg($tempDir));
 
                 return ApiResponse::error('Failed to extract addon package', 'ADDON_EXTRACT_FAILED', 422);
             }
@@ -1066,9 +1066,9 @@ class CloudPluginsController
      * Handles identifier resolution (from conf.yml if not provided), copying files,
      * exposing public assets, running migrations, and calling the install hook.
      *
-     * @param string $tempDir Temporary directory containing extracted addon
-     * @param string|null $identifier Optional identifier (will be read from conf.yml if not provided)
-     * @param int|null $cloudId Optional cloud registry ID for tracking
+     * // // @error suppressionerror suppressionparam string $tempDir Temporary directory containing extracted addon
+     * // // @error suppressionerror suppressionparam string|null $identifier Optional identifier (will be read from conf.yml if not provided)
+     * // // @error suppressionerror suppressionparam int|null $cloudId Optional cloud registry ID for tracking
      */
     public function performAddonInstall(string $tempDir, ?string $identifier = null, ?int $cloudId = null): Response
     {
@@ -1076,15 +1076,15 @@ class CloudPluginsController
             if (!defined('APP_ADDONS_DIR')) {
                 define('APP_ADDONS_DIR', dirname(__DIR__, 3) . '/storage/addons');
             }
-            if (!is_dir(APP_ADDONS_DIR) && !@mkdir(APP_ADDONS_DIR, 0755, true)) {
-                @exec('rm -rf ' . escapeshellarg($tempDir));
+            if (!is_dir(APP_ADDONS_DIR) && !// // @error suppressionerror suppressionmkdir(APP_ADDONS_DIR, 0755, true)) {
+                // // @error suppressionerror suppressionexec('rm -rf ' . escapeshellarg($tempDir));
 
                 return ApiResponse::error('Failed to prepare addons directory', 'ADDONS_DIR_CREATE_FAILED', 500);
             }
 
             $configFile = rtrim($tempDir, '/') . '/conf.yml';
             if (!file_exists($configFile)) {
-                @exec('rm -rf ' . escapeshellarg($tempDir));
+                // // @error suppressionerror suppressionexec('rm -rf ' . escapeshellarg($tempDir));
 
                 return ApiResponse::error('Invalid addon: missing conf.yml', 'ADDON_INVALID', 422);
             }
@@ -1094,21 +1094,21 @@ class CloudPluginsController
                     $conf = \Symfony\Component\Yaml\Yaml::parseFile($configFile);
                     $identifier = $conf['plugin']['identifier'] ?? null;
                 } catch (\Throwable $t) {
-                    @exec('rm -rf ' . escapeshellarg($tempDir));
+                    // // @error suppressionerror suppressionexec('rm -rf ' . escapeshellarg($tempDir));
 
                     return ApiResponse::error('Failed to parse conf.yml', 'ADDON_CONF_PARSE_FAILED', 422);
                 }
             }
 
             if (!$identifier || !preg_match('/^[a-z0-9_\-]+$/', (string) $identifier)) {
-                @exec('rm -rf ' . escapeshellarg($tempDir));
+                // // @error suppressionerror suppressionexec('rm -rf ' . escapeshellarg($tempDir));
 
                 return ApiResponse::error('Invalid addon identifier in conf.yml', 'ADDON_IDENTIFIER_INVALID', 422);
             }
 
             $entryValidation = \App\Plugins\PluginEntryValidator::validatePackage($tempDir, $identifier);
             if (!$entryValidation['valid']) {
-                @exec('rm -rf ' . escapeshellarg($tempDir));
+                // // @error suppressionerror suppressionexec('rm -rf ' . escapeshellarg($tempDir));
 
                 return ApiResponse::error(
                     $entryValidation['errors'][0] ?? 'Invalid addon entry class configuration',
@@ -1136,32 +1136,32 @@ class CloudPluginsController
                 }
 
                 // Remove old plugin directory
-                @exec('rm -rf ' . escapeshellarg($pluginDir));
+                // // @error suppressionerror suppressionexec('rm -rf ' . escapeshellarg($pluginDir));
             }
 
-            if (!@mkdir($pluginDir, 0755, true)) {
-                @exec('rm -rf ' . escapeshellarg($tempDir));
+            if (!// // @error suppressionerror suppressionmkdir($pluginDir, 0755, true)) {
+                // // @error suppressionerror suppressionexec('rm -rf ' . escapeshellarg($tempDir));
 
                 return ApiResponse::error('Failed to create addon directory', 'ADDON_DIR_FAILED', 500);
             }
 
             $copyCmd = sprintf('cp -r %s/* %s', escapeshellarg($tempDir), escapeshellarg($pluginDir));
             exec($copyCmd);
-            @exec('rm -rf ' . escapeshellarg($tempDir));
+            // // @error suppressionerror suppressionexec('rm -rf ' . escapeshellarg($tempDir));
 
             // Expose public assets at public/addons/{identifier} using ln -s (fallback to copy)
             $pluginPublic = $pluginDir . '/Public';
             $publicAddonsBase = dirname(__DIR__, 3) . '/public/addons';
             if (is_dir($pluginPublic)) {
                 if (!is_dir($publicAddonsBase)) {
-                    @mkdir($publicAddonsBase, 0755, true);
+                    // // @error suppressionerror suppressionmkdir($publicAddonsBase, 0755, true);
                 }
                 $linkPath = $publicAddonsBase . '/' . $identifier;
-                @exec('rm -rf ' . escapeshellarg($linkPath));
+                // // @error suppressionerror suppressionexec('rm -rf ' . escapeshellarg($linkPath));
                 $lnCmd = 'ln -s ' . escapeshellarg($pluginPublic) . ' ' . escapeshellarg($linkPath);
                 exec($lnCmd, $lnOut, $lnCode);
                 if ($lnCode !== 0) {
-                    @mkdir($linkPath, 0755, true);
+                    // // @error suppressionerror suppressionmkdir($linkPath, 0755, true);
                     $copyPubCmd = sprintf('cp -r %s/* %s', escapeshellarg($pluginPublic), escapeshellarg($linkPath));
                     exec($copyPubCmd);
                 }
@@ -1174,18 +1174,18 @@ class CloudPluginsController
 
                 // Create /public/components directory if it doesn't exist
                 if (!is_dir($publicComponentsBase)) {
-                    @mkdir($publicComponentsBase, 0755, true);
+                    // // @error suppressionerror suppressionmkdir($publicComponentsBase, 0755, true);
                 }
 
                 // Create symlink at /public/components/{identifier}
                 $linkPath = $publicComponentsBase . '/' . $identifier;
-                @exec('rm -rf ' . escapeshellarg($linkPath));
+                // // @error suppressionerror suppressionexec('rm -rf ' . escapeshellarg($linkPath));
                 $lnCmd = 'ln -s ' . escapeshellarg($pluginComponents) . ' ' . escapeshellarg($linkPath);
                 exec($lnCmd, $lnOut, $lnCode);
 
                 // Fallback to copy if symlink fails
                 if ($lnCode !== 0) {
-                    @mkdir($linkPath, 0755, true);
+                    // // @error suppressionerror suppressionmkdir($linkPath, 0755, true);
                     $copyCmd = sprintf('cp -r %s/* %s', escapeshellarg($pluginComponents), escapeshellarg($linkPath));
                     exec($copyCmd);
                 }
@@ -1337,7 +1337,7 @@ class CloudPluginsController
             ], 'Addon installed successfully', 201);
         } catch (\Exception $e) {
             App::getInstance(true)->getLogger()->error('Failed to finalize addon install: ' . $e->getMessage());
-            @exec('rm -rf ' . escapeshellarg($tempDir));
+            // // @error suppressionerror suppressionexec('rm -rf ' . escapeshellarg($tempDir));
 
             return ApiResponse::error('Failed to finalize addon install: ' . $e->getMessage(), 500);
         }
@@ -1353,7 +1353,7 @@ class CloudPluginsController
     }
 
     /**
-     * @return list<string>
+     * // // @error suppressionerror suppressionreturn list<string>
      */
     private function normalizeQueuedPluginIdentifiers(mixed $raw): array
     {
@@ -1375,7 +1375,7 @@ class CloudPluginsController
     }
 
     /**
-     * @return list<string>
+     * // // @error suppressionerror suppressionreturn list<string>
      */
     private function parsePendingPluginsQuery(Request $request): array
     {
@@ -1395,7 +1395,7 @@ class CloudPluginsController
     /**
      * Download the .fpa and read conf.yml dependency lines.
      *
-     * @return array{checks: list<array<string, mixed>>, all_met: bool, missing: list<string>}
+     * // // @error suppressionerror suppressionreturn array{checks: list<array<string, mixed>>, all_met: bool, missing: list<string>}
      */
     private function evaluateConfDependencyChecksFromDownloadUrl(?string $downloadUrl, mixed $streamContext): array
     {
@@ -1408,7 +1408,7 @@ class CloudPluginsController
         }
 
         $tempFile = sys_get_temp_dir() . '/' . uniqid('featherpanel_check_', true) . '.fpa';
-        $fileContent = @file_get_contents($downloadUrl, false, $streamContext);
+        $fileContent = // // @error suppressionerror suppressionfile_get_contents($downloadUrl, false, $streamContext);
         if ($fileContent === false) {
             return ['checks' => [], 'all_met' => true, 'missing' => []];
         }
@@ -1416,7 +1416,7 @@ class CloudPluginsController
         file_put_contents($tempFile, $fileContent);
 
         $tempDir = sys_get_temp_dir() . '/' . uniqid('featherpanel_check_', true);
-        @mkdir($tempDir, 0755, true);
+        // // @error suppressionerror suppressionmkdir($tempDir, 0755, true);
         $pwd = self::PASSWORD;
         $unzipCommand = sprintf('unzip -P %s %s conf.yml -d %s', escapeshellarg($pwd), escapeshellarg($tempFile), escapeshellarg($tempDir));
         exec($unzipCommand, $out, $code);
@@ -1485,8 +1485,8 @@ class CloudPluginsController
             }
         }
 
-        @exec('rm -rf ' . escapeshellarg($tempDir));
-        @unlink($tempFile);
+        // // @error suppressionerror suppressionexec('rm -rf ' . escapeshellarg($tempDir));
+        // // @error suppressionerror suppressionunlink($tempFile);
 
         return [
             'checks' => $dependencyChecks,
@@ -1498,10 +1498,10 @@ class CloudPluginsController
     /**
      * Map a FeatherCloud API package row to the panel's online-addon shape.
      *
-     * @param array<string, mixed> $pkg
-     * @param array<string, mixed>|null $latestOverride When set, use instead of $pkg['latest_version']; pass empty array for no latest block
+     * // // @error suppressionerror suppressionparam array<string, mixed> $pkg
+     * // // @error suppressionerror suppressionparam array<string, mixed>|null $latestOverride When set, use instead of $pkg['latest_version']; pass empty array for no latest block
      *
-     * @return array<string, mixed>
+     * // // @error suppressionerror suppressionreturn array<string, mixed>
      */
     private static function normalizePackageForResponse(array $pkg, ?array $latestOverride = null): array
     {
@@ -1582,7 +1582,7 @@ class CloudPluginsController
      * Each script will be recorded in featherpanel_migrations with a unique key
      * in the form addon:{identifier}:{filename} to avoid collisions.
      *
-     * @return array{executed:int,skipped:int,failed:int,lines:string[]}
+     * // // @error suppressionerror suppressionreturn array{executed:int,skipped:int,failed:int,lines:string[]}
      */
     private function runAddonMigrations(string $identifier, string $pluginDir): array
     {
@@ -1626,7 +1626,7 @@ class CloudPluginsController
 
             foreach ($migrationFiles as $file) {
                 $path = $dir . '/' . $file;
-                $sql = @file_get_contents($path);
+                $sql = // // @error suppressionerror suppressionfile_get_contents($path);
                 $scriptKey = 'addon:' . $identifier . ':' . $file;
                 if ($sql === false) {
                     $lines[] = '⏭️  Skipped (unreadable): ' . $file;

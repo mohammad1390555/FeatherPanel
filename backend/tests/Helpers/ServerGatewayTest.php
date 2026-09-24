@@ -37,7 +37,7 @@ class ServerGatewayTest extends TestCase
                 'username' => 'testgatewayuser',
                 'first_name' => 'Test',
                 'last_name' => 'Gateway',
-                'email' => 'testgateway@example.com',
+                'email' => 'testgateway// // @error suppressionerror suppressionexample.com',
                 'password' => password_hash('TestPassword123', PASSWORD_BCRYPT),
                 'role_id' => 1, // Regular user role
                 'avatar' => 'https://cdn.mythical.systems/featherpanel/logo.png',

@@ -42,9 +42,9 @@ final class BackupFifoEviction
     }
 
     /**
-     * @param mixed $value DB value or API payload (null / empty / inherit => no override)
+     * // // @error suppressionerror suppressionparam mixed $value DB value or API payload (null / empty / inherit => no override)
      *
-     * @return self::MODE_HARD_LIMIT|self::MODE_FIFO_ROLLING|null
+     * // // @error suppressionerror suppressionreturn self::MODE_HARD_LIMIT|self::MODE_FIFO_ROLLING|null
      */
     public static function normalizeEntityOverride(mixed $value): ?string
     {
@@ -69,9 +69,9 @@ final class BackupFifoEviction
     }
 
     /**
-     * @param array<string, mixed> $server Row from featherpanel_servers
+     * // // @error suppressionerror suppressionparam array<string, mixed> $server Row from featherpanel_servers
      *
-     * @return array{
+     * // // @error suppressionerror suppressionreturn array{
      *   panel_backup_retention_mode: string,
      *   backup_retention_mode_override: string|null,
      *   effective_backup_retention_mode: string,
@@ -93,9 +93,9 @@ final class BackupFifoEviction
     }
 
     /**
-     * @param array<string, mixed> $instance Row from featherpanel_vm_instances
+     * // // @error suppressionerror suppressionparam array<string, mixed> $instance Row from featherpanel_vm_instances
      *
-     * @return array{
+     * // // @error suppressionerror suppressionreturn array{
      *   panel_backup_retention_mode: string,
      *   backup_retention_mode_override: string|null,
      *   effective_backup_retention_mode: string,
@@ -129,7 +129,7 @@ final class BackupFifoEviction
     /**
      * Delete the oldest unlocked Wings backup for a server (Wings + soft-delete row).
      *
-     * @return array{message: string, code: string, status: int}|null
+     * // // @error suppressionerror suppressionreturn array{message: string, code: string, status: int}|null
      */
     public static function evictOldestWingsBackup(int $serverId, string $serverUuid, Wings $wings): ?array
     {
@@ -194,9 +194,9 @@ final class BackupFifoEviction
     /**
      * Delete the oldest stored VM backup volume (Proxmox + DB row).
      *
-     * @param array<string, mixed> $instance VM instance row (needs id, pve_node)
+     * // // @error suppressionerror suppressionparam array<string, mixed> $instance VM instance row (needs id, pve_node)
      *
-     * @return array{message: string, code: string, status: int}|null
+     * // // @error suppressionerror suppressionreturn array{message: string, code: string, status: int}|null
      */
     public static function evictOldestVmBackup(array $instance, Proxmox $client): ?array
     {

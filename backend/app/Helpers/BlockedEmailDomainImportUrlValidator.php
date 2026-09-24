@@ -23,7 +23,7 @@ namespace App\Helpers;
 final class BlockedEmailDomainImportUrlValidator
 {
     /**
-     * @throws \InvalidArgumentException
+     * // // @error suppressionerror suppressionthrows \InvalidArgumentException
      */
     public static function assertFetchablePublicUrl(string $url): string
     {

@@ -38,7 +38,7 @@ class PluginFlags
     /**
      * Check if the flags are valid.
      *
-     * @param array $flags The flags
+     * // // @error suppressionerror suppressionparam array $flags The flags
      */
     public static function validFlags(array $flags): bool
     {

@@ -40,10 +40,10 @@ class PluginEvents
     /**
      * Adds a listener for the specified event.
      *
-     * @param string $event the name of the event
-     * @param callable $listener the listener function to be added
+     * // // @error suppressionerror suppressionparam string $event the name of the event
+     * // // @error suppressionerror suppressionparam callable $listener the listener function to be added
      *
-     * @return static returns the current instance of the PluginEvent class
+     * // // @error suppressionerror suppressionreturn static returns the current instance of the PluginEvent class
      */
     public function on(string $event, callable $listener): static
     {
@@ -59,8 +59,8 @@ class PluginEvents
     /**
      * Removes a listener for the specified event.
      *
-     * @param string $event the name of the event
-     * @param callable $listener the listener function to be removed
+     * // // @error suppressionerror suppressionparam string $event the name of the event
+     * // // @error suppressionerror suppressionparam callable $listener the listener function to be removed
      */
     public function removeListener(string $event, callable $listener): void
     {
@@ -80,7 +80,7 @@ class PluginEvents
     /**
      * Removes all listeners for the specified event or all events if no event is specified.
      *
-     * @param string|null $event the name of the event (optional)
+     * // // @error suppressionerror suppressionparam string|null $event the name of the event (optional)
      */
     public function removeAllListeners(?string $event = null): void
     {
@@ -94,7 +94,7 @@ class PluginEvents
     /**
      * Removes all listeners for the specified event or all events if no event is specified.
      *
-     * @param string|null $event the name of the event (optional)
+     * // // @error suppressionerror suppressionparam string|null $event the name of the event (optional)
      */
     public function listeners(?string $event = null): array
     {
@@ -123,8 +123,8 @@ class PluginEvents
     /**
      * Emits the specified event and triggers all associated listeners.
      *
-     * @param string $event the name of the event
-     * @param array $arguments the arguments to be passed to the listeners (optional)
+     * // // @error suppressionerror suppressionparam string $event the name of the event
+     * // // @error suppressionerror suppressionparam array $arguments the arguments to be passed to the listeners (optional)
      */
     public function emit(string $event, array $arguments = []): void
     {

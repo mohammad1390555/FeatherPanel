@@ -31,10 +31,10 @@ class RateLimitMiddleware implements MiddlewareInterface
     /**
      * Handle the rate limiting middleware.
      *
-     * @param Request $request The HTTP request
-     * @param callable $next The next middleware/controller in the chain
+     * // // @error suppressionerror suppressionparam Request $request The HTTP request
+     * // // @error suppressionerror suppressionparam callable $next The next middleware/controller in the chain
      *
-     * @return Response The HTTP response
+     * // // @error suppressionerror suppressionreturn Response The HTTP response
      */
     public function handle(Request $request, callable $next): Response
     {

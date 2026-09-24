@@ -22,7 +22,7 @@ use App\App;
 class Cron
 {
     /**
-     * @var array Supported time units and their minute equivalents
+     * // // @error suppressionerror suppressionvar array Supported time units and their minute equivalents
      */
     private const TIME_UNITS = [
         'S' => 1 / 60,          // Seconds → 1/60 minute
@@ -35,27 +35,27 @@ class Cron
     ];
 
     /**
-     * @var string The unique identifier for this cron job
+     * // // @error suppressionerror suppressionvar string The unique identifier for this cron job
      */
     private string $identifier;
 
     /**
-     * @var int Minutes between executions
+     * // // @error suppressionerror suppressionvar int Minutes between executions
      */
     private int $interval;
 
     /**
-     * @var string Path to store last run timestamps
+     * // // @error suppressionerror suppressionvar string Path to store last run timestamps
      */
     private string $storageFile;
 
     /**
      * Initialize a new Cron instance.
      *
-     * @param string $identifier Unique identifier for this cron job
-     * @param string $interval Interval string (e.g., "30M", "1H", "1D")
+     * // // @error suppressionerror suppressionparam string $identifier Unique identifier for this cron job
+     * // // @error suppressionerror suppressionparam string $interval Interval string (e.g., "30M", "1H", "1D")
      *
-     * @throws \Exception If interval format is invalid
+     * // // @error suppressionerror suppressionthrows \Exception If interval format is invalid
      */
     public function __construct(string $identifier, string $interval)
     {
@@ -120,9 +120,9 @@ class Cron
     /**
      * Execute the cron job if it's due.
      *
-     * @param callable $callback Function to execute
+     * // // @error suppressionerror suppressionparam callable $callback Function to execute
      *
-     * @return bool Whether the job was executed
+     * // // @error suppressionerror suppressionreturn bool Whether the job was executed
      */
     public function runIfDue(callable $callback, bool $force = false): bool
     {
@@ -148,11 +148,11 @@ class Cron
     /**
      * Parse the interval string into minutes.
      *
-     * @param string $interval Interval string (e.g., "30M", "1H", "1D")
+     * // // @error suppressionerror suppressionparam string $interval Interval string (e.g., "30M", "1H", "1D")
      *
-     * @throws \Exception If interval format is invalid
+     * // // @error suppressionerror suppressionthrows \Exception If interval format is invalid
      *
-     * @return int Minutes
+     * // // @error suppressionerror suppressionreturn int Minutes
      */
     private function parseInterval(string $interval): int
     {

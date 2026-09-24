@@ -92,9 +92,9 @@ class GameTypeResolver
     /**
      * Resolve the game type for a server from its spell data.
      *
-     * @param array $server Server array containing 'spell' and optionally 'realm' keys
+     * // // @error suppressionerror suppressionparam array $server Server array containing 'spell' and optionally 'realm' keys
      *
-     * @return string|null Game type identifier or null if unresolvable
+     * // // @error suppressionerror suppressionreturn string|null Game type identifier or null if unresolvable
      */
     public static function resolve(array $server): ?string
     {
@@ -115,10 +115,10 @@ class GameTypeResolver
      * 2. Attempt inference from spell name and realm name
      * 3. Return null if unresolvable
      *
-     * @param array $spell Spell configuration array with keys like 'name', 'gamedig_type'
-     * @param array $server Optional server array for realm context
+     * // // @error suppressionerror suppressionparam array $spell Spell configuration array with keys like 'name', 'gamedig_type'
+     * // // @error suppressionerror suppressionparam array $server Optional server array for realm context
      *
-     * @return string|null Game type identifier or null if unresolvable
+     * // // @error suppressionerror suppressionreturn string|null Game type identifier or null if unresolvable
      */
     public static function resolveFromSpell(array $spell, array $server = []): ?string
     {
@@ -146,7 +146,7 @@ class GameTypeResolver
     /**
      * Get the known spell name to game type mappings.
      *
-     * @return array<string, string> Mapping of lowercase spell name patterns to game type identifiers
+     * // // @error suppressionerror suppressionreturn array<string, string> Mapping of lowercase spell name patterns to game type identifiers
      */
     public static function getKnownMappings(): array
     {
@@ -160,10 +160,10 @@ class GameTypeResolver
      * Checks exact matches first, then substring matches on the spell name,
      * and finally falls back to realm name matching.
      *
-     * @param string $name Spell name to match against
-     * @param string|null $realmName Optional realm name for additional context
+     * // // @error suppressionerror suppressionparam string $name Spell name to match against
+     * // // @error suppressionerror suppressionparam string|null $realmName Optional realm name for additional context
      *
-     * @return string|null Inferred game type identifier or null if no match
+     * // // @error suppressionerror suppressionreturn string|null Inferred game type identifier or null if no match
      */
     private static function inferFromName(string $name, ?string $realmName): ?string
     {

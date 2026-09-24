@@ -25,16 +25,16 @@ use App\App;
 class Spell
 {
     /**
-     * @var string The spells table name
+     * // // @error suppressionerror suppressionvar string The spells table name
      */
     private static string $table = 'featherpanel_spells';
 
     /**
      * Create a new spell.
      *
-     * @param array $data Associative array of spell fields
+     * // // @error suppressionerror suppressionparam array $data Associative array of spell fields
      *
-     * @return int|false The new spell's ID or false on failure
+     * // // @error suppressionerror suppressionreturn int|false The new spell's ID or false on failure
      */
     public static function createSpell(array $data): int | false
     {
@@ -536,8 +536,8 @@ class Spell
     /**
      * Update sort order for multiple spells (batch reorder within a realm).
      *
-     * @param array $spells Array of ['id' => int, 'sort_order' => int]
-     * @param int|null $realmId When set, every spell must belong to this realm
+     * // // @error suppressionerror suppressionparam array $spells Array of ['id' => int, 'sort_order' => int]
+     * // // @error suppressionerror suppressionparam int|null $realmId When set, every spell must belong to this realm
      */
     public static function updateSortOrders(array $spells, ?int $realmId = null): bool
     {
@@ -602,7 +602,7 @@ class Spell
     /**
      * Parse docker_images JSON into a list of image tags.
      *
-     * @return list<string>
+     * // // @error suppressionerror suppressionreturn list<string>
      */
     public static function parseDockerImages(?string $dockerImagesJson): array
     {
@@ -697,10 +697,10 @@ class Spell
     /**
      * Validate JSON fields in spell data.
      *
-     * @param array $data The spell data array
-     * @param string|null $spellName Optional spell name for error logging
+     * // // @error suppressionerror suppressionparam array $data The spell data array
+     * // // @error suppressionerror suppressionparam string|null $spellName Optional spell name for error logging
      *
-     * @return bool True if all JSON fields are valid, false otherwise
+     * // // @error suppressionerror suppressionreturn bool True if all JSON fields are valid, false otherwise
      */
     private static function validateJsonFields(array $data, ?string $spellName = null): bool
     {

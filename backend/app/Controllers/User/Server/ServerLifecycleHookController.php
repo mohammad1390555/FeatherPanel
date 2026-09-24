@@ -614,7 +614,7 @@ class ServerLifecycleHookController
     }
 
     /**
-     * @param array<mixed,mixed> $embed
+     * // // @error suppressionerror suppressionparam array<mixed,mixed> $embed
      */
     private function discordEmbedHasRenderableBody(array $embed): bool
     {

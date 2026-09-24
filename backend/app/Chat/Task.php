@@ -25,16 +25,16 @@ use App\App;
 class Task
 {
     /**
-     * @var string The tasks table name
+     * // // @error suppressionerror suppressionvar string The tasks table name
      */
     private static string $table = 'featherpanel_server_schedules_tasks';
 
     /**
      * Create a new task.
      *
-     * @param array $data Associative array of task fields
+     * // // @error suppressionerror suppressionparam array $data Associative array of task fields
      *
-     * @return int|false The new task's ID or false on failure
+     * // // @error suppressionerror suppressionreturn int|false The new task's ID or false on failure
      */
     public static function createTask(array $data): int | false
     {
@@ -217,15 +217,15 @@ class Task
     /**
      * Search tasks with pagination, filtering, and field selection.
      *
-     * @param int $page Page number (1-based)
-     * @param int $limit Number of results per page
-     * @param string $search Search term for action or payload (optional)
-     * @param array $fields Fields to select (e.g. ['action', 'is_queued']) (default: all)
-     * @param string $sortBy Field to sort by (default: 'id')
-     * @param string $sortOrder 'ASC' or 'DESC' (default: 'ASC')
-     * @param int|null $scheduleId Filter by schedule ID (optional)
-     * @param string|null $action Filter by action type (optional)
-     * @param bool|null $isQueued Filter by queued status (optional)
+     * // // @error suppressionerror suppressionparam int $page Page number (1-based)
+     * // // @error suppressionerror suppressionparam int $limit Number of results per page
+     * // // @error suppressionerror suppressionparam string $search Search term for action or payload (optional)
+     * // // @error suppressionerror suppressionparam array $fields Fields to select (e.g. ['action', 'is_queued']) (default: all)
+     * // // @error suppressionerror suppressionparam string $sortBy Field to sort by (default: 'id')
+     * // // @error suppressionerror suppressionparam string $sortOrder 'ASC' or 'DESC' (default: 'ASC')
+     * // // @error suppressionerror suppressionparam int|null $scheduleId Filter by schedule ID (optional)
+     * // // @error suppressionerror suppressionparam string|null $action Filter by action type (optional)
+     * // // @error suppressionerror suppressionparam bool|null $isQueued Filter by queued status (optional)
      */
     public static function searchTasks(
         int $page = 1,

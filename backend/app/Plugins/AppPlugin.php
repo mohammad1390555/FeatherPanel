@@ -22,7 +22,7 @@ interface AppPlugin
     /**
      * Process the events for the plugin.
      *
-     * @param PluginEvents $event The event to process
+     * // // @error suppressionerror suppressionparam PluginEvents $event The event to process
      */
     public static function processEvents(PluginEvents $event): void;
 
@@ -44,10 +44,10 @@ interface AppPlugin
      * This method is OPTIONAL and not part of the interface to maintain backward compatibility.
      * Plugins can optionally implement this method to handle update-specific logic.
      *
-     * @param string|null $oldVersion The previous version of the plugin (e.g., "1.0.0")
-     * @param string|null $newVersion The new version being installed (e.g., "1.0.1")
+     * // // @error suppressionerror suppressionparam string|null $oldVersion The previous version of the plugin (e.g., "1.0.0")
+     * // // @error suppressionerror suppressionparam string|null $newVersion The new version being installed (e.g., "1.0.1")
      *
-     * @example
+     * // // @error suppressionerror suppressionexample
      * public static function pluginUpdate(?string $oldVersion, ?string $newVersion): void
      * {
      *     // Handle update logic here
