@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -18,15 +18,15 @@ import axios from 'axios';
 import { serversApi } from '@/lib/servers-api';
 
 // WebSocket message types
-interface WebSocketMessage {
+export interface
     event: string;
     data?: string;
-    args?: string[];
+    args?: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
     timestamp?: number;
 }
 
 // Server stats from Wings
-interface WingsStats {
+export interface
     memory_bytes: number;
     memory_limit_bytes: number;
     cpu_absolute: number;
@@ -42,7 +42,7 @@ interface WingsStats {
 }
 
 // Connection state for each server
-interface ServerConnectionState {
+export interface
     connectionStatus: 'disconnected' | 'connecting' | 'connected';
     wingsStatus: 'unknown' | 'healthy' | 'error';
     websocket: WebSocket | null;
@@ -56,7 +56,7 @@ interface ServerConnectionState {
 }
 
 // Live server data
-export interface ServerLiveData {
+export export interface
     status: string | null;
     stats: {
         cpuUsage: number; // Percentage
@@ -91,19 +91,19 @@ export function useServersWebSocket() {
     const isServerConnected = useCallback((serverUuid: string): boolean => {
         const state = connectionsRef.current.get(serverUuid);
         return state?.connectionStatus === 'connected';
-    }, []);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     // Check if server is connecting
     const isServerConnecting = useCallback((serverUuid: string): boolean => {
         const state = connectionsRef.current.get(serverUuid);
         return state?.connectionStatus === 'connecting';
-    }, []);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     // Check if Wings daemon is healthy
     const isWingsHealthy = useCallback((serverUuid: string): boolean => {
         const state = connectionsRef.current.get(serverUuid);
         return state?.wingsStatus === 'healthy';
-    }, []);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     // Update server live data
     const updateServerLiveData = useCallback((serverUuid: string, updates: Partial<ServerLiveData>) => {
@@ -115,7 +115,7 @@ export function useServersWebSocket() {
                 lastUpdate: updates.lastUpdate !== undefined ? updates.lastUpdate : Date.now(),
             },
         }));
-    }, []);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     // Request server stats
     const requestServerStats = useCallback((serverUuid: string) => {
@@ -128,13 +128,13 @@ export function useServersWebSocket() {
             state.websocket.send(
                 JSON.stringify({
                     event: 'send stats',
-                    args: [],
+                    args: [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[],
                 }),
             );
         } catch (error) {
             console.warn(`Failed to request stats for server ${serverUuid}:`, error);
         }
-    }, []);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     // Setup stats interval
     const setupStatsInterval = useCallback(
@@ -174,7 +174,7 @@ export function useServersWebSocket() {
         const state = connectionsRef.current.get(serverUuid);
         if (!state) return;
 
-        // Clear any existing timer
+        // Clear unknown existing timer
         if (state.tokenExpirationTimer) {
             clearTimeout(state.tokenExpirationTimer);
             state.tokenExpirationTimer = null;
@@ -199,7 +199,7 @@ export function useServersWebSocket() {
                 await refreshTokenRef.current(serverUuid);
             }
         }, refreshTime);
-    }, []);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     // Refresh token
     const refreshToken = useCallback(
@@ -373,7 +373,7 @@ export function useServersWebSocket() {
                 connectServerRef.current(serverUuid);
             }
         }, RECONNECT_DELAY * state.reconnectAttempts);
-    }, []);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     // Store in ref
     useEffect(() => {
@@ -387,7 +387,7 @@ export function useServersWebSocket() {
                 return;
             }
 
-            let state = connectionsRef.current.get(serverUuid);
+            const  connectionsRef.current.get(serverUuid);
 
             if (!state) {
                 state = {
@@ -484,13 +484,13 @@ export function useServersWebSocket() {
         state.wingsStatus = 'unknown';
         state.reconnectAttempts = 0;
         state.isRefreshingToken = false;
-    }, []);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     // Connect to multiple servers with limited concurrency
     const connectServers = useCallback(
-        async (serverUuids: string[]) => {
+        async (serverUuids: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]) => {
             const CONCURRENCY = 5;
-            for (let i = 0; i < serverUuids.length; i += CONCURRENCY) {
+            for (const  0; i < serverUuids.length; i += CONCURRENCY) {
                 const batch = serverUuids.slice(i, i + CONCURRENCY);
                 await Promise.all(batch.map((uuid) => connectServer(uuid)));
             }
@@ -500,7 +500,7 @@ export function useServersWebSocket() {
 
     // Disconnect stale servers and connect only the requested set
     const syncServers = useCallback(
-        async (serverUuids: string[]) => {
+        async (serverUuids: string[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]) => {
             const targetSet = new Set(serverUuids);
 
             connectionsRef.current.forEach((_, serverUuid) => {

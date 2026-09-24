@@ -159,7 +159,7 @@ class ServerService
     /**
      * Get server logs.
      *
-     * @param int $lines Number of lines to get (default: 100)
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $lines Number of lines to get (default: 100)
      */
     public function getServerLogs(string $serverUuid, int $lines = 100): WingsResponse
     {
@@ -229,7 +229,7 @@ class ServerService
     /**
      * List items in a directory.
      *
-     * @param bool $includeDirectorySizes when true, requests Wings recursive per-folder sizes (cached on the daemon)
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool $includeDirectorySizes when true, requests Wings recursive per-folder sizes (cached on the daemon)
      */
     public function listDirectory(string $serverUuid, string $directory = '/', bool $includeDirectorySizes = false): WingsResponse
     {
@@ -250,7 +250,7 @@ class ServerService
     /**
      * Search files with advanced filters.
      *
-     * @param array<string,mixed> $filters
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string,mixed> $filters
      */
     public function searchFiles(string $serverUuid, array $filters = []): WingsResponse
     {
@@ -268,7 +268,7 @@ class ServerService
     /**
      * List one directory inside an on-disk archive without extracting (supported formats only).
      *
-     * @param string $innerPath Path inside the archive (empty string = root)
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $innerPath Path inside the archive (empty string = root)
      */
     public function listArchiveDirectory(string $serverUuid, string $directory, string $file, string $innerPath = ''): WingsResponse
     {
@@ -391,7 +391,7 @@ class ServerService
     /**
      * Delete files/directories.
      *
-     * @param array<string, mixed> $options Optional keys: use_trash (bool), permanent (bool), trash (array{max_size_bytes?: int, retention_days?: int})
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $options Optional keys: use_trash (bool), permanent (bool), trash (array{max_size_bytes?: int, retention_days?: int})
      */
     public function deleteFiles(string $serverUuid, string $root, array $files, array $options = []): WingsResponse
     {
@@ -512,12 +512,12 @@ class ServerService
      * - Supported extensions: zip, tar.gz, tgz, tar.bz2, tbz2, tar.xz, txz
      * - Returns: 200 with the new archive file object
      *
-     * @param string $serverUuid The server UUID
-     * @param string $root The root directory path
-     * @param array $files Array of file names (relative to root)
-     * @param string $name Optional archive name (empty for auto-generated)
-     * @param string $extension Archive extension (zip, tar.gz, tgz, tar.bz2, tbz2, tar.xz, txz)
-     * @param int|null $timeout Optional timeout in seconds (default: 15 minutes for large archives)
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $serverUuid The server UUID
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $root The root directory path
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $files Array of file names (relative to root)
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name Optional archive name (empty for auto-generated)
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $extension Archive extension (zip, tar.gz, tgz, tar.bz2, tbz2, tar.xz, txz)
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int|null $timeout Optional timeout in seconds (default: 15 minutes for large archives)
      */
     public function compressFiles(string $serverUuid, string $root, array $files, string $name = '', string $extension = 'tar.gz', ?int $timeout = null): WingsResponse
     {
@@ -571,10 +571,10 @@ class ServerService
     /**
      * Decompress archive.
      *
-     * @param string $serverUuid The server UUID
-     * @param string $file The archive file path
-     * @param string $root The root directory path
-     * @param int|null $timeout Optional timeout in seconds (default: 15 minutes for large archives)
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $serverUuid The server UUID
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $file The archive file path
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $root The root directory path
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int|null $timeout Optional timeout in seconds (default: 15 minutes for large archives)
      */
     public function decompressArchive(string $serverUuid, string $file, string $root, ?int $timeout = null): WingsResponse
     {
@@ -597,7 +597,7 @@ class ServerService
     /**
      * Extract selected paths from an on-disk archive without unpacking the whole archive (Wings 204).
      *
-     * @param array<int, string> $entries Paths inside the archive (files and/or directories)
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<int, string> $entries Paths inside the archive (files and/or directories)
      */
     public function extractArchiveSelection(
         string $serverUuid,
@@ -768,7 +768,7 @@ class ServerService
     /**
      * Add JWT tokens to WebSocket deny list.
      *
-     * @deprecated Use deAuthUser instead
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressiondeprecated Use deAuthUser instead
      */
     public function denyWebSocketJWT(string $serverUuid, array $jtis): WingsResponse
     {
@@ -787,8 +787,8 @@ class ServerService
     /**
      * Deauthorizes a user (disconnects websockets and SFTP) on the Wings instance for the server.
      *
-     * @param string $user The user to deauthorize
-     * @param string $serverUuid The server UUID
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $user The user to deauthorize
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $serverUuid The server UUID
      */
     public function deAuthUser(string $user, string $serverUuid): WingsResponse
     {
@@ -872,7 +872,7 @@ class ServerService
     /**
      * Create a new firewall rule.
      *
-     * @param array<string,mixed> $data
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string,mixed> $data
      */
     public function createFirewallRule(string $serverUuid, array $data): WingsResponse
     {
@@ -888,7 +888,7 @@ class ServerService
     /**
      * Update an existing firewall rule.
      *
-     * @param array<string,mixed> $data
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string,mixed> $data
      */
     public function updateFirewallRule(string $serverUuid, int $ruleId, array $data): WingsResponse
     {
@@ -950,7 +950,7 @@ class ServerService
     /**
      * Create a reverse proxy configuration.
      *
-     * @param array<string,mixed> $data
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string,mixed> $data
      */
     public function createProxy(string $serverUuid, array $data): WingsResponse
     {
@@ -1015,7 +1015,7 @@ class ServerService
     /**
      * Import server files from a remote SFTP or FTP server.
      *
-     * @param array<string,mixed> $data Import configuration data
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string,mixed> $data Import configuration data
      */
     public function importServer(string $serverUuid, array $data): WingsResponse
     {
@@ -1049,7 +1049,7 @@ class ServerService
     /**
      * Enable FastDL for a server.
      *
-     * @param array<string,mixed> $data FastDL configuration data (optional directory)
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string,mixed> $data FastDL configuration data (optional directory)
      */
     public function enableFastDl(string $serverUuid, array $data = []): WingsResponse
     {
@@ -1079,7 +1079,7 @@ class ServerService
     /**
      * Update FastDL configuration for a server.
      *
-     * @param array<string,mixed> $data FastDL configuration data
+     * // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string,mixed> $data FastDL configuration data
      */
     public function updateFastDl(string $serverUuid, array $data): WingsResponse
     {

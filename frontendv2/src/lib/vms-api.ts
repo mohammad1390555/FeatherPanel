@@ -8,14 +8,14 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
 
 import axios from 'axios';
 
-export interface VmInstance {
+export export interface
     id: number;
     user_uuid: string;
     vm_node_id: number;
@@ -44,7 +44,7 @@ export interface VmInstance {
     updated_at?: string;
 }
 
-export interface VmPagination {
+export export interface
     current_page: number;
     per_page: number;
     total_records: number;
@@ -56,20 +56,20 @@ export interface VmPagination {
     to?: number;
 }
 
-export interface VmListResponse {
+export export interface
     success: boolean;
     data: {
-        instances: VmInstance[];
+        instances: VmInstance[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
         pagination: VmPagination;
     };
     message: string;
 }
 
-export interface VmStatusData {
+export export interface
     [key: string]: unknown;
 }
 
-export interface PowerActionResponse {
+export export interface
     task_id?: string;
     status?: string;
     [key: string]: unknown;

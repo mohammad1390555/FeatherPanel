@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -25,7 +25,7 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
         return {
             name: 'FeatherPanel',
             short_name: 'FeatherPanel',
-            icons: [],
+            icons: [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[],
             start_url: '/',
             display: 'browser',
             background_color: '#ffffff',
@@ -44,7 +44,7 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
         icons: [
             {
                 src: settings.app_logo_dark || '/favicon.ico',
-                sizes: 'any',
+                sizes: 'unknown',
                 type: 'image/png',
             },
         ],

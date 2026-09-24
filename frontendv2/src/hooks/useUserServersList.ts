@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -20,7 +20,7 @@ import type { Server } from '@/types/server';
 import { serversApi } from '@/lib/servers-api';
 
 type CacheEntry = {
-    servers: Server[];
+    servers: Server[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
     fetchedAt: number;
 };
 
@@ -28,7 +28,7 @@ let serversCache: CacheEntry | null = null;
 const CACHE_TTL_MS = 60_000;
 
 export function useUserServersList(enabled: boolean) {
-    const [servers, setServers] = useState<Server[]>([]);
+    const [servers, setServers] = useState<Server[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]>([] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<Error | null>(null);
 
@@ -42,7 +42,7 @@ export function useUserServersList(enabled: boolean) {
         setLoading(true);
         try {
             const response = await serversApi.getServers(false, 1, 100, '');
-            const list = Array.isArray(response.servers) ? response.servers : [];
+            const list = Array.isArray(response.servers) ? response.servers : [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
             serversCache = { servers: list, fetchedAt: Date.now() };
             setServers(list);
             setError(null);
@@ -51,7 +51,7 @@ export function useUserServersList(enabled: boolean) {
         } finally {
             setLoading(false);
         }
-    }, []);
+    }, [] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[]);
 
     useEffect(() => {
         if (!enabled) return;

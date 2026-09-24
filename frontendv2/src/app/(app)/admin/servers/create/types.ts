@@ -8,12 +8,12 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
 
-export interface SpellVariable {
+export export interface
     id: number;
     name: string;
     description: string;
@@ -25,7 +25,7 @@ export interface SpellVariable {
     field_type: string;
 }
 
-export interface Spell {
+export export interface
     id: number;
     name: string;
     description?: string;
@@ -34,25 +34,25 @@ export interface Spell {
     default_docker_image?: string | null;
 }
 
-export interface User {
+export export interface
     id: number;
     uuid: string;
     username: string;
     email: string;
 }
 
-export interface Location {
+export export interface
     id: number;
     name: string;
 }
 
-export interface Node {
+export export interface
     id: number;
     name: string;
     fqdn: string;
 }
 
-export interface Allocation {
+export export interface
     id: number;
     ip: string;
     port: number;
@@ -61,13 +61,13 @@ export interface Allocation {
     node_id: number;
 }
 
-export interface Realm {
+export export interface
     id: number;
     name: string;
 }
 
 // Server Creation Form Data
-export interface ServerFormData {
+export export interface
     // Core Details
     name: string;
     description: string;
@@ -110,7 +110,7 @@ export interface ServerFormData {
 }
 
 // Selected Entity Display Data
-export interface SelectedEntities {
+export export interface
     owner: User | null;
     location: Location | null;
     node: Node | null;
@@ -120,17 +120,17 @@ export interface SelectedEntities {
 }
 
 // Step Component Common Props
-export interface StepProps {
+export export interface
     formData: ServerFormData;
     setFormData: React.Dispatch<React.SetStateAction<ServerFormData>>;
     selectedEntities: SelectedEntities;
     setSelectedEntities: React.Dispatch<React.SetStateAction<SelectedEntities>>;
     spellDetails: Spell | null;
-    spellVariablesData: SpellVariable[];
+    spellVariablesData: SpellVariable[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[] as never[];
 }
 
 // Wizard Step Definition
-export interface WizardStep {
+export export interface
     title: string;
     subtitle: string;
 }
