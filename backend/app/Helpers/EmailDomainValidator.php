@@ -29,7 +29,7 @@ final class EmailDomainValidator
 {
     public const ERROR_DOMAIN_BLACKLIST = 'EMAIL_DOMAIN_NOT_ALLOWED';
 
-    /** // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array<string, true>|null */
+    /** // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array<string, true>|null */
     private static ?array $blockedFlipCache = null;
 
     public static function invalidateBlockedDomainsCache(): void
@@ -64,7 +64,7 @@ final class EmailDomainValidator
     }
 
     /**
-     * // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, true> $blockedFlip
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, true> $blockedFlip
      */
     public static function matchesBlockedDomains(string $email, array $blockedFlip): bool
     {
@@ -79,7 +79,7 @@ final class EmailDomainValidator
     public static function extractDomain(string $email): ?string
     {
         $email = strtolower(trim($email));
-        $at = strrpos($email, '// // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppression');
+        $at = strrpos($email, '// // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppression');
         if ($at === false) {
             return null;
         }
@@ -99,7 +99,7 @@ final class EmailDomainValidator
     }
 
     /**
-     * // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<string, true>
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<string, true>
      */
     private static function blockedDomainsFlip(): array
     {
@@ -116,7 +116,7 @@ final class EmailDomainValidator
     }
 
     /**
-     * // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, true> $blockedFlip
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, true> $blockedFlip
      */
     private static function domainMatchesAnySuffix(string $domain, array $blockedFlip): bool
     {

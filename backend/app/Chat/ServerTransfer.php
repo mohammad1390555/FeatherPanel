@@ -26,7 +26,7 @@ class ServerTransfer
     /**
      * Create a new server transfer record.
      *
-     * // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $data Transfer data including:
+     * // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $data Transfer data including:
      *                    - server_id: The server being transferred
      *                    - source_node_id: The source node ID (old_node in Pelican)
      *                    - destination_node_id: The destination node ID (new_node in Pelican)
