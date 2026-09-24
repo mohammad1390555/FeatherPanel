@@ -70,7 +70,7 @@ function formatInteger(value) {
 }
 
 function printUsage() {
-  console.log(
+  // // // // // // // console.log(
     [
       "Usage: node count.js [targetDir] [options]",
       "",
@@ -584,7 +584,7 @@ async function main() {
   fs.writeFileSync(resultsFile, JSON.stringify(resultsWithTotal, null, 2));
   fs.writeFileSync(resultsFileRaw, countings);
 
-  console.log(
+  // // // console.log(
     countings +
       "\n\n" +
       `Results saved to: \n` +
