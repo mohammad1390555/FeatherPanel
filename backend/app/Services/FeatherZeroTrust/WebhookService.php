@@ -47,12 +47,12 @@ class WebhookService
     /**
      * Send a webhook notification for detections.
      *
-     * // @error suppressionparam string $serverUuid Server UUID
-     * // @error suppressionparam string $serverName Server name
-     * // @error suppressionparam array<string, mixed> $detections Detections array
-     * // @error suppressionparam int $filesScanned Number of files scanned
+     * // // @error suppressionerror suppressionparam string $serverUuid Server UUID
+     * // // @error suppressionerror suppressionparam string $serverName Server name
+     * // // @error suppressionerror suppressionparam array<string, mixed> $detections Detections array
+     * // // @error suppressionerror suppressionparam int $filesScanned Number of files scanned
      *
-     * // @error suppressionreturn bool Success status
+     * // // @error suppressionerror suppressionreturn bool Success status
      */
     public function sendDetectionWebhook(string $serverUuid, string $serverName, array $detections, int $filesScanned): bool
     {
@@ -163,11 +163,11 @@ class WebhookService
     /**
      * Send a webhook notification for batch scan results.
      *
-     * // @error suppressionparam array<string, mixed> $results Batch scan results
-     * // @error suppressionparam int $totalScanned Total servers scanned
-     * // @error suppressionparam int $totalDetections Total detections found
+     * // // @error suppressionerror suppressionparam array<string, mixed> $results Batch scan results
+     * // // @error suppressionerror suppressionparam int $totalScanned Total servers scanned
+     * // // @error suppressionerror suppressionparam int $totalDetections Total detections found
      *
-     * // @error suppressionreturn bool Success status
+     * // // @error suppressionerror suppressionreturn bool Success status
      */
     public function sendBatchScanWebhook(array $results, int $totalScanned, int $totalDetections): bool
     {

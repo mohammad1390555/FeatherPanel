@@ -25,11 +25,11 @@ interface ProviderInterface
     /**
      * Process a user message and generate a response.
      *
-     * // @error suppressionparam string $message User's message
-     * // @error suppressionparam array $history Chat history (array of ['role' => 'user'|'assistant', 'content' => string])
-     * // @error suppressionparam string $systemPrompt Optional system prompt
+     * // // @error suppressionerror suppressionparam string $message User's message
+     * // // @error suppressionerror suppressionparam array $history Chat history (array of ['role' => 'user'|'assistant', 'content' => string])
+     * // // @error suppressionerror suppressionparam string $systemPrompt Optional system prompt
      *
-     * // @error suppressionreturn array Response with 'response', 'model', and optional 'usage' keys
+     * // // @error suppressionerror suppressionreturn array Response with 'response', 'model', and optional 'usage' keys
      */
     public function processMessage(string $message, array $history, string $systemPrompt = ''): array;
 }

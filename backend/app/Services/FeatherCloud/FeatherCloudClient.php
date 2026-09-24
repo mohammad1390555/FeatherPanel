@@ -81,8 +81,8 @@ class FeatherCloudClient
     /**
      * Get team members with pagination.
      *
-     * // @error suppressionparam int $page Page number
-     * // @error suppressionparam int $limit Results per page
+     * // // @error suppressionerror suppressionparam int $page Page number
+     * // // @error suppressionerror suppressionparam int $limit Results per page
      */
     public function getTeamMembers(int $page = 1, int $limit = 50): array
     {
@@ -100,8 +100,8 @@ class FeatherCloudClient
     /**
      * Get purchased products for all team members.
      *
-     * // @error suppressionparam int $page Page number
-     * // @error suppressionparam int $limit Results per page
+     * // // @error suppressionerror suppressionparam int $page Page number
+     * // // @error suppressionerror suppressionparam int $limit Results per page
      */
     public function getPurchasedProducts(int $page = 1, int $limit = 50): array
     {
@@ -111,9 +111,9 @@ class FeatherCloudClient
     /**
      * Get purchased products for a specific team member.
      *
-     * // @error suppressionparam string $userUuid User UUID
-     * // @error suppressionparam int $page Page number
-     * // @error suppressionparam int $limit Results per page
+     * // // @error suppressionerror suppressionparam string $userUuid User UUID
+     * // // @error suppressionerror suppressionparam int $page Page number
+     * // // @error suppressionerror suppressionparam int $limit Results per page
      */
     public function getMemberProducts(string $userUuid, int $page = 1, int $limit = 50): array
     {
@@ -123,7 +123,7 @@ class FeatherCloudClient
     /**
      * Get member information.
      *
-     * // @error suppressionparam string $userUuid User UUID
+     * // // @error suppressionerror suppressionparam string $userUuid User UUID
      */
     public function getMember(string $userUuid): array
     {
@@ -141,12 +141,12 @@ class FeatherCloudClient
     /**
      * Download a premium package.
      *
-     * // @error suppressionparam string $packageName Package name/identifier
-     * // @error suppressionparam string $version Package version
+     * // // @error suppressionerror suppressionparam string $packageName Package name/identifier
+     * // // @error suppressionerror suppressionparam string $version Package version
      *
-     * // @error suppressionthrows FeatherCloudException
+     * // // @error suppressionerror suppressionthrows FeatherCloudException
      *
-     * // @error suppressionreturn string File content (binary)
+     * // // @error suppressionerror suppressionreturn string File content (binary)
      */
     public function downloadPremiumPackage(string $packageName, string $version): string
     {
@@ -220,13 +220,13 @@ class FeatherCloudClient
     /**
      * Make a request to the FeatherCloud Panel API.
      *
-     * // @error suppressionparam string $endpoint API endpoint (e.g., '/panel/summary')
-     * // @error suppressionparam string $method HTTP method (default: 'GET')
-     * // @error suppressionparam array $queryParams Query parameters
+     * // // @error suppressionerror suppressionparam string $endpoint API endpoint (e.g., '/panel/summary')
+     * // // @error suppressionerror suppressionparam string $method HTTP method (default: 'GET')
+     * // // @error suppressionerror suppressionparam array $queryParams Query parameters
      *
-     * // @error suppressionthrows FeatherCloudException
+     * // // @error suppressionerror suppressionthrows FeatherCloudException
      *
-     * // @error suppressionreturn array Response data
+     * // // @error suppressionerror suppressionreturn array Response data
      */
     private function makeRequest(string $endpoint, string $method = 'GET', array $queryParams = []): array
     {

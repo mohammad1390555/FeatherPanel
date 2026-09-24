@@ -38,10 +38,10 @@ class ConfigFactory
     /**
      * Get a setting from the database.
      *
-     * // @error suppressionparam string $name The name of the setting
-     * // @error suppressionparam mixed $fallback The fallback value if the setting is not found
+     * // // @error suppressionerror suppressionparam string $name The name of the setting
+     * // // @error suppressionerror suppressionparam mixed $fallback The fallback value if the setting is not found
      *
-     * // @error suppressionreturn string|null The value of the setting
+     * // // @error suppressionerror suppressionreturn string|null The value of the setting
      */
     public function getSetting(string $name, ?string $fallback): ?string
     {
@@ -90,12 +90,12 @@ class ConfigFactory
     /**
      * Set a setting in the database.
      *
-     * // @error suppressionparam string $name The name of the setting
-     * // @error suppressionparam string|null $value The value of the setting (null to delete)
+     * // // @error suppressionerror suppressionparam string $name The name of the setting
+     * // // @error suppressionerror suppressionparam string|null $value The value of the setting (null to delete)
      *
-     * // @error suppressionthrows \Exception If the setting already exists
+     * // // @error suppressionerror suppressionthrows \Exception If the setting already exists
      *
-     * // @error suppressionreturn bool True if the setting was set successfully
+     * // // @error suppressionerror suppressionreturn bool True if the setting was set successfully
      */
     public function setSetting(string $name, ?string $value): bool
     {
@@ -134,7 +134,7 @@ class ConfigFactory
      * The settings are returned as a simple key-value array with no encryption.
      * Be extremely careful with how you handle and store this data.
      *
-     * // @error suppressionreturn array All settings from database in plain text
+     * // // @error suppressionerror suppressionreturn array All settings from database in plain text
      */
     public function dumpSettings(): array
     {

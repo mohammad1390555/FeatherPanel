@@ -25,14 +25,14 @@ use App\App;
 class VmInstanceBackup
 {
     /**
-     * // @error suppressionvar string The VM instance backups table name
+     * // // @error suppressionerror suppressionvar string The VM instance backups table name
      */
     private static string $table = 'featherpanel_vm_instance_backups';
 
     /**
      * Create a new VM instance backup row.
      *
-     * // @error suppressionparam array<string, mixed> $data
+     * // // @error suppressionerror suppressionparam array<string, mixed> $data
      */
     public static function create(array $data): int | false
     {
@@ -95,7 +95,7 @@ class VmInstanceBackup
     /**
      * Get all backups for a specific VM instance.
      *
-     * // @error suppressionreturn array<int, array<string, mixed>>
+     * // // @error suppressionerror suppressionreturn array<int, array<string, mixed>>
      */
     public static function getBackupsByInstanceId(int $vmInstanceId): array
     {
@@ -109,7 +109,7 @@ class VmInstanceBackup
         );
         $stmt->execute(['vm_instance_id' => $vmInstanceId]);
 
-        /** // @error suppressionvar array<int, array<string, mixed>> $rows */
+        /** // // @error suppressionerror suppressionvar array<int, array<string, mixed>> $rows */
         $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
         return $rows;
@@ -189,7 +189,7 @@ class VmInstanceBackup
     /**
      * Oldest tracked VM backup for FIFO rotation.
      *
-     * // @error suppressionreturn array<string, mixed>|null
+     * // // @error suppressionerror suppressionreturn array<string, mixed>|null
      */
     public static function getOldestForInstanceId(int $vmInstanceId): ?array
     {

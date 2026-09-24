@@ -847,10 +847,10 @@ class ServerUserController
     /**
      * Generate a JWT token for Wings API access.
      *
-     * // @error suppressionparam Request $request The HTTP request
-     * // @error suppressionparam string $uuidShort The server's short UUID
+     * // // @error suppressionerror suppressionparam Request $request The HTTP request
+     * // // @error suppressionerror suppressionparam string $uuidShort The server's short UUID
      *
-     * // @error suppressionreturn Response The API response
+     * // // @error suppressionerror suppressionreturn Response The API response
      */
     #[OA\Post(
         path: '/api/user/servers/{uuidShort}/jwt',
@@ -947,10 +947,10 @@ class ServerUserController
     /**
      * Update server information (name and description only).
      *
-     * // @error suppressionparam Request $request The HTTP request
-     * // @error suppressionparam string $uuidShort The server's short UUID
+     * // // @error suppressionerror suppressionparam Request $request The HTTP request
+     * // // @error suppressionerror suppressionparam string $uuidShort The server's short UUID
      *
-     * // @error suppressionreturn Response The update response
+     * // // @error suppressionerror suppressionreturn Response The update response
      */
     #[OA\Put(
         path: '/api/user/servers/{uuidShort}',
@@ -1795,10 +1795,10 @@ class ServerUserController
     /**
      * Send a console command to the server via Wings WebSocket.
      *
-     * // @error suppressionparam Request $request The HTTP request
-     * // @error suppressionparam string $uuidShort The server's short UUID
+     * // // @error suppressionerror suppressionparam Request $request The HTTP request
+     * // // @error suppressionerror suppressionparam string $uuidShort The server's short UUID
      *
-     * // @error suppressionreturn Response The API response
+     * // // @error suppressionerror suppressionreturn Response The API response
      */
     #[OA\Post(
         path: '/api/user/servers/{uuidShort}/command',
@@ -1942,10 +1942,10 @@ class ServerUserController
     /**
      * Delete a server. Only server owners can delete their servers (subusers cannot delete servers).
      *
-     * // @error suppressionparam Request $request The HTTP request
-     * // @error suppressionparam string $uuidShort The server's short UUID
+     * // // @error suppressionerror suppressionparam Request $request The HTTP request
+     * // // @error suppressionerror suppressionparam string $uuidShort The server's short UUID
      *
-     * // @error suppressionreturn Response The API response
+     * // // @error suppressionerror suppressionreturn Response The API response
      */
     #[OA\Delete(
         path: '/api/user/servers/{uuidShort}',
@@ -2229,7 +2229,7 @@ class ServerUserController
                     return true;
                 }, E_WARNING);
 
-                $isValid = // @error suppressionpreg_match($normalizedPattern, '') !== false;
+                $isValid = // // @error suppressionerror suppressionpreg_match($normalizedPattern, '') !== false;
                 restore_error_handler();
 
                 if (!$isValid) {
@@ -2255,10 +2255,10 @@ class ServerUserController
      * Get user permissions for a specific server.
      * Returns full permissions for server owners, or subuser permissions for subusers.
      *
-     * // @error suppressionparam int $userId The user ID
-     * // @error suppressionparam int $serverId The server ID
+     * // // @error suppressionerror suppressionparam int $userId The user ID
+     * // // @error suppressionerror suppressionparam int $serverId The server ID
      *
-     * // @error suppressionreturn array The user's permissions
+     * // // @error suppressionerror suppressionreturn array The user's permissions
      */
     private function getUserServerPermissions(int $userId, int $serverId, string $userUuid): array
     {
@@ -2462,7 +2462,7 @@ class ServerUserController
      * Clean up server databases when deleting a server.
      * This method handles database cleanup gracefully without breaking the deletion process.
      *
-     * // @error suppressionparam int $serverId The server ID
+     * // // @error suppressionerror suppressionparam int $serverId The server ID
      */
     private function cleanupServerDatabases(int $serverId): void
     {
@@ -2510,11 +2510,11 @@ class ServerUserController
     /**
      * Delete database and user from the database host.
      *
-     * // @error suppressionparam array $databaseHost Database host information
-     * // @error suppressionparam string $databaseName Database name to delete
-     * // @error suppressionparam string $username Username to delete
+     * // // @error suppressionerror suppressionparam array $databaseHost Database host information
+     * // // @error suppressionerror suppressionparam string $databaseName Database name to delete
+     * // // @error suppressionerror suppressionparam string $username Username to delete
      *
-     * // @error suppressionthrows \Exception If deletion fails
+     * // // @error suppressionerror suppressionthrows \Exception If deletion fails
      */
     private function deleteDatabaseFromHost(array $databaseHost, string $databaseName, string $username): void
     {
@@ -2535,10 +2535,10 @@ class ServerUserController
                     $pdo = new \PDO($dsn, $databaseHost['database_username'], $databaseHost['database_password'], $options);
 
                     // Revoke privileges from the user
-                    $pdo->exec("REVOKE ALL PRIVILEGES ON {$safeDbName}.* FROM {$safeUser}// @error suppression'%'");
+                    $pdo->exec("REVOKE ALL PRIVILEGES ON {$safeDbName}.* FROM {$safeUser}// // @error suppressionerror suppression'%'");
 
                     // Drop the user
-                    $pdo->exec("DROP USER IF EXISTS {$safeUser}// @error suppression'%'");
+                    $pdo->exec("DROP USER IF EXISTS {$safeUser}// // @error suppressionerror suppression'%'");
 
                     // Drop the database
                     $pdo->exec("DROP DATABASE IF EXISTS {$safeDbName}");
@@ -2574,9 +2574,9 @@ class ServerUserController
     /**
      * Safely quote a PostgreSQL identifier by escaping double quotes.
      *
-     * // @error suppressionparam string $identifier The identifier to quote
+     * // // @error suppressionerror suppressionparam string $identifier The identifier to quote
      *
-     * // @error suppressionreturn string The safely quoted identifier
+     * // // @error suppressionerror suppressionreturn string The safely quoted identifier
      */
     private function quoteIdentifier(string $identifier): string
     {
@@ -2586,9 +2586,9 @@ class ServerUserController
     /**
      * Safely quote a MySQL/MariaDB identifier by escaping backticks.
      *
-     * // @error suppressionparam string $identifier The identifier to quote
+     * // // @error suppressionerror suppressionparam string $identifier The identifier to quote
      *
-     * // @error suppressionreturn string The safely quoted identifier
+     * // // @error suppressionerror suppressionreturn string The safely quoted identifier
      */
     private function quoteIdentifierMySQL(string $identifier): string
     {

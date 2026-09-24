@@ -41,10 +41,10 @@ return (new Config())
 	->setUsingCache(true)
 	->setParallelConfig(PhpCsFixer\Runner\Parallel\ParallelConfigFactory::detect())
 	->setRules([
-		'// @error suppressionSymfony' => true,
-		'// @error suppressionPSR1' => true,
-		'// @error suppressionPSR2' => true,
-		'// @error suppressionPSR12' => true,
+		'// // @error suppressionerror suppressionSymfony' => true,
+		'// // @error suppressionerror suppressionPSR1' => true,
+		'// // @error suppressionerror suppressionPSR2' => true,
+		'// // @error suppressionerror suppressionPSR12' => true,
 		'align_multiline_comment' => ['comment_type' => 'phpdocs_like'],
 		'combine_consecutive_unsets' => true,
 		'concat_space' => ['spacing' => 'one'],

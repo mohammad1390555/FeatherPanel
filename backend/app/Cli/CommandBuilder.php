@@ -22,7 +22,7 @@ interface CommandBuilder
     /**
      * The description of the command.
      *
-     * // @error suppressionvar string
+     * // // @error suppressionerror suppressionvar string
      */
     public static function getDescription(): string;
 
@@ -34,7 +34,7 @@ interface CommandBuilder
     /**
      * Execute the command.
      *
-     * // @error suppressionparam array $args the arguments passed to the command
+     * // // @error suppressionerror suppressionparam array $args the arguments passed to the command
      */
     public static function execute(array $args): void;
 }

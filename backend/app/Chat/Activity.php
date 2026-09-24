@@ -82,10 +82,10 @@ class Activity
     /**
      * Get activities where context LIKE :contextLike and name IN :names (e.g. for VM instance history).
      *
-     * // @error suppressionparam string $contextLike e.g. '%my-vm%'
-     * // @error suppressionparam string[] $names e.g. ['vm_instance_create', 'vm_instance_update', 'vm_instance_delete']
+     * // // @error suppressionerror suppressionparam string $contextLike e.g. '%my-vm%'
+     * // // @error suppressionerror suppressionparam string[] $names e.g. ['vm_instance_create', 'vm_instance_update', 'vm_instance_delete']
      *
-     * // @error suppressionreturn array<int, array<string, mixed>>
+     * // // @error suppressionerror suppressionreturn array<int, array<string, mixed>>
      */
     public static function getActivitiesByContextLikeAndNameIn(string $contextLike, array $names, int $limit = 50): array
     {
@@ -103,7 +103,7 @@ class Activity
     }
 
     /**
-     * // @error suppressionreturn string[]
+     * // // @error suppressionerror suppressionreturn string[]
      */
     public static function getDistinctIpsByUserUuid(string $userUuid): array
     {

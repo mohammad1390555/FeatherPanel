@@ -26,7 +26,7 @@ use Symfony\Component\Yaml\Yaml;
 class Node
 {
     /**
-     * // @error suppressionvar string The nodes table name
+     * // // @error suppressionerror suppressionvar string The nodes table name
      */
     private static string $table = 'featherpanel_nodes';
 
@@ -128,9 +128,9 @@ class Node
     /**
      * Create a new node.
      *
-     * // @error suppressionparam array $data Associative array of node fields
+     * // // @error suppressionerror suppressionparam array $data Associative array of node fields
      *
-     * // @error suppressionreturn int|false The new node's ID or false on failure
+     * // // @error suppressionerror suppressionreturn int|false The new node's ID or false on failure
      */
     public static function createNode(array $data): int | false
     {
@@ -625,9 +625,9 @@ class Node
     /**
      * Validate subdomain format according to RFC 1123 DNS hostname rules.
      *
-     * // @error suppressionparam string|null $subdomain The subdomain to validate
+     * // // @error suppressionerror suppressionparam string|null $subdomain The subdomain to validate
      *
-     * // @error suppressionreturn bool True if valid or null, false otherwise
+     * // // @error suppressionerror suppressionreturn bool True if valid or null, false otherwise
      */
     public static function isValidSubdomain(?string $subdomain): bool
     {
@@ -655,9 +655,9 @@ class Node
     /**
      * Get the SFTP hostname for a node (subdomain or fallback to FQDN/IP).
      *
-     * // @error suppressionparam array $node Node data array
+     * // // @error suppressionerror suppressionparam array $node Node data array
      *
-     * // @error suppressionreturn string The hostname to use for SFTP connections
+     * // // @error suppressionerror suppressionreturn string The hostname to use for SFTP connections
      */
     public static function getSftpHostname(array $node): string
     {
@@ -797,10 +797,10 @@ class Node
      * Generate Wings config.yml content from node data.
      * Used by the panel to serve config to Wings via GET /api/remote/config (setup flow).
      *
-     * // @error suppressionparam array<string, mixed> $node Node record (must include uuid, daemon_token_id, daemon_token, daemonListen, scheme, fqdn, upload_size, daemonBase, daemonSFTP)
-     * // @error suppressionparam string $panelUrl Panel base URL (e.g. https://panel.example.com) for Wings to call back
+     * // // @error suppressionerror suppressionparam array<string, mixed> $node Node record (must include uuid, daemon_token_id, daemon_token, daemonListen, scheme, fqdn, upload_size, daemonBase, daemonSFTP)
+     * // // @error suppressionerror suppressionparam string $panelUrl Panel base URL (e.g. https://panel.example.com) for Wings to call back
      *
-     * // @error suppressionreturn string YAML content for FeatherWings config.yml
+     * // // @error suppressionerror suppressionreturn string YAML content for FeatherWings config.yml
      */
     public static function generateWingsConfigYaml(array $node, string $panelUrl): string
     {

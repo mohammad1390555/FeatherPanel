@@ -202,9 +202,9 @@ class SftpAuthController
     /**
      * Validate the request data.
      *
-     * // @error suppressionparam array|null $data The request data
+     * // // @error suppressionerror suppressionparam array|null $data The request data
      *
-     * // @error suppressionreturn bool True if valid, false otherwise
+     * // // @error suppressionerror suppressionreturn bool True if valid, false otherwise
      */
     private function validateRequestData(?array $data): bool
     {
@@ -240,9 +240,9 @@ class SftpAuthController
     /**
      * Parse username in format: username.serverid.
      *
-     * // @error suppressionparam string $username The full username
+     * // // @error suppressionerror suppressionparam string $username The full username
      *
-     * // @error suppressionreturn array|null Array with 'username' and 'serverId' keys, or null if invalid
+     * // // @error suppressionerror suppressionreturn array|null Array with 'username' and 'serverId' keys, or null if invalid
      */
     private function parseUsername(string $username): ?array
     {
@@ -261,11 +261,11 @@ class SftpAuthController
     /**
      * Authenticate user based on authentication type.
      *
-     * // @error suppressionparam string $username The username
-     * // @error suppressionparam string $password The password or public key
-     * // @error suppressionparam string $type The authentication type
+     * // // @error suppressionerror suppressionparam string $username The username
+     * // // @error suppressionerror suppressionparam string $password The password or public key
+     * // // @error suppressionerror suppressionparam string $type The authentication type
      *
-     * // @error suppressionreturn array|null User data if authenticated, null otherwise
+     * // // @error suppressionerror suppressionreturn array|null User data if authenticated, null otherwise
      */
     private function authenticateUser(string $username, string $password, string $type): ?array
     {
@@ -308,9 +308,9 @@ class SftpAuthController
     /**
      * Validate public key format.
      *
-     * // @error suppressionparam string $publicKey The public key content
+     * // // @error suppressionerror suppressionparam string $publicKey The public key content
      *
-     * // @error suppressionreturn bool True if valid, false otherwise
+     * // // @error suppressionerror suppressionreturn bool True if valid, false otherwise
      */
     private function validatePublicKey(string $publicKey): bool
     {
@@ -343,10 +343,10 @@ class SftpAuthController
     /**
      * Check if user has a specific public key.
      *
-     * // @error suppressionparam int $userId The user ID
-     * // @error suppressionparam string $publicKey The public key content
+     * // // @error suppressionerror suppressionparam int $userId The user ID
+     * // // @error suppressionerror suppressionparam string $publicKey The public key content
      *
-     * // @error suppressionreturn bool True if user has the key, false otherwise
+     * // // @error suppressionerror suppressionreturn bool True if user has the key, false otherwise
      */
     private function userHasPublicKey(int $userId, string $publicKey): bool
     {
@@ -358,10 +358,10 @@ class SftpAuthController
     /**
      * Check if user has access to a specific server.
      *
-     * // @error suppressionparam int $userId The user ID
-     * // @error suppressionparam int $serverId The server ID
+     * // // @error suppressionerror suppressionparam int $userId The user ID
+     * // // @error suppressionerror suppressionparam int $serverId The server ID
      *
-     * // @error suppressionreturn bool True if user has access, false otherwise
+     * // // @error suppressionerror suppressionreturn bool True if user has access, false otherwise
      */
     private function userHasServerAccess(int $userId, int $serverId): bool
     {
@@ -377,10 +377,10 @@ class SftpAuthController
     /**
      * Get user's file permissions for a specific server.
      *
-     * // @error suppressionparam int $userId The user ID
-     * // @error suppressionparam int $serverId The server ID
+     * // // @error suppressionerror suppressionparam int $userId The user ID
+     * // // @error suppressionerror suppressionparam int $serverId The server ID
      *
-     * // @error suppressionreturn array Array of permission strings
+     * // // @error suppressionerror suppressionreturn array Array of permission strings
      */
     private function getUserFilePermissions(int $userId, int $serverId): array
     {

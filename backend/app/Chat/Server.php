@@ -25,16 +25,16 @@ use App\App;
 class Server
 {
     /**
-     * // @error suppressionvar string The servers table name
+     * // // @error suppressionerror suppressionvar string The servers table name
      */
     private static string $table = 'featherpanel_servers';
 
     /**
      * Create a new server.
      *
-     * // @error suppressionparam array $data Associative array of server fields (must include required fields)
+     * // // @error suppressionerror suppressionparam array $data Associative array of server fields (must include required fields)
      *
-     * // @error suppressionreturn int|false The new server's ID or false on failure
+     * // // @error suppressionerror suppressionreturn int|false The new server's ID or false on failure
      */
     public static function createServer(array $data): int | false
     {
@@ -401,22 +401,22 @@ class Server
     /**
      * Search servers with pagination, filtering, and field selection.
      *
-     * // @error suppressionparam int $page Page number (1-based)
-     * // @error suppressionparam int $limit Number of results per page
-     * // @error suppressionparam string $search Search term for name/description (optional)
-     * // @error suppressionparam array $fields Fields to select (e.g. ['name', 'status']) (default: all)
-     * // @error suppressionparam string $sortBy Field to sort by (default: 'id')
-     * // @error suppressionparam string $sortOrder 'ASC' or 'DESC' (default: 'ASC')
-     * // @error suppressionparam int|null $ownerId Filter by owner ID (optional)
-     * // @error suppressionparam int|null $excludeOwnerId Exclude servers owned by this user ID (optional)
-     * // @error suppressionparam int|null $nodeId Filter by node ID (optional)
-     * // @error suppressionparam int|null $realmId Filter by realm ID (optional)
-     * // @error suppressionparam int|null $spellId Filter by spell ID (optional)
-     * // @error suppressionparam int|null $serverId Filter by server ID (optional)
-     * // @error suppressionparam string|null $uuid Filter by UUID (optional)
-     * // @error suppressionparam string|null $uuidShort Filter by short UUID (optional)
-     * // @error suppressionparam string|null $externalId Filter by external ID (optional)
-     * // @error suppressionparam string|null $status Filter by server status (optional)
+     * // // @error suppressionerror suppressionparam int $page Page number (1-based)
+     * // // @error suppressionerror suppressionparam int $limit Number of results per page
+     * // // @error suppressionerror suppressionparam string $search Search term for name/description (optional)
+     * // // @error suppressionerror suppressionparam array $fields Fields to select (e.g. ['name', 'status']) (default: all)
+     * // // @error suppressionerror suppressionparam string $sortBy Field to sort by (default: 'id')
+     * // // @error suppressionerror suppressionparam string $sortOrder 'ASC' or 'DESC' (default: 'ASC')
+     * // // @error suppressionerror suppressionparam int|null $ownerId Filter by owner ID (optional)
+     * // // @error suppressionerror suppressionparam int|null $excludeOwnerId Exclude servers owned by this user ID (optional)
+     * // // @error suppressionerror suppressionparam int|null $nodeId Filter by node ID (optional)
+     * // // @error suppressionerror suppressionparam int|null $realmId Filter by realm ID (optional)
+     * // // @error suppressionerror suppressionparam int|null $spellId Filter by spell ID (optional)
+     * // // @error suppressionerror suppressionparam int|null $serverId Filter by server ID (optional)
+     * // // @error suppressionerror suppressionparam string|null $uuid Filter by UUID (optional)
+     * // // @error suppressionerror suppressionparam string|null $uuidShort Filter by short UUID (optional)
+     * // // @error suppressionerror suppressionparam string|null $externalId Filter by external ID (optional)
+     * // // @error suppressionerror suppressionparam string|null $status Filter by server status (optional)
      */
     public static function searchServers(
         int $page = 1,
@@ -722,8 +722,8 @@ class Server
     /**
      * Get the total number of servers.
      *
-     * // @error suppressionparam int|null $excludeOwnerId Exclude servers owned by this user ID (optional)
-     * // @error suppressionparam string|null $status Filter by server status (optional)
+     * // // @error suppressionerror suppressionparam int|null $excludeOwnerId Exclude servers owned by this user ID (optional)
+     * // // @error suppressionerror suppressionparam string|null $status Filter by server status (optional)
      */
     public static function getCount(
         string $search = '',
@@ -853,7 +853,7 @@ class Server
     /**
      * Reset all server statuses to null.
      *
-     * // @error suppressionreturn bool True if successful, false otherwise
+     * // // @error suppressionerror suppressionreturn bool True if successful, false otherwise
      */
     public static function resetAllServerStatuses(int $nodeId): bool
     {
@@ -873,10 +873,10 @@ class Server
     /**
      * Update a server's status.
      *
-     * // @error suppressionparam int $serverId The server ID
-     * // @error suppressionparam string|null $status The new status
+     * // // @error suppressionerror suppressionparam int $serverId The server ID
+     * // // @error suppressionerror suppressionparam string|null $status The new status
      *
-     * // @error suppressionreturn bool True if successful, false otherwise
+     * // // @error suppressionerror suppressionreturn bool True if successful, false otherwise
      */
     public static function updateServerStatus(int $serverId, ?string $status): bool
     {
@@ -897,11 +897,11 @@ class Server
     /**
      * Update a server's installation status and timestamp.
      *
-     * // @error suppressionparam int $serverId The server ID
-     * // @error suppressionparam string $status The new status
-     * // @error suppressionparam \DateTimeImmutable|null $installedAt The installation timestamp (optional)
+     * // // @error suppressionerror suppressionparam int $serverId The server ID
+     * // // @error suppressionerror suppressionparam string $status The new status
+     * // // @error suppressionerror suppressionparam \DateTimeImmutable|null $installedAt The installation timestamp (optional)
      *
-     * // @error suppressionreturn bool True if successful, false otherwise
+     * // // @error suppressionerror suppressionreturn bool True if successful, false otherwise
      */
     public static function updateServerInstallationStatus(int $serverId, string $status, ?\DateTimeImmutable $installedAt = null): bool
     {

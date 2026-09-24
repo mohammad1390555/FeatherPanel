@@ -25,7 +25,7 @@ class PluginHelper
     /**
      * Get the plugins directory.
      *
-     * // @error suppressionreturn string The plugins directory
+     * // // @error suppressionerror suppressionreturn string The plugins directory
      */
     public static function getPluginsDir(): string
     {
@@ -44,9 +44,9 @@ class PluginHelper
     /**
      * Get the plugin config.
      *
-     * // @error suppressionparam string $identifier The plugin identifier
+     * // // @error suppressionerror suppressionparam string $identifier The plugin identifier
      *
-     * // @error suppressionreturn array The plugin config
+     * // // @error suppressionerror suppressionreturn array The plugin config
      */
     public static function getPluginConfig(string $identifier): array
     {

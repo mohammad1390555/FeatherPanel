@@ -35,9 +35,9 @@ class TokenGenerator
     /**
      * Create a new TokenGenerator instance.
      *
-     * // @error suppressionparam string $secret The JWT secret key
-     * // @error suppressionparam string $algorithm The JWT algorithm (default: HS256)
-     * // @error suppressionparam int $expiration Token expiration time in seconds (default: 900 = 15 minutes)
+     * // // @error suppressionerror suppressionparam string $secret The JWT secret key
+     * // // @error suppressionerror suppressionparam string $algorithm The JWT algorithm (default: HS256)
+     * // // @error suppressionerror suppressionparam int $expiration Token expiration time in seconds (default: 900 = 15 minutes)
      */
     public function __construct(
         string $secret = '',
@@ -100,13 +100,13 @@ class TokenGenerator
     /**
      * Generate a backup download token.
      *
-     * // @error suppressionparam string $serverUuid The server UUID
-     * // @error suppressionparam string $backupUuid The backup UUID
-     * // @error suppressionparam string $uniqueId Unique request ID
+     * // // @error suppressionerror suppressionparam string $serverUuid The server UUID
+     * // // @error suppressionerror suppressionparam string $backupUuid The backup UUID
+     * // // @error suppressionerror suppressionparam string $uniqueId Unique request ID
      *
-     * // @error suppressionthrows \Exception
+     * // // @error suppressionerror suppressionthrows \Exception
      *
-     * // @error suppressionreturn string The JWT token
+     * // // @error suppressionerror suppressionreturn string The JWT token
      */
     public function generateBackupDownloadToken(string $serverUuid, string $backupUuid, string $uniqueId = ''): string
     {
@@ -125,13 +125,13 @@ class TokenGenerator
     /**
      * Generate a file download token.
      *
-     * // @error suppressionparam string $serverUuid The server UUID
-     * // @error suppressionparam string $filePath The file path
-     * // @error suppressionparam string $uniqueId Unique request ID
+     * // // @error suppressionerror suppressionparam string $serverUuid The server UUID
+     * // // @error suppressionerror suppressionparam string $filePath The file path
+     * // // @error suppressionerror suppressionparam string $uniqueId Unique request ID
      *
-     * // @error suppressionthrows \Exception
+     * // // @error suppressionerror suppressionthrows \Exception
      *
-     * // @error suppressionreturn string The JWT token
+     * // // @error suppressionerror suppressionreturn string The JWT token
      */
     public function generateFileDownloadToken(string $serverUuid, string $filePath, string $uniqueId = ''): string
     {
@@ -150,13 +150,13 @@ class TokenGenerator
     /**
      * Generate a file upload token.
      *
-     * // @error suppressionparam string $serverUuid The server UUID
-     * // @error suppressionparam string $userUuid The user UUID
-     * // @error suppressionparam string $uniqueId Unique request ID
+     * // // @error suppressionerror suppressionparam string $serverUuid The server UUID
+     * // // @error suppressionerror suppressionparam string $userUuid The user UUID
+     * // // @error suppressionerror suppressionparam string $uniqueId Unique request ID
      *
-     * // @error suppressionthrows \Exception
+     * // // @error suppressionerror suppressionthrows \Exception
      *
-     * // @error suppressionreturn string The JWT token
+     * // // @error suppressionerror suppressionreturn string The JWT token
      */
     public function generateFileUploadToken(string $serverUuid, string $userUuid, string $uniqueId = ''): string
     {
@@ -175,11 +175,11 @@ class TokenGenerator
     /**
      * Generate a transfer token.
      *
-     * // @error suppressionparam string $serverUuid The server UUID
+     * // // @error suppressionerror suppressionparam string $serverUuid The server UUID
      *
-     * // @error suppressionthrows \Exception
+     * // // @error suppressionerror suppressionthrows \Exception
      *
-     * // @error suppressionreturn string The JWT token
+     * // // @error suppressionerror suppressionreturn string The JWT token
      */
     public function generateTransferToken(string $serverUuid): string
     {
@@ -196,13 +196,13 @@ class TokenGenerator
     /**
      * Generate a WebSocket token.
      *
-     * // @error suppressionparam string $serverUuid The server UUID
-     * // @error suppressionparam string $userUuid The user UUID
-     * // @error suppressionparam array $permissions The permissions array (e.g., ['console', 'files', 'admin'])
+     * // // @error suppressionerror suppressionparam string $serverUuid The server UUID
+     * // // @error suppressionerror suppressionparam string $userUuid The user UUID
+     * // // @error suppressionerror suppressionparam array $permissions The permissions array (e.g., ['console', 'files', 'admin'])
      *
-     * // @error suppressionthrows \Exception
+     * // // @error suppressionerror suppressionthrows \Exception
      *
-     * // @error suppressionreturn string The JWT token
+     * // // @error suppressionerror suppressionreturn string The JWT token
      */
     public function generateWebSocketToken(string $serverUuid, string $userUuid, array $permissions = []): string
     {
@@ -224,16 +224,16 @@ class TokenGenerator
      * This method generates a JWT token that follows the exact format expected by Wings,
      * including all required claims like issuer, audience, and proper timestamps.
      *
-     * // @error suppressionparam string $serverUuid The server UUID
-     * // @error suppressionparam string $userUuid The user UUID
-     * // @error suppressionparam array $permissions The permissions array
-     * // @error suppressionparam string $panelUrl The panel's URL (issuer)
-     * // @error suppressionparam string $wingsUrl The Wings node's URL (audience)
-     * // @error suppressionparam array $additionalClaims Additional claims to include
+     * // // @error suppressionerror suppressionparam string $serverUuid The server UUID
+     * // // @error suppressionerror suppressionparam string $userUuid The user UUID
+     * // // @error suppressionerror suppressionparam array $permissions The permissions array
+     * // // @error suppressionerror suppressionparam string $panelUrl The panel's URL (issuer)
+     * // // @error suppressionerror suppressionparam string $wingsUrl The Wings node's URL (audience)
+     * // // @error suppressionerror suppressionparam array $additionalClaims Additional claims to include
      *
-     * // @error suppressionthrows \Exception
+     * // // @error suppressionerror suppressionthrows \Exception
      *
-     * // @error suppressionreturn string The JWT token
+     * // // @error suppressionerror suppressionreturn string The JWT token
      */
     public function generateWingsApiToken(
         string $serverUuid,
@@ -280,16 +280,16 @@ class TokenGenerator
      * This method generates a JWT token specifically for server control actions
      * like start, stop, restart, etc.
      *
-     * // @error suppressionparam string $serverUuid The server UUID
-     * // @error suppressionparam string $userUuid The user UUID
-     * // @error suppressionparam array $permissions The permissions array
-     * // @error suppressionparam string $panelUrl The panel's URL (issuer)
-     * // @error suppressionparam string $wingsUrl The Wings node's URL (audience)
-     * // @error suppressionparam string $action The specific action being performed
+     * // // @error suppressionerror suppressionparam string $serverUuid The server UUID
+     * // // @error suppressionerror suppressionparam string $userUuid The user UUID
+     * // // @error suppressionerror suppressionparam array $permissions The permissions array
+     * // // @error suppressionerror suppressionparam string $panelUrl The panel's URL (issuer)
+     * // // @error suppressionerror suppressionparam string $wingsUrl The Wings node's URL (audience)
+     * // // @error suppressionerror suppressionparam string $action The specific action being performed
      *
-     * // @error suppressionthrows \Exception
+     * // // @error suppressionerror suppressionthrows \Exception
      *
-     * // @error suppressionreturn string The JWT token
+     * // // @error suppressionerror suppressionreturn string The JWT token
      */
     public function generateServerActionToken(
         string $serverUuid,
@@ -321,17 +321,17 @@ class TokenGenerator
      * This method generates a JWT token specifically for backup-related actions
      * like creating, downloading, or restoring backups.
      *
-     * // @error suppressionparam string $serverUuid The server UUID
-     * // @error suppressionparam string $userUuid The user UUID
-     * // @error suppressionparam array $permissions The permissions array
-     * // @error suppressionparam string $panelUrl The panel's URL (issuer)
-     * // @error suppressionparam string $wingsUrl The Wings node's URL (audience)
-     * // @error suppressionparam string $backupUuid The backup UUID (if applicable)
-     * // @error suppressionparam string $operation The backup operation (create, download, restore, delete)
+     * // // @error suppressionerror suppressionparam string $serverUuid The server UUID
+     * // // @error suppressionerror suppressionparam string $userUuid The user UUID
+     * // // @error suppressionerror suppressionparam array $permissions The permissions array
+     * // // @error suppressionerror suppressionparam string $panelUrl The panel's URL (issuer)
+     * // // @error suppressionerror suppressionparam string $wingsUrl The Wings node's URL (audience)
+     * // // @error suppressionerror suppressionparam string $backupUuid The backup UUID (if applicable)
+     * // // @error suppressionerror suppressionparam string $operation The backup operation (create, download, restore, delete)
      *
-     * // @error suppressionthrows \Exception
+     * // // @error suppressionerror suppressionthrows \Exception
      *
-     * // @error suppressionreturn string The JWT token
+     * // // @error suppressionerror suppressionreturn string The JWT token
      */
     public function generateBackupOperationToken(
         string $serverUuid,
@@ -367,14 +367,14 @@ class TokenGenerator
     /**
      * Generate a signed URL for backup download.
      *
-     * // @error suppressionparam string $baseUrl The Wings base URL
-     * // @error suppressionparam string $serverUuid The server UUID
-     * // @error suppressionparam string $backupUuid The backup UUID
-     * // @error suppressionparam string $uniqueId Unique request ID
+     * // // @error suppressionerror suppressionparam string $baseUrl The Wings base URL
+     * // // @error suppressionerror suppressionparam string $serverUuid The server UUID
+     * // // @error suppressionerror suppressionparam string $backupUuid The backup UUID
+     * // // @error suppressionerror suppressionparam string $uniqueId Unique request ID
      *
-     * // @error suppressionthrows \Exception
+     * // // @error suppressionerror suppressionthrows \Exception
      *
-     * // @error suppressionreturn string The signed URL
+     * // // @error suppressionerror suppressionreturn string The signed URL
      */
     public function generateBackupDownloadUrl(string $baseUrl, string $serverUuid, string $backupUuid, string $uniqueId = ''): string
     {
@@ -387,14 +387,14 @@ class TokenGenerator
     /**
      * Generate a signed URL for file download.
      *
-     * // @error suppressionparam string $baseUrl The Wings base URL
-     * // @error suppressionparam string $serverUuid The server UUID
-     * // @error suppressionparam string $filePath The file path
-     * // @error suppressionparam string $uniqueId Unique request ID
+     * // // @error suppressionerror suppressionparam string $baseUrl The Wings base URL
+     * // // @error suppressionerror suppressionparam string $serverUuid The server UUID
+     * // // @error suppressionerror suppressionparam string $filePath The file path
+     * // // @error suppressionerror suppressionparam string $uniqueId Unique request ID
      *
-     * // @error suppressionthrows \Exception
+     * // // @error suppressionerror suppressionthrows \Exception
      *
-     * // @error suppressionreturn string The signed URL
+     * // // @error suppressionerror suppressionreturn string The signed URL
      */
     public function generateFileDownloadUrl(string $baseUrl, string $serverUuid, string $filePath, string $uniqueId = ''): string
     {
@@ -408,14 +408,14 @@ class TokenGenerator
     /**
      * Generate a signed URL for file upload.
      *
-     * // @error suppressionparam string $baseUrl The Wings base URL
-     * // @error suppressionparam string $serverUuid The server UUID
-     * // @error suppressionparam string $userUuid The user UUID
-     * // @error suppressionparam string $uniqueId Unique request ID
+     * // // @error suppressionerror suppressionparam string $baseUrl The Wings base URL
+     * // // @error suppressionerror suppressionparam string $serverUuid The server UUID
+     * // // @error suppressionerror suppressionparam string $userUuid The user UUID
+     * // // @error suppressionerror suppressionparam string $uniqueId Unique request ID
      *
-     * // @error suppressionthrows \Exception
+     * // // @error suppressionerror suppressionthrows \Exception
      *
-     * // @error suppressionreturn string The signed URL
+     * // // @error suppressionerror suppressionreturn string The signed URL
      */
     public function generateFileUploadUrl(string $baseUrl, string $serverUuid, string $userUuid, string $uniqueId = ''): string
     {
@@ -428,14 +428,14 @@ class TokenGenerator
     /**
      * Generate a WebSocket URL.
      *
-     * // @error suppressionparam string $baseUrl The Wings base URL
-     * // @error suppressionparam string $serverUuid The server UUID
-     * // @error suppressionparam string $userUuid The user UUID
-     * // @error suppressionparam array $permissions The permissions array
+     * // // @error suppressionerror suppressionparam string $baseUrl The Wings base URL
+     * // // @error suppressionerror suppressionparam string $serverUuid The server UUID
+     * // // @error suppressionerror suppressionparam string $userUuid The user UUID
+     * // // @error suppressionerror suppressionparam array $permissions The permissions array
      *
-     * // @error suppressionthrows \Exception
+     * // // @error suppressionerror suppressionthrows \Exception
      *
-     * // @error suppressionreturn string The WebSocket URL
+     * // // @error suppressionerror suppressionreturn string The WebSocket URL
      */
     public function generateWebSocketUrl(string $baseUrl, string $serverUuid, string $userUuid, array $permissions = []): string
     {
@@ -451,11 +451,11 @@ class TokenGenerator
     /**
      * Decode and validate a JWT token.
      *
-     * // @error suppressionparam string $token The JWT token
+     * // // @error suppressionerror suppressionparam string $token The JWT token
      *
-     * // @error suppressionthrows \Exception
+     * // // @error suppressionerror suppressionthrows \Exception
      *
-     * // @error suppressionreturn array The decoded payload
+     * // // @error suppressionerror suppressionreturn array The decoded payload
      */
     public function decodeToken(string $token): array
     {
@@ -475,9 +475,9 @@ class TokenGenerator
     /**
      * Validate if a token is expired.
      *
-     * // @error suppressionparam string $token The JWT token
+     * // // @error suppressionerror suppressionparam string $token The JWT token
      *
-     * // @error suppressionreturn bool True if expired, false otherwise
+     * // // @error suppressionerror suppressionreturn bool True if expired, false otherwise
      */
     public function isTokenExpired(string $token): bool
     {
@@ -493,9 +493,9 @@ class TokenGenerator
     /**
      * Get token expiration time.
      *
-     * // @error suppressionparam string $token The JWT token
+     * // // @error suppressionerror suppressionparam string $token The JWT token
      *
-     * // @error suppressionreturn int|null The expiration timestamp or null if not found
+     * // // @error suppressionerror suppressionreturn int|null The expiration timestamp or null if not found
      */
     public function getTokenExpiration(string $token): ?int
     {
@@ -511,11 +511,11 @@ class TokenGenerator
     /**
      * Encode a payload into a JWT token.
      *
-     * // @error suppressionparam array $payload The payload to encode
+     * // // @error suppressionerror suppressionparam array $payload The payload to encode
      *
-     * // @error suppressionthrows \Exception
+     * // // @error suppressionerror suppressionthrows \Exception
      *
-     * // @error suppressionreturn string The JWT token
+     * // // @error suppressionerror suppressionreturn string The JWT token
      */
     private function encodeToken(array $payload): string
     {

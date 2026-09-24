@@ -29,12 +29,12 @@ class TicketAttachment
     /**
      * Get all attachments for a ticket.
      *
-     * // @error suppressionparam int|null $ticketId Ticket ID
-     * // @error suppressionparam int|null $messageId Message ID
-     * // @error suppressionparam int $limit Number of records per page
-     * // @error suppressionparam int $offset Offset for pagination
+     * // // @error suppressionerror suppressionparam int|null $ticketId Ticket ID
+     * // // @error suppressionerror suppressionparam int|null $messageId Message ID
+     * // // @error suppressionerror suppressionparam int $limit Number of records per page
+     * // // @error suppressionerror suppressionparam int $offset Offset for pagination
      *
-     * // @error suppressionreturn array Array of attachments
+     * // // @error suppressionerror suppressionreturn array Array of attachments
      */
     public static function getAll(
         ?int $ticketId = null,
@@ -79,9 +79,9 @@ class TicketAttachment
     /**
      * Get attachment by ID.
      *
-     * // @error suppressionparam int $id Attachment ID
+     * // // @error suppressionerror suppressionparam int $id Attachment ID
      *
-     * // @error suppressionreturn array|null Attachment data or null if not found
+     * // // @error suppressionerror suppressionreturn array|null Attachment data or null if not found
      */
     public static function getById(int $id): ?array
     {
@@ -99,10 +99,10 @@ class TicketAttachment
     /**
      * Get count of attachments.
      *
-     * // @error suppressionparam int|null $ticketId Filter by ticket ID
-     * // @error suppressionparam int|null $messageId Filter by message ID
+     * // // @error suppressionerror suppressionparam int|null $ticketId Filter by ticket ID
+     * // // @error suppressionerror suppressionparam int|null $messageId Filter by message ID
      *
-     * // @error suppressionreturn int Count of attachments
+     * // // @error suppressionerror suppressionreturn int Count of attachments
      */
     public static function getCount(?int $ticketId = null, ?int $messageId = null): int
     {
@@ -138,9 +138,9 @@ class TicketAttachment
     /**
      * Create a new attachment.
      *
-     * // @error suppressionparam array $data Attachment data
+     * // // @error suppressionerror suppressionparam array $data Attachment data
      *
-     * // @error suppressionreturn int|false The new attachment's ID or false on failure
+     * // // @error suppressionerror suppressionreturn int|false The new attachment's ID or false on failure
      */
     public static function create(array $data): int | false
     {
@@ -206,10 +206,10 @@ class TicketAttachment
     /**
      * Update an attachment by ID.
      *
-     * // @error suppressionparam int $id Attachment ID
-     * // @error suppressionparam array $data Fields to update
+     * // // @error suppressionerror suppressionparam int $id Attachment ID
+     * // // @error suppressionerror suppressionparam array $data Fields to update
      *
-     * // @error suppressionreturn bool True on success, false on failure
+     * // // @error suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function update(int $id, array $data): bool
     {
@@ -255,9 +255,9 @@ class TicketAttachment
      * This method deletes both the database record and the associated file on disk.
      * File deletion happens first to prevent orphaned files if database deletion fails.
      *
-     * // @error suppressionparam int $id Attachment ID
+     * // // @error suppressionerror suppressionparam int $id Attachment ID
      *
-     * // @error suppressionreturn bool True on success, false on failure
+     * // // @error suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function delete(int $id): bool
     {
@@ -279,7 +279,7 @@ class TicketAttachment
         if (isset($attachment['file_path']) && is_string($attachment['file_path']) && $attachment['file_path'] !== '') {
             $filePath = self::sanitizeAndResolveFilePath($attachment['file_path']);
             if ($filePath !== null && file_exists($filePath)) {
-                if (// @error suppressionunlink($filePath)) {
+                if (// // @error suppressionerror suppressionunlink($filePath)) {
                     $fileDeleted = true;
                 } else {
                     // File deletion failed - log error and return false
@@ -344,9 +344,9 @@ class TicketAttachment
     /**
      * Sanitize and resolve the file path to prevent directory traversal attacks.
      *
-     * // @error suppressionparam string $filePath The file path from the database (e.g., '/attachments/filename.ext')
+     * // // @error suppressionerror suppressionparam string $filePath The file path from the database (e.g., '/attachments/filename.ext')
      *
-     * // @error suppressionreturn string|null The resolved absolute file path, or null if invalid
+     * // // @error suppressionerror suppressionreturn string|null The resolved absolute file path, or null if invalid
      */
     public static function sanitizeAndResolveFilePath(string $filePath): ?string
     {

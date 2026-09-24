@@ -34,16 +34,16 @@ use App\App;
 class ServerActivity
 {
     /**
-     * // @error suppressionvar string The server activities table name
+     * // // @error suppressionerror suppressionvar string The server activities table name
      */
     private static string $table = 'featherpanel_server_activities';
 
     /**
      * Create a new server activity log.
      *
-     * // @error suppressionparam array $data Associative array of activity fields
+     * // // @error suppressionerror suppressionparam array $data Associative array of activity fields
      *
-     * // @error suppressionreturn int|false The new activity's ID or false on failure
+     * // // @error suppressionerror suppressionreturn int|false The new activity's ID or false on failure
      */
     public static function createActivity(array $data): int | false
     {
@@ -117,9 +117,9 @@ class ServerActivity
     /**
      * Get activity by ID.
      *
-     * // @error suppressionparam int $id Activity ID
+     * // // @error suppressionerror suppressionparam int $id Activity ID
      *
-     * // @error suppressionreturn array|null Activity data or null if not found
+     * // // @error suppressionerror suppressionreturn array|null Activity data or null if not found
      */
     public static function getActivityById(int $id): ?array
     {
@@ -137,10 +137,10 @@ class ServerActivity
     /**
      * Get activities by server ID.
      *
-     * // @error suppressionparam int $serverId Server ID
-     * // @error suppressionparam int $limit Maximum number of results (default: 100)
+     * // // @error suppressionerror suppressionparam int $serverId Server ID
+     * // // @error suppressionerror suppressionparam int $limit Maximum number of results (default: 100)
      *
-     * // @error suppressionreturn array Array of activities
+     * // // @error suppressionerror suppressionreturn array Array of activities
      */
     public static function getActivitiesByServerId(int $serverId, int $limit = 100): array
     {
@@ -160,10 +160,10 @@ class ServerActivity
     /**
      * Get activities by node ID.
      *
-     * // @error suppressionparam int $nodeId Node ID
-     * // @error suppressionparam int $limit Maximum number of results (default: 100)
+     * // // @error suppressionerror suppressionparam int $nodeId Node ID
+     * // // @error suppressionerror suppressionparam int $limit Maximum number of results (default: 100)
      *
-     * // @error suppressionreturn array Array of activities
+     * // // @error suppressionerror suppressionreturn array Array of activities
      */
     public static function getActivitiesByNodeId(int $nodeId, int $limit = 100): array
     {
@@ -183,10 +183,10 @@ class ServerActivity
     /**
      * Get activities by event type.
      *
-     * // @error suppressionparam string $event Event type
-     * // @error suppressionparam int $limit Maximum number of results (default: 100)
+     * // // @error suppressionerror suppressionparam string $event Event type
+     * // // @error suppressionerror suppressionparam int $limit Maximum number of results (default: 100)
      *
-     * // @error suppressionreturn array Array of activities
+     * // // @error suppressionerror suppressionreturn array Array of activities
      */
     public static function getActivitiesByEvent(string $event, int $limit = 100): array
     {
@@ -204,7 +204,7 @@ class ServerActivity
     }
 
     /**
-     * // @error suppressionreturn string[]
+     * // // @error suppressionerror suppressionreturn string[]
      */
     public static function getDistinctIpsByUserId(int $userId): array
     {
@@ -225,10 +225,10 @@ class ServerActivity
     /**
      * Get activities by user ID.
      *
-     * // @error suppressionparam int $userId User ID
-     * // @error suppressionparam int $limit Maximum number of results (default: 100)
+     * // // @error suppressionerror suppressionparam int $userId User ID
+     * // // @error suppressionerror suppressionparam int $limit Maximum number of results (default: 100)
      *
-     * // @error suppressionreturn array Array of activities
+     * // // @error suppressionerror suppressionreturn array Array of activities
      */
     public static function getActivitiesByUserId(int $userId, int $limit = 100): array
     {
@@ -248,10 +248,10 @@ class ServerActivity
     /**
      * Get activities by user ID with server information.
      *
-     * // @error suppressionparam int $userId User ID
-     * // @error suppressionparam int $limit Maximum number of results (default: 100)
+     * // // @error suppressionerror suppressionparam int $userId User ID
+     * // // @error suppressionerror suppressionparam int $limit Maximum number of results (default: 100)
      *
-     * // @error suppressionreturn array Array of activities with server details
+     * // // @error suppressionerror suppressionreturn array Array of activities with server details
      */
     public static function getActivitiesByUserIdWithServerInfo(int $userId, int $limit = 100): array
     {
@@ -313,14 +313,14 @@ class ServerActivity
     /**
      * Get all activities with pagination.
      *
-     * // @error suppressionparam int $page Page number (1-based)
-     * // @error suppressionparam int $perPage Number of results per page
-     * // @error suppressionparam string $search Search term for event (optional)
-     * // @error suppressionparam int|null $serverId Filter by server ID (optional)
-     * // @error suppressionparam int|null $nodeId Filter by node ID (optional)
-     * // @error suppressionparam int|null $userId Filter by user ID (optional)
+     * // // @error suppressionerror suppressionparam int $page Page number (1-based)
+     * // // @error suppressionerror suppressionparam int $perPage Number of results per page
+     * // // @error suppressionerror suppressionparam string $search Search term for event (optional)
+     * // // @error suppressionerror suppressionparam int|null $serverId Filter by server ID (optional)
+     * // // @error suppressionerror suppressionparam int|null $nodeId Filter by node ID (optional)
+     * // // @error suppressionerror suppressionparam int|null $userId Filter by user ID (optional)
      *
-     * // @error suppressionreturn array Array of activities with pagination info
+     * // // @error suppressionerror suppressionreturn array Array of activities with pagination info
      */
     public static function getActivitiesWithPagination(
         int $page = 1,
@@ -441,9 +441,9 @@ class ServerActivity
     /**
      * Delete old activities (cleanup).
      *
-     * // @error suppressionparam int $daysOld Number of days old to delete
+     * // // @error suppressionerror suppressionparam int $daysOld Number of days old to delete
      *
-     * // @error suppressionreturn int Number of deleted records
+     * // // @error suppressionerror suppressionreturn int Number of deleted records
      */
     public static function deleteOldActivities(int $daysOld = 30): int
     {
@@ -458,7 +458,7 @@ class ServerActivity
     /**
      * Get table columns.
      *
-     * // @error suppressionreturn array Array of column information
+     * // // @error suppressionerror suppressionreturn array Array of column information
      */
     public static function getColumns(): array
     {

@@ -27,7 +27,7 @@ class ServerAnalytics
     /**
      * Get servers overview statistics.
      *
-     * // @error suppressionreturn array Server statistics
+     * // // @error suppressionerror suppressionreturn array Server statistics
      */
     public static function getServersOverview(): array
     {
@@ -75,7 +75,7 @@ class ServerAnalytics
     /**
      * Get servers by realm distribution.
      *
-     * // @error suppressionreturn array Server distribution by realm
+     * // // @error suppressionerror suppressionreturn array Server distribution by realm
      */
     public static function getServersByRealm(): array
     {
@@ -110,7 +110,7 @@ class ServerAnalytics
     /**
      * Get servers by spell distribution.
      *
-     * // @error suppressionreturn array Server distribution by spell
+     * // // @error suppressionerror suppressionreturn array Server distribution by spell
      */
     public static function getServersBySpell(): array
     {
@@ -143,7 +143,7 @@ class ServerAnalytics
     /**
      * Get database usage per server statistics.
      *
-     * // @error suppressionreturn array Database usage patterns
+     * // // @error suppressionerror suppressionreturn array Database usage patterns
      */
     public static function getDatabaseUsagePerServer(): array
     {
@@ -208,7 +208,7 @@ class ServerAnalytics
     /**
      * Get allocation usage per server statistics.
      *
-     * // @error suppressionreturn array Allocation usage patterns
+     * // // @error suppressionerror suppressionreturn array Allocation usage patterns
      */
     public static function getAllocationUsagePerServer(): array
     {
@@ -260,7 +260,7 @@ class ServerAnalytics
     /**
      * Get server resource usage statistics.
      *
-     * // @error suppressionreturn array Resource usage statistics
+     * // // @error suppressionerror suppressionreturn array Resource usage statistics
      */
     public static function getResourceUsage(): array
     {
@@ -297,7 +297,7 @@ class ServerAnalytics
     /**
      * Get server status distribution.
      *
-     * // @error suppressionreturn array Status distribution
+     * // // @error suppressionerror suppressionreturn array Status distribution
      */
     public static function getStatusDistribution(): array
     {
@@ -329,9 +329,9 @@ class ServerAnalytics
     /**
      * Get Docker image usage statistics.
      *
-     * // @error suppressionparam int $limit Number of top images to retrieve (default: 10)
+     * // // @error suppressionerror suppressionparam int $limit Number of top images to retrieve (default: 10)
      *
-     * // @error suppressionreturn array Image usage statistics
+     * // // @error suppressionerror suppressionreturn array Image usage statistics
      */
     public static function getImageUsage(int $limit = 10): array
     {
@@ -363,7 +363,7 @@ class ServerAnalytics
     /**
      * Get server limits distribution (backup and database limits).
      *
-     * // @error suppressionreturn array Limits distribution
+     * // // @error suppressionerror suppressionreturn array Limits distribution
      */
     public static function getLimitsDistribution(): array
     {
@@ -401,7 +401,7 @@ class ServerAnalytics
     /**
      * Get backup statistics per server.
      *
-     * // @error suppressionreturn array Backup usage statistics
+     * // // @error suppressionerror suppressionreturn array Backup usage statistics
      */
     public static function getBackupUsage(): array
     {
@@ -455,7 +455,7 @@ class ServerAnalytics
     /**
      * Get schedule statistics per server.
      *
-     * // @error suppressionreturn array Schedule usage statistics
+     * // // @error suppressionerror suppressionreturn array Schedule usage statistics
      */
     public static function getScheduleUsage(): array
     {
@@ -515,7 +515,7 @@ class ServerAnalytics
     /**
      * Get subuser statistics.
      *
-     * // @error suppressionreturn array Subuser statistics
+     * // // @error suppressionerror suppressionreturn array Subuser statistics
      */
     public static function getSubuserStats(): array
     {
@@ -562,7 +562,7 @@ class ServerAnalytics
     /**
      * Get server activity statistics.
      *
-     * // @error suppressionreturn array Server activity statistics
+     * // // @error suppressionerror suppressionreturn array Server activity statistics
      */
     public static function getServerActivityStats(): array
     {
@@ -626,7 +626,7 @@ class ServerAnalytics
     /**
      * Get variable usage statistics.
      *
-     * // @error suppressionreturn array Variable statistics
+     * // // @error suppressionerror suppressionreturn array Variable statistics
      */
     public static function getVariableStats(): array
     {
@@ -675,9 +675,9 @@ class ServerAnalytics
     /**
      * Get server creation trends over time.
      *
-     * // @error suppressionparam int $days Number of days to look back (default: 30)
+     * // // @error suppressionerror suppressionparam int $days Number of days to look back (default: 30)
      *
-     * // @error suppressionreturn array Daily server creation counts
+     * // // @error suppressionerror suppressionreturn array Daily server creation counts
      */
     public static function getServerCreationTrend(int $days = 30): array
     {
@@ -705,9 +705,9 @@ class ServerAnalytics
     /**
      * Get resource allocation trends (average over time).
      *
-     * // @error suppressionparam int $days Number of days to look back (default: 30)
+     * // // @error suppressionerror suppressionparam int $days Number of days to look back (default: 30)
      *
-     * // @error suppressionreturn array Resource trends
+     * // // @error suppressionerror suppressionreturn array Resource trends
      */
     public static function getResourceTrends(int $days = 30): array
     {
@@ -744,7 +744,7 @@ class ServerAnalytics
     /**
      * Get server age distribution.
      *
-     * // @error suppressionreturn array Server age statistics
+     * // // @error suppressionerror suppressionreturn array Server age statistics
      */
     public static function getServerAgeDistribution(): array
     {
@@ -786,7 +786,7 @@ class ServerAnalytics
     /**
      * Get resource distribution (how resources are allocated).
      *
-     * // @error suppressionreturn array Resource distribution data
+     * // // @error suppressionerror suppressionreturn array Resource distribution data
      */
     public static function getResourceDistribution(): array
     {
@@ -894,7 +894,7 @@ class ServerAnalytics
     /**
      * Get installation statistics.
      *
-     * // @error suppressionreturn array Installation stats
+     * // // @error suppressionerror suppressionreturn array Installation stats
      */
     public static function getInstallationStats(): array
     {
@@ -942,7 +942,7 @@ class ServerAnalytics
     /**
      * Get server configuration patterns.
      *
-     * // @error suppressionreturn array Configuration statistics
+     * // // @error suppressionerror suppressionreturn array Configuration statistics
      */
     public static function getConfigurationPatterns(): array
     {
@@ -980,7 +980,7 @@ class ServerAnalytics
     /**
      * Get comprehensive server analytics dashboard.
      *
-     * // @error suppressionreturn array Complete server statistics
+     * // // @error suppressionerror suppressionreturn array Complete server statistics
      */
     public static function getServerDashboard(): array
     {

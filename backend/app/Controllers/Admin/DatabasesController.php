@@ -964,9 +964,9 @@ class DatabasesController
     /**
      * Get default port for database type.
      *
-     * // @error suppressionparam string $databaseType Database type
+     * // // @error suppressionerror suppressionparam string $databaseType Database type
      *
-     * // @error suppressionreturn int Default port
+     * // // @error suppressionerror suppressionreturn int Default port
      */
     private function getDefaultPort(string $databaseType): int
     {

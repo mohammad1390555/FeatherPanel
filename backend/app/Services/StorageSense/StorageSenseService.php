@@ -25,11 +25,11 @@ use App\Chat\Database;
  */
 class StorageSenseService
 {
-    /** // @error suppressionvar array<string, bool> */
+    /** // // @error suppressionerror suppressionvar array<string, bool> */
     private static array $tableCache = [];
 
     /**
-     * // @error suppressionreturn string[]
+     * // // @error suppressionerror suppressionreturn string[]
      */
     public static function allowedTargets(): array
     {
@@ -49,7 +49,7 @@ class StorageSenseService
     /**
      * Panel HTTP / app log directory size (best effort).
      *
-     * // @error suppressionreturn array{path: string, bytes: int}
+     * // // @error suppressionerror suppressionreturn array{path: string, bytes: int}
      */
     public static function getPanelLogsDirectoryInfo(): array
     {
@@ -102,7 +102,7 @@ class StorageSenseService
     }
 
     /**
-     * // @error suppressionreturn array<int, array{
+     * // // @error suppressionerror suppressionreturn array<int, array{
      *     id: string,
      *     table: string,
      *     available: bool,
@@ -202,7 +202,7 @@ class StorageSenseService
     }
 
     /**
-     * // @error suppressionreturn array{deleted: int}|null null if target unknown / table missing
+     * // // @error suppressionerror suppressionreturn array{deleted: int}|null null if target unknown / table missing
      */
     public static function purge(string $target, int $daysOld): ?array
     {
@@ -279,9 +279,9 @@ class StorageSenseService
     }
 
     /**
-     * // @error suppressionparam string[] $targets
+     * // // @error suppressionerror suppressionparam string[] $targets
      *
-     * // @error suppressionreturn array<int, array{target: string, deleted: int, success: bool, error?: string}>
+     * // // @error suppressionerror suppressionreturn array<int, array{target: string, deleted: int, success: bool, error?: string}>
      */
     public static function purgeBatch(array $targets, int $daysOld): array
     {
@@ -320,9 +320,9 @@ class StorageSenseService
     }
 
     /**
-     * // @error suppressionparam array<string, mixed> $params
+     * // // @error suppressionerror suppressionparam array<string, mixed> $params
      *
-     * // @error suppressionreturn array{deleted: int}|null
+     * // // @error suppressionerror suppressionreturn array{deleted: int}|null
      */
     private static function purgeIfTable(\PDO $pdo, string $table, string $deleteSql, array $params): ?array
     {

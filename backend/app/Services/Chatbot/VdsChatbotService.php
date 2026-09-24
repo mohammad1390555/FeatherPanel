@@ -46,12 +46,12 @@ class VdsChatbotService
      *
      * Supports multiple AI providers: basic, google_gemini, openrouter, openai, ollama, grok, perplexity
      *
-     * // @error suppressionparam string $message User's message
-     * // @error suppressionparam array $history Chat history (array of ['role' => 'user'|'assistant', 'content' => string])
-     * // @error suppressionparam array $user Current user data
-     * // @error suppressionparam array $pageContext Optional page context (route, vdsInstance, etc.)
+     * // // @error suppressionerror suppressionparam string $message User's message
+     * // // @error suppressionerror suppressionparam array $history Chat history (array of ['role' => 'user'|'assistant', 'content' => string])
+     * // // @error suppressionerror suppressionparam array $user Current user data
+     * // // @error suppressionerror suppressionparam array $pageContext Optional page context (route, vdsInstance, etc.)
      *
-     * // @error suppressionreturn array Response with 'response', 'model', and 'tool_executions' keys
+     * // // @error suppressionerror suppressionreturn array Response with 'response', 'model', and 'tool_executions' keys
      */
     public function processMessage(string $message, array $history, array $user, array $pageContext = [], ?callable $emit = null): array
     {
@@ -329,9 +329,9 @@ class VdsChatbotService
     /**
      * Format tools information for system prompt.
      *
-     * // @error suppressionparam VdsToolHandler $toolHandler VDS tool handler instance
+     * // // @error suppressionerror suppressionparam VdsToolHandler $toolHandler VDS tool handler instance
      *
-     * // @error suppressionreturn string Formatted tools information
+     * // // @error suppressionerror suppressionreturn string Formatted tools information
      */
     private function formatToolsForPrompt(VdsToolHandler $toolHandler): string
     {
@@ -493,12 +493,12 @@ class VdsChatbotService
     /**
      * Get the appropriate provider instance based on configuration.
      *
-     * // @error suppressionparam string $provider Provider name
-     * // @error suppressionparam array $userPreferences User preferences for API keys
-     * // @error suppressionparam float $temperature Temperature setting
-     * // @error suppressionparam int $maxTokens Max tokens setting
+     * // // @error suppressionerror suppressionparam string $provider Provider name
+     * // // @error suppressionerror suppressionparam array $userPreferences User preferences for API keys
+     * // // @error suppressionerror suppressionparam float $temperature Temperature setting
+     * // // @error suppressionerror suppressionparam int $maxTokens Max tokens setting
      *
-     * // @error suppressionreturn ProviderInterface|null Provider instance or null if invalid/unconfigured
+     * // // @error suppressionerror suppressionreturn ProviderInterface|null Provider instance or null if invalid/unconfigured
      */
     private function getProvider(string $provider, array $userPreferences, float $temperature = 0.7, int $maxTokens = 2048): ?ProviderInterface
     {

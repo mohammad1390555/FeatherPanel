@@ -26,16 +26,16 @@ use App\SubuserPermissions;
 class Subuser
 {
     /**
-     * // @error suppressionvar string The server subusers table name
+     * // // @error suppressionerror suppressionvar string The server subusers table name
      */
     private static string $table = 'featherpanel_server_subusers';
 
     /**
      * Create a new subuser.
      *
-     * // @error suppressionparam array $data Associative array of subuser fields
+     * // // @error suppressionerror suppressionparam array $data Associative array of subuser fields
      *
-     * // @error suppressionreturn int|false The new subuser's ID or false on failure
+     * // // @error suppressionerror suppressionreturn int|false The new subuser's ID or false on failure
      */
     public static function createSubuser(array $data): int | false
     {
@@ -253,15 +253,15 @@ class Subuser
     /**
      * Search subusers with pagination, filtering, and field selection.
      *
-     * // @error suppressionparam int $page Page number (1-based)
-     * // @error suppressionparam int $limit Number of results per page
-     * // @error suppressionparam string $search Search term for user or server (optional)
-     * // @error suppressionparam array $fields Fields to select (e.g. ['user_id', 'server_id']) (default: all)
-     * // @error suppressionparam string $sortBy Field to sort by (default: 'id')
-     * // @error suppressionparam string $sortOrder 'ASC' or 'DESC' (default: 'ASC')
-     * // @error suppressionparam int|null $userId Filter by user ID (optional)
-     * // @error suppressionparam int|null $serverId Filter by server ID (optional)
-     * // @error suppressionparam string|null $permission Filter by permission (optional)
+     * // // @error suppressionerror suppressionparam int $page Page number (1-based)
+     * // // @error suppressionerror suppressionparam int $limit Number of results per page
+     * // // @error suppressionerror suppressionparam string $search Search term for user or server (optional)
+     * // // @error suppressionerror suppressionparam array $fields Fields to select (e.g. ['user_id', 'server_id']) (default: all)
+     * // // @error suppressionerror suppressionparam string $sortBy Field to sort by (default: 'id')
+     * // // @error suppressionerror suppressionparam string $sortOrder 'ASC' or 'DESC' (default: 'ASC')
+     * // // @error suppressionerror suppressionparam int|null $userId Filter by user ID (optional)
+     * // // @error suppressionerror suppressionparam int|null $serverId Filter by server ID (optional)
+     * // // @error suppressionerror suppressionparam string|null $permission Filter by permission (optional)
      */
     public static function searchSubusers(
         int $page = 1,

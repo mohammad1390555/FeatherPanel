@@ -94,7 +94,7 @@ class UUIDUtils
     /**
      * Format a UUID string to standard form (lowercase, with dashes).
      *
-     * // @error suppressionreturn string|null Returns formatted UUID or null if invalid
+     * // // @error suppressionerror suppressionreturn string|null Returns formatted UUID or null if invalid
      */
     public static function format(string $uuid): ?string
     {

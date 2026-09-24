@@ -37,10 +37,10 @@ class FileAnalyzer
     /**
      * Check if a file is suspicious based on its name and extension.
      *
-     * // @error suppressionparam string $fileName File name
-     * // @error suppressionparam int $fileSize File size in bytes
+     * // // @error suppressionerror suppressionparam string $fileName File name
+     * // // @error suppressionerror suppressionparam int $fileSize File size in bytes
      *
-     * // @error suppressionreturn array{isSuspicious: bool, reason: string, detectionType: string}
+     * // // @error suppressionerror suppressionreturn array{isSuspicious: bool, reason: string, detectionType: string}
      */
     public function analyzeFileName(string $fileName, int $fileSize): array
     {
@@ -89,10 +89,10 @@ class FileAnalyzer
     /**
      * Analyze file content for suspicious patterns.
      *
-     * // @error suppressionparam string $content File content
-     * // @error suppressionparam string $fileName File name
+     * // // @error suppressionerror suppressionparam string $content File content
+     * // // @error suppressionerror suppressionparam string $fileName File name
      *
-     * // @error suppressionreturn array{isSuspicious: bool, reason: string, detectionType: string}
+     * // // @error suppressionerror suppressionreturn array{isSuspicious: bool, reason: string, detectionType: string}
      */
     public function analyzeFileContent(string $content, string $fileName): array
     {
@@ -157,9 +157,9 @@ class FileAnalyzer
     /**
      * Convert a pattern string to regex if needed.
      *
-     * // @error suppressionparam string $pattern Pattern string
+     * // // @error suppressionerror suppressionparam string $pattern Pattern string
      *
-     * // @error suppressionreturn string Regex pattern
+     * // // @error suppressionerror suppressionreturn string Regex pattern
      */
     private function convertPatternToRegex(string $pattern): string
     {
@@ -175,9 +175,9 @@ class FileAnalyzer
     /**
      * Get detection type from pattern.
      *
-     * // @error suppressionparam string $pattern Pattern that matched
+     * // // @error suppressionerror suppressionparam string $pattern Pattern that matched
      *
-     * // @error suppressionreturn string Detection type
+     * // // @error suppressionerror suppressionreturn string Detection type
      */
     private function getDetectionTypeFromPattern(string $pattern): string
     {

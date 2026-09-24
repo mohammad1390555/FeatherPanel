@@ -26,20 +26,20 @@ use App\Chat\Database;
 class SuspiciousFileHashService
 {
     /**
-     * // @error suppressionvar string The suspicious file hashes table name
+     * // // @error suppressionerror suppressionvar string The suspicious file hashes table name
      */
     private static string $table = 'featherpanel_suspicious_file_hashes';
 
     /**
      * Submit or update a hash for tracking.
      *
-     * // @error suppressionparam string $hash SHA-256 hash string
-     * // @error suppressionparam string $fileName File name
-     * // @error suppressionparam string $detectionType Detection type (e.g., "trojan", "virus", "suspicious")
-     * // @error suppressionparam string|null $serverUuid Server UUID or identifier
-     * // @error suppressionparam array<string, mixed> $metadata Additional metadata
+     * // // @error suppressionerror suppressionparam string $hash SHA-256 hash string
+     * // // @error suppressionerror suppressionparam string $fileName File name
+     * // // @error suppressionerror suppressionparam string $detectionType Detection type (e.g., "trojan", "virus", "suspicious")
+     * // // @error suppressionerror suppressionparam string|null $serverUuid Server UUID or identifier
+     * // // @error suppressionerror suppressionparam array<string, mixed> $metadata Additional metadata
      *
-     * // @error suppressionreturn bool True on success, false on failure
+     * // // @error suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function submitHash(
         string $hash,
@@ -131,9 +131,9 @@ class SuspiciousFileHashService
     /**
      * Get all confirmed malicious hashes.
      *
-     * // @error suppressionparam bool $confirmedOnly Only return confirmed malicious hashes
+     * // // @error suppressionerror suppressionparam bool $confirmedOnly Only return confirmed malicious hashes
      *
-     * // @error suppressionreturn array<int, array<string, mixed>> Array of hash records
+     * // // @error suppressionerror suppressionreturn array<int, array<string, mixed>> Array of hash records
      */
     public static function getHashes(bool $confirmedOnly = false): array
     {
@@ -169,9 +169,9 @@ class SuspiciousFileHashService
     /**
      * Get hashes as a map for quick lookup.
      *
-     * // @error suppressionparam bool $confirmedOnly Only return confirmed malicious hashes
+     * // // @error suppressionerror suppressionparam bool $confirmedOnly Only return confirmed malicious hashes
      *
-     * // @error suppressionreturn array<string, array<string, mixed>> Hash map keyed by hash
+     * // // @error suppressionerror suppressionreturn array<string, array<string, mixed>> Hash map keyed by hash
      */
     public static function getHashesMap(bool $confirmedOnly = false): array
     {
@@ -190,10 +190,10 @@ class SuspiciousFileHashService
     /**
      * Check multiple hashes against the database.
      *
-     * // @error suppressionparam array<string> $hashes Array of SHA-256 hashes
-     * // @error suppressionparam bool $confirmedOnly Only check against confirmed malicious hashes
+     * // // @error suppressionerror suppressionparam array<string> $hashes Array of SHA-256 hashes
+     * // // @error suppressionerror suppressionparam bool $confirmedOnly Only check against confirmed malicious hashes
      *
-     * // @error suppressionreturn array<int, array<string, mixed>> Matches found in the database
+     * // // @error suppressionerror suppressionreturn array<int, array<string, mixed>> Matches found in the database
      */
     public static function checkHashes(array $hashes, bool $confirmedOnly = false): array
     {
@@ -234,7 +234,7 @@ class SuspiciousFileHashService
     /**
      * Get statistics about the hash database.
      *
-     * // @error suppressionreturn array<string, mixed> Statistics
+     * // // @error suppressionerror suppressionreturn array<string, mixed> Statistics
      */
     public static function getStats(): array
     {
@@ -289,9 +289,9 @@ class SuspiciousFileHashService
     /**
      * Mark a hash as confirmed malicious.
      *
-     * // @error suppressionparam string $hash SHA-256 hash
+     * // // @error suppressionerror suppressionparam string $hash SHA-256 hash
      *
-     * // @error suppressionreturn bool True on success, false on failure
+     * // // @error suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function confirmMalicious(string $hash): bool
     {
@@ -310,9 +310,9 @@ class SuspiciousFileHashService
     /**
      * Delete a hash from the database.
      *
-     * // @error suppressionparam string $hash SHA-256 hash
+     * // // @error suppressionerror suppressionparam string $hash SHA-256 hash
      *
-     * // @error suppressionreturn bool True on success, false on failure
+     * // // @error suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function deleteHash(string $hash): bool
     {

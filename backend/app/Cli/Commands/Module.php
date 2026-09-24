@@ -271,10 +271,10 @@ class Module extends App implements CommandBuilder
             if (is_dir($path)) {
                 self::deleteDirectory($path);
             } else {
-                // @error suppressionunlink($path);
+                // // @error suppressionerror suppressionunlink($path);
             }
         }
 
-        // @error suppressionrmdir($dir);
+        // // @error suppressionerror suppressionrmdir($dir);
     }
 }

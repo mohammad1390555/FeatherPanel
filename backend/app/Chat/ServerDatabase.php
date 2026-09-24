@@ -25,16 +25,16 @@ use App\App;
 class ServerDatabase
 {
     /**
-     * // @error suppressionvar string The server_databases table name
+     * // // @error suppressionerror suppressionvar string The server_databases table name
      */
     private static string $table = 'featherpanel_server_databases';
 
     /**
      * Create a new server database.
      *
-     * // @error suppressionparam array $data Associative array of database fields
+     * // // @error suppressionerror suppressionparam array $data Associative array of database fields
      *
-     * // @error suppressionreturn int|false The new database's ID or false on failure
+     * // // @error suppressionerror suppressionreturn int|false The new database's ID or false on failure
      */
     public static function createServerDatabase(array $data): int | false
     {

@@ -326,7 +326,7 @@ class ServerImportController
     /**
      * Validate import payload.
      *
-     * // @error suppressionparam array<string,mixed> $payload
+     * // // @error suppressionerror suppressionparam array<string,mixed> $payload
      */
     private function validateImportPayload(array $payload): ?Response
     {

@@ -37,11 +37,11 @@ class SuspensionService
     /**
      * Suspend a server if auto-suspend is enabled and detections are found.
      *
-     * // @error suppressionparam string $serverUuid Server UUID
-     * // @error suppressionparam int $detectionsCount Number of detections found
-     * // @error suppressionparam Configuration $config Configuration instance
+     * // // @error suppressionerror suppressionparam string $serverUuid Server UUID
+     * // // @error suppressionerror suppressionparam int $detectionsCount Number of detections found
+     * // // @error suppressionerror suppressionparam Configuration $config Configuration instance
      *
-     * // @error suppressionreturn bool True if server was suspended, false otherwise
+     * // // @error suppressionerror suppressionreturn bool True if server was suspended, false otherwise
      */
     public static function suspendIfNeeded(string $serverUuid, int $detectionsCount, Configuration $config): bool
     {
@@ -115,7 +115,7 @@ class SuspensionService
                         'suspended_by' => [
                             'uuid' => 'system',
                             'username' => 'FeatherZeroTrust',
-                            'email' => 'system// @error suppressionfeatherpanel',
+                            'email' => 'system// // @error suppressionerror suppressionfeatherpanel',
                         ],
                     ]
                 );

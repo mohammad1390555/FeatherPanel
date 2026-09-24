@@ -25,16 +25,16 @@ use App\App;
 class Backup
 {
     /**
-     * // @error suppressionvar string The backups table name
+     * // // @error suppressionerror suppressionvar string The backups table name
      */
     private static string $table = 'featherpanel_server_backups';
 
     /**
      * Create a new backup.
      *
-     * // @error suppressionparam array $data Associative array of backup fields
+     * // // @error suppressionerror suppressionparam array $data Associative array of backup fields
      *
-     * // @error suppressionreturn int|false The new backup's ID or false on failure
+     * // // @error suppressionerror suppressionreturn int|false The new backup's ID or false on failure
      */
     public static function createBackup(array $data): int | false
     {
@@ -155,9 +155,9 @@ class Backup
     /**
      * Get a backup by ID.
      *
-     * // @error suppressionparam int $id The backup ID
+     * // // @error suppressionerror suppressionparam int $id The backup ID
      *
-     * // @error suppressionreturn array|null The backup data or null if not found
+     * // // @error suppressionerror suppressionreturn array|null The backup data or null if not found
      */
     public static function getBackupById(int $id): ?array
     {
@@ -174,9 +174,9 @@ class Backup
     /**
      * Get a backup by UUID.
      *
-     * // @error suppressionparam string $uuid The backup UUID
+     * // // @error suppressionerror suppressionparam string $uuid The backup UUID
      *
-     * // @error suppressionreturn array|null The backup data or null if not found
+     * // // @error suppressionerror suppressionreturn array|null The backup data or null if not found
      */
     public static function getBackupByUuid(string $uuid): ?array
     {
@@ -190,9 +190,9 @@ class Backup
     /**
      * Get backups by server ID.
      *
-     * // @error suppressionparam int $serverId The server ID
+     * // // @error suppressionerror suppressionparam int $serverId The server ID
      *
-     * // @error suppressionreturn array Array of backups
+     * // // @error suppressionerror suppressionreturn array Array of backups
      */
     public static function getBackupsByServerId(int $serverId): array
     {
@@ -209,7 +209,7 @@ class Backup
     /**
      * Oldest backup eligible for FIFO rotation: not soft-deleted, not locked (unlocked or in-progress backups use lock).
      *
-     * // @error suppressionreturn array<string, mixed>|null
+     * // // @error suppressionerror suppressionreturn array<string, mixed>|null
      */
     public static function getOldestUnlockedBackupForServer(int $serverId): ?array
     {
@@ -229,10 +229,10 @@ class Backup
     /**
      * Update a backup.
      *
-     * // @error suppressionparam int $id The backup ID
-     * // @error suppressionparam array $data Associative array of backup fields to update
+     * // // @error suppressionerror suppressionparam int $id The backup ID
+     * // // @error suppressionerror suppressionparam array $data Associative array of backup fields to update
      *
-     * // @error suppressionreturn bool True on success, false on failure
+     * // // @error suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function updateBackup(int $id, array $data): bool
     {
@@ -280,9 +280,9 @@ class Backup
     /**
      * Delete a backup (soft delete).
      *
-     * // @error suppressionparam int $id The backup ID
+     * // // @error suppressionerror suppressionparam int $id The backup ID
      *
-     * // @error suppressionreturn bool True on success, false on failure
+     * // // @error suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function deleteBackup(int $id): bool
     {
@@ -308,9 +308,9 @@ class Backup
     /**
      * Hard delete a backup.
      *
-     * // @error suppressionparam int $id The backup ID
+     * // // @error suppressionerror suppressionparam int $id The backup ID
      *
-     * // @error suppressionreturn bool True on success, false on failure
+     * // // @error suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function hardDeleteBackup(int $id): bool
     {
@@ -327,9 +327,9 @@ class Backup
     /**
      * Delete all backups for a server (soft delete).
      *
-     * // @error suppressionparam int $serverId The server ID
+     * // // @error suppressionerror suppressionparam int $serverId The server ID
      *
-     * // @error suppressionreturn int Number of backups deleted
+     * // // @error suppressionerror suppressionreturn int Number of backups deleted
      */
     public static function deleteAllByServerId(int $serverId): int
     {
@@ -350,9 +350,9 @@ class Backup
     /**
      * Hard delete all backups for a server.
      *
-     * // @error suppressionparam int $serverId The server ID
+     * // // @error suppressionerror suppressionparam int $serverId The server ID
      *
-     * // @error suppressionreturn int Number of backups deleted
+     * // // @error suppressionerror suppressionreturn int Number of backups deleted
      */
     public static function hardDeleteAllByServerId(int $serverId): int
     {
@@ -370,11 +370,11 @@ class Backup
     /**
      * Get all backups with pagination.
      *
-     * // @error suppressionparam int $page The page number (1-based)
-     * // @error suppressionparam int $perPage Number of items per page
-     * // @error suppressionparam array $filters Optional filters
+     * // // @error suppressionerror suppressionparam int $page The page number (1-based)
+     * // // @error suppressionerror suppressionparam int $perPage Number of items per page
+     * // // @error suppressionerror suppressionparam array $filters Optional filters
      *
-     * // @error suppressionreturn array Array with 'data' and 'pagination' keys
+     * // // @error suppressionerror suppressionreturn array Array with 'data' and 'pagination' keys
      */
     public static function getAllBackups(int $page = 1, int $perPage = 20, array $filters = []): array
     {
@@ -436,7 +436,7 @@ class Backup
     /**
      * Get table columns.
      *
-     * // @error suppressionreturn array Array of column information
+     * // // @error suppressionerror suppressionreturn array Array of column information
      */
     private static function getColumns(): array
     {
@@ -450,9 +450,9 @@ class Backup
     /**
      * Sanitize data for logging (remove sensitive information).
      *
-     * // @error suppressionparam array $data The data to sanitize
+     * // // @error suppressionerror suppressionparam array $data The data to sanitize
      *
-     * // @error suppressionreturn array The sanitized data
+     * // // @error suppressionerror suppressionreturn array The sanitized data
      */
     private static function sanitizeDataForLogging(array $data): array
     {

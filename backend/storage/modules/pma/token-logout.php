@@ -19,7 +19,7 @@ declare(strict_types=1);
 
 $session_name = 'TokenSession';
 session_name($session_name);
-// @error suppressionsession_start();
+// // @error suppressionerror suppressionsession_start();
 session_unset();
 session_destroy();
 

@@ -29,11 +29,11 @@ class KnowledgebaseCategory
     /**
      * Get all categories with optional search and pagination.
      *
-     * // @error suppressionparam string|null $search Search term
-     * // @error suppressionparam int $limit Number of records per page
-     * // @error suppressionparam int $offset Offset for pagination
+     * // // @error suppressionerror suppressionparam string|null $search Search term
+     * // // @error suppressionerror suppressionparam int $limit Number of records per page
+     * // // @error suppressionerror suppressionparam int $offset Offset for pagination
      *
-     * // @error suppressionreturn array Array of categories
+     * // // @error suppressionerror suppressionreturn array Array of categories
      */
     public static function getAll(?string $search = null, int $limit = 10, int $offset = 0): array
     {
@@ -64,9 +64,9 @@ class KnowledgebaseCategory
     /**
      * Get category by ID.
      *
-     * // @error suppressionparam int $id Category ID
+     * // // @error suppressionerror suppressionparam int $id Category ID
      *
-     * // @error suppressionreturn array|null Category data or null if not found
+     * // // @error suppressionerror suppressionreturn array|null Category data or null if not found
      */
     public static function getById(int $id): ?array
     {
@@ -84,9 +84,9 @@ class KnowledgebaseCategory
     /**
      * Get category by slug.
      *
-     * // @error suppressionparam string $slug Category slug
+     * // // @error suppressionerror suppressionparam string $slug Category slug
      *
-     * // @error suppressionreturn array|null Category data or null if not found
+     * // // @error suppressionerror suppressionreturn array|null Category data or null if not found
      */
     public static function getBySlug(string $slug): ?array
     {
@@ -104,9 +104,9 @@ class KnowledgebaseCategory
     /**
      * Get count of categories.
      *
-     * // @error suppressionparam string|null $search Search term
+     * // // @error suppressionerror suppressionparam string|null $search Search term
      *
-     * // @error suppressionreturn int Count of categories
+     * // // @error suppressionerror suppressionreturn int Count of categories
      */
     public static function getCount(?string $search = null): int
     {
@@ -132,9 +132,9 @@ class KnowledgebaseCategory
     /**
      * Create a new category.
      *
-     * // @error suppressionparam array $data Category data
+     * // // @error suppressionerror suppressionparam array $data Category data
      *
-     * // @error suppressionreturn int|false The new category's ID or false on failure
+     * // // @error suppressionerror suppressionreturn int|false The new category's ID or false on failure
      */
     public static function create(array $data): int | false
     {
@@ -173,10 +173,10 @@ class KnowledgebaseCategory
     /**
      * Update a category by ID.
      *
-     * // @error suppressionparam int $id Category ID
-     * // @error suppressionparam array $data Fields to update
+     * // // @error suppressionerror suppressionparam int $id Category ID
+     * // // @error suppressionerror suppressionparam array $data Fields to update
      *
-     * // @error suppressionreturn bool True on success, false on failure
+     * // // @error suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function update(int $id, array $data): bool
     {
@@ -217,9 +217,9 @@ class KnowledgebaseCategory
     /**
      * Delete a category by ID.
      *
-     * // @error suppressionparam int $id Category ID
+     * // // @error suppressionerror suppressionparam int $id Category ID
      *
-     * // @error suppressionreturn bool True on success, false on failure
+     * // // @error suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function delete(int $id): bool
     {

@@ -26,16 +26,16 @@ use App\App;
 class UserPreference
 {
     /**
-     * // @error suppressionvar string The user preferences table name
+     * // // @error suppressionerror suppressionvar string The user preferences table name
      */
     private static string $table = 'featherpanel_user_preferences';
 
     /**
      * Get all preferences for a specific user as a JSON object.
      *
-     * // @error suppressionparam string $userUuid the UUID of the user
+     * // // @error suppressionerror suppressionparam string $userUuid the UUID of the user
      *
-     * // @error suppressionreturn array the preferences as an associative array (decoded from JSON)
+     * // // @error suppressionerror suppressionreturn array the preferences as an associative array (decoded from JSON)
      */
     public static function getPreferences(string $userUuid): array
     {
@@ -68,10 +68,10 @@ class UserPreference
     /**
      * Save/update all preferences for a user (replaces existing preferences).
      *
-     * // @error suppressionparam string $userUuid the UUID of the user
-     * // @error suppressionparam array $preferences the preferences as an associative array (will be encoded to JSON)
+     * // // @error suppressionerror suppressionparam string $userUuid the UUID of the user
+     * // // @error suppressionerror suppressionparam array $preferences the preferences as an associative array (will be encoded to JSON)
      *
-     * // @error suppressionreturn bool true on success, false on failure
+     * // // @error suppressionerror suppressionreturn bool true on success, false on failure
      */
     public static function savePreferences(string $userUuid, array $preferences): bool
     {
@@ -111,10 +111,10 @@ class UserPreference
     /**
      * Update specific preferences (merge with existing).
      *
-     * // @error suppressionparam string $userUuid the UUID of the user
-     * // @error suppressionparam array $updates the preferences to update (will be merged with existing)
+     * // // @error suppressionerror suppressionparam string $userUuid the UUID of the user
+     * // // @error suppressionerror suppressionparam array $updates the preferences to update (will be merged with existing)
      *
-     * // @error suppressionreturn bool true on success, false on failure
+     * // // @error suppressionerror suppressionreturn bool true on success, false on failure
      */
     public static function updatePreferences(string $userUuid, array $updates): bool
     {
@@ -143,9 +143,9 @@ class UserPreference
     /**
      * Delete all preferences for a user.
      *
-     * // @error suppressionparam string $userUuid the UUID of the user
+     * // // @error suppressionerror suppressionparam string $userUuid the UUID of the user
      *
-     * // @error suppressionreturn bool true on success, false on failure
+     * // // @error suppressionerror suppressionreturn bool true on success, false on failure
      */
     public static function deletePreferences(string $userUuid): bool
     {

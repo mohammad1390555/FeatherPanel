@@ -49,11 +49,11 @@ class PerplexityProvider implements ProviderInterface
     /**
      * Process a user message and generate a response using Perplexity API.
      *
-     * // @error suppressionparam string $message User's message
-     * // @error suppressionparam array $history Chat history
-     * // @error suppressionparam string $systemPrompt Optional system prompt
+     * // // @error suppressionerror suppressionparam string $message User's message
+     * // // @error suppressionerror suppressionparam array $history Chat history
+     * // // @error suppressionerror suppressionparam string $systemPrompt Optional system prompt
      *
-     * // @error suppressionreturn array Response with 'response' and 'model' keys
+     * // // @error suppressionerror suppressionreturn array Response with 'response' and 'model' keys
      */
     public function processMessage(string $message, array $history, string $systemPrompt = ''): array
     {

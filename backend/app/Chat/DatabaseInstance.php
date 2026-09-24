@@ -25,7 +25,7 @@ use App\App;
 class DatabaseInstance
 {
     /**
-     * // @error suppressionvar string The databases table name
+     * // // @error suppressionerror suppressionvar string The databases table name
      */
     private static string $table = 'featherpanel_databases';
 
@@ -47,9 +47,9 @@ class DatabaseInstance
     /**
      * Create a new database instance.
      *
-     * // @error suppressionparam array $data Associative array of database fields
+     * // // @error suppressionerror suppressionparam array $data Associative array of database fields
      *
-     * // @error suppressionreturn int|false The new database's ID or false on failure
+     * // // @error suppressionerror suppressionreturn int|false The new database's ID or false on failure
      */
     public static function createDatabase(array $data): int | false
     {
@@ -510,9 +510,9 @@ class DatabaseInstance
     /**
      * Validate subdomain format according to RFC 1123 DNS hostname rules.
      *
-     * // @error suppressionparam string|null $subdomain The subdomain to validate
+     * // // @error suppressionerror suppressionparam string|null $subdomain The subdomain to validate
      *
-     * // @error suppressionreturn bool True if valid or null, false otherwise
+     * // // @error suppressionerror suppressionreturn bool True if valid or null, false otherwise
      */
     public static function isValidSubdomain(?string $subdomain): bool
     {
@@ -540,9 +540,9 @@ class DatabaseInstance
     /**
      * Get the database hostname for a database instance (subdomain or fallback to host).
      *
-     * // @error suppressionparam array $database Database data array
+     * // // @error suppressionerror suppressionparam array $database Database data array
      *
-     * // @error suppressionreturn string The hostname to use for database connections
+     * // // @error suppressionerror suppressionreturn string The hostname to use for database connections
      */
     public static function getDatabaseHostname(array $database): string
     {

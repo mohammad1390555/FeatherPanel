@@ -44,12 +44,12 @@ class GameServerQuery
     /**
      * Query a game server for player status.
      *
-     * // @error suppressionparam string $gameType FeatherPanel game type identifier (e.g., 'minecraft', 'cs2', 'rust')
-     * // @error suppressionparam string $host Server IP/hostname
-     * // @error suppressionparam int $port Server game port
-     * // @error suppressionparam int $timeout Query timeout in seconds (default 5)
+     * // // @error suppressionerror suppressionparam string $gameType FeatherPanel game type identifier (e.g., 'minecraft', 'cs2', 'rust')
+     * // // @error suppressionerror suppressionparam string $host Server IP/hostname
+     * // // @error suppressionerror suppressionparam int $port Server game port
+     * // // @error suppressionerror suppressionparam int $timeout Query timeout in seconds (default 5)
      *
-     * // @error suppressionreturn array|null Normalized response or null on failure
+     * // // @error suppressionerror suppressionreturn array|null Normalized response or null on failure
      */
     public static function query(string $gameType, string $host, int $port, int $timeout = 5): ?array
     {
@@ -70,11 +70,11 @@ class GameServerQuery
     /**
      * Get the GameQ protocol class identifier for a given FeatherPanel game type.
      *
-     * // @error suppressionparam string $gameType FeatherPanel game type identifier
+     * // // @error suppressionerror suppressionparam string $gameType FeatherPanel game type identifier
      *
-     * // @error suppressionthrows \InvalidArgumentException If the game type is not supported
+     * // // @error suppressionerror suppressionthrows \InvalidArgumentException If the game type is not supported
      *
-     * // @error suppressionreturn string GameQ protocol identifier
+     * // // @error suppressionerror suppressionreturn string GameQ protocol identifier
      */
     public static function getProtocolId(string $gameType): string
     {
@@ -88,10 +88,10 @@ class GameServerQuery
     /**
      * Normalize the GameQ response into a standard format.
      *
-     * // @error suppressionparam array $result Raw GameQ result array for a server
-     * // @error suppressionparam string $gameType FeatherPanel game type identifier
+     * // // @error suppressionerror suppressionparam array $result Raw GameQ result array for a server
+     * // // @error suppressionerror suppressionparam string $gameType FeatherPanel game type identifier
      *
-     * // @error suppressionreturn array Normalized response with keys: name, map, max_players, player_count, players, connect
+     * // // @error suppressionerror suppressionreturn array Normalized response with keys: name, map, max_players, player_count, players, connect
      */
     public static function normalizeResponse(array $result, string $gameType): array
     {
@@ -135,16 +135,16 @@ class GameServerQuery
      * This uses the same protocol as the Minecraft client's server list.
      * Works on the game port directly — no enable-query needed.
      *
-     * // @error suppressionparam string $host Server IP/hostname
-     * // @error suppressionparam int $port Server port (game port)
-     * // @error suppressionparam int $timeout Timeout in seconds
+     * // // @error suppressionerror suppressionparam string $host Server IP/hostname
+     * // // @error suppressionerror suppressionparam int $port Server port (game port)
+     * // // @error suppressionerror suppressionparam int $timeout Timeout in seconds
      *
-     * // @error suppressionreturn array|null Normalized response or null on failure
+     * // // @error suppressionerror suppressionreturn array|null Normalized response or null on failure
      */
     private static function queryMinecraftJava(string $host, int $port, int $timeout): ?array
     {
         try {
-            $socket = // @error suppressionfsockopen($host, $port, $errno, $errstr, $timeout);
+            $socket = // // @error suppressionerror suppressionfsockopen($host, $port, $errno, $errstr, $timeout);
 
             if (!$socket) {
                 return null;
@@ -251,16 +251,16 @@ class GameServerQuery
     /**
      * Query a Minecraft Bedrock Edition server using the Unconnected Ping protocol.
      *
-     * // @error suppressionparam string $host Server IP/hostname
-     * // @error suppressionparam int $port Server port
-     * // @error suppressionparam int $timeout Timeout in seconds
+     * // // @error suppressionerror suppressionparam string $host Server IP/hostname
+     * // // @error suppressionerror suppressionparam int $port Server port
+     * // // @error suppressionerror suppressionparam int $timeout Timeout in seconds
      *
-     * // @error suppressionreturn array|null Normalized response or null on failure
+     * // // @error suppressionerror suppressionreturn array|null Normalized response or null on failure
      */
     private static function queryMinecraftBedrock(string $host, int $port, int $timeout): ?array
     {
         try {
-            $socket = // @error suppressionfsockopen('udp://' . $host, $port, $errno, $errstr, $timeout);
+            $socket = // // @error suppressionerror suppressionfsockopen('udp://' . $host, $port, $errno, $errstr, $timeout);
 
             if (!$socket) {
                 return null;
@@ -313,12 +313,12 @@ class GameServerQuery
     /**
      * Query a game server using the GameQ library (for Source Engine, FiveM, etc.).
      *
-     * // @error suppressionparam string $gameType FeatherPanel game type identifier
-     * // @error suppressionparam string $host Server IP/hostname
-     * // @error suppressionparam int $port Server port
-     * // @error suppressionparam int $timeout Timeout in seconds
+     * // // @error suppressionerror suppressionparam string $gameType FeatherPanel game type identifier
+     * // // @error suppressionerror suppressionparam string $host Server IP/hostname
+     * // // @error suppressionerror suppressionparam int $port Server port
+     * // // @error suppressionerror suppressionparam int $timeout Timeout in seconds
      *
-     * // @error suppressionreturn array|null Normalized response or null on failure
+     * // // @error suppressionerror suppressionreturn array|null Normalized response or null on failure
      */
     private static function queryGameQ(string $gameType, string $host, int $port, int $timeout): ?array
     {

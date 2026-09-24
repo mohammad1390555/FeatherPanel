@@ -25,17 +25,17 @@ use App\App;
 class SsoToken
 {
     /**
-     * // @error suppressionvar string The SSO tokens table name
+     * // // @error suppressionerror suppressionvar string The SSO tokens table name
      */
     private static string $table = 'featherpanel_sso_tokens';
 
     /**
      * Create a new SSO token for a user.
      *
-     * // @error suppressionparam string $userUuid User UUID
-     * // @error suppressionparam int $expiresInMinutes Expiration time in minutes
+     * // // @error suppressionerror suppressionparam string $userUuid User UUID
+     * // // @error suppressionerror suppressionparam int $expiresInMinutes Expiration time in minutes
      *
-     * // @error suppressionreturn string|null Generated token or null on failure
+     * // // @error suppressionerror suppressionreturn string|null Generated token or null on failure
      */
     public static function createTokenForUser(string $userUuid, int $expiresInMinutes = 5): ?string
     {
@@ -70,7 +70,7 @@ class SsoToken
     /**
      * Get a valid (not used, not expired) SSO token record by token string.
      *
-     * // @error suppressionreturn array<string,mixed>|null
+     * // // @error suppressionerror suppressionreturn array<string,mixed>|null
      */
     public static function getValidToken(string $token): ?array
     {
@@ -130,9 +130,9 @@ class SsoToken
     /**
      * Delete old SSO tokens (expired or used).
      *
-     * // @error suppressionparam int $olderThanDays Delete tokens older than this many days (default: 7)
+     * // // @error suppressionerror suppressionparam int $olderThanDays Delete tokens older than this many days (default: 7)
      *
-     * // @error suppressionreturn int Number of tokens deleted
+     * // // @error suppressionerror suppressionreturn int Number of tokens deleted
      */
     public static function deleteOldTokens(int $olderThanDays = 7): int
     {

@@ -543,12 +543,12 @@ class WingsServerInfoController
      * Replace placeholders in configuration values with actual server data.
      * Handles both modern and legacy Pterodactyl placeholders.
      *
-     * // @error suppressionparam string $value The value containing placeholders
-     * // @error suppressionparam array<string, mixed> $server Server data
-     * // @error suppressionparam array<string, mixed> $allocation Allocation data
-     * // @error suppressionparam array<string, mixed> $environment Environment variables (from server variables)
+     * // // @error suppressionerror suppressionparam string $value The value containing placeholders
+     * // // @error suppressionerror suppressionparam array<string, mixed> $server Server data
+     * // // @error suppressionerror suppressionparam array<string, mixed> $allocation Allocation data
+     * // // @error suppressionerror suppressionparam array<string, mixed> $environment Environment variables (from server variables)
      *
-     * // @error suppressionreturn string The value with placeholders replaced
+     * // // @error suppressionerror suppressionreturn string The value with placeholders replaced
      */
     private function replacePlaceholders(string $value, array $server, array $allocation, array $environment): string
     {
@@ -619,9 +619,9 @@ class WingsServerInfoController
     /**
      * Build allocation mappings grouped by IP address.
      *
-     * // @error suppressionparam array<int, array<string, mixed>> $allocations Array of allocations
+     * // // @error suppressionerror suppressionparam array<int, array<string, mixed>> $allocations Array of allocations
      *
-     * // @error suppressionreturn array<string, array<int, int>> Allocations grouped by IP with array of ports
+     * // // @error suppressionerror suppressionreturn array<string, array<int, int>> Allocations grouped by IP with array of ports
      */
     private function buildAllocationMappings(array $allocations): array
     {
@@ -645,10 +645,10 @@ class WingsServerInfoController
      * Sanitize Java memory arguments in startup command to prevent invalid values.
      * Fixes issues like -Xmx0M, -Xms0M, etc. by removing invalid arguments or replacing with valid defaults.
      *
-     * // @error suppressionparam string $startupCommand The startup command to sanitize
-     * // @error suppressionparam int $serverMemory Server memory in MB (used as fallback for -Xmx)
+     * // // @error suppressionerror suppressionparam string $startupCommand The startup command to sanitize
+     * // // @error suppressionerror suppressionparam int $serverMemory Server memory in MB (used as fallback for -Xmx)
      *
-     * // @error suppressionreturn string The sanitized startup command
+     * // // @error suppressionerror suppressionreturn string The sanitized startup command
      */
     private function sanitizeJavaMemoryArguments(string $startupCommand, int $serverMemory): string
     {

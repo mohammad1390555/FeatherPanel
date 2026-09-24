@@ -44,9 +44,9 @@ class RateLimitController
     /**
      * Get all rate limit configurations.
      *
-     * // @error suppressionparam Request $request The HTTP request
+     * // // @error suppressionerror suppressionparam Request $request The HTTP request
      *
-     * // @error suppressionreturn Response The HTTP response
+     * // // @error suppressionerror suppressionreturn Response The HTTP response
      */
     #[OA\Get(
         path: '/api/admin/rate-limits',
@@ -91,9 +91,9 @@ class RateLimitController
     /**
      * Update global rate limiting enabled state.
      *
-     * // @error suppressionparam Request $request The HTTP request
+     * // // @error suppressionerror suppressionparam Request $request The HTTP request
      *
-     * // @error suppressionreturn Response The HTTP response
+     * // // @error suppressionerror suppressionreturn Response The HTTP response
      */
     #[OA\Patch(
         path: '/api/admin/rate-limits/global',
@@ -155,12 +155,12 @@ class RateLimitController
             $jsonString = json_encode($jsonData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . "\n";
 
             // Write with exclusive lock to prevent race conditions
-            $result = // @error suppressionfile_put_contents($configPath, $jsonString, LOCK_EX);
+            $result = // // @error suppressionerror suppressionfile_put_contents($configPath, $jsonString, LOCK_EX);
 
             // Immediately verify by reading the file back
             if ($result !== false) {
                 usleep(10000); // Small delay to ensure disk write completes
-                $readBack = // @error suppressionfile_get_contents($configPath);
+                $readBack = // // @error suppressionerror suppressionfile_get_contents($configPath);
                 if ($readBack !== false) {
                     $readBackDecoded = json_decode($readBack, true);
                     if (json_last_error() === JSON_ERROR_NONE) {
@@ -168,7 +168,7 @@ class RateLimitController
                         if ($actualEnabled !== $enabledValue) {
                             // Write failed - try again
                             App::getInstance(true)->getLogger()->warning('First write verification failed, retrying...');
-                            $result = // @error suppressionfile_put_contents($configPath, $jsonString, LOCK_EX);
+                            $result = // // @error suppressionerror suppressionfile_put_contents($configPath, $jsonString, LOCK_EX);
                         }
                     }
                 }
@@ -195,7 +195,7 @@ class RateLimitController
             chmod($configPath, 0644);
 
             // Read back to verify
-            $verifyContent = // @error suppressionfile_get_contents($configPath);
+            $verifyContent = // // @error suppressionerror suppressionfile_get_contents($configPath);
             if ($verifyContent !== false) {
                 $verifyDecoded = json_decode($verifyContent, true);
                 if (json_last_error() === JSON_ERROR_NONE && isset($verifyDecoded['_enabled'])) {
@@ -234,10 +234,10 @@ class RateLimitController
     /**
      * Get rate limit configuration for a specific route.
      *
-     * // @error suppressionparam Request $request The HTTP request
-     * // @error suppressionparam string $routeName The route name
+     * // // @error suppressionerror suppressionparam Request $request The HTTP request
+     * // // @error suppressionerror suppressionparam string $routeName The route name
      *
-     * // @error suppressionreturn Response The HTTP response
+     * // // @error suppressionerror suppressionreturn Response The HTTP response
      */
     #[OA\Get(
         path: '/api/admin/rate-limits/{routeName}',
@@ -279,10 +279,10 @@ class RateLimitController
     /**
      * Update rate limit configuration for a route.
      *
-     * // @error suppressionparam Request $request The HTTP request
-     * // @error suppressionparam string $routeName The route name
+     * // // @error suppressionerror suppressionparam Request $request The HTTP request
+     * // // @error suppressionerror suppressionparam string $routeName The route name
      *
-     * // @error suppressionreturn Response The HTTP response
+     * // // @error suppressionerror suppressionreturn Response The HTTP response
      */
     #[OA\Put(
         path: '/api/admin/rate-limits/{routeName}',
@@ -384,10 +384,10 @@ class RateLimitController
     /**
      * Delete rate limit configuration for a route (reset to default).
      *
-     * // @error suppressionparam Request $request The HTTP request
-     * // @error suppressionparam string $routeName The route name
+     * // // @error suppressionerror suppressionparam Request $request The HTTP request
+     * // // @error suppressionerror suppressionparam string $routeName The route name
      *
-     * // @error suppressionreturn Response The HTTP response
+     * // // @error suppressionerror suppressionreturn Response The HTTP response
      */
     #[OA\Delete(
         path: '/api/admin/rate-limits/{routeName}',
@@ -474,9 +474,9 @@ class RateLimitController
     /**
      * Bulk update multiple rate limit configurations.
      *
-     * // @error suppressionparam Request $request The HTTP request
+     * // // @error suppressionerror suppressionparam Request $request The HTTP request
      *
-     * // @error suppressionreturn Response The HTTP response
+     * // // @error suppressionerror suppressionreturn Response The HTTP response
      */
     #[OA\Patch(
         path: '/api/admin/rate-limits/bulk',

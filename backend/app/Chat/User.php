@@ -27,16 +27,16 @@ use App\Config\ConfigInterface;
 class User
 {
     /**
-     * // @error suppressionvar string The users table name
+     * // // @error suppressionerror suppressionvar string The users table name
      */
     private static string $table = 'featherpanel_users';
 
     /**
      * Create a new user.
      *
-     * // @error suppressionparam array $data Associative array of user fields (must include required fields)
+     * // // @error suppressionerror suppressionparam array $data Associative array of user fields (must include required fields)
      *
-     * // @error suppressionreturn int|false The new user's ID or false on failure
+     * // // @error suppressionerror suppressionreturn int|false The new user's ID or false on failure
      */
     public static function createUser(array $data, bool $skipEmailValidation = false): int | false
     {
@@ -185,9 +185,9 @@ class User
     /**
      * Get active (non-deleted, non-banned) users for the given role IDs.
      *
-     * // @error suppressionparam int[] $roleIds
+     * // // @error suppressionerror suppressionparam int[] $roleIds
      *
-     * // @error suppressionreturn array<int, array>
+     * // // @error suppressionerror suppressionreturn array<int, array>
      */
     public static function getActiveUsersByRoleIds(array $roleIds): array
     {
@@ -209,13 +209,13 @@ class User
     /**
      * Search users with pagination, filtering, and field selection.
      *
-     * // @error suppressionparam int $page Page number (1-based)
-     * // @error suppressionparam int $limit Number of results per page
-     * // @error suppressionparam string $search Search term for username/email (optional)
-     * // @error suppressionparam bool $includeDeleted Include deleted users (default: false)
-     * // @error suppressionparam array $fields Fields to select (e.g. ['username', 'email']) (default: all)
-     * // @error suppressionparam string $sortBy Field to sort by (default: 'id')
-     * // @error suppressionparam string $sortOrder 'ASC' or 'DESC' (default: 'ASC')
+     * // // @error suppressionerror suppressionparam int $page Page number (1-based)
+     * // // @error suppressionerror suppressionparam int $limit Number of results per page
+     * // // @error suppressionerror suppressionparam string $search Search term for username/email (optional)
+     * // // @error suppressionerror suppressionparam bool $includeDeleted Include deleted users (default: false)
+     * // // @error suppressionerror suppressionparam array $fields Fields to select (e.g. ['username', 'email']) (default: all)
+     * // // @error suppressionerror suppressionparam string $sortBy Field to sort by (default: 'id')
+     * // // @error suppressionerror suppressionparam string $sortOrder 'ASC' or 'DESC' (default: 'ASC')
      */
     public static function searchUsers(
         int $page = 1,
@@ -560,9 +560,9 @@ class User
     /**
      * Return a non-empty remember token for the user, generating and persisting one if missing.
      *
-     * // @error suppressionparam mixed $currentRememberToken Value from user row (may be null or absent)
+     * // // @error suppressionerror suppressionparam mixed $currentRememberToken Value from user row (may be null or absent)
      *
-     * // @error suppressionreturn string|false The token, or false if the database update failed
+     * // // @error suppressionerror suppressionreturn string|false The token, or false if the database update failed
      */
     public static function ensureRememberToken(string $uuid, mixed $currentRememberToken): string | false
     {
@@ -613,7 +613,7 @@ class User
      * Find other users that may be alts by comparing IP addresses from panel activity,
      * server activity, first/last IP fields, and browser/device sync identifiers.
      *
-     * // @error suppressionreturn array{
+     * // // @error suppressionerror suppressionreturn array{
      *     source_ips: string[],
      *     source_devices: string[],
      *     potential_alts: array<int, array<string, mixed>>

@@ -31,7 +31,7 @@ use Symfony\Component\HttpFoundation\Response;
     contact: new OA\Contact(
         name: 'MythicalSystems',
         url: 'https://mythical.systems',
-        email: 'support// @error suppressionmythical.systems'
+        email: 'support// // @error suppressionerror suppressionmythical.systems'
     ),
     license: new OA\License(
         name: 'MIT',
@@ -160,7 +160,7 @@ class ApiDocs
                         'contact' => [
                             'name' => 'MythicalSystems',
                             'url' => 'https://mythical.systems',
-                            'email' => 'support// @error suppressionmythical.systems',
+                            'email' => 'support// // @error suppressionerror suppressionmythical.systems',
                         ],
                         'license' => [
                             'name' => 'MIT',

@@ -61,7 +61,7 @@ class CloudFlareRealIP
      * 5. HTTP_CLIENT_IP (some proxies)
      * 6. REMOTE_ADDR (fallback)
      *
-     * // @error suppressionreturn string Real client IP address
+     * // // @error suppressionerror suppressionreturn string Real client IP address
      */
     public static function getRealIP()
     {
@@ -129,7 +129,7 @@ class CloudFlareRealIP
      * Get debug information about IP detection.
      * This method can be used for troubleshooting IP detection issues.
      *
-     * // @error suppressionreturn array Debug information
+     * // // @error suppressionerror suppressionreturn array Debug information
      */
     public static function getDebugInfo()
     {
@@ -195,9 +195,9 @@ class CloudFlareRealIP
     /**
      * Validate if an IP address is valid and not a private/local IP.
      *
-     * // @error suppressionparam string $ip IP address to validate
+     * // // @error suppressionerror suppressionparam string $ip IP address to validate
      *
-     * // @error suppressionreturn bool True if valid and not private/local
+     * // // @error suppressionerror suppressionreturn bool True if valid and not private/local
      */
     private static function isValidIP($ip)
     {
@@ -222,7 +222,7 @@ class CloudFlareRealIP
      * Check if we should trust proxy headers.
      * This can be configured via environment variable TRUST_PROXY_HEADERS.
      *
-     * // @error suppressionreturn bool True if we should trust proxy headers
+     * // // @error suppressionerror suppressionreturn bool True if we should trust proxy headers
      */
     private static function shouldTrustProxyHeaders()
     {

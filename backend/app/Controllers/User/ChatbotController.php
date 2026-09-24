@@ -111,7 +111,7 @@ class ChatbotController
             $emit = function (string $type, array $payload = []): void {
                 // // // // // // // // echo ...
                 // echo ...
-                // @error suppressionob_flush();
+                // // @error suppressionerror suppressionob_flush();
                 flush();
             };
 

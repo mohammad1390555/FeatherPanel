@@ -47,9 +47,9 @@ class VdsToolHandler
      * Parse tool calls from AI response.
      * Format: TOOL_CALL: tool_name {"param1": "value1", "param2": "value2"}.
      *
-     * // @error suppressionparam string $response AI response text
+     * // // @error suppressionerror suppressionparam string $response AI response text
      *
-     * // @error suppressionreturn array Array of tool calls [['tool' => 'name', 'params' => [...]], ...]
+     * // // @error suppressionerror suppressionreturn array Array of tool calls [['tool' => 'name', 'params' => [...]], ...]
      */
     public function parseToolCalls(string $response): array
     {
@@ -108,12 +108,12 @@ class VdsToolHandler
     /**
      * Execute a tool call.
      *
-     * // @error suppressionparam string $toolName Tool name
-     * // @error suppressionparam array $params Tool parameters
-     * // @error suppressionparam array $user Current user data
-     * // @error suppressionparam array $pageContext Page context
+     * // // @error suppressionerror suppressionparam string $toolName Tool name
+     * // // @error suppressionerror suppressionparam array $params Tool parameters
+     * // // @error suppressionerror suppressionparam array $user Current user data
+     * // // @error suppressionerror suppressionparam array $pageContext Page context
      *
-     * // @error suppressionreturn array Tool execution result ['success' => bool, 'data' => mixed, 'error' => string|null]
+     * // // @error suppressionerror suppressionreturn array Tool execution result ['success' => bool, 'data' => mixed, 'error' => string|null]
      */
     public function executeTool(string $toolName, array $params, array $user, array $pageContext = []): array
     {
@@ -148,9 +148,9 @@ class VdsToolHandler
     /**
      * Remove tool calls from response text.
      *
-     * // @error suppressionparam string $response Response text
+     * // // @error suppressionerror suppressionparam string $response Response text
      *
-     * // @error suppressionreturn string Response without tool calls
+     * // // @error suppressionerror suppressionreturn string Response without tool calls
      */
     public function removeToolCalls(string $response): string
     {
@@ -167,10 +167,10 @@ class VdsToolHandler
     /**
      * Format tool result for AI context.
      *
-     * // @error suppressionparam string $toolName Tool name
-     * // @error suppressionparam array $result Tool execution result
+     * // // @error suppressionerror suppressionparam string $toolName Tool name
+     * // // @error suppressionerror suppressionparam array $result Tool execution result
      *
-     * // @error suppressionreturn string Formatted result string
+     * // // @error suppressionerror suppressionreturn string Formatted result string
      */
     public function formatToolResult(string $toolName, array $result): string
     {
@@ -276,7 +276,7 @@ class VdsToolHandler
     /**
      * Get available VDS tools metadata.
      *
-     * // @error suppressionreturn array Tool metadata array keyed by tool name
+     * // // @error suppressionerror suppressionreturn array Tool metadata array keyed by tool name
      */
     public function getAvailableTools(): array
     {

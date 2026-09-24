@@ -41,11 +41,11 @@ class ContextBuilder
     /**
      * Build comprehensive context for the AI including user info, servers, and current page.
      *
-     * // @error suppressionparam array $user Current user data
-     * // @error suppressionparam array $pageContext Current page context (route, server, etc.)
-     * // @error suppressionparam bool $includeLogs Whether server logs should be included in context
+     * // // @error suppressionerror suppressionparam array $user Current user data
+     * // // @error suppressionerror suppressionparam array $pageContext Current page context (route, server, etc.)
+     * // // @error suppressionerror suppressionparam bool $includeLogs Whether server logs should be included in context
      *
-     * // @error suppressionreturn string Formatted context string
+     * // // @error suppressionerror suppressionreturn string Formatted context string
      */
     public function buildContext(array $user, array $pageContext = [], bool $includeLogs = false): string
     {
@@ -266,7 +266,7 @@ class ContextBuilder
     /**
      * Load system prompt from file.
      *
-     * // @error suppressionreturn string System prompt content
+     * // // @error suppressionerror suppressionreturn string System prompt content
      */
     public static function loadSystemPrompt(): string
     {
@@ -285,9 +285,9 @@ class ContextBuilder
     /**
      * Get user's servers (owned and subuser).
      *
-     * // @error suppressionparam int $userId User ID
+     * // // @error suppressionerror suppressionparam int $userId User ID
      *
-     * // @error suppressionreturn array Array of server data
+     * // // @error suppressionerror suppressionreturn array Array of server data
      */
     private function getUserServers(int $userId): array
     {
@@ -390,9 +390,9 @@ class ContextBuilder
     /**
      * Get server logs for a specific server.
      *
-     * // @error suppressionparam array $server Server data
+     * // // @error suppressionerror suppressionparam array $server Server data
      *
-     * // @error suppressionreturn array|string Server logs or empty array/string
+     * // // @error suppressionerror suppressionreturn array|string Server logs or empty array/string
      */
     private function getServerLogs(array $server): array | string
     {

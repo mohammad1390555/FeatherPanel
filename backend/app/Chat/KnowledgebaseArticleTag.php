@@ -29,9 +29,9 @@ class KnowledgebaseArticleTag
     /**
      * Get all tags for an article.
      *
-     * // @error suppressionparam int $articleId Article ID
+     * // // @error suppressionerror suppressionparam int $articleId Article ID
      *
-     * // @error suppressionreturn array Array of tags
+     * // // @error suppressionerror suppressionreturn array Array of tags
      */
     public static function getByArticleId(int $articleId): array
     {
@@ -51,10 +51,10 @@ class KnowledgebaseArticleTag
     /**
      * Get all articles with a specific tag.
      *
-     * // @error suppressionparam string $tagName Tag name
-     * // @error suppressionparam int $limit Number of records
+     * // // @error suppressionerror suppressionparam string $tagName Tag name
+     * // // @error suppressionerror suppressionparam int $limit Number of records
      *
-     * // @error suppressionreturn array Array of article IDs
+     * // // @error suppressionerror suppressionreturn array Array of article IDs
      */
     public static function getArticleIdsByTag(string $tagName, int $limit = 100): array
     {
@@ -78,9 +78,9 @@ class KnowledgebaseArticleTag
     /**
      * Get all unique tag names.
      *
-     * // @error suppressionparam int $limit Number of records
+     * // // @error suppressionerror suppressionparam int $limit Number of records
      *
-     * // @error suppressionreturn array Array of tag names
+     * // // @error suppressionerror suppressionreturn array Array of tag names
      */
     public static function getAllTagNames(int $limit = 1000): array
     {
@@ -99,9 +99,9 @@ class KnowledgebaseArticleTag
     /**
      * Get tag by ID.
      *
-     * // @error suppressionparam int $id Tag ID
+     * // // @error suppressionerror suppressionparam int $id Tag ID
      *
-     * // @error suppressionreturn array|null Tag data or null if not found
+     * // // @error suppressionerror suppressionreturn array|null Tag data or null if not found
      */
     public static function getById(int $id): ?array
     {
@@ -119,9 +119,9 @@ class KnowledgebaseArticleTag
     /**
      * Create a new tag.
      *
-     * // @error suppressionparam array $data Tag data
+     * // // @error suppressionerror suppressionparam array $data Tag data
      *
-     * // @error suppressionreturn int|false The new tag's ID or false on failure
+     * // // @error suppressionerror suppressionreturn int|false The new tag's ID or false on failure
      */
     public static function create(array $data): int | false
     {
@@ -170,9 +170,9 @@ class KnowledgebaseArticleTag
     /**
      * Delete a tag by ID.
      *
-     * // @error suppressionparam int $id Tag ID
+     * // // @error suppressionerror suppressionparam int $id Tag ID
      *
-     * // @error suppressionreturn bool True on success, false on failure
+     * // // @error suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function delete(int $id): bool
     {
@@ -189,9 +189,9 @@ class KnowledgebaseArticleTag
     /**
      * Delete all tags for an article.
      *
-     * // @error suppressionparam int $articleId Article ID
+     * // // @error suppressionerror suppressionparam int $articleId Article ID
      *
-     * // @error suppressionreturn bool True on success, false on failure
+     * // // @error suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function deleteByArticleId(int $articleId): bool
     {
@@ -208,10 +208,10 @@ class KnowledgebaseArticleTag
     /**
      * Delete a specific tag from an article.
      *
-     * // @error suppressionparam int $articleId Article ID
-     * // @error suppressionparam string $tagName Tag name
+     * // // @error suppressionerror suppressionparam int $articleId Article ID
+     * // // @error suppressionerror suppressionparam string $tagName Tag name
      *
-     * // @error suppressionreturn bool True on success, false on failure
+     * // // @error suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function deleteByArticleIdAndTag(int $articleId, string $tagName): bool
     {

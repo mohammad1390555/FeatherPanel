@@ -61,7 +61,7 @@ class UserDeviceTracker
     }
 
     /**
-     * // @error suppressionreturn array<string, mixed>|null
+     * // // @error suppressionerror suppressionreturn array<string, mixed>|null
      */
     public static function extractSignals(Request $request): ?array
     {

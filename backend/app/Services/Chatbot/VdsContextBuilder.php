@@ -35,10 +35,10 @@ class VdsContextBuilder
     /**
      * Build comprehensive context for the VDS AI including user info, VDS instances, and current page.
      *
-     * // @error suppressionparam array $user Current user data
-     * // @error suppressionparam array $pageContext Current page context (route, vdsInstance, etc.)
+     * // // @error suppressionerror suppressionparam array $user Current user data
+     * // // @error suppressionerror suppressionparam array $pageContext Current page context (route, vdsInstance, etc.)
      *
-     * // @error suppressionreturn string Formatted context string
+     * // // @error suppressionerror suppressionreturn string Formatted context string
      */
     public function buildContext(array $user, array $pageContext = []): string
     {
@@ -180,7 +180,7 @@ class VdsContextBuilder
     /**
      * Load system prompt from file.
      *
-     * // @error suppressionreturn string System prompt content
+     * // // @error suppressionerror suppressionreturn string System prompt content
      */
     public static function loadSystemPrompt(): string
     {
@@ -199,9 +199,9 @@ class VdsContextBuilder
     /**
      * Get the user's VDS instances (up to 5).
      *
-     * // @error suppressionparam string $userUuid User UUID
+     * // // @error suppressionerror suppressionparam string $userUuid User UUID
      *
-     * // @error suppressionreturn array Array of VDS instance data
+     * // // @error suppressionerror suppressionreturn array Array of VDS instance data
      */
     public function getUserVdsInstances(string $userUuid): array
     {

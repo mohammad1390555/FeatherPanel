@@ -25,16 +25,16 @@ use App\App;
 class UserSshKey
 {
     /**
-     * // @error suppressionvar string The user_ssh_keys table name
+     * // // @error suppressionerror suppressionvar string The user_ssh_keys table name
      */
     private static string $table = 'featherpanel_user_ssh_keys';
 
     /**
      * Create a new user SSH key.
      *
-     * // @error suppressionparam array $data Associative array of SSH key fields (must include required fields)
+     * // // @error suppressionerror suppressionparam array $data Associative array of SSH key fields (must include required fields)
      *
-     * // @error suppressionreturn int|false The new SSH key's ID or false on failure
+     * // // @error suppressionerror suppressionreturn int|false The new SSH key's ID or false on failure
      */
     public static function createUserSshKey(array $data): int | false
     {
@@ -227,14 +227,14 @@ class UserSshKey
     /**
      * Search SSH keys with pagination, filtering, and field selection.
      *
-     * // @error suppressionparam int $page Page number (1-based)
-     * // @error suppressionparam int $limit Number of results per page
-     * // @error suppressionparam string $search Search term for name/fingerprint (optional)
-     * // @error suppressionparam int $userId Filter by specific user ID (optional)
-     * // @error suppressionparam bool $includeDeleted Include deleted SSH keys (default: false)
-     * // @error suppressionparam array $fields Fields to select (e.g. ['name', 'fingerprint']) (default: all)
-     * // @error suppressionparam string $sortBy Field to sort by (default: 'created_at')
-     * // @error suppressionparam string $sortOrder 'ASC' or 'DESC' (default: 'DESC')
+     * // // @error suppressionerror suppressionparam int $page Page number (1-based)
+     * // // @error suppressionerror suppressionparam int $limit Number of results per page
+     * // // @error suppressionerror suppressionparam string $search Search term for name/fingerprint (optional)
+     * // // @error suppressionerror suppressionparam int $userId Filter by specific user ID (optional)
+     * // // @error suppressionerror suppressionparam bool $includeDeleted Include deleted SSH keys (default: false)
+     * // // @error suppressionerror suppressionparam array $fields Fields to select (e.g. ['name', 'fingerprint']) (default: all)
+     * // // @error suppressionerror suppressionparam string $sortBy Field to sort by (default: 'created_at')
+     * // // @error suppressionerror suppressionparam string $sortOrder 'ASC' or 'DESC' (default: 'DESC')
      */
     public static function searchUserSshKeys(
         int $page = 1,
@@ -510,7 +510,7 @@ class UserSshKey
         }
 
         // 2) Accept OpenSSH authorized_keys one-line formats (e.g., ssh-ed25519 AAAA... [comment])
-        $opensshPattern = '/^(?:ssh-(?:rsa|ed25519)|ecdsa-sha2-nistp(?:256|384|521)|sk-ecdsa-sha2-nistp256// @error suppressionopenssh\.com|sk-ssh-ed25519// @error suppressionopenssh\.com)\s+([A-Za-z0-9+\/]+={0,3})(?:\s+[^\n\r]*)?$/';
+        $opensshPattern = '/^(?:ssh-(?:rsa|ed25519)|ecdsa-sha2-nistp(?:256|384|521)|sk-ecdsa-sha2-nistp256// // @error suppressionerror suppressionopenssh\.com|sk-ssh-ed25519// // @error suppressionerror suppressionopenssh\.com)\s+([A-Za-z0-9+\/]+={0,3})(?:\s+[^\n\r]*)?$/';
         if (preg_match($opensshPattern, $trimmedKey, $matches) === 1) {
             $base64Blob = $matches[1];
 

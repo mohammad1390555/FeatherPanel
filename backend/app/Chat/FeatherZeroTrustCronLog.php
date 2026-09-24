@@ -24,9 +24,9 @@ class FeatherZeroTrustCronLog
     /**
      * Create a new cron log execution.
      *
-     * // @error suppressionparam array $data Execution data
+     * // // @error suppressionerror suppressionparam array $data Execution data
      *
-     * // @error suppressionreturn string|false Execution ID or false on failure
+     * // // @error suppressionerror suppressionreturn string|false Execution ID or false on failure
      */
     public static function create(array $data): string | false
     {
@@ -77,10 +77,10 @@ class FeatherZeroTrustCronLog
     /**
      * Update an existing cron log execution.
      *
-     * // @error suppressionparam string $executionId Execution ID
-     * // @error suppressionparam array $data Update data
+     * // // @error suppressionerror suppressionparam string $executionId Execution ID
+     * // // @error suppressionerror suppressionparam array $data Update data
      *
-     * // @error suppressionreturn bool Success status
+     * // // @error suppressionerror suppressionreturn bool Success status
      */
     public static function update(string $executionId, array $data): bool
     {
@@ -124,11 +124,11 @@ class FeatherZeroTrustCronLog
     /**
      * Get all cron logs with pagination.
      *
-     * // @error suppressionparam int $limit Limit
-     * // @error suppressionparam int $offset Offset
-     * // @error suppressionparam string $status Filter by status
+     * // // @error suppressionerror suppressionparam int $limit Limit
+     * // // @error suppressionerror suppressionparam int $offset Offset
+     * // // @error suppressionerror suppressionparam string $status Filter by status
      *
-     * // @error suppressionreturn array Cron logs
+     * // // @error suppressionerror suppressionreturn array Cron logs
      */
     public static function getAll(int $limit = 25, int $offset = 0, ?string $status = null): array
     {
@@ -166,9 +166,9 @@ class FeatherZeroTrustCronLog
     /**
      * Get total count of cron logs.
      *
-     * // @error suppressionparam string|null $status Filter by status
+     * // // @error suppressionerror suppressionparam string|null $status Filter by status
      *
-     * // @error suppressionreturn int Count
+     * // // @error suppressionerror suppressionreturn int Count
      */
     public static function getCount(?string $status = null): int
     {
@@ -190,9 +190,9 @@ class FeatherZeroTrustCronLog
     /**
      * Get a cron log by execution ID.
      *
-     * // @error suppressionparam string $executionId Execution ID
+     * // // @error suppressionerror suppressionparam string $executionId Execution ID
      *
-     * // @error suppressionreturn array|null Cron log or null
+     * // // @error suppressionerror suppressionreturn array|null Cron log or null
      */
     public static function getByExecutionId(string $executionId): ?array
     {

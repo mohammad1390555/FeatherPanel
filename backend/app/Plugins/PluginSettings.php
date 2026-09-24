@@ -30,12 +30,12 @@ class PluginSettings extends PluginDB
     /**
      * Set a setting in the database with validation and error handling.
      *
-     * // @error suppressionparam string $identifier The identifier of the plugin
-     * // @error suppressionparam string $key The key of the setting
-     * // @error suppressionparam array $settings The settings to set
+     * // // @error suppressionerror suppressionparam string $identifier The identifier of the plugin
+     * // // @error suppressionerror suppressionparam string $key The key of the setting
+     * // // @error suppressionerror suppressionparam array $settings The settings to set
      *
-     * // @error suppressionthrows \PDOException If database operation fails
-     * // @error suppressionthrows \InvalidArgumentException If input validation fails
+     * // // @error suppressionerror suppressionthrows \PDOException If database operation fails
+     * // // @error suppressionerror suppressionthrows \InvalidArgumentException If input validation fails
      */
     public static function setSettings(string $identifier, string $key, array $settings): void
     {
@@ -106,11 +106,11 @@ class PluginSettings extends PluginDB
     /**
      * Delete a setting from the database with transaction support.
      *
-     * // @error suppressionparam string $identifier The identifier of the plugin
-     * // @error suppressionparam string $key The key of the setting
+     * // // @error suppressionerror suppressionparam string $identifier The identifier of the plugin
+     * // // @error suppressionerror suppressionparam string $key The key of the setting
      *
-     * // @error suppressionthrows \PDOException If database operation fails
-     * // @error suppressionthrows \InvalidArgumentException If input validation fails
+     * // // @error suppressionerror suppressionthrows \PDOException If database operation fails
+     * // // @error suppressionerror suppressionthrows \InvalidArgumentException If input validation fails
      */
     public static function deleteSettings(string $identifier, string $key): void
     {
@@ -143,13 +143,13 @@ class PluginSettings extends PluginDB
     /**
      * Get a setting from the database with proper error handling.
      *
-     * // @error suppressionparam string $identifier The identifier of the plugin
-     * // @error suppressionparam string $key The key of the setting
+     * // // @error suppressionerror suppressionparam string $identifier The identifier of the plugin
+     * // // @error suppressionerror suppressionparam string $key The key of the setting
      *
-     * // @error suppressionthrows \PDOException If database operation fails
-     * // @error suppressionthrows \InvalidArgumentException If input validation fails
+     * // // @error suppressionerror suppressionthrows \PDOException If database operation fails
+     * // // @error suppressionerror suppressionthrows \InvalidArgumentException If input validation fails
      *
-     * // @error suppressionreturn string The value of the setting
+     * // // @error suppressionerror suppressionreturn string The value of the setting
      */
     public static function getSetting(string $identifier, string $key): ?string
     {
@@ -183,12 +183,12 @@ class PluginSettings extends PluginDB
     /**
      * Get all settings for a plugin with proper error handling.
      *
-     * // @error suppressionparam string $identifier The identifier of the plugin
+     * // // @error suppressionerror suppressionparam string $identifier The identifier of the plugin
      *
-     * // @error suppressionthrows \PDOException If database operation fails
-     * // @error suppressionthrows \InvalidArgumentException If input validation fails
+     * // // @error suppressionerror suppressionthrows \PDOException If database operation fails
+     * // // @error suppressionerror suppressionthrows \InvalidArgumentException If input validation fails
      *
-     * // @error suppressionreturn array All settings for the plugin
+     * // // @error suppressionerror suppressionreturn array All settings for the plugin
      */
     public static function getSettings(string $identifier): array
     {
@@ -217,10 +217,10 @@ class PluginSettings extends PluginDB
     /**
      * Validate input parameters.
      *
-     * // @error suppressionparam string $identifier The identifier to validate
-     * // @error suppressionparam string|null $key The key to validate (optional)
+     * // // @error suppressionerror suppressionparam string $identifier The identifier to validate
+     * // // @error suppressionerror suppressionparam string|null $key The key to validate (optional)
      *
-     * // @error suppressionthrows \InvalidArgumentException If validation fails
+     * // // @error suppressionerror suppressionthrows \InvalidArgumentException If validation fails
      */
     private static function validateInput(string $identifier, ?string $key = null): void
     {
@@ -236,9 +236,9 @@ class PluginSettings extends PluginDB
     /**
      * Sanitize input to prevent SQL injection.
      *
-     * // @error suppressionparam string $input The input to sanitize
+     * // // @error suppressionerror suppressionparam string $input The input to sanitize
      *
-     * // @error suppressionreturn string The sanitized input
+     * // // @error suppressionerror suppressionreturn string The sanitized input
      */
     private static function sanitizeInput(string $input): string
     {

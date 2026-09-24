@@ -2284,10 +2284,10 @@ class ServerFilesController
     /**
      * Create a Wings connection with configurable timeout.
      *
-     * // @error suppressionparam array $node The node configuration array
-     * // @error suppressionparam int $timeout Timeout in seconds (default: 30 seconds)
+     * // // @error suppressionerror suppressionparam array $node The node configuration array
+     * // // @error suppressionerror suppressionparam int $timeout Timeout in seconds (default: 30 seconds)
      *
-     * // @error suppressionreturn Wings The Wings connection instance
+     * // // @error suppressionerror suppressionreturn Wings The Wings connection instance
      */
     private function createWingsConnection(array $node, int $timeout = 30): Wings
     {
@@ -2551,7 +2551,7 @@ class ServerFilesController
     }
 
     /**
-     * // @error suppressionreturn array{max_size_bytes: int, retention_days: int}
+     * // // @error suppressionerror suppressionreturn array{max_size_bytes: int, retention_days: int}
      */
     private function getTrashLimits(): array
     {
@@ -2566,7 +2566,7 @@ class ServerFilesController
     }
 
     /**
-     * // @error suppressionreturn array<string, mixed>
+     * // // @error suppressionerror suppressionreturn array<string, mixed>
      */
     private function buildTrashDeleteOptions(bool $permanent): array
     {

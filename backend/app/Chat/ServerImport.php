@@ -27,9 +27,9 @@ class ServerImport
     /**
      * Create a new import record.
      *
-     * // @error suppressionparam array<string,mixed> $data
+     * // // @error suppressionerror suppressionparam array<string,mixed> $data
      *
-     * // @error suppressionreturn int|false The new import's ID or false on failure
+     * // // @error suppressionerror suppressionreturn int|false The new import's ID or false on failure
      */
     public static function create(array $data): int | false
     {
@@ -70,7 +70,7 @@ class ServerImport
     /**
      * Get imports by server ID.
      *
-     * // @error suppressionreturn array<int,array<string,mixed>>
+     * // // @error suppressionerror suppressionreturn array<int,array<string,mixed>>
      */
     public static function getByServerId(int $serverId): array
     {
@@ -84,7 +84,7 @@ class ServerImport
     /**
      * Get import by ID.
      *
-     * // @error suppressionreturn array<string,mixed>|null
+     * // // @error suppressionerror suppressionreturn array<string,mixed>|null
      */
     public static function getById(int $id): ?array
     {
@@ -98,7 +98,7 @@ class ServerImport
     /**
      * Get the most recent pending/importing import for a server.
      *
-     * // @error suppressionreturn array<string,mixed>|null
+     * // // @error suppressionerror suppressionreturn array<string,mixed>|null
      */
     public static function getLatestActiveByServerId(int $serverId): ?array
     {
@@ -114,7 +114,7 @@ class ServerImport
     /**
      * Update an import record.
      *
-     * // @error suppressionparam array<string,mixed> $data
+     * // // @error suppressionerror suppressionparam array<string,mixed> $data
      */
     public static function update(int $id, array $data): bool
     {

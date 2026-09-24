@@ -47,12 +47,12 @@ class WingsConnection
     /**
      * Create a new Wings connection instance.
      *
-     * // @error suppressionparam string $host The Wings server hostname/IP
-     * // @error suppressionparam int $port The Wings server port (default: 8443)
-     * // @error suppressionparam string $protocol The protocol to use (http/https)
-     * // @error suppressionparam string $authToken The authentication token for Wings
-     * // @error suppressionparam int $timeout Request timeout in seconds (default: 30)
-     * // @error suppressionparam bool $behindProxy Whether Wings is accessed through a reverse proxy
+     * // // @error suppressionerror suppressionparam string $host The Wings server hostname/IP
+     * // // @error suppressionerror suppressionparam int $port The Wings server port (default: 8443)
+     * // // @error suppressionerror suppressionparam string $protocol The protocol to use (http/https)
+     * // // @error suppressionerror suppressionparam string $authToken The authentication token for Wings
+     * // // @error suppressionerror suppressionparam int $timeout Request timeout in seconds (default: 30)
+     * // // @error suppressionerror suppressionparam bool $behindProxy Whether Wings is accessed through a reverse proxy
      */
     public function __construct(
         string $host,
@@ -149,15 +149,15 @@ class WingsConnection
     /**
      * Make a GET request to the Wings API.
      *
-     * // @error suppressionparam string $endpoint The API endpoint (without base URL)
-     * // @error suppressionparam array $headers Additional headers to include
-     * // @error suppressionparam int $maxRetries Maximum number of retry attempts
+     * // // @error suppressionerror suppressionparam string $endpoint The API endpoint (without base URL)
+     * // // @error suppressionerror suppressionparam array $headers Additional headers to include
+     * // // @error suppressionerror suppressionparam int $maxRetries Maximum number of retry attempts
      *
-     * // @error suppressionthrows WingsConnectionException
-     * // @error suppressionthrows WingsAuthenticationException
-     * // @error suppressionthrows WingsRequestException
+     * // // @error suppressionerror suppressionthrows WingsConnectionException
+     * // // @error suppressionerror suppressionthrows WingsAuthenticationException
+     * // // @error suppressionerror suppressionthrows WingsRequestException
      *
-     * // @error suppressionreturn array The response data
+     * // // @error suppressionerror suppressionreturn array The response data
      */
     public function get(string $endpoint, array $headers = [], int $maxRetries = 3): array
     {
@@ -168,15 +168,15 @@ class WingsConnection
      * Make a GET request to the Wings API and return raw response.
      * Useful for file downloads and other non-JSON responses.
      *
-     * // @error suppressionparam string $endpoint The API endpoint (without base URL)
-     * // @error suppressionparam array $headers Additional headers to include
-     * // @error suppressionparam int $maxRetries Maximum number of retry attempts
+     * // // @error suppressionerror suppressionparam string $endpoint The API endpoint (without base URL)
+     * // // @error suppressionerror suppressionparam array $headers Additional headers to include
+     * // // @error suppressionerror suppressionparam int $maxRetries Maximum number of retry attempts
      *
-     * // @error suppressionthrows WingsConnectionException
-     * // @error suppressionthrows WingsAuthenticationException
-     * // @error suppressionthrows WingsRequestException
+     * // // @error suppressionerror suppressionthrows WingsConnectionException
+     * // // @error suppressionerror suppressionthrows WingsAuthenticationException
+     * // // @error suppressionerror suppressionthrows WingsRequestException
      *
-     * // @error suppressionreturn string The raw response body
+     * // // @error suppressionerror suppressionreturn string The raw response body
      */
     public function getRaw(string $endpoint, array $headers = [], int $maxRetries = 3): string
     {
@@ -248,17 +248,17 @@ class WingsConnection
     /**
      * Make a POST request to the Wings API.
      *
-     * // @error suppressionparam string $endpoint The API endpoint (without base URL)
-     * // @error suppressionparam array $data The data to send
-     * // @error suppressionparam array $headers Additional headers to include
-     * // @error suppressionparam int $maxRetries Maximum number of retry attempts
-     * // @error suppressionparam int|null $timeout Optional timeout in seconds (overrides default timeout)
+     * // // @error suppressionerror suppressionparam string $endpoint The API endpoint (without base URL)
+     * // // @error suppressionerror suppressionparam array $data The data to send
+     * // // @error suppressionerror suppressionparam array $headers Additional headers to include
+     * // // @error suppressionerror suppressionparam int $maxRetries Maximum number of retry attempts
+     * // // @error suppressionerror suppressionparam int|null $timeout Optional timeout in seconds (overrides default timeout)
      *
-     * // @error suppressionthrows WingsConnectionException
-     * // @error suppressionthrows WingsAuthenticationException
-     * // @error suppressionthrows WingsRequestException
+     * // // @error suppressionerror suppressionthrows WingsConnectionException
+     * // // @error suppressionerror suppressionthrows WingsAuthenticationException
+     * // // @error suppressionerror suppressionthrows WingsRequestException
      *
-     * // @error suppressionreturn array The response data
+     * // // @error suppressionerror suppressionreturn array The response data
      */
     public function post(string $endpoint, array $data = [], array $headers = [], int $maxRetries = 3, ?int $timeout = null): array
     {
@@ -269,16 +269,16 @@ class WingsConnection
      * Make a POST request with a raw body (no JSON encoding).
      * Useful for uploading file contents to Wings.
      *
-     * // @error suppressionparam string $endpoint The API endpoint (without base URL)
-     * // @error suppressionparam string $body Raw request body
-     * // @error suppressionparam array $headers Additional headers to include
-     * // @error suppressionparam int $maxRetries Maximum number of retry attempts
+     * // // @error suppressionerror suppressionparam string $endpoint The API endpoint (without base URL)
+     * // // @error suppressionerror suppressionparam string $body Raw request body
+     * // // @error suppressionerror suppressionparam array $headers Additional headers to include
+     * // // @error suppressionerror suppressionparam int $maxRetries Maximum number of retry attempts
      *
-     * // @error suppressionthrows WingsConnectionException
-     * // @error suppressionthrows WingsAuthenticationException
-     * // @error suppressionthrows WingsRequestException
+     * // // @error suppressionerror suppressionthrows WingsConnectionException
+     * // // @error suppressionerror suppressionthrows WingsAuthenticationException
+     * // // @error suppressionerror suppressionthrows WingsRequestException
      *
-     * // @error suppressionreturn array Decoded JSON response if any, otherwise empty array
+     * // // @error suppressionerror suppressionreturn array Decoded JSON response if any, otherwise empty array
      */
     public function postRaw(string $endpoint, string $body, array $headers = [], int $maxRetries = 3): array
     {
@@ -353,16 +353,16 @@ class WingsConnection
     /**
      * Make a PUT request to the Wings API.
      *
-     * // @error suppressionparam string $endpoint The API endpoint (without base URL)
-     * // @error suppressionparam array $data The data to send
-     * // @error suppressionparam array $headers Additional headers to include
-     * // @error suppressionparam int $maxRetries Maximum number of retry attempts
+     * // // @error suppressionerror suppressionparam string $endpoint The API endpoint (without base URL)
+     * // // @error suppressionerror suppressionparam array $data The data to send
+     * // // @error suppressionerror suppressionparam array $headers Additional headers to include
+     * // // @error suppressionerror suppressionparam int $maxRetries Maximum number of retry attempts
      *
-     * // @error suppressionthrows WingsConnectionException
-     * // @error suppressionthrows WingsAuthenticationException
-     * // @error suppressionthrows WingsRequestException
+     * // // @error suppressionerror suppressionthrows WingsConnectionException
+     * // // @error suppressionerror suppressionthrows WingsAuthenticationException
+     * // // @error suppressionerror suppressionthrows WingsRequestException
      *
-     * // @error suppressionreturn array The response data
+     * // // @error suppressionerror suppressionreturn array The response data
      */
     public function put(string $endpoint, array $data = [], array $headers = [], int $maxRetries = 3): array
     {
@@ -372,15 +372,15 @@ class WingsConnection
     /**
      * Make a DELETE request to the Wings API.
      *
-     * // @error suppressionparam string $endpoint The API endpoint (without base URL)
-     * // @error suppressionparam array $headers Additional headers to include
-     * // @error suppressionparam int $maxRetries Maximum number of retry attempts
+     * // // @error suppressionerror suppressionparam string $endpoint The API endpoint (without base URL)
+     * // // @error suppressionerror suppressionparam array $headers Additional headers to include
+     * // // @error suppressionerror suppressionparam int $maxRetries Maximum number of retry attempts
      *
-     * // @error suppressionthrows WingsConnectionException
-     * // @error suppressionthrows WingsAuthenticationException
-     * // @error suppressionthrows WingsRequestException
+     * // // @error suppressionerror suppressionthrows WingsConnectionException
+     * // // @error suppressionerror suppressionthrows WingsAuthenticationException
+     * // // @error suppressionerror suppressionthrows WingsRequestException
      *
-     * // @error suppressionreturn array The response data
+     * // // @error suppressionerror suppressionreturn array The response data
      */
     public function delete(string $endpoint, array $headers = [], int $maxRetries = 3): array
     {
@@ -390,16 +390,16 @@ class WingsConnection
     /**
      * Make a PATCH request to the Wings API.
      *
-     * // @error suppressionparam string $endpoint The API endpoint (without base URL)
-     * // @error suppressionparam array $data The data to send
-     * // @error suppressionparam array $headers Additional headers to include
-     * // @error suppressionparam int $maxRetries Maximum number of retry attempts
+     * // // @error suppressionerror suppressionparam string $endpoint The API endpoint (without base URL)
+     * // // @error suppressionerror suppressionparam array $data The data to send
+     * // // @error suppressionerror suppressionparam array $headers Additional headers to include
+     * // // @error suppressionerror suppressionparam int $maxRetries Maximum number of retry attempts
      *
-     * // @error suppressionthrows WingsConnectionException
-     * // @error suppressionthrows WingsAuthenticationException
-     * // @error suppressionthrows WingsRequestException
+     * // // @error suppressionerror suppressionthrows WingsConnectionException
+     * // // @error suppressionerror suppressionthrows WingsAuthenticationException
+     * // // @error suppressionerror suppressionthrows WingsRequestException
      *
-     * // @error suppressionreturn array The response data
+     * // // @error suppressionerror suppressionreturn array The response data
      */
     public function patch(string $endpoint, array $data = [], array $headers = [], int $maxRetries = 3): array
     {
@@ -409,18 +409,18 @@ class WingsConnection
     /**
      * Make a raw HTTP request to the Wings API with retry mechanism.
      *
-     * // @error suppressionparam string $method The HTTP method
-     * // @error suppressionparam string $endpoint The API endpoint (without base URL)
-     * // @error suppressionparam array $data The data to send (for POST, PUT, PATCH)
-     * // @error suppressionparam array $headers Additional headers to include
-     * // @error suppressionparam int $maxRetries Maximum number of retry attempts (default: 3)
-     * // @error suppressionparam int|null $timeout Optional timeout in seconds (overrides default timeout)
+     * // // @error suppressionerror suppressionparam string $method The HTTP method
+     * // // @error suppressionerror suppressionparam string $endpoint The API endpoint (without base URL)
+     * // // @error suppressionerror suppressionparam array $data The data to send (for POST, PUT, PATCH)
+     * // // @error suppressionerror suppressionparam array $headers Additional headers to include
+     * // // @error suppressionerror suppressionparam int $maxRetries Maximum number of retry attempts (default: 3)
+     * // // @error suppressionerror suppressionparam int|null $timeout Optional timeout in seconds (overrides default timeout)
      *
-     * // @error suppressionthrows WingsConnectionException
-     * // @error suppressionthrows WingsAuthenticationException
-     * // @error suppressionthrows WingsRequestException
+     * // // @error suppressionerror suppressionthrows WingsConnectionException
+     * // // @error suppressionerror suppressionthrows WingsAuthenticationException
+     * // // @error suppressionerror suppressionthrows WingsRequestException
      *
-     * // @error suppressionreturn array The response data
+     * // // @error suppressionerror suppressionreturn array The response data
      */
     public function request(string $method, string $endpoint, array $data = [], array $headers = [], int $maxRetries = 3, ?int $timeout = null): array
     {
@@ -579,7 +579,7 @@ class WingsConnection
     /**
      * Get system information from Wings.
      *
-     * // @error suppressionparam bool $detailed Whether to get detailed information (v2)
+     * // // @error suppressionerror suppressionparam bool $detailed Whether to get detailed information (v2)
      */
     public function getSystemInfo(bool $detailed = false): array
     {
@@ -610,8 +610,8 @@ class WingsConnection
     /**
      * Handle HTTP error responses.
      *
-     * // @error suppressionthrows WingsAuthenticationException
-     * // @error suppressionthrows WingsRequestException
+     * // // @error suppressionerror suppressionthrows WingsAuthenticationException
+     * // // @error suppressionerror suppressionthrows WingsRequestException
      */
     private function handleHttpError(int $httpCode, ?array $responseData, string $endpoint): void
     {

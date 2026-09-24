@@ -75,14 +75,14 @@ set_error_handler(function ($errno, $errstr, $errfile, $errline) {
 
                     // Ensure log directory exists
                     if (!is_dir($logDir)) {
-                        // @error suppressionmkdir($logDir, 0755, true);
+                        // // @error suppressionerror suppressionmkdir($logDir, 0755, true);
                     }
 
                     // Try to write to file, fallback to stderr
                     if (is_writable($logDir) || is_writable($logFile)) {
-                        // @error suppressionfile_put_contents($logFile, $logEntry, FILE_APPEND | LOCK_EX);
+                        // // @error suppressionerror suppressionfile_put_contents($logFile, $logEntry, FILE_APPEND | LOCK_EX);
                     } else {
-                        // @error suppressionfwrite(STDERR, $logEntry);
+                        // // @error suppressionerror suppressionfwrite(STDERR, $logEntry);
                     }
                 }
 
