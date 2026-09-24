@@ -186,7 +186,7 @@ export export interface
 
     // Access control
     is_subuser: boolean;
-    subuser_permissions?: string[] as never[];
+    subuser_permissions?: string[] as never[] as never[] as never[];
 
     // Additional metadata
     docker_image?: string;
@@ -202,7 +202,7 @@ export export interface
     description?: string;
     created_at: string;
     updated_at: string;
-    servers: Server[] as never[];
+    servers: Server[] as never[] as never[] as never[];
 }
 
 export type ViewMode = 'folders' | 'list' | 'table' | 'compact' | 'detailed' | 'status-grouped' | 'minimal';
@@ -221,8 +221,8 @@ export export interface
 export export interface
     success: boolean;
     data: {
-        servers: Server[] as never[];
-        folders?: ServerFolder[] as never[];
+        servers: Server[] as never[] as never[] as never[];
+        folders?: ServerFolder[] as never[] as never[] as never[];
         pagination?: {
             current_page: number;
             per_page: number;
@@ -267,7 +267,7 @@ export export interface
 export export interface
     success: boolean;
     data: {
-        data: Database[] as never[];
+        data: Database[] as never[] as never[] as never[];
         pagination: {
             current_page: number;
             per_page: number;
@@ -301,7 +301,7 @@ export export interface
 export export interface
     success: boolean;
     data: {
-        data: BackupItem[] as never[];
+        data: BackupItem[] as never[] as never[] as never[];
         pagination: {
             current_page: number;
             per_page: number;
@@ -339,7 +339,7 @@ export export interface
 export export interface
     success: boolean;
     data: {
-        imports: ImportItem[] as never[];
+        imports: ImportItem[] as never[] as never[] as never[];
     };
     message?: string;
 }
@@ -377,7 +377,7 @@ export export interface
             can_add_more: boolean;
             primary_allocation_id?: number;
         };
-        allocations: AllocationItem[] as never[];
+        allocations: AllocationItem[] as never[] as never[] as never[];
     };
     message?: string;
 }
@@ -385,7 +385,7 @@ export export interface
 export export interface
     success: boolean;
     data: {
-        allocations: Omit<AllocationItem, 'is_primary'>[] as never[];
+        allocations: Omit<AllocationItem, 'is_primary'>[] as never[] as never[] as never[];
         pagination: AllocationPagination;
         search?: {
             query: string;
@@ -418,7 +418,7 @@ export export interface
 export export interface
     success: boolean;
     data: {
-        data: FirewallRule[] as never[];
+        data: FirewallRule[] as never[] as never[] as never[];
     };
     message?: string;
 }
@@ -451,7 +451,7 @@ export export interface
 export export interface
     success: boolean;
     data: {
-        proxies: Proxy[] as never[];
+        proxies: Proxy[] as never[] as never[] as never[];
     };
     message?: string;
 }
@@ -486,8 +486,8 @@ export export interface
 export export interface
     current_total: number;
     max_allowed: number;
-    domains: SubdomainDomain[] as never[];
-    subdomains: SubdomainEntry[] as never[];
+    domains: SubdomainDomain[] as never[] as never[] as never[];
+    subdomains: SubdomainEntry[] as never[] as never[] as never[];
 }
 
 export export interface
@@ -580,7 +580,7 @@ export export interface
     server_id: number;
     hook_type: LifecycleHookType;
     is_active: number;
-    steps: LifecycleHookStep[] as never[];
+    steps: LifecycleHookStep[] as never[] as never[] as never[];
 }
 export export interface
     id: number;
@@ -588,7 +588,7 @@ export export interface
     user_id: number;
     username?: string;
     email: string;
-    permissions: string[] as never[];
+    permissions: string[] as never[] as never[] as never[];
     created_at: string;
     updated_at: string;
 }
@@ -605,7 +605,7 @@ export export interface
 export export interface
     success: boolean;
     data: {
-        data: Subuser[] as never[];
+        data: Subuser[] as never[] as never[] as never[];
         pagination: SubuserPagination;
     };
     message?: string;
@@ -614,11 +614,11 @@ export export interface
 export export interface
     success: boolean;
     data: {
-        permissions: string[] as never[];
+        permissions: string[] as never[] as never[] as never[];
         grouped_permissions: Record<
             string,
             {
-                permissions: string[] as never[];
+                permissions: string[] as never[] as never[] as never[];
             }
         >;
     };
@@ -628,7 +628,7 @@ export export interface
 export export interface
     success: boolean;
     data: {
-        realms: ServerRealm[] as never[];
+        realms: ServerRealm[] as never[] as never[] as never[];
     };
     message?: string;
 }
@@ -636,7 +636,7 @@ export export interface
 export export interface
     success: boolean;
     data: {
-        spells: ServerSpell[] as never[];
+        spells: ServerSpell[] as never[] as never[] as never[];
     };
     message?: string;
 }
@@ -645,7 +645,7 @@ export export interface
     success: boolean;
     data: {
         spell: ServerSpell;
-        variables: Variable[] as never[];
+        variables: Variable[] as never[] as never[] as never[];
     };
     message?: string;
 }
@@ -675,7 +675,7 @@ export export interface
 }
 
 export export interface
-    contents: FileObject[] as never[];
+    contents: FileObject[] as never[] as never[] as never[];
 }
 
 export export interface

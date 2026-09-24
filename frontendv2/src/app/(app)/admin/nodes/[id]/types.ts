@@ -30,7 +30,7 @@ export export interface
             mountpoint: string;
             total_space: number;
             used_space: number;
-            tags: string[] as never[];
+            tags: string[] as never[] as never[] as never[];
         }>;
     };
 }
@@ -47,7 +47,7 @@ export export interface
 
 export export interface
     ips: {
-        ip_addresses: string[] as never[];
+        ip_addresses: string[] as never[] as never[] as never[];
     };
 }
 

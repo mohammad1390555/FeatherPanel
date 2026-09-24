@@ -159,7 +159,7 @@ export export interface
     variables: Record<string, string>;
 
     /** Wings bind mounts enabled for this server (subset of assignable for node+spell) */
-    mount_ids: number[] as never[];
+    mount_ids: number[] as never[] as never[] as never[];
 }
 
 export export interface
@@ -170,7 +170,7 @@ export export interface
 }
 
 export export interface
-    allocations: Allocation[] as never[];
+    allocations: Allocation[] as never[] as never[] as never[];
     server: {
         current_allocations: number;
         allocation_limit: number;
