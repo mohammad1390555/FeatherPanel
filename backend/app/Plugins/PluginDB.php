@@ -20,7 +20,7 @@ namespace App\Plugins;
 use App\Chat\Database;
 
 /**
- * @deprecated Please use PluginHelper or PluginManager instead!
+ * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressiondeprecated Please use PluginHelper or PluginManager instead!
  */
 class PluginDB extends Database
 {
@@ -29,7 +29,7 @@ class PluginDB extends Database
     /**
      * Get all the plugins.
      *
-     * @deprecated Please use PluginManager::getLoadedPlugins() instead
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressiondeprecated Please use PluginManager::getLoadedPlugins() instead
      */
     public static function getPlugins(): array
     {
@@ -49,12 +49,12 @@ class PluginDB extends Database
     /**
      * Register a new plugin in the database.
      *
-     * @param string $name The unique name/identifier of the plugin
-     * @param string $displayName The display name of the plugin
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The unique name/identifier of the plugin
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $displayName The display name of the plugin
      *
-     * @return bool True if registration successful, false if already exists
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if registration successful, false if already exists
      *
-     * @deprecated Use PluginHelper::getPluginConfig() instead
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressiondeprecated Use PluginHelper::getPluginConfig() instead
      */
     public static function registerPlugin(string $name, string $displayName): bool
     {
@@ -93,11 +93,11 @@ class PluginDB extends Database
     /**
      * Check if a plugin is registered.
      *
-     * @param string $name The name of the plugin
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the plugin
      *
-     * @return bool True if plugin exists and isn't deleted
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if plugin exists and isn't deleted
      *
-     * @deprecated Use PluginHelper::getPluginConfig() instead
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressiondeprecated Use PluginHelper::getPluginConfig() instead
      */
     public static function isPluginRegistered(string $name): bool
     {
@@ -125,10 +125,10 @@ class PluginDB extends Database
     /**
      * Enable or disable a plugin.
      *
-     * @param string $name The name of the plugin
-     * @param bool $enabled Whether to enable or disable the plugin
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the plugin
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool $enabled Whether to enable or disable the plugin
      *
-     * @deprecated Use PluginHelper::getPluginConfig() instead
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressiondeprecated Use PluginHelper::getPluginConfig() instead
      */
     public static function setPluginEnabled(string $name, bool $enabled): void
     {
@@ -154,11 +154,11 @@ class PluginDB extends Database
     /**
      * Check if a plugin is enabled.
      *
-     * @param string $name The name of the plugin
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the plugin
      *
-     * @return bool True if plugin is enabled
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if plugin is enabled
      *
-     * @deprecated Use PluginHelper::getPluginConfig() instead
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressiondeprecated Use PluginHelper::getPluginConfig() instead
      */
     public static function isPluginEnabled(string $name): bool
     {
@@ -187,9 +187,9 @@ class PluginDB extends Database
     /**
      * Delete a plugin.
      *
-     * @param string $name The name of the plugin
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the plugin
      *
-     * @deprecated Use PluginHelper::getPluginConfig() instead
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressiondeprecated Use PluginHelper::getPluginConfig() instead
      */
     public static function deletePlugin(string $name): void
     {
@@ -212,11 +212,11 @@ class PluginDB extends Database
     /**
      * Get plugin information.
      *
-     * @param string $name The name of the plugin
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the plugin
      *
-     * @return array|null Plugin information or null if not found
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array|null Plugin information or null if not found
      *
-     * @deprecated Use PluginHelper::getPluginConfig() instead
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressiondeprecated Use PluginHelper::getPluginConfig() instead
      */
     public static function getPluginInfo(string $name): ?array
     {
@@ -245,11 +245,11 @@ class PluginDB extends Database
     /**
      * List all registered plugins.
      *
-     * @param bool $includeDisabled Whether to include disabled plugins
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool $includeDisabled Whether to include disabled plugins
      *
-     * @return array List of plugins
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array List of plugins
      *
-     * @deprecated Use PluginHelper::getPluginConfig() instead
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressiondeprecated Use PluginHelper::getPluginConfig() instead
      */
     public static function listPlugins(bool $includeDisabled = false): array
     {
@@ -280,11 +280,11 @@ class PluginDB extends Database
     /**
      * Convert an ID to a name.
      *
-     * @param int $id The ID to convert
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $id The ID to convert
      *
-     * @return string The name
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string The name
      *
-     * @deprecated Use PluginHelper::getPluginConfig() instead
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressiondeprecated Use PluginHelper::getPluginConfig() instead
      */
     public static function convertIdToName(int $id): string
     {

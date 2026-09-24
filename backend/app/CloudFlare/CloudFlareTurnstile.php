@@ -25,11 +25,11 @@ class CloudFlareTurnstile
     /**
      * Validate a Cloudflare Turnstile response using Guzzle.
      *
-     * @param string $response The user response token provided by the Turnstile widget
-     * @param string $ip The user's IP address
-     * @param string $secret_key Your Turnstile secret key
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $response The user response token provided by the Turnstile widget
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $ip The user's IP address
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $secret_key Your Turnstile secret key
      *
-     * @return bool True if validation is successful, false otherwise
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if validation is successful, false otherwise
      */
     public static function validate(string $response, string $ip, string $secret_key): bool
     {

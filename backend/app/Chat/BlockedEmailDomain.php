@@ -45,13 +45,13 @@ class BlockedEmailDomain
         if ($raw === '') {
             return null;
         }
-        if (str_contains($raw, '@')) {
+        if (str_contains($raw, '// // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppression')) {
             if (!filter_var($raw, \FILTER_VALIDATE_EMAIL)) {
                 return null;
             }
             $domain = EmailDomainValidator::extractDomain($raw);
         } else {
-            $domain = strtolower(ltrim($raw, '@'));
+            $domain = strtolower(ltrim($raw, '// // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppression'));
             if (function_exists('idn_to_ascii')) {
                 $ascii = idn_to_ascii($domain, \IDNA_DEFAULT, \INTL_IDNA_VARIANT_UTS46);
                 if ($ascii !== false) {
@@ -76,7 +76,7 @@ class BlockedEmailDomain
     }
 
     /**
-     * @return array<string, true>
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<string, true>
      */
     public static function fetchAllDomainsAsFlip(): array
     {
@@ -97,7 +97,7 @@ class BlockedEmailDomain
     }
 
     /**
-     * @return array<int, array<string, mixed>>
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, array<string, mixed>>
      */
     public static function search(int $page = 1, int $limit = 20, string $search = ''): array
     {
@@ -179,7 +179,7 @@ class BlockedEmailDomain
     /**
      * Import plaintext (one domain per line, # comments). Source is `preset` (bundled) or `import` (URL/paste).
      *
-     * @return array{inserted: int, skipped_lines: int}|false
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{inserted: int, skipped_lines: int}|false
      */
     public static function importFromDecodedText(string $text, string $source = 'import'): array | false
     {
@@ -195,7 +195,7 @@ class BlockedEmailDomain
     /**
      * Fetch a public list URL (no redirects) and import. URL must pass BlockedEmailDomainImportUrlValidator first.
      *
-     * @return array{inserted: int, skipped_lines: int}|false
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{inserted: int, skipped_lines: int}|false
      */
     public static function importFromRemoteUrl(string $validatedUrl, int $maxBytes = 12582912): array | false
     {
@@ -241,7 +241,7 @@ class BlockedEmailDomain
     /**
      * Import domains from the bundled preset file. Skips duplicates (INSERT IGNORE).
      *
-     * @return array{inserted: int, skipped_lines: int}|false
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{inserted: int, skipped_lines: int}|false
      */
     public static function importFromPresetFile(?string $path = null): array | false
     {
@@ -258,10 +258,10 @@ class BlockedEmailDomain
     }
 
     /**
-     * @param list<string> $lines
-     * @param 'preset'|'import' $source
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam list<string> $lines
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam 'preset'|'import' $source
      *
-     * @return array{inserted: int, skipped_lines: int}|false
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array{inserted: int, skipped_lines: int}|false
      */
     private static function persistDomainLines(array $lines, string $source): array | false
     {

@@ -49,9 +49,9 @@ class ToolHandler
      * Parse tool calls from AI response.
      * Format: TOOL_CALL: tool_name {"param1": "value1", "param2": "value2"}.
      *
-     * @param string $response AI response text
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $response AI response text
      *
-     * @return array Array of tool calls [['tool' => 'name', 'params' => [...]], ...]
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Array of tool calls [['tool' => 'name', 'params' => [...]], ...]
      */
     public function parseToolCalls(string $response): array
     {
@@ -115,12 +115,12 @@ class ToolHandler
     /**
      * Execute a tool call.
      *
-     * @param string $toolName Tool name
-     * @param array $params Tool parameters
-     * @param array $user Current user data
-     * @param array $pageContext Page context
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $toolName Tool name
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $params Tool parameters
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $user Current user data
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $pageContext Page context
      *
-     * @return array Tool execution result ['success' => bool, 'data' => mixed, 'error' => string|null]
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Tool execution result ['success' => bool, 'data' => mixed, 'error' => string|null]
      */
     public function executeTool(string $toolName, array $params, array $user, array $pageContext = []): array
     {
@@ -155,9 +155,9 @@ class ToolHandler
     /**
      * Remove tool calls from response text.
      *
-     * @param string $response Response text
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $response Response text
      *
-     * @return string Response without tool calls
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string Response without tool calls
      */
     public function removeToolCalls(string $response): string
     {
@@ -174,10 +174,10 @@ class ToolHandler
     /**
      * Format tool result for AI context.
      *
-     * @param string $toolName Tool name
-     * @param array $result Tool execution result
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $toolName Tool name
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $result Tool execution result
      *
-     * @return string Formatted result string
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string Formatted result string
      */
     public function formatToolResult(string $toolName, array $result): string
     {
@@ -553,7 +553,7 @@ class ToolHandler
     /**
      * Get list of available tools with descriptions.
      *
-     * @return array Array of tool descriptions
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Array of tool descriptions
      */
     public function getAvailableTools(): array
     {

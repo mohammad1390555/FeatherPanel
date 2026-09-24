@@ -1629,7 +1629,7 @@ class ServersController
             }
         }
 
-        /** @var list<array{variable_id: int, variable_value: string}>|null Rows to insert after spell change (DB write deferred to transaction). */
+        /** // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar list<array{variable_id: int, variable_value: string}>|null Rows to insert after spell change (DB write deferred to transaction). */
         $spellChangeVariableRows = null;
         if ($spellChanged) {
             $newSpellId = (int) $data['spell_id'];
@@ -3037,7 +3037,7 @@ class ServersController
      * Clean up server databases when deleting a server.
      * This method handles database cleanup gracefully without breaking the deletion process.
      *
-     * @param int $serverId The server ID
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $serverId The server ID
      */
     private function cleanupServerDatabases(int $serverId): void
     {
@@ -3086,11 +3086,11 @@ class ServersController
      * Delete database and user from the database host.
      * This is a copy of the method from ServerDatabaseController to avoid dependency issues.
      *
-     * @param array $databaseHost Database host information
-     * @param string $databaseName Database name to delete
-     * @param string $username Username to delete
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $databaseHost Database host information
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $databaseName Database name to delete
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $username Username to delete
      *
-     * @throws \Exception If deletion fails
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionthrows \Exception If deletion fails
      */
     private function deleteDatabaseFromHost(array $databaseHost, string $databaseName, string $username): void
     {
@@ -3111,10 +3111,10 @@ class ServersController
                     $pdo = new \PDO($dsn, $databaseHost['database_username'], $databaseHost['database_password'], $options);
 
                     // Revoke privileges from the user
-                    $pdo->exec("REVOKE ALL PRIVILEGES ON {$safeDbName}.* FROM {$safeUser}@'%'");
+                    $pdo->exec("REVOKE ALL PRIVILEGES ON {$safeDbName}.* FROM {$safeUser}// // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppression'%'");
 
                     // Drop the user
-                    $pdo->exec("DROP USER IF EXISTS {$safeUser}@'%'");
+                    $pdo->exec("DROP USER IF EXISTS {$safeUser}// // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppression'%'");
 
                     // Drop the database
                     $pdo->exec("DROP DATABASE IF EXISTS {$safeDbName}");
@@ -3150,9 +3150,9 @@ class ServersController
     /**
      * Safely quote a PostgreSQL identifier by escaping double quotes.
      *
-     * @param string $identifier The identifier to quote
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $identifier The identifier to quote
      *
-     * @return string The safely quoted identifier
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string The safely quoted identifier
      */
     private function quoteIdentifier(string $identifier): string
     {
@@ -3162,9 +3162,9 @@ class ServersController
     /**
      * Safely quote a MySQL/MariaDB identifier by escaping backticks.
      *
-     * @param string $identifier The identifier to quote
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $identifier The identifier to quote
      *
-     * @return string The safely quoted identifier
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string The safely quoted identifier
      */
     private function quoteIdentifierMySQL(string $identifier): string
     {
@@ -3172,9 +3172,9 @@ class ServersController
     }
 
     /**
-     * @param array<mixed> $raw
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<mixed> $raw
      *
-     * @return list<int>|Response
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn list<int>|Response
      */
     private static function parseStrictPositiveIntegerIds(array $raw, string $fieldLabel): array | Response
     {

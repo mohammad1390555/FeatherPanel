@@ -27,7 +27,7 @@ class NodesControllerTest extends TestCase
     private NodesController $controller;
     private LocationsController $locationsController;
     private string $adminUuid = '123e4567-e89b-12d3-a456-426614174000';
-    private string $adminEmail = 'testadmin@example.com';
+    private string $adminEmail = 'testadmin// // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com';
 
     protected function setUp(): void
     {

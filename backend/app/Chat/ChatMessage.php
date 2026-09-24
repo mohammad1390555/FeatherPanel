@@ -27,9 +27,9 @@ class ChatMessage
     /**
      * Create a new message.
      *
-     * @param array $data Message data
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $data Message data
      *
-     * @return int|false Message ID or false on failure
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int|false Message ID or false on failure
      */
     public static function createMessage(array $data): int | false
     {
@@ -58,10 +58,10 @@ class ChatMessage
     /**
      * Get messages by conversation ID.
      *
-     * @param int $conversationId Conversation ID
-     * @param int $limit Maximum number of results
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $conversationId Conversation ID
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $limit Maximum number of results
      *
-     * @return array Array of messages
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Array of messages
      */
     public static function getMessagesByConversation(int $conversationId, int $limit = 100): array
     {
@@ -77,9 +77,9 @@ class ChatMessage
     /**
      * Get message count for a conversation.
      *
-     * @param int $conversationId Conversation ID
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $conversationId Conversation ID
      *
-     * @return int Message count
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int Message count
      */
     public static function getMessageCount(int $conversationId): int
     {
@@ -93,9 +93,9 @@ class ChatMessage
     /**
      * Get message by ID.
      *
-     * @param int $id Message ID
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $id Message ID
      *
-     * @return array|null Message data or null if not found
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array|null Message data or null if not found
      */
     public static function getMessageById(int $id): ?array
     {
@@ -111,9 +111,9 @@ class ChatMessage
     /**
      * Delete messages by conversation ID.
      *
-     * @param int $conversationId Conversation ID
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $conversationId Conversation ID
      *
-     * @return bool Success status
+     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool Success status
      */
     public static function deleteMessagesByConversation(int $conversationId): bool
     {

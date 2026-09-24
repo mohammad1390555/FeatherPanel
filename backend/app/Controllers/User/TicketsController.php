@@ -722,7 +722,7 @@ class TicketsController
 
             // Set safe file permissions (read-only for owner and group, no execute)
             // This prevents accidental execution even if PHP execution is somehow enabled
-            @chmod($filePath, 0644);
+            // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionchmod($filePath, 0644);
         } catch (\Exception $e) {
             return ApiResponse::error('Failed to save file: ' . $e->getMessage(), 'SAVE_FAILED', 500);
         }
@@ -952,7 +952,7 @@ class TicketsController
                 if (isset($attachment['file_path']) && is_string($attachment['file_path']) && $attachment['file_path'] !== '') {
                     $filePath = TicketAttachment::sanitizeAndResolveFilePath($attachment['file_path']);
                     if ($filePath !== null && file_exists($filePath)) {
-                        if (!@unlink($filePath)) {
+                        if (!// // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionunlink($filePath)) {
                             throw new \Exception('Failed to delete attachment file: ' . $filePath);
                         }
                     }
