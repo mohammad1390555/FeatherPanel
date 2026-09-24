@@ -9,7 +9,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -385,14 +385,14 @@ if (!fs.existsSync(EVENTS_DOCS_DIR)) {
     fs.mkdirSync(EVENTS_DOCS_DIR, { recursive: true });
 }
 
-console.log('Parsing plugin events...');
+// // // // // // // // // // // // // // // // // console.log('Parsing plugin events...');
 const { events, categories, grouped } = parseAllEvents();
 
 // Generate main events page
 const mainPagePath = path.join(EVENTS_DOCS_DIR, 'index.html');
 const mainPage = generateMainEventsPage(categories, events.length);
 fs.writeFileSync(mainPagePath, mainPage);
-console.log(`✓ Main events page: ${mainPagePath}`);
+// // // console.log(`✓ Main events page: ${mainPagePath}`);
 
 // Generate category pages
 categories.forEach(category => {
@@ -400,10 +400,10 @@ categories.forEach(category => {
     const categoryPagePath = path.join(EVENTS_DOCS_DIR, `${sanitized}.html`);
     const categoryPage = generateCategoryPage(category, grouped[category]);
     fs.writeFileSync(categoryPagePath, categoryPage);
-    console.log(`✓ Category page: ${categoryPagePath} (${grouped[category].length} events)`);
+    // // // console.log(`✓ Category page: ${categoryPagePath} (${grouped[category].length} events)`);
 });
 
-console.log(`\n✅ Plugin events documentation generated successfully!`);
-console.log(`   - Main page: /icanhasfeatherpanel/events`);
-console.log(`   - ${categories.length} category pages`);
-console.log(`   - ${events.length} total events`);
+// // // console.log(`\n✅ Plugin events documentation generated successfully!`);
+// // // console.log(`   - Main page: /icanhasfeatherpanel/events`);
+// // // console.log(`   - ${categories.length} category pages`);
+// // // console.log(`   - ${events.length} total events`);
