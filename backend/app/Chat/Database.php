@@ -32,13 +32,13 @@ class Database
     /**
      * Database constructor.
      *
-     * @param string $host the hostname or path to the database
-     * @param string $dbName the name of the database (not used for sqlite)
-     * @param string|null $username the username for the database connection (not used for sqlite)
-     * @param string|null $password the password for the database connection (not used for sqlite)
-     * @param int $port the port to use for the database connection
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $host the hostname or path to the database
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $dbName the name of the database (not used for sqlite)
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $username the username for the database connection (not used for sqlite)
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $password the password for the database connection (not used for sqlite)
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $port the port to use for the database connection
      *
-     * @throws \Exception if an unsupported database type is provided or the connection fails
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionthrows \Exception if an unsupported database type is provided or the connection fails
      */
     public function __construct($host, $dbName, $username = null, $password = null, int $port = 3306)
     {
@@ -84,7 +84,7 @@ class Database
     /**
      * Get the PDO connection.
      *
-     * @return \PDO the PDO connection
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn \PDO the PDO connection
      */
     public static function getPdoConnection(): \PDO
     {
@@ -100,7 +100,7 @@ class Database
     /**
      * Get the table row count.
      *
-     * @param string $table the table name
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $table the table name
      */
     public static function getTableRowCount(string $table, bool $adminSide = false): int
     {
@@ -122,11 +122,11 @@ class Database
     /**
      * Get the table column count.
      *
-     * @param string $table the table name
-     * @param array $where the where conditions
-     * @param bool $includeDeleted whether to include deleted records
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $table the table name
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $where the where conditions
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool $includeDeleted whether to include deleted records
      *
-     * @return int the number of rows in the table
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int the number of rows in the table
      */
     public static function getTableColumnCount(string $table, array $where = [], bool $includeDeleted = false): int
     {
@@ -168,9 +168,9 @@ class Database
     /**
      * Check if a table exists.
      *
-     * @param string $table the table name
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $table the table name
      *
-     * @return bool true if the table exists, false otherwise
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool true if the table exists, false otherwise
      */
     public static function tableExists(string $table): bool
     {
@@ -204,8 +204,8 @@ class Database
     /**
      * Marks a record as deleted in the specified table by setting the 'deleted' column to 'true'.
      *
-     * @param string $table the name of the table containing the record
-     * @param int $row the ID of the record to mark as deleted
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $table the name of the table containing the record
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $row the ID of the record to mark as deleted
      */
     public static function markRecordAsDeleted(string $table, int $row): void
     {
@@ -223,9 +223,9 @@ class Database
     /**
      * Retrieves all records marked as deleted from the specified table.
      *
-     * @param string $table the name of the table to query
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $table the name of the table to query
      *
-     * @return array array of deleted records in associative array format
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array array of deleted records in associative array format
      */
     public static function getDeletedRecords(string $table): array
     {
@@ -244,8 +244,8 @@ class Database
     /**
      * Restores a previously deleted record by setting the 'deleted' column to 'false'.
      *
-     * @param string $table the name of the table containing the record
-     * @param int $row the ID of the record to restore
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $table the name of the table containing the record
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $row the ID of the record to restore
      */
     public static function restoreRecord(string $table, int $row): void
     {
@@ -263,8 +263,8 @@ class Database
     /**
      * Permanently deletes a record from the specified table.
      *
-     * @param string $table the name of the table containing the record
-     * @param int $row the ID of the record to delete
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $table the name of the table containing the record
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $row the ID of the record to delete
      */
     public static function deleteRecord(string $table, int $row): void
     {
@@ -282,8 +282,8 @@ class Database
     /**
      * Locks a record in the specified table by setting the 'locked' column to 'true'.
      *
-     * @param string $table the name of the table containing the record
-     * @param int $row the ID of the record to lock
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $table the name of the table containing the record
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $row the ID of the record to lock
      */
     public static function lockRecord(string $table, int $row): void
     {
@@ -301,8 +301,8 @@ class Database
     /**
      * Unlocks a record in the specified table by setting the 'locked' column to 'false'.
      *
-     * @param string $table the name of the table containing the record
-     * @param int $row the ID of the record to unlock
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $table the name of the table containing the record
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $row the ID of the record to unlock
      */
     public static function unlockRecord(string $table, int $row): void
     {
@@ -320,10 +320,10 @@ class Database
     /**
      * Checks if a specific record is locked.
      *
-     * @param string $table the name of the table containing the record
-     * @param int $row the ID of the record to check
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $table the name of the table containing the record
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $row the ID of the record to check
      *
-     * @return bool returns true if the record is locked, false otherwise
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool returns true if the record is locked, false otherwise
      */
     public static function isLocked(string $table, int $row): bool
     {
@@ -358,9 +358,9 @@ class Database
      *
      * Run a SQL query.
      *
-     * @param string $sql the SQL query to run
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $sql the SQL query to run
      *
-     * @return array the result of the SQL query
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array the result of the SQL query
      */
     public static function runSQL(string $sql): array
     {
@@ -378,9 +378,9 @@ class Database
     /**
      * Get the last insert ID.
      *
-     * @param string $table the table name
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $table the table name
      *
-     * @return int the last insert ID
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int the last insert ID
      */
     public static function getLastInsertId(string $table): int
     {
@@ -398,8 +398,8 @@ class Database
     /**
      * Request to save and unlock a record.
      *
-     * @param string $table the table name
-     * @param int $row the ID of the record to save and unlock
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $table the table name
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $row the ID of the record to save and unlock
      */
     public static function requestSaveAndUnlock(string $table, int $row): void
     {
@@ -417,9 +417,9 @@ class Database
     /**
      * Run a raw SQL query.
      *
-     * @param string $query the SQL query to run
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $query the SQL query to run
      *
-     * @return array the result of the SQL query
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array the result of the SQL query
      */
     public static function rawQuery(string $query): array
     {

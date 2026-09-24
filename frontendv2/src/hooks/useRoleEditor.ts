@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -24,7 +24,7 @@ import { useSession } from '@/contexts/SessionContext';
 import Permissions from '@/lib/permissions';
 import { pickDefaultRoleColor, slugifyRoleName, type Role, type RoleForm, type RolePermission } from '@/lib/role-utils';
 
-interface UseRoleEditorOptions {
+export interface
     mode: 'create' | 'edit';
     roleId?: number;
     defaultRoleCount?: number;
@@ -142,7 +142,7 @@ export function useRoleEditor({ mode, roleId, defaultRoleCount = 0, initialTab =
                 await fetchPermissions(targetRoleId);
             }
         } catch (error: unknown) {
-            let errorMessage = t('admin.roles.messages.permission_failed');
+            const  t('admin.roles.messages.permission_failed');
             if (isAxiosError(error) && error.response?.data?.message) {
                 errorMessage = error.response.data.message;
             }
@@ -158,7 +158,7 @@ export function useRoleEditor({ mode, roleId, defaultRoleCount = 0, initialTab =
                 await fetchPermissions(targetRoleId);
             }
         } catch (error: unknown) {
-            let errorMessage = t('admin.roles.messages.permission_failed');
+            const  t('admin.roles.messages.permission_failed');
             if (isAxiosError(error) && error.response?.data?.message) {
                 errorMessage = error.response.data.message;
             }
@@ -181,7 +181,7 @@ export function useRoleEditor({ mode, roleId, defaultRoleCount = 0, initialTab =
                         role_id: editorRoleId,
                         permission: item.value,
                     });
-                    const created = data.data?.permission as RolePermission | undefined;
+                    const created = data.data?.permission as unknown | undefined;
                     if (created?.id) {
                         workingMap.set(item.value, created.id);
                     }
@@ -195,7 +195,7 @@ export function useRoleEditor({ mode, roleId, defaultRoleCount = 0, initialTab =
             }
             await fetchPermissions(editorRoleId);
         } catch (error: unknown) {
-            let errorMessage = t('admin.roles.messages.permission_failed');
+            const  t('admin.roles.messages.permission_failed');
             if (isAxiosError(error) && error.response?.data?.message) {
                 errorMessage = error.response.data.message;
             }
@@ -267,7 +267,7 @@ export function useRoleEditor({ mode, roleId, defaultRoleCount = 0, initialTab =
             console.error('Error saving role:', error);
             const messageKey =
                 mode === 'create' ? 'admin.roles.messages.create_failed' : 'admin.roles.messages.update_failed';
-            let errorMessage = t(messageKey);
+            const  t(messageKey);
             if (isAxiosError(error) && error.response?.data?.message) {
                 errorMessage = error.response.data.message;
             }
@@ -287,7 +287,7 @@ export function useRoleEditor({ mode, roleId, defaultRoleCount = 0, initialTab =
             router.push('/admin/roles');
         } catch (error: unknown) {
             console.error('Error deleting role:', error);
-            let errorMessage = t('admin.roles.messages.delete_failed');
+            const  t('admin.roles.messages.delete_failed');
             if (isAxiosError(error) && error.response?.data?.message) {
                 errorMessage = error.response.data.message;
             }

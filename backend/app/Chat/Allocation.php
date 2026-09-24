@@ -234,17 +234,17 @@ class Allocation
     /**
      * Pick free allocation IDs on a node for assignment (e.g. server transfers).
      *
-     * @param array<int> $excludeIds Allocation IDs to skip (already reserved in the same batch)
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<int> $excludeIds Allocation IDs to skip (already reserved in the same batch)
      *
-     * @return array<int>
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int>
      */
     /**
      * Pick free allocation IDs that match specific IP/port slots (in order).
      *
-     * @param array<int, array{ip: string, port: int}> $slots
-     * @param array<int> $excludeIds
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<int, array{ip: string, port: int}> $slots
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<int> $excludeIds
      *
-     * @return array<int>
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int>
      */
     public static function pickFreeAllocationIdsForSlots(int $nodeId, array $slots, array $excludeIds = []): array
     {
@@ -482,9 +482,9 @@ class Allocation
     /**
      * Unassign multiple allocations from their servers.
      *
-     * @param array $allocationIds Array of allocation IDs to unassign
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $allocationIds Array of allocation IDs to unassign
      *
-     * @return bool True if all allocations were unassigned successfully
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if all allocations were unassigned successfully
      */
     public static function unassignMultiple(array $allocationIds): bool
     {
@@ -508,10 +508,10 @@ class Allocation
     /**
      * Assign multiple allocations to a server.
      *
-     * @param int $serverId The server ID to assign allocations to
-     * @param array $allocationIds Array of allocation IDs to assign
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $serverId The server ID to assign allocations to
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $allocationIds Array of allocation IDs to assign
      *
-     * @return bool True if all allocations were assigned successfully
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if all allocations were assigned successfully
      */
     public static function assignMultipleToServer(int $serverId, array $allocationIds): bool
     {
@@ -555,9 +555,9 @@ class Allocation
      * Check if an allocation can be safely deleted.
      * An allocation can only be deleted if it's not assigned to any server.
      *
-     * @param int $id Allocation ID
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $id Allocation ID
      *
-     * @return bool True if allocation can be deleted
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if allocation can be deleted
      */
     public static function canDelete(int $id): bool
     {
@@ -578,9 +578,9 @@ class Allocation
      * Delete multiple allocations by their IDs.
      * Only deletes allocations that are not assigned to servers.
      *
-     * @param array $ids Array of allocation IDs to delete
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $ids Array of allocation IDs to delete
      *
-     * @return array ['deleted' => count, 'skipped' => count, 'skipped_ids' => []]
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array ['deleted' => count, 'skipped' => count, 'skipped_ids' => []]
      */
     public static function deleteBulk(array $ids): array
     {
@@ -614,10 +614,10 @@ class Allocation
     /**
      * Delete all unused allocations (where server_id IS NULL).
      *
-     * @param int|null $nodeId Optional node ID to filter deletions
-     * @param string|null $ip Optional IP address to filter deletions by subnet/IP
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int|null $nodeId Optional node ID to filter deletions
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $ip Optional IP address to filter deletions by subnet/IP
      *
-     * @return int Number of allocations deleted
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int Number of allocations deleted
      */
     public static function deleteUnused(?int $nodeId = null, ?string $ip = null): int
     {

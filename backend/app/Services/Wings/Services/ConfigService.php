@@ -43,7 +43,7 @@ class ConfigService
     /**
      * Get the raw Wings configuration file as YAML.
      *
-     * @return string The raw YAML configuration
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string The raw YAML configuration
      */
     public function getConfig(): string
     {
@@ -63,10 +63,10 @@ class ConfigService
      *   "restart": true/false
      * }
      *
-     * @param string $yamlContent The complete YAML configuration content
-     * @param bool $restart Whether to restart Wings after update (default: false)
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $yamlContent The complete YAML configuration content
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool $restart Whether to restart Wings after update (default: false)
      *
-     * @return array The response data
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array The response data
      */
     public function putConfig(string $yamlContent, bool $restart = false): array
     {
@@ -94,10 +94,10 @@ class ConfigService
      *   "restart": true/false
      * }
      *
-     * @param array $updates Associative array of config paths to values (e.g., ['api.port' => 8443])
-     * @param bool $restart Whether to restart Wings after update (default: false)
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $updates Associative array of config paths to values (e.g., ['api.port' => 8443])
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool $restart Whether to restart Wings after update (default: false)
      *
-     * @return array The response data
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array The response data
      */
     public function patchConfig(array $updates, bool $restart = false): array
     {
@@ -112,7 +112,7 @@ class ConfigService
     /**
      * Get the configuration schema.
      *
-     * @return array The configuration schema
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array The configuration schema
      */
     public function getConfigSchema(): array
     {

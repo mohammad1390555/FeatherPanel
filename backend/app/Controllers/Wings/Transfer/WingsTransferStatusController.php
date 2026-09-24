@@ -392,9 +392,9 @@ class WingsTransferStatusController
     /**
      * Delete server from old node after successful transfer.
      *
-     * @param array $server The server data
-     * @param array $transfer The transfer record
-     * @param mixed $logger The logger instance
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $server The server data
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $transfer The transfer record
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam mixed $logger The logger instance
      */
     private function deleteServerFromOldNode(array $server, array $transfer, $logger): void
     {

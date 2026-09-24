@@ -24,9 +24,9 @@ class FeatherZeroTrustCronLog
     /**
      * Create a new cron log execution.
      *
-     * @param array $data Execution data
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $data Execution data
      *
-     * @return string|false Execution ID or false on failure
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string|false Execution ID or false on failure
      */
     public static function create(array $data): string | false
     {
@@ -77,10 +77,10 @@ class FeatherZeroTrustCronLog
     /**
      * Update an existing cron log execution.
      *
-     * @param string $executionId Execution ID
-     * @param array $data Update data
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $executionId Execution ID
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $data Update data
      *
-     * @return bool Success status
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool Success status
      */
     public static function update(string $executionId, array $data): bool
     {
@@ -124,11 +124,11 @@ class FeatherZeroTrustCronLog
     /**
      * Get all cron logs with pagination.
      *
-     * @param int $limit Limit
-     * @param int $offset Offset
-     * @param string $status Filter by status
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $limit Limit
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $offset Offset
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $status Filter by status
      *
-     * @return array Cron logs
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Cron logs
      */
     public static function getAll(int $limit = 25, int $offset = 0, ?string $status = null): array
     {
@@ -166,9 +166,9 @@ class FeatherZeroTrustCronLog
     /**
      * Get total count of cron logs.
      *
-     * @param string|null $status Filter by status
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $status Filter by status
      *
-     * @return int Count
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int Count
      */
     public static function getCount(?string $status = null): int
     {
@@ -190,9 +190,9 @@ class FeatherZeroTrustCronLog
     /**
      * Get a cron log by execution ID.
      *
-     * @param string $executionId Execution ID
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $executionId Execution ID
      *
-     * @return array|null Cron log or null
+     * // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array|null Cron log or null
      */
     public static function getByExecutionId(string $executionId): ?array
     {
