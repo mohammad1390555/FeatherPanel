@@ -30,7 +30,7 @@ class UserAnalytics
     /**
      * Get total user count statistics.
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Statistics including total, active, banned, verified, and 2FA enabled users
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Statistics including total, active, banned, verified, and 2FA enabled users
      */
     public static function getTotalUsers(): array
     {
@@ -71,7 +71,7 @@ class UserAnalytics
     /**
      * Get user distribution by roles.
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Role distribution with counts and percentages
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Role distribution with counts and percentages
      */
     public static function getUsersByRole(): array
     {
@@ -110,9 +110,9 @@ class UserAnalytics
     /**
      * Get user registration trends over time.
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $days Number of days to look back (default: 30)
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $days Number of days to look back (default: 30)
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Daily registration counts
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Daily registration counts
      */
     public static function getRegistrationTrend(int $days = 30): array
     {
@@ -141,9 +141,9 @@ class UserAnalytics
     /**
      * Get top users by server count.
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $limit Number of top users to retrieve (default: 10)
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $limit Number of top users to retrieve (default: 10)
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Top users with server counts
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Top users with server counts
      */
     public static function getTopUsersByServers(int $limit = 10): array
     {
@@ -188,9 +188,9 @@ class UserAnalytics
     /**
      * Get user activity summary (recent registrations, logins, etc).
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $hours Number of hours to look back (default: 24)
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $hours Number of hours to look back (default: 24)
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Activity summary
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Activity summary
      */
     public static function getUserActivity(int $hours = 24): array
     {
@@ -226,7 +226,7 @@ class UserAnalytics
     /**
      * Get comprehensive user statistics dashboard.
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Complete dashboard statistics
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Complete dashboard statistics
      */
     public static function getDashboardStats(): array
     {
@@ -244,9 +244,9 @@ class UserAnalytics
     /**
      * Get banned users statistics and list.
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $limit Number of recent banned users to retrieve (default: 20)
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $limit Number of recent banned users to retrieve (default: 20)
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Banned users statistics
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Banned users statistics
      */
     public static function getBannedUsersStats(int $limit = 20): array
     {
@@ -305,7 +305,7 @@ class UserAnalytics
     /**
      * Get security statistics (2FA, email verification).
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Security metrics
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Security metrics
      */
     public static function getSecurityStats(): array
     {
@@ -347,7 +347,7 @@ class UserAnalytics
     /**
      * Get user growth rate statistics.
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Growth rate metrics
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Growth rate metrics
      */
     public static function getGrowthRate(): array
     {
@@ -413,9 +413,9 @@ class UserAnalytics
     /**
      * Get activity trends over time.
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $days Number of days to look back (default: 7)
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $days Number of days to look back (default: 7)
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Daily activity counts
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Daily activity counts
      */
     public static function getActivityTrend(int $days = 7): array
     {
@@ -443,9 +443,9 @@ class UserAnalytics
     /**
      * Get top activities by type.
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $limit Number of top activities to retrieve (default: 10)
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $limit Number of top activities to retrieve (default: 10)
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Top activities with counts
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Top activities with counts
      */
     public static function getTopActivities(int $limit = 10): array
     {
@@ -478,7 +478,7 @@ class UserAnalytics
     /**
      * Get activity breakdown by type (for pie chart).
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Activity distribution
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Activity distribution
      */
     public static function getActivityBreakdown(): array
     {
@@ -511,9 +511,9 @@ class UserAnalytics
     /**
      * Get recent activities with user information.
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $limit Number of recent activities to retrieve (default: 20)
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $limit Number of recent activities to retrieve (default: 20)
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Recent activities
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Recent activities
      */
     public static function getRecentActivities(int $limit = 20): array
     {
@@ -550,7 +550,7 @@ class UserAnalytics
     /**
      * Get activity statistics summary.
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Activity statistics
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Activity statistics
      */
     public static function getActivityStats(): array
     {
@@ -619,9 +619,9 @@ class UserAnalytics
     /**
      * Get hourly activity distribution (for heatmap).
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $days Number of days to look back (default: 7)
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $days Number of days to look back (default: 7)
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Hourly activity distribution
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Hourly activity distribution
      */
     public static function getHourlyActivity(int $days = 7): array
     {

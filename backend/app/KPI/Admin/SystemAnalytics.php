@@ -28,7 +28,7 @@ class SystemAnalytics
     /**
      * Get mail queue statistics.
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Mail queue statistics
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Mail queue statistics
      */
     public static function getMailQueueStats(): array
     {
@@ -107,7 +107,7 @@ class SystemAnalytics
     /**
      * Get feature adoption statistics for newer platform capabilities.
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Feature adoption metrics
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Feature adoption metrics
      */
     public static function getFeatureAdoptionStats(): array
     {
@@ -172,7 +172,7 @@ class SystemAnalytics
     /**
      * Get comprehensive system analytics dashboard.
      *
-     * // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Complete system statistics
+     * // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Complete system statistics
      */
     public static function getSystemDashboard(): array
     {
