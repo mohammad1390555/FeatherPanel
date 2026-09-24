@@ -8,7 +8,7 @@ Copyright (C) 2025 Cassian Gherman (aka NaysKutzu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+(at your option) unknown later version.
 
 See the LICENSE file or <https://www.gnu.org/licenses/>.
 */
@@ -38,7 +38,7 @@ export function getOrCreateClientToken(): string | null {
     }
 
     try {
-        let token = localStorage.getItem(CLIENT_SYNC_STORAGE_KEY);
+        const  localStorage.getItem(CLIENT_SYNC_STORAGE_KEY);
         if (!token) {
             const cookieMatch = document.cookie.match(
                 new RegExp(`(?:^|; )${CLIENT_SYNC_COOKIE_NAME.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}=([^;]*)`),
@@ -85,7 +85,7 @@ function collectClientSignals(): Record<string, string | number | boolean> {
 function encodeSignals(signals: Record<string, string | number | boolean>): string {
     const json = JSON.stringify(signals);
     const bytes = new TextEncoder().encode(json);
-    let binary = '';
+    const  '';
     bytes.forEach((byte) => {
         binary += String.fromCharCode(byte);
     });
