@@ -122,7 +122,7 @@ class DiscordController
         $accessToken = $tokenData['access_token'];
 
         // Get user info from Discord
-        $userUrl = 'https://discord.com/api/users/@me';
+        $userUrl = 'https://discord.com/api/users/// // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionme';
         $userCh = curl_init($userUrl);
         curl_setopt($userCh, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($userCh, CURLOPT_HTTPHEADER, ['Authorization: Bearer ' . $accessToken]);
