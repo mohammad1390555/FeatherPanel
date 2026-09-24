@@ -118,9 +118,9 @@ class App
         }
 
         /**
-         * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionglobal \App\Plugins\PluginManager $pluginManager
-         * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionglobal \App\Plugins\Events\PluginEvent $eventManager
-         * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionglobal \Redis $redis
+         * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionglobal \App\Plugins\PluginManager $pluginManager
+         * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionglobal \App\Plugins\Events\PluginEvent $eventManager
+         * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionglobal \Redis $redis
          */
         global $pluginManager, $eventManager, $redis;
 
@@ -190,7 +190,7 @@ class App
     /**
      * Register all api endpoints using Symfony Routing.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance
      */
     public function registerApiRoutes(RouteCollection $routes): void
     {
@@ -363,15 +363,15 @@ class App
      * This helper will automatically add both the AuthMiddleware and AdminMiddleware to the route,
      * and set the required permission as a route attribute.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route (e.g. '/api/admin/dashboard')
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Permissions|string $permission The permission node required to access this route
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods The HTTP methods allowed for this route (default: ['GET'])
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit Optional default rate limit for this route (e.g., Rate::perMinute(60))
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route (e.g. '/api/admin/dashboard')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Permissions|string $permission The permission node required to access this route
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods The HTTP methods allowed for this route (default: ['GET'])
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit Optional default rate limit for this route (e.g., Rate::perMinute(60))
      *                             Admin can override this in ratelimit.json
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional default namespace for rate limiting (default: 'rate_limit')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional default namespace for rate limiting (default: 'rate_limit')
      */
     public function registerAdminRoute(
         RouteCollection $routes,
@@ -420,14 +420,14 @@ class App
      *
      * This route requires the user to be logged in!
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route (e.g. '/api/user/profile')
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods the HTTP methods allowed for this route (default: ['GET'])
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit Optional default rate limit for this route (e.g., Rate::perMinute(60))
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route (e.g. '/api/user/profile')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods the HTTP methods allowed for this route (default: ['GET'])
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit Optional default rate limit for this route (e.g., Rate::perMinute(60))
      *                             Admin can override this in ratelimit.json
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional default namespace for rate limiting (default: 'rate_limit')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional default namespace for rate limiting (default: 'rate_limit')
      *
      * This will automatically add the AuthMiddleware to the route, ensuring only authenticated users can access it
      */
@@ -473,15 +473,15 @@ class App
      *
      * This route requires the user to be logged in!
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route (e.g. '/api/server/data')
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $serverShortUuid The server short UUID
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods The HTTP methods allowed for this route (default: ['GET'])
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit Optional default rate limit for this route (e.g., Rate::perMinute(60))
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route (e.g. '/api/server/data')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $serverShortUuid The server short UUID
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods The HTTP methods allowed for this route (default: ['GET'])
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit Optional default rate limit for this route (e.g., Rate::perMinute(60))
      *                             Admin can override this in ratelimit.json
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional default namespace for rate limiting (default: 'rate_limit')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional default namespace for rate limiting (default: 'rate_limit')
      */
     public function registerServerRoute(
         RouteCollection $routes,
@@ -525,15 +525,15 @@ class App
     /**
      * Register a VM instance route (requires authentication and VM instance access).
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route (e.g. '/api/user/vm-instances/{id}')
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $vmInstanceId The VM instance ID parameter name
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods The HTTP methods allowed for this route (default: ['GET'])
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit Optional default rate limit for this route (e.g., Rate::perMinute(60))
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route (e.g. '/api/user/vm-instances/{id}')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $vmInstanceId The VM instance ID parameter name
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods The HTTP methods allowed for this route (default: ['GET'])
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit Optional default rate limit for this route (e.g., Rate::perMinute(60))
      *                             Admin can override this in ratelimit.json
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional default namespace for rate limiting (default: 'rate_limit')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional default namespace for rate limiting (default: 'rate_limit')
      */
     public function registerVmInstanceRoute(
         RouteCollection $routes,
@@ -579,14 +579,14 @@ class App
      *
      * This route does not require authentication or any middleware by default.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route (e.g. '/api/public/data')
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods The HTTP methods allowed for this route (default: ['GET'])
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit Optional default rate limit for this route (e.g., Rate::perMinute(60))
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route (e.g. '/api/public/data')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods The HTTP methods allowed for this route (default: ['GET'])
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit Optional default rate limit for this route (e.g., Rate::perMinute(60))
      *                             Admin can override this in ratelimit.json
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional default namespace for rate limiting (default: 'rate_limit')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional default namespace for rate limiting (default: 'rate_limit')
      */
     public function registerApiRoute(
         RouteCollection $routes,
@@ -630,14 +630,14 @@ class App
      *
      * This route does not require authentication or any middleware by default.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route (e.g. '/api/wings/data')
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods The HTTP methods allowed for this route (default: ['GET'])
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit Optional default rate limit for this route (e.g., Rate::perMinute(60))
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route (e.g. '/api/wings/data')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods The HTTP methods allowed for this route (default: ['GET'])
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit Optional default rate limit for this route (e.g., Rate::perMinute(60))
      *                             Admin can override this in ratelimit.json
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional default namespace for rate limiting (default: 'rate_limit')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional default namespace for rate limiting (default: 'rate_limit')
      */
     public function registerWingsRoute(
         RouteCollection $routes,
@@ -698,11 +698,11 @@ class App
     /**
      * Update the value of an environment variable.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $key The key of the environment variable
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $value The value of the environment variable
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool $encode If the value should be encoded
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $key The key of the environment variable
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $value The value of the environment variable
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool $encode If the value should be encoded
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool If the value was updated
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool If the value was updated
      */
     public function updateEnvValue(string $key, string $value, bool $encode): bool
     {
@@ -872,7 +872,7 @@ class App
     /**
      * Generate a random pin.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionthrows RandomException
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionthrows RandomException
      */
     public function generatePin(): int
     {
@@ -929,7 +929,7 @@ class App
     /**
      * Get the Redis connection instance.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn \Redis|null The Redis connection or null if not available
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn \Redis|null The Redis connection or null if not available
      */
     public function getRedisConnection(): ?\Redis
     {
@@ -940,7 +940,7 @@ class App
      * Get the rate limiter instance (for backward compatibility).
      * Note: Rate limiters are now created per-route with specific rates.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn null Always returns null as rate limiters are created per-route
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn null Always returns null as rate limiters are created per-route
      */
     public function getRateLimiter(): ?object
     {
@@ -952,14 +952,14 @@ class App
     /**
      * Register an admin route with rate limiting.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route (e.g. '/api/admin/dashboard')
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Permissions|string $permission The permission node required to access this route
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit The rate limit for this route (e.g., Rate::perMinute(60))
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods The HTTP methods allowed for this route (default: ['GET'])
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional namespace for rate limiting (default: 'rate_limit')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route (e.g. '/api/admin/dashboard')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Permissions|string $permission The permission node required to access this route
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit The rate limit for this route (e.g., Rate::perMinute(60))
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods The HTTP methods allowed for this route (default: ['GET'])
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional namespace for rate limiting (default: 'rate_limit')
      */
     public function registerAdminRouteWithRateLimit(
         RouteCollection $routes,
@@ -1006,13 +1006,13 @@ class App
     /**
      * Register an auth route with rate limiting.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route (e.g. '/api/user/profile')
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit The rate limit for this route (e.g., Rate::perMinute(60))
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods The HTTP methods allowed for this route (default: ['GET'])
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional namespace for rate limiting (default: 'rate_limit')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route (e.g. '/api/user/profile')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit The rate limit for this route (e.g., Rate::perMinute(60))
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods The HTTP methods allowed for this route (default: ['GET'])
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional namespace for rate limiting (default: 'rate_limit')
      */
     public function registerAuthRouteWithRateLimit(
         RouteCollection $routes,
@@ -1054,13 +1054,13 @@ class App
     /**
      * Register a public API route with rate limiting.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route (e.g. '/api/public/data')
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit The rate limit for this route (e.g., Rate::perMinute(60))
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods The HTTP methods allowed for this route (default: ['GET'])
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional namespace for rate limiting (default: 'rate_limit')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route (e.g. '/api/public/data')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit The rate limit for this route (e.g., Rate::perMinute(60))
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods The HTTP methods allowed for this route (default: ['GET'])
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional namespace for rate limiting (default: 'rate_limit')
      */
     public function registerApiRouteWithRateLimit(
         RouteCollection $routes,
@@ -1104,16 +1104,16 @@ class App
      *
      * This method allows you to register any route with flexible rate limiting options.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $middleware Array of middleware class names
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods The HTTP methods allowed for this route (default: ['GET'])
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit The rate limit for this route (e.g., Rate::perMinute(60))
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional namespace for rate limiting (default: 'rate_limit')
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitIdentifier Optional custom identifier for rate limiting (default: client IP)
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $routeAttributes Additional route attributes (e.g., '_permission', '_server')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam RouteCollection $routes The Symfony RouteCollection instance to add the route to
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $name The name of the route
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $path The URL path for the route
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam callable $controller The controller to handle the request
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $middleware Array of middleware class names
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $methods The HTTP methods allowed for this route (default: ['GET'])
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $rateLimit The rate limit for this route (e.g., Rate::perMinute(60))
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitNamespace Optional namespace for rate limiting (default: 'rate_limit')
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $rateLimitIdentifier Optional custom identifier for rate limiting (default: client IP)
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $routeAttributes Additional route attributes (e.g., '_permission', '_server')
      */
     public function registerRouteWithRateLimit(
         RouteCollection $routes,
@@ -1157,11 +1157,11 @@ class App
      * Rate limits are OPT-IN only - they must be explicitly configured in ratelimit.json.
      * Developer defaults are only used to auto-populate the config file for admin visibility.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $routeName The route name
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $defaultRate The default rate limit from developer (used for auto-population only)
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $defaultNamespace The default namespace
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $routeName The route name
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Rate|null $defaultRate The default rate limit from developer (used for auto-population only)
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $defaultNamespace The default namespace
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array|null Returns ['rate' => Rate, 'namespace' => string] or null if no rate limit configured
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array|null Returns ['rate' => Rate, 'namespace' => string] or null if no rate limit configured
      */
     private function getRouteRateLimit(string $routeName, ?Rate $defaultRate = null, ?string $defaultNamespace = null): ?array
     {

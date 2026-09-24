@@ -319,7 +319,7 @@ class LdapController
             }
 
             // Generate username if not provided
-            $username = $ldapUser['username'] ?? explode('// // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppression', $ldapUser['email'])[0];
+            $username = $ldapUser['username'] ?? explode('// // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppression', $ldapUser['email'])[0];
 
             // Ensure username is unique
             $baseUsername = $username;

@@ -25,14 +25,14 @@ use App\App;
 class VmInstanceBackup
 {
     /**
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar string The VM instance backups table name
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar string The VM instance backups table name
      */
     private static string $table = 'featherpanel_vm_instance_backups';
 
     /**
      * Create a new VM instance backup row.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $data
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $data
      */
     public static function create(array $data): int | false
     {
@@ -95,7 +95,7 @@ class VmInstanceBackup
     /**
      * Get all backups for a specific VM instance.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, array<string, mixed>>
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, array<string, mixed>>
      */
     public static function getBackupsByInstanceId(int $vmInstanceId): array
     {
@@ -109,7 +109,7 @@ class VmInstanceBackup
         );
         $stmt->execute(['vm_instance_id' => $vmInstanceId]);
 
-        /** // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array<int, array<string, mixed>> $rows */
+        /** // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array<int, array<string, mixed>> $rows */
         $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
         return $rows;
@@ -189,7 +189,7 @@ class VmInstanceBackup
     /**
      * Oldest tracked VM backup for FIFO rotation.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<string, mixed>|null
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<string, mixed>|null
      */
     public static function getOldestForInstanceId(int $vmInstanceId): ?array
     {

@@ -44,7 +44,7 @@ class SystemService
     /**
      * Get system information.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $version Version to get (v1 or v2)
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $version Version to get (v1 or v2)
      */
     public function getSystemInfo(string $version = 'v1'): array
     {
@@ -603,8 +603,8 @@ class SystemService
     /**
      * Trigger a Wings self-update.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $options Self-update options payload
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool $disableRetries Whether to disable client-level retry logic
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $options Self-update options payload
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool $disableRetries Whether to disable client-level retry logic
      */
     public function triggerSelfUpdate(array $options, bool $disableRetries = false): array
     {
@@ -616,12 +616,12 @@ class SystemService
     /**
      * Execute a command on the host system.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $command The command to execute
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int|null $timeoutSeconds Command timeout in seconds (default: 60)
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $workingDirectory Working directory for command execution
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array|null $environment Environment variables for the command
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $command The command to execute
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int|null $timeoutSeconds Command timeout in seconds (default: 60)
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $workingDirectory Working directory for command execution
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array|null $environment Environment variables for the command
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Response containing exit_code, stdout, stderr, timed_out, duration_ms
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Response containing exit_code, stdout, stderr, timed_out, duration_ms
      */
     public function executeCommand(
         string $command,
@@ -654,13 +654,13 @@ class SystemService
      * Returns plain-text diagnostics by default. When format is set to `url`,
      * the response will be JSON with an uploaded report URL.
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool|null $includeEndpoints Include HTTP endpoint metadata when true
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool|null $includeLogs Include daemon logs when true
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int|null $logLines Number of log lines to include (1-500)
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $format Response format (`text`|`url`)
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $uploadApiUrl Override upload endpoint when using `url` format
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool|null $includeEndpoints Include HTTP endpoint metadata when true
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool|null $includeLogs Include daemon logs when true
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int|null $logLines Number of log lines to include (1-500)
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $format Response format (`text`|`url`)
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $uploadApiUrl Override upload endpoint when using `url` format
      *
-     * // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array|string Plain text diagnostics or JSON payload depending on format
+     * // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array|string Plain text diagnostics or JSON payload depending on format
      */
     public function getDiagnostics(
         ?bool $includeEndpoints = null,
