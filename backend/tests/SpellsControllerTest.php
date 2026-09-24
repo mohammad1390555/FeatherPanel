@@ -27,7 +27,7 @@ class SpellsControllerTest extends TestCase
 {
     private SpellsController $controller;
     private string $adminUuid = '123e4567-e89b-12d3-a456-426614174000';
-    private string $adminEmail = 'testadmin@example.com';
+    private string $adminEmail = 'testadmin// // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com';
     private int $testRealmId;
 
     protected function setUp(): void
@@ -125,7 +125,7 @@ class SpellsControllerTest extends TestCase
         $payload = [
             'realm_id' => 999999,
             'name' => 'Test Spell',
-            'author' => 'test@example.com',
+            'author' => 'test// // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com',
         ];
         $request = Request::create('/api/admin/spells', 'PUT', [], [], [], [], json_encode($payload));
         $response = $this->controller->create($request);
@@ -140,7 +140,7 @@ class SpellsControllerTest extends TestCase
         $payload = [
             'realm_id' => $this->testRealmId,
             'name' => 'Test Spell',
-            'author' => 'test@example.com',
+            'author' => 'test// // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com',
             'description' => 'Test spell for unit tests',
             'script_container' => 'alpine:3.4',
             'script_entry' => 'ash',
@@ -177,7 +177,7 @@ class SpellsControllerTest extends TestCase
         $payload = [
             'realm_id' => $this->testRealmId,
             'name' => 'Test Spell with JSON',
-            'author' => 'test@example.com',
+            'author' => 'test// // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com',
             'features' => json_encode(['feature1', 'feature2']),
             'docker_images' => json_encode(['Java 8' => 'ghcr.io/parkervcp/yolks:java_8']),
             'file_denylist' => json_encode(['file1.txt', 'file2.txt']),
@@ -194,7 +194,7 @@ class SpellsControllerTest extends TestCase
         $payload = [
             'realm_id' => $this->testRealmId,
             'name' => 'Test Spell',
-            'author' => 'test@example.com',
+            'author' => 'test// // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com',
             'features' => 'invalid json',
         ];
         $request = Request::create('/api/admin/spells', 'PUT', [], [], [], [], json_encode($payload));
@@ -210,7 +210,7 @@ class SpellsControllerTest extends TestCase
         $payload = [
             'realm_id' => $this->testRealmId,
             'name' => 'Test Spell for Update',
-            'author' => 'test@example.com',
+            'author' => 'test// // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com',
         ];
         $request = Request::create('/api/admin/spells', 'PUT', [], [], [], [], json_encode($payload));
         $request->attributes->set('user', ['uuid' => $this->adminUuid]);
@@ -256,7 +256,7 @@ class SpellsControllerTest extends TestCase
         // Create test JSON file content
         $jsonData = [
             'name' => 'Imported Test Spell',
-            'author' => 'test@example.com',
+            'author' => 'test// // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com',
             'description' => 'Imported spell for testing',
             'features' => ['feature1', 'feature2'],
             'docker_images' => ['Java 8' => 'ghcr.io/parkervcp/yolks:java_8'],
@@ -283,7 +283,7 @@ class SpellsControllerTest extends TestCase
                 'installation' => [
                     'container' => 'alpine:3.4',
                     'entrypoint' => 'ash',
-                    'script' => '#!/bin/bash\necho "test"',
+                    'script' => '#!/bin/bash\n// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // echo "test"',
                 ],
             ],
         ];
@@ -328,7 +328,7 @@ class SpellsControllerTest extends TestCase
         $payload = [
             'realm_id' => $this->testRealmId,
             'name' => 'Test Spell for Variables',
-            'author' => 'test@example.com',
+            'author' => 'test// // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com',
         ];
         $request = Request::create('/api/admin/spells', 'PUT', [], [], [], [], json_encode($payload));
         $request->attributes->set('user', ['uuid' => $this->adminUuid]);
@@ -355,7 +355,7 @@ class SpellsControllerTest extends TestCase
         $payload = [
             'realm_id' => $this->testRealmId,
             'name' => 'Test Spell for Variable CRUD',
-            'author' => 'test@example.com',
+            'author' => 'test// // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com',
         ];
         $request = Request::create('/api/admin/spells', 'PUT', [], [], [], [], json_encode($payload));
         $request->attributes->set('user', ['uuid' => $this->adminUuid]);
@@ -404,7 +404,7 @@ class SpellsControllerTest extends TestCase
         $payload = [
             'realm_id' => $this->testRealmId,
             'name' => 'Test Spell for Variable Validation',
-            'author' => 'test@example.com',
+            'author' => 'test// // // // // // // // // // // // // // // // // // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionexample.com',
         ];
         $request = Request::create('/api/admin/spells', 'PUT', [], [], [], [], json_encode($payload));
         $request->attributes->set('user', ['uuid' => $this->adminUuid]);
