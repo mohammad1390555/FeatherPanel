@@ -156,7 +156,7 @@ class ServerFirewallController
                 );
             }
 
-            /** @var array<string,mixed> $data */
+            /** // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array<string,mixed> $data */
             $data = $response->getData();
 
             return ApiResponse::success([
@@ -266,7 +266,7 @@ class ServerFirewallController
                 );
             }
 
-            /** @var array<string,mixed> $data */
+            /** // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array<string,mixed> $data */
             $data = $response->getData();
             $rule = $data['data'] ?? null;
 
@@ -411,7 +411,7 @@ class ServerFirewallController
                 );
             }
 
-            /** @var array<string,mixed> $data */
+            /** // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array<string,mixed> $data */
             $data = $response->getData();
             $rule = $data['data'] ?? null;
 
@@ -632,7 +632,7 @@ class ServerFirewallController
                 );
             }
 
-            /** @var array<string,mixed> $data */
+            /** // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array<string,mixed> $data */
             $data = $response->getData();
 
             return ApiResponse::success([
@@ -748,7 +748,7 @@ class ServerFirewallController
     /**
      * Validate firewall rule payload.
      *
-     * @param array<string,mixed> $payload
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string,mixed> $payload
      */
     private function validateRulePayload(array $payload, bool $partial = false): ?Response
     {
@@ -824,9 +824,9 @@ class ServerFirewallController
     /**
      * Validate IP address or CIDR notation.
      *
-     * @param string $ipOrCidr IP address or CIDR notation (e.g., "192.168.1.100" or "10.0.0.0/24")
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $ipOrCidr IP address or CIDR notation (e.g., "192.168.1.100" or "10.0.0.0/24")
      *
-     * @return bool True if valid, false otherwise
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True if valid, false otherwise
      */
     private function validateIpOrCidr(string $ipOrCidr): bool
     {

@@ -27,14 +27,14 @@ use App\App;
 class VmNode
 {
     /**
-     * @var string The VM nodes table name
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar string The VM nodes table name
      */
     private static string $table = 'featherpanel_vm_nodes';
 
     /**
      * Whitelist of allowed field names for SQL queries to prevent injection.
      *
-     * @var array<int, string>
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionvar array<int, string>
      */
     private static array $allowedFields = [
         'id',
@@ -60,10 +60,10 @@ class VmNode
     /**
      * Validate required fields and types for VM node creation/update.
      *
-     * @param array<string, mixed> $data
-     * @param array<int, string> $requiredFields
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $data
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<int, string> $requiredFields
      *
-     * @return array<int, string> Validation error messages (empty if ok)
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, string> Validation error messages (empty if ok)
      */
     public static function validateVmNodeData(array $data, array $requiredFields = []): array
     {
@@ -115,9 +115,9 @@ class VmNode
     /**
      * Create a new VM node.
      *
-     * @param array<string, mixed> $data
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $data
      *
-     * @return int|false The new VM node ID or false on failure
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int|false The new VM node ID or false on failure
      */
     public static function createVmNode(array $data): int | false
     {
@@ -191,7 +191,7 @@ class VmNode
     /**
      * Alias for createVmNode.
      *
-     * @param array<string, mixed> $data
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $data
      */
     public static function create(array $data): int | false
     {
@@ -201,7 +201,7 @@ class VmNode
     /**
      * Fetch a VM node by ID.
      *
-     * @return array<string, mixed>|null
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<string, mixed>|null
      */
     public static function getVmNodeById(int $id): ?array
     {
@@ -224,7 +224,7 @@ class VmNode
     /**
      * Fetch all VM nodes with optional filtering.
      *
-     * @return array<int, array<string, mixed>>
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, array<string, mixed>>
      */
     public static function getAllVmNodes(): array
     {
@@ -243,7 +243,7 @@ class VmNode
     /**
      * Search VM nodes with pagination and filtering.
      *
-     * @return array<int, array<string, mixed>>
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, array<string, mixed>>
      */
     public static function searchVmNodes(
         int $page = 1,
@@ -323,7 +323,7 @@ class VmNode
     /**
      * Update a VM node by ID.
      *
-     * @param array<string, mixed> $data
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $data
      */
     public static function updateVmNodeById(int $id, array $data): bool
     {
@@ -405,7 +405,7 @@ class VmNode
     /**
      * Get table columns information.
      *
-     * @return array<int, array<string, mixed>>
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<int, array<string, mixed>>
      */
     public static function getColumns(): array
     {
@@ -419,7 +419,7 @@ class VmNode
     /**
      * Get count of VM nodes based on conditions.
      *
-     * @param array<string, mixed> $conditions
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $conditions
      */
     public static function count(array $conditions): int
     {
@@ -448,9 +448,9 @@ class VmNode
     /**
      * Sanitize data for logging by excluding sensitive fields.
      *
-     * @param array<string, mixed> $data
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $data
      *
-     * @return array<string, mixed>
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<string, mixed>
      */
     private static function sanitizeDataForLogging(array $data): array
     {
@@ -472,9 +472,9 @@ class VmNode
     /**
      * Decrypt sensitive fields for application usage.
      *
-     * @param array<string, mixed> $row
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $row
      *
-     * @return array<string, mixed>
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<string, mixed>
      */
     private static function decryptSensitiveFields(array $row): array
     {

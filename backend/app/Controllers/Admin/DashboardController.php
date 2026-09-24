@@ -419,9 +419,9 @@ class DashboardController
     /**
      * Clear the system cache.
      *
-     * @param Request $request The HTTP request
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam Request $request The HTTP request
      *
-     * @return Response The HTTP response
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn Response The HTTP response
      */
     #[OA\Post(
         path: '/api/admin/dashboard/cache/clear',
@@ -482,10 +482,10 @@ class DashboardController
     /**
      * Fetch version information from the API.
      *
-     * @param string $upstream The upstream type (stable/beta/canary)
-     * @param string $currentVersion The current application version
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $upstream The upstream type (stable/beta/canary)
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $currentVersion The current application version
      *
-     * @return array Version information
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Version information
      */
     private function fetchVersionInfo(
         string $upstream,
@@ -520,7 +520,7 @@ class DashboardController
                 'Attempting to fetch current version from: ' .
                     $currentVersionUrl,
             );
-            $currentVersionResponse = @file_get_contents(
+            $currentVersionResponse = // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionfile_get_contents(
                 $currentVersionUrl,
                 false,
                 $context,
@@ -582,7 +582,7 @@ class DashboardController
             $logger->debug(
                 'Attempting to fetch latest version from: ' . $latestVersionUrl,
             );
-            $latestVersionResponse = @file_get_contents(
+            $latestVersionResponse = // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionfile_get_contents(
                 $latestVersionUrl,
                 false,
                 $context,

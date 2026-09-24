@@ -29,14 +29,14 @@ class KnowledgebaseArticle
     /**
      * Get all articles with optional filters and pagination.
      *
-     * @param int $page Page number
-     * @param int $limit Number of records per page
-     * @param string $search Search term
-     * @param int|null $categoryId Filter by category ID
-     * @param string|null $status Filter by status
-     * @param bool|null $pinned Filter by pinned status
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $page Page number
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $limit Number of records per page
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $search Search term
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int|null $categoryId Filter by category ID
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $status Filter by status
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool|null $pinned Filter by pinned status
      *
-     * @return array Array of articles
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Array of articles
      */
     public static function searchArticles(
         int $page = 1,
@@ -88,9 +88,9 @@ class KnowledgebaseArticle
     /**
      * Get article by ID.
      *
-     * @param int $id Article ID
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $id Article ID
      *
-     * @return array|null Article data or null if not found
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array|null Article data or null if not found
      */
     public static function getById(int $id): ?array
     {
@@ -108,9 +108,9 @@ class KnowledgebaseArticle
     /**
      * Get article by slug.
      *
-     * @param string $slug Article slug
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $slug Article slug
      *
-     * @return array|null Article data or null if not found
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array|null Article data or null if not found
      */
     public static function getBySlug(string $slug): ?array
     {
@@ -128,10 +128,10 @@ class KnowledgebaseArticle
     /**
      * Get articles by category ID.
      *
-     * @param int $categoryId Category ID
-     * @param int $limit Number of records
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $categoryId Category ID
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $limit Number of records
      *
-     * @return array Array of articles
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Array of articles
      */
     public static function getByCategoryId(int $categoryId, int $limit = 100): array
     {
@@ -153,10 +153,10 @@ class KnowledgebaseArticle
     /**
      * Get articles by author ID.
      *
-     * @param int $authorId Author ID
-     * @param int $limit Number of records
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $authorId Author ID
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $limit Number of records
      *
-     * @return array Array of articles
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array Array of articles
      */
     public static function getByAuthorId(int $authorId, int $limit = 100): array
     {
@@ -178,12 +178,12 @@ class KnowledgebaseArticle
     /**
      * Get count of articles.
      *
-     * @param string $search Search term
-     * @param int|null $categoryId Filter by category ID
-     * @param string|null $status Filter by status
-     * @param bool|null $pinned Filter by pinned status
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $search Search term
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int|null $categoryId Filter by category ID
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string|null $status Filter by status
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam bool|null $pinned Filter by pinned status
      *
-     * @return int Count of articles
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int Count of articles
      */
     public static function getCount(
         string $search = '',
@@ -228,9 +228,9 @@ class KnowledgebaseArticle
     /**
      * Create a new article.
      *
-     * @param array $data Article data
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $data Article data
      *
-     * @return int|false The new article's ID or false on failure
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn int|false The new article's ID or false on failure
      */
     public static function create(array $data): int | false
     {
@@ -293,10 +293,10 @@ class KnowledgebaseArticle
     /**
      * Update an article by ID.
      *
-     * @param int $id Article ID
-     * @param array $data Fields to update
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $id Article ID
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $data Fields to update
      *
-     * @return bool True on success, false on failure
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function update(int $id, array $data): bool
     {
@@ -362,9 +362,9 @@ class KnowledgebaseArticle
     /**
      * Update sort order for multiple articles (batch reorder).
      *
-     * @param array $articles Array of ['id' => int, 'sort_order' => int]
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array $articles Array of ['id' => int, 'sort_order' => int]
      *
-     * @return bool True on success, false on failure
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function updateSortOrders(array $articles): bool
     {
@@ -411,9 +411,9 @@ class KnowledgebaseArticle
     /**
      * Delete an article by ID.
      *
-     * @param int $id Article ID
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $id Article ID
      *
-     * @return bool True on success, false on failure
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn bool True on success, false on failure
      */
     public static function delete(int $id): bool
     {

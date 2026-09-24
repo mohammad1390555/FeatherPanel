@@ -543,12 +543,12 @@ class WingsServerInfoController
      * Replace placeholders in configuration values with actual server data.
      * Handles both modern and legacy Pterodactyl placeholders.
      *
-     * @param string $value The value containing placeholders
-     * @param array<string, mixed> $server Server data
-     * @param array<string, mixed> $allocation Allocation data
-     * @param array<string, mixed> $environment Environment variables (from server variables)
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $value The value containing placeholders
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $server Server data
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $allocation Allocation data
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<string, mixed> $environment Environment variables (from server variables)
      *
-     * @return string The value with placeholders replaced
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string The value with placeholders replaced
      */
     private function replacePlaceholders(string $value, array $server, array $allocation, array $environment): string
     {
@@ -619,9 +619,9 @@ class WingsServerInfoController
     /**
      * Build allocation mappings grouped by IP address.
      *
-     * @param array<int, array<string, mixed>> $allocations Array of allocations
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam array<int, array<string, mixed>> $allocations Array of allocations
      *
-     * @return array<string, array<int, int>> Allocations grouped by IP with array of ports
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn array<string, array<int, int>> Allocations grouped by IP with array of ports
      */
     private function buildAllocationMappings(array $allocations): array
     {
@@ -645,10 +645,10 @@ class WingsServerInfoController
      * Sanitize Java memory arguments in startup command to prevent invalid values.
      * Fixes issues like -Xmx0M, -Xms0M, etc. by removing invalid arguments or replacing with valid defaults.
      *
-     * @param string $startupCommand The startup command to sanitize
-     * @param int $serverMemory Server memory in MB (used as fallback for -Xmx)
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam string $startupCommand The startup command to sanitize
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionparam int $serverMemory Server memory in MB (used as fallback for -Xmx)
      *
-     * @return string The sanitized startup command
+     * // // // // // // // // // // @error suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionerror suppressionreturn string The sanitized startup command
      */
     private function sanitizeJavaMemoryArguments(string $startupCommand, int $serverMemory): string
     {
