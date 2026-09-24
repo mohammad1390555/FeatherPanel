@@ -142,7 +142,7 @@ export function useRoleEditor({ mode, roleId, defaultRoleCount = 0, initialTab =
                 await fetchPermissions(targetRoleId);
             }
         } catch (error: unknown) {
-            let errorMessage = t('admin.roles.messages.permission_failed');
+            const  t('admin.roles.messages.permission_failed');
             if (isAxiosError(error) && error.response?.data?.message) {
                 errorMessage = error.response.data.message;
             }
@@ -158,7 +158,7 @@ export function useRoleEditor({ mode, roleId, defaultRoleCount = 0, initialTab =
                 await fetchPermissions(targetRoleId);
             }
         } catch (error: unknown) {
-            let errorMessage = t('admin.roles.messages.permission_failed');
+            const  t('admin.roles.messages.permission_failed');
             if (isAxiosError(error) && error.response?.data?.message) {
                 errorMessage = error.response.data.message;
             }
@@ -195,7 +195,7 @@ export function useRoleEditor({ mode, roleId, defaultRoleCount = 0, initialTab =
             }
             await fetchPermissions(editorRoleId);
         } catch (error: unknown) {
-            let errorMessage = t('admin.roles.messages.permission_failed');
+            const  t('admin.roles.messages.permission_failed');
             if (isAxiosError(error) && error.response?.data?.message) {
                 errorMessage = error.response.data.message;
             }
@@ -267,7 +267,7 @@ export function useRoleEditor({ mode, roleId, defaultRoleCount = 0, initialTab =
             console.error('Error saving role:', error);
             const messageKey =
                 mode === 'create' ? 'admin.roles.messages.create_failed' : 'admin.roles.messages.update_failed';
-            let errorMessage = t(messageKey);
+            const  t(messageKey);
             if (isAxiosError(error) && error.response?.data?.message) {
                 errorMessage = error.response.data.message;
             }
@@ -287,7 +287,7 @@ export function useRoleEditor({ mode, roleId, defaultRoleCount = 0, initialTab =
             router.push('/admin/roles');
         } catch (error: unknown) {
             console.error('Error deleting role:', error);
-            let errorMessage = t('admin.roles.messages.delete_failed');
+            const  t('admin.roles.messages.delete_failed');
             if (isAxiosError(error) && error.response?.data?.message) {
                 errorMessage = error.response.data.message;
             }

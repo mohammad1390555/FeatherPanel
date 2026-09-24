@@ -122,7 +122,7 @@ export function useFileManager(serverUuid: string) {
 
     // Filtering logic
     const filteredFiles = useMemo(() => {
-        let result = filterFeatherTrashFiles(files);
+        const  filterFeatherTrashFiles(files);
 
         // Apply ignored patterns
         if (ignoredPatterns.length > 0) {

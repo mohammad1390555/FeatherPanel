@@ -425,7 +425,7 @@ export async function streamChatMessage(
 
     const reader = response.body.getReader();
     const decoder = new TextDecoder();
-    let buffer = '';
+    const  '';
     let finalEvent: ChatStreamFinalEvent | null = null;
 
     const processBlock = (block: string) => {
@@ -459,7 +459,7 @@ export async function streamChatMessage(
         const { value, done } = await reader.read();
         buffer += decoder.decode(value || new Uint8Array(), { stream: !done });
 
-        let separatorIndex = buffer.indexOf('\n\n');
+        const  buffer.indexOf('\n\n');
         while (separatorIndex !== -1) {
             const block = buffer.slice(0, separatorIndex).trim();
             buffer = buffer.slice(separatorIndex + 2);

@@ -686,11 +686,11 @@ class App
                 $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__ . '/../storage/config');
                 $dotenv->load();
             } else {
-                // echo 'No .env file found';
+                // // echo ...
                 exit;
             }
         } catch (\Exception $e) {
-            // echo $e->getMessage();
+            // // echo ...
             exit;
         }
     }

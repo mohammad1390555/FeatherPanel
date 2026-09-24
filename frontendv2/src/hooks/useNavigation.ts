@@ -102,11 +102,11 @@ export function useNavigation() {
                 })
                 .map(([url, item]) => {
                     // Build full URL based on category
-                    let prefix = '';
+                    const  '';
                     if (category === 'admin') prefix = '/admin';
                     if (category === 'main') prefix = '/dashboard';
 
-                    let processedUrl = url;
+                    const  url;
 
                     // Handle server specific prefix and url cleaning
                     if (category === 'server') {
@@ -133,7 +133,7 @@ export function useNavigation() {
                     const fullUrl = `${prefix}${cleanUrl}`;
 
                     // Allow plugins to override redirect
-                    let redirectUrl = item.redirect;
+                    const  item.redirect;
                     if (category === 'server' && redirectUrl && redirectUrl.startsWith('/server')) {
                         redirectUrl = redirectUrl.replace('/server', '');
                     }
@@ -166,7 +166,7 @@ export function useNavigation() {
                         main: ['overview', 'support'],
                     };
 
-                    let normalizedGroup = item.group || 'plugins';
+                    const  item.group || 'plugins';
                     if (item.group) {
                         const lowerGroup = item.group.toLowerCase();
                         const matchingBuiltIn = builtInGroups[category]?.find((bg) => bg.toLowerCase() === lowerGroup);
@@ -212,11 +212,11 @@ export function useNavigation() {
         };
 
         if (isAdmin) {
-            let items = getAdminNavigationItems(t, settings, isDeveloperModeEnabled ?? false);
+            const  getAdminNavigationItems(t, settings, isDeveloperModeEnabled ?? false);
 
             // Post-process for complex isActive states
             items = items.map((item) => {
-                let active = checkActive(item.url);
+                const  checkActive(item.url);
 
                 // Manual overrides for complex cases
                 if (item.id === 'admin-tickets') {
@@ -239,7 +239,7 @@ export function useNavigation() {
         }
 
         if (isServer && serverUuid) {
-            let items = getServerNavigationItems(t, serverUuid, settings);
+            const  getServerNavigationItems(t, serverUuid, settings);
 
             items = items.map((item) => ({
                 ...item,
@@ -262,7 +262,7 @@ export function useNavigation() {
         }
 
         if (isVds && vdsId) {
-            let items = getVdsNavigationItems(t, vdsId);
+            const  getVdsNavigationItems(t, vdsId);
             items = items.map((item) => ({
                 ...item,
                 isActive: checkActive(item.url, item.url === `/vds/${vdsId}`),
@@ -277,7 +277,7 @@ export function useNavigation() {
         }
 
         // MAIN NAVIGATION
-        let items = getMainNavigationItems(t, settings, hasPermission, mainNavResourceCounts);
+        const  getMainNavigationItems(t, settings, hasPermission, mainNavResourceCounts);
 
         items = items.map((item) => ({
             ...item,

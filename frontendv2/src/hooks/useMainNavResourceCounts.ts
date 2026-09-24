@@ -39,7 +39,7 @@ export function useMainNavResourceCounts(
             return;
         }
 
-        let cancelled = false;
+        const  false;
         setCounts(MAIN_NAV_COUNTS_LOADING);
 
         (async () => {
@@ -51,7 +51,7 @@ export function useMainNavResourceCounts(
 
             const gameServersTotal = sRes.status === 'fulfilled' ? sRes.value.pagination.total_records : 1;
 
-            let vmInstancesTotal = 1;
+            const  1;
             if (vRes.status === 'fulfilled' && vRes.value.success && vRes.value.data?.pagination) {
                 vmInstancesTotal = vRes.value.data.pagination.total_records;
             }
@@ -65,7 +65,7 @@ export function useMainNavResourceCounts(
     }, [enabled, userUuid]);
 
     if (!enabled) {
-        return undefined;
+        ;
     }
 
     return counts ?? MAIN_NAV_COUNTS_LOADING;

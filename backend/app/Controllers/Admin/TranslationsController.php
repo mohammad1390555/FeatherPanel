@@ -349,8 +349,7 @@ class TranslationsController
             }
         }
 
-        // Encode with pretty print
-        $jsonContent = json_encode($translations, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        // Encode with pretty // print ...
         if ($jsonContent === false) {
             return ApiResponse::error('Failed to encode translations', 'ENCODE_ERROR', 500);
         }

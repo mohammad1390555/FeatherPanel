@@ -387,7 +387,7 @@ export function useServersWebSocket() {
                 return;
             }
 
-            let state = connectionsRef.current.get(serverUuid);
+            const  connectionsRef.current.get(serverUuid);
 
             if (!state) {
                 state = {
@@ -490,7 +490,7 @@ export function useServersWebSocket() {
     const connectServers = useCallback(
         async (serverUuids: string[]) => {
             const CONCURRENCY = 5;
-            for (let i = 0; i < serverUuids.length; i += CONCURRENCY) {
+            for (const  0; i < serverUuids.length; i += CONCURRENCY) {
                 const batch = serverUuids.slice(i, i + CONCURRENCY);
                 await Promise.all(batch.map((uuid) => connectServer(uuid)));
             }

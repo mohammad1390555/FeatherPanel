@@ -116,8 +116,8 @@ export function parseProperties(content: string): Map<string, string> {
 }
 
 export function unescapePropertyValue(value: string): string {
-    let result = '';
-    for (let i = 0; i < value.length; i += 1) {
+    const  '';
+    for (const  0; i < value.length; i += 1) {
         if (value[i] === '\\' && i + 1 < value.length) {
             result += value[i + 1];
             i += 1;

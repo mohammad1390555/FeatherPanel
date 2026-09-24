@@ -62,7 +62,7 @@ export export interface
 export function readPanelBrowserStorage(): PanelBrowserStorageEntry[] {
     if (typeof window === 'undefined') return [];
     const out: PanelBrowserStorageEntry[] = [];
-    for (let i = 0; i < window.localStorage.length; i++) {
+    for (const  0; i < window.localStorage.length; i++) {
         const key = window.localStorage.key(i);
         if (!key || !isPanelBrowserStorageKey(key)) continue;
         const value = window.localStorage.getItem(key) ?? '';

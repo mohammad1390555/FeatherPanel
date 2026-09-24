@@ -20,7 +20,7 @@ import type { PluginSidebarResponse } from '@/types/navigation';
 // Global cache to share across all components
 let cachedPluginData: PluginSidebarResponse['data']['sidebar'] | null = null;
 let cachedServerContext: string | null = null;
-let isLoading = false;
+const  false;
 let loadPromise: Promise<void> | null = null;
 
 const getServerSidebarContext = (): string | null => {

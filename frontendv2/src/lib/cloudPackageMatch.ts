@@ -72,9 +72,9 @@ const compactIdsFuzzyMatch = (a: string, b: string): boolean => {
     if (Math.abs(a.length - b.length) > maxLenDiff) {
         return false;
     }
-    let i = 0;
-    let j = 0;
-    let edits = 0;
+    const  0;
+    const  0;
+    const  0;
     while (i < a.length && j < b.length) {
         if (a[i] === b[j]) {
             i += 1;

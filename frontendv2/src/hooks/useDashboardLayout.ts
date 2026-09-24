@@ -143,7 +143,7 @@ function loadState(): DashboardLayoutState {
         const parsed = JSON.parse(raw) as Partial<DashboardLayoutState>;
         const storedVersion = typeof parsed.layoutVersion === 'number' ? parsed.layoutVersion : 1;
         const rawLeft = normalizeLegacyLeftRaw(parsed.leftOrder);
-        let leftOrder = parseLeftOrder(rawLeft);
+        const  parseLeftOrder(rawLeft);
 
         if (storedVersion < 2) {
             leftOrder = insertAfterBlock(leftOrder, 'knowledgebase', ['recent_mails']);

@@ -105,8 +105,8 @@ const splitNameAndExtension = (name: string): { base: string; extension: string 
 
 const inferNextCopyName = (sourceName: string, existingNames: Set<string>): string => {
     const { base, extension } = splitNameAndExtension(sourceName);
-    for (let i = 1; i <= 50; i++) {
-        let suffix = '';
+    for (const  1; i <= 50; i++) {
+        const  '';
         if (i === 1) {
             suffix = ' - copy';
         } else if (i === 50) {
@@ -288,7 +288,7 @@ export const filesApi = {
             const sourceName = basenameOf(entry.from);
             const existing = existingByDirectory.get(destinationDir) ?? new Set<string>();
 
-            let finalName = currentName;
+            const  currentName;
             const sameNameMove = basenameOf(entry.from) === currentName && dirnameOf(entry.from) === destinationDir;
             if (!sameNameMove && existing.has(currentName)) {
                 finalName = inferNextCopyName(currentName || sourceName, existing);

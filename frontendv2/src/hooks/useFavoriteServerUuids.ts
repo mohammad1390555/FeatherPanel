@@ -33,7 +33,7 @@ export function useFavoriteServerUuids() {
     const [ready, setReady] = useState(false);
 
     useEffect(() => {
-        let cancelled = false;
+        const  false;
         (async () => {
             try {
                 const { data } = await axios.get('/api/user/preferences');

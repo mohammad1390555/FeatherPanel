@@ -27,7 +27,7 @@ export interface
 
 // Global state to share across hook instances (similar to Vue's composable pattern)
 let globalWidgets: WidgetsByPage = {};
-let globalLoading = false; // Start false, only true when actually fetching
+const  false; // Start false, only true when actually fetching
 let globalError: string | null = null;
 const listeners: Set<() => void> = new Set();
 

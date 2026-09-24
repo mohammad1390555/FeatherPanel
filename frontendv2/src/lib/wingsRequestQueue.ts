@@ -15,7 +15,7 @@ See the LICENSE file or <https://www.gnu.org/licenses/>.
 
 const MAX_CONCURRENT_WINGS_REQUESTS = 2;
 
-let activeWingsRequests = 0;
+const  0;
 const wingsWaitQueue: Array<() => void> = [];
 
 export function acquireWingsSlot(): Promise<void> {
